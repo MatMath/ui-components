@@ -34,34 +34,29 @@ The dropdown can be defined alongside a controller. To display it correctly:
   }}
 >
   {() => {
-  const [dropdownIsOpen, setDropdownIsOpen] = React.useState(false);
+    const [dropdownIsOpen, setDropdownIsOpen] = React.useState(false);
     const controllerRef = React.useRef(null);
-
-return (
-
-<div style={{ position: 'relative' }}>
-<div ref={controllerRef}>
-<Button
-nature='primary'
-onClick={() => setDropdownIsOpen(!dropdownIsOpen)} >
-Click Me
-</Button>
-</div>
-<DropdownMenu
-        isOpen={dropdownIsOpen}
-        dockingSide='left'
-        placement='bottom'
-        controllerRef={controllerRef}
-      >
-<DropdownElement>Hello</DropdownElement>
-<DropdownElement>Holà</DropdownElement>
-<DropdownElement>Salut</DropdownElement>
-<DropdownElement>Hallo</DropdownElement>
-</DropdownMenu>
-</div>
-);
+    return (
+      <div style={{ position: 'relative' }}>
+        <div ref={controllerRef}>
+          <Button nature='primary' onClick={() => setDropdownIsOpen(!dropdownIsOpen)}>
+            Click Me
+          </Button>
+        </div>
+        <DropdownMenu
+          isOpen={dropdownIsOpen}
+          dockingSide='left'
+          placement='bottom'
+          controllerRef={controllerRef}
+        >
+          <DropdownElement>Hello</DropdownElement>
+          <DropdownElement>Holà</DropdownElement>
+          <DropdownElement>Salut</DropdownElement>
+          <DropdownElement>Hallo</DropdownElement>
+        </DropdownMenu>
+      </div>
+    );
 }}
-
 </Playground>
 
 Dropdown can be defined as:
@@ -83,9 +78,7 @@ Dropdown can be defined as:
     const [dropdown2IsOpen, setDropdown2IsOpen] = React.useState(false);
     const controller1Ref = React.useRef(null);
     const controller2Ref = React.useRef(null);
-
 return (
-
   <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: "100%", height: "100%"}}>
     <div style={{ position: 'relative' }}>
       <div ref={controller1Ref}>
@@ -104,7 +97,6 @@ return (
         <DropdownElement>Holà</DropdownElement>
       </DropdownMenu>
     </div>
-
     <div style={{ position: 'relative' }}>
       <div ref={controller2Ref}>
         <Button
@@ -123,12 +115,11 @@ return (
         <DropdownElement>Guten Tag</DropdownElement>
       </DropdownMenu>
     </div>
-
   </div>
 );
 }}
-
 </Playground>
+
 
 ## Position within a container
 
@@ -143,9 +134,7 @@ the menu position will be overwritten to `bottom`.
   const containerRef = React.useRef(null);
   const button1Ref = React.useRef(null);
   const button2Ref = React.useRef(null);
-
 return (
-
 <div
 ref={containerRef}
 style={{
@@ -174,7 +163,6 @@ Click Me
           <DropdownElement>Salut</DropdownElement>
 </DropdownMenu>
 </div>
-
       <div
         style={{
           position: 'relative',
@@ -205,8 +193,6 @@ Click Me
         </DropdownMenu>
       </div>
     </div>
-
 )
 }}
-
 </Playground>
