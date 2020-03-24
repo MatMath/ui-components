@@ -1,0 +1,112 @@
+@use '../../colors/colors';
+@use '../../typography/typography';
+
+/* ROOT */
+.root {
+  display: flex;
+  flex-direction: row;
+}
+
+/* INPUT */
+input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &:focus + .groove {
+    /* To be defined */
+    background: darkred;
+    /* box-shadow: 0 0 0 3px pink; */
+  }
+
+  &:focus + .handle {
+    /* To be defined */
+    background: red;
+    /* box-shadow: 0 0 0 3px pink; */
+  }
+}
+
+/* GROOVE */
+.groove {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 32px;
+  height: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.2s;
+  background: colors.$white;
+
+  border: 1px solid colors.$dash-green-05;
+  box-sizing: border-box;
+
+  &.checked {
+    border-width: 0px;
+    background: colors.$mid-green-00;
+
+    &.disabled {
+      background: colors.$mid-green-03;
+    }
+
+    &.hover {
+      background: colors.$dash-green-00;
+    }
+  }
+
+  &.disabled {
+    cursor: 'default';
+    background: colors.$dash-green-06;
+  }
+}
+
+/* HANDLE */
+.handle {
+  content: '';
+  position: absolute;
+  top: 'calc(100% - 4px)';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: colors.$mid-green-00;
+  transform: none;
+  left: 4px;
+
+  &.checked {
+    transform: translateX(-100%);
+    left: calc(100% - 4px);
+    background: colors.$white;
+  }
+
+  &.unchecked {
+    &.disabled {
+      background: colors.$mid-green-03;
+    }
+
+    &.hover {
+      background: colors.$dash-green-00;
+    }
+  }
+}
+
+/* LABEL */
+.label {
+  @include typography.body-small;
+  margin-left: 8px;
+  color: colors.$black;
+  cursor: pointer;
+
+  &.disabled {
+    color: colors.$dash-green-03;
+    cursor: default;
+  }
+}
