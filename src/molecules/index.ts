@@ -1,3 +1,1 @@
-export {
-  default as QuickActionsMenu
-} from './quick-actions-menu/QuickActionsMenu';
+export { default as QuickActionsMenu } from './quick-actions-menu/QuickActionsMenu';

@@ -125,9 +125,11 @@ export const getTooltipBgColorByType = (type: TooltipType) => {
   }
 };
 
-export const isTooltipOutOfContainer: IsElementOutOfContainerMethod<
-  Placement
-> = ({ elementDimensions, containerDimensions, placement }) => {
+export const isTooltipOutOfContainer: IsElementOutOfContainerMethod<Placement> = ({
+  elementDimensions,
+  containerDimensions,
+  placement
+}) => {
   switch (placement) {
     case 'top':
       return (

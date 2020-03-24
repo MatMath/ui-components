@@ -150,7 +150,7 @@ exports[`<Button> Global render should render 1`] = `
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bxivhb",
-                            "isStatic": true,
+                            "isStatic": false,
                             "lastClassName": "hHBGtV",
                             "rules": Array [
                               "
@@ -206,7 +206,7 @@ exports[`<Button> Global render should render 1`] = `
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-htpNat",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "cAleLB",
                                   "rules": Array [
                                     "
@@ -252,7 +252,7 @@ exports[`<Button> Global render should render 1`] = `
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bxivhb",
-                            "isStatic": true,
+                            "isStatic": false,
                             "lastClassName": "hHBGtV",
                             "rules": Array [
                               "
@@ -308,7 +308,7 @@ exports[`<Button> Global render should render 1`] = `
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-htpNat",
-                                  "isStatic": true,
+                                  "isStatic": false,
                                   "lastClassName": "cAleLB",
                                   "rules": Array [
                                     "
