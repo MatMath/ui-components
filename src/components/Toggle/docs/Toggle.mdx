@@ -1,0 +1,49 @@
+---
+name: Toggle
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Toggle } from '../Toggle';
+import {ToggleDemo} from './ToggleDemo'
+
+# Toggle
+
+An On/Off checkable toggle component.
+
+## Properties
+
+<Props of={Toggle} />
+
+## Usage
+
+### Basic usage
+
+The example below shows the `Toggle` in its checked and unchecked states, both in enabled and disabled modes:
+
+<Playground
+  style={{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    pointerEvents: 'none'
+  }}
+>
+  <Toggle />
+  <Toggle checked/>
+  <Toggle disabled />
+  <Toggle disabled checked/>
+
+</Playground>
+
+The example below shows an interactive `Toggle`.
+
+<Playground
+  style={{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  }}
+>
+  <ToggleDemo />
+</Playground>

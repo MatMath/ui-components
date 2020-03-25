@@ -8,20 +8,15 @@ export interface ToggleProps
   labelOn?: string;
 }
 
-interface ToggleChildProps extends ToggleProps {
-  isHover: boolean;
-}
-
 const HiddenInput = (props: ToggleProps) => {
-  return <input type='checkbox' {...props} />;
+  return <input className='hidden-input' type='checkbox' {...props} />;
 };
 
-const Handle = (props: ToggleChildProps) => {
+const Handle = (props: ToggleProps) => {
   return (
-    <span
+    <div
       className={getClassNames('handle', {
-        unchecked: props.checked,
-        hover: props.isHover,
+        checked: props.checked,
         disabled: props.disabled
       })}
       {...props}
@@ -29,58 +24,39 @@ const Handle = (props: ToggleChildProps) => {
   );
 };
 
-const Groove: FC<ToggleChildProps> = props => {
+const Groove: FC<ToggleProps> = props => {
   return (
-    <label
+    <div
       className={getClassNames('groove', {
         checked: props.checked,
-        hover: props.isHover,
         disabled: props.disabled
       })}
     >
       {props.children}
-    </label>
-  );
-};
-
-const Label = (props: ToggleChildProps) => {
-  return (
-    <label
-      className={getClassNames('label', {
-        disabled: props.disabled
-      })}
-    >
-      {props.labelOn
-        ? props.checked
-          ? props.labelOn
-          : props.labelOff
-        : props.labelOff}
-    </label>
+    </div>
   );
 };
 
 export const Toggle = (props: ToggleProps) => {
-  const [isHover, setIsHover] = useState(false);
-
   return (
     <label
-      className='root'
-      onMouseLeave={() => {
-        if (!props.disabled) {
-          setIsHover(false);
-        }
-      }}
-      onMouseEnter={() => {
-        if (!props.disabled) {
-          setIsHover(true);
-        }
-      }}
+      className={getClassNames('Toggle', {
+        checked: props.checked,
+        disabled: props.disabled
+      })}
     >
       <HiddenInput {...props} onChange={props.onChange} />
-      <Groove {...props} isHover={isHover}>
-        <Handle {...props} isHover={isHover} />
+      <Groove {...props}>
+        <Handle {...props} />
       </Groove>
-      <Label {...props} isHover={isHover} />
+      <span className='text'>
+        {props.checked ? props.labelOn : props.labelOff}
+      </span>
     </label>
   );
+};
+
+Toggle.defaultProps = {
+  labelOn: 'On',
+  labelOff: 'Off'
 };
