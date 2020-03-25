@@ -8,6 +8,7 @@ import Button from '../../atoms/button/Button';
 import MoreIcon from '../../atoms/icons/MoreIcon';
 import DropdownElement from '../../ions/dropdown/element/DropdownElement.tsx';
 import QuickActionsMenu from './QuickActionsMenu';
+import '../../../utils/playgroundStyle.css';
 
 # Quick Actions Menu
 
@@ -22,14 +23,7 @@ check out the [Dropdown Menu component](./src-atoms-button-button).
 
 ## Example
 
-<Playground
-  style={{
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    height: '200px'
-  }}
->
+<Playground>
   {() => {
     const [isOpen, setIsOpen] = React.useState(false);
     const onClick = e => {
@@ -37,15 +31,17 @@ check out the [Dropdown Menu component](./src-atoms-button-button).
       setIsOpen(!isOpen);
     };
     return (
-      <QuickActionsMenu
-        icon={<MoreIcon />}
-        isOpen={isOpen}
-        onClick={onClick}
-        tooltipTitle='Tooltip'
-      >
-        <DropdownElement>Copy Password</DropdownElement>
-        <DropdownElement>Copy Login</DropdownElement>
-      </QuickActionsMenu>
+      <div className='playground-style' style={{height: '200px'}}>
+        <QuickActionsMenu
+          icon={<MoreIcon />}
+          isOpen={isOpen}
+          onClick={onClick}
+          tooltipTitle='Tooltip'
+        >
+          <DropdownElement>Copy Password</DropdownElement>
+          <DropdownElement>Copy Login</DropdownElement>
+        </QuickActionsMenu>
+      </div>
     );
   }}
 </Playground>

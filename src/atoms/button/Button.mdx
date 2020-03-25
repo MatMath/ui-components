@@ -7,6 +7,7 @@ import { Playground, Props } from 'docz';
 import Button from './Button';
 import CopyPassword from '../icons/CopyPasswordIcon';
 import Shared from '../icons/SharedIcon';
+import '../../../utils/playgroundStyle.css';
 
 # Button
 
@@ -24,7 +25,8 @@ Bug on repo link: https://github.com/doczjs/docz/issues/895
 
 ### Available buttons:
 
-<Playground style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around' }}>
+<Playground>
+  <div className='playground-style'>
     <div>
       <Button nature="secondary">Cancel</Button>
     </div>
@@ -40,72 +42,68 @@ Bug on repo link: https://github.com/doczjs/docz/issues/895
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       <Button nature="ghost" size="small"><CopyPassword /></Button>
     </div>
-
+  </div>
 </Playground>
 
 ### All buttons can display icons, text or mixed content:
 
-<Playground
-  style={{
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  }}
->
-  <div>
-    <Button nature='secondary'>
-      <Shared /> Share
-    </Button>
-  </div>
-  <div>
-    <Button nature='danger'>
-      <Shared color='white' /> Delete
-    </Button>
-  </div>
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center'
-    }}
-  >
-    <Button nature='ghost' size='small'>
-      <CopyPassword />
-    </Button>
-  </div>
-  <div
-    style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center'
-    }}
-  >
-    <Button nature='ghost' size='small'>
-      Confirm
-    </Button>
+<Playground>
+  <div className='playground-style'>
+    <div>
+      <Button nature='secondary'>
+        <Shared /> Share
+      </Button>
+    </div>
+    <div>
+      <Button nature='danger'>
+        <Shared color='white' /> Delete
+      </Button>
+    </div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
+      }}
+    >
+      <Button nature='ghost' size='small'>
+        <CopyPassword />
+      </Button>
+    </div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center'
+      }}
+    >
+      <Button nature='ghost' size='small'>
+        Confirm
+      </Button>
+    </div>
   </div>
 </Playground>
 
 ### The default theme is light (white), but some buttons can be displayed in a Dark theme (Dashlane's dark green) ( ⚠️ `danger` button is not supported in dark theme):
 
 <Playground style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', backgroundColor: '#0E353D', height: '12vw', margin: '-40px', alignItems: 'center' }}>
-    <div>
-      <Button nature="secondary" theme="dark">Cancel</Button>
+    <div className='playground-style' style={{backgroundColor: '#0E353D', padding: '16px'}}>
+      <div>
+        <Button nature="secondary" theme="dark">Cancel</Button>
+      </div>
+      <div>
+        <Button nature="primary" theme="dark">Save</Button>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <Button nature="ghost" size="small" theme="dark"><CopyPassword color="white"/></Button>
+      </div>
     </div>
-
-    <div>
-      <Button nature="primary" theme="dark">Save</Button>
-    </div>
-
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-      <Button nature="ghost" size="small" theme="dark"><CopyPassword color="white"/></Button>
-    </div>
-
 </Playground>
 
 ### Buttons can be have different sizes [`small`, `medium`, `large`] with `medium` being the default value if none is specified:
 
-<Playground style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', minHeight: '150px' }}>
+<Playground>
+  <div className='playground-style' style={{minHeight: '150px'}}>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
           <Button nature="secondary" size="small">
             Cancel
@@ -153,13 +151,13 @@ Bug on repo link: https://github.com/doczjs/docz/issues/895
             Decline
         </Button>
     </div>
-
+  </div>
 </Playground>
 
 ### In disabled mode, buttons will behave as following:
 
-<Playground className="test" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', flexFlow: 'wrap' }}>
-  <div style={{ display: 'flex', justifyContent: 'space-around', width: '100%', margin: '10px 0' }}>
+<Playground>
+  <div className='playground-style'>
         <div>
             <Button nature="secondary" disabled>
               Cancel
