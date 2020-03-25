@@ -25,38 +25,52 @@ Also, if the text of the tooltip changes while its being displayed, then the pla
 Examples below show usage of the tooltip with different titles and types. You can change the size of the window (by opening the dev console for example) to see how the tooltip of the last button adapts to the new container size (placement goes from right to top).
 
 <Playground>
-<div className='playground-style'>
-    <div style={{display: 'flex'}}>
-        <div>
-            <Tooltip options={{container: document.getElementById('list')}} title='Oups!' type='error'>
-                <button>Tooltip me to the default (top)</button>
-            </Tooltip>
-        </div>
-        <div>
-            <Tooltip placement='left' options={{container: document.getElementById('list')}} title='At vero eos et accusamus' placement='right'>
-                <button>Tooltip me to the right</button>
-            </Tooltip>
-        </div>
-        <div>
-            <Tooltip placement='bottom' options={{container: document.getElementById('list')}}
-            title="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?"
-            placement='bottom' options={{container: document.getElementById('list')}}
-            type='success'
-            >
-                <button>Tooltip me to the bottom with success</button>
-            </Tooltip>
-        </div>
-        <div>
-            <Tooltip placement='right' options={{container: document.getElementById('list')}}
-            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-            placement='right'
-            type='success'
-            >
-                <button>Tooltip me to the right with a long text</button>
-            </Tooltip>
-        </div>
+  <div className='playground-style'>
+    <div style={{ display: 'flex' }}>
+      <div>
+        <Tooltip
+          options={{ container: document.getElementById('list') }}
+          title='Oups!'
+          type='error'
+        >
+          <button>Tooltip me to the default (top)</button>
+        </Tooltip>
+      </div>
+      <div>
+        <Tooltip
+          placement='left'
+          options={{ container: document.getElementById('list') }}
+          title='At vero eos et accusamus'
+          placement='right'
+        >
+          <button>Tooltip me to the right</button>
+        </Tooltip>
+      </div>
+      <div>
+        <Tooltip
+          placement='bottom'
+          options={{ container: document.getElementById('list') }}
+          title='Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?'
+          placement='bottom'
+          options={{ container: document.getElementById('list') }}
+          type='success'
+        >
+          <button>Tooltip me to the bottom with success</button>
+        </Tooltip>
+      </div>
+      <div>
+        <Tooltip
+          placement='right'
+          options={{ container: document.getElementById('list') }}
+          title='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+          placement='right'
+          type='success'
+        >
+          <button>Tooltip me to the right with a long text</button>
+        </Tooltip>
+      </div>
     </div>
-</div>
+  </div>
 </Playground>
 
 ### Advanced settings
@@ -69,7 +83,7 @@ Examples below show usage of the tooltip with different titles and types. You ca
 - You will notice as well that once you click on the "hover me" button of the item number `1` the tooltip title will be updated and its placement will be automatically calculated again to fit into the container with the new long text.
 
 <Playground>
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <TooltipDemo />
-    </div>
+  <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <TooltipDemo />
+  </div>
 </Playground>

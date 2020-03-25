@@ -30,7 +30,10 @@ The dropdown can be defined alongside a controller. To display it correctly:
     const [dropdownIsOpen, setDropdownIsOpen] = React.useState(false);
     const controllerRef = React.useRef(null);
     return (
-      <div className='playground-style' style={{height: '200px', alignItems: 'flex-start'}}>
+      <div
+        className='playground-style'
+        style={{ height: '200px', alignItems: 'flex-start' }}
+      >
         <div style={{ position: 'relative' }}>
           <div ref={controllerRef}>
             <Button
@@ -69,7 +72,10 @@ Dropdown can be defined as:
     const controller1Ref = React.useRef(null);
     const controller2Ref = React.useRef(null);
     return (
-      <div className='playground-style' style={{height: '300px', alignItems: 'flex-start'}}>
+      <div
+        className='playground-style'
+        style={{ height: '300px', alignItems: 'flex-start' }}
+      >
         <div
           style={{
             display: 'flex',
@@ -136,7 +142,10 @@ the menu position will be overwritten to `bottom`.
     const button1Ref = React.useRef(null);
     const button2Ref = React.useRef(null);
     return (
-      <div className='playground-style' style={{height: '400px', width: '100%', margin: 'auto'}}>
+      <div
+        className='playground-style'
+        style={{ height: '400px', width: '100%', margin: 'auto' }}
+      >
         <div
           ref={containerRef}
           style={{
