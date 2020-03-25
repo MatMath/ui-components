@@ -4,6 +4,6 @@
 .docz
 yarn-error.log
 .DS_Store
-docs
+/docs
 *.css
 *.css.map
