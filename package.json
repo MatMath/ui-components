@@ -1,6 +1,6 @@
 {
   "name": "@dashlane/ui-components",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A set of reusable UI React components",
   "main": "lib/index.esm.js",
   "module": "lib/index.esm.js",
@@ -126,5 +126,8 @@
       "yarn pretty-quick"
     ],
     "*.{tsx,ts,js,json}": "eslint"
+  },
+  "publishConfig": {
+    "@dashlane:registry": "https://npm.dashlane.com/repository/npm-private/"
   }
 }
