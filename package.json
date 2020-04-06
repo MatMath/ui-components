@@ -2,8 +2,8 @@
   "name": "@dashlane/ui-components",
   "version": "1.6.0",
   "description": "A set of reusable UI React components",
-  "main": "lib/index.esm.js",
-  "module": "lib/index.esm.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "license": "ISC",
   "files": [
     "lib",
@@ -30,6 +30,8 @@
   },
   "sideEffects": false,
   "dependencies": {
+    "@rollup/plugin-replace": "^2.3.1",
+    "rollup-plugin-rename": "^0.0.1",
     "styled-components": "^4.3.1"
   },
   "peerDependencies": {
