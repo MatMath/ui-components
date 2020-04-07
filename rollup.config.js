@@ -27,14 +27,13 @@ const config = {
     }),
     json({ preferConst: true }),
     /**
-     * Next lines are tricky.
-     * For unknown reasons, when the postcss extract option is set to false using preserveModules set to true,
-     * the .js files will be created in /lib/src
-     * This is not the wanted output, so we move them back into lib/ ,
-     * but we have one import that must be updated
+     * When preserveModules is set to true, rollup mimics the file structure.
+     * Therefore, the .js files will be created in /lib/src. Move them back to /lib
+     * This also makes some modules "virtual" and put them into a special folder.
+     * We therefore need to update the referenced path as well
      */
     replace({
-      '../_virtual/_tslib.js': '_virtual/_tslib.js',
+      '../_virtual/': '_virtual/',
       delimiters: ['', '']
     }),
     renameExtensions({
