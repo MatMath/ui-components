@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { CheckCircleIcon, CloseIcon } from '@atoms';
-
-import { Alert, AlertProps } from './Alert';
-import { AlertSeverity } from './types';
+import { Alert, AlertProps } from '@components/alert/Alert';
+import { AlertSeverity } from '@components/alert/types';
 
 describe('<Alert />', () => {
   let wrapper: ReactWrapper;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BaseButton } from '@components';
+import BaseButton from '@components/button/base/BaseButton';
 import {
   ThemeColors,
   ThemeWrapperProps

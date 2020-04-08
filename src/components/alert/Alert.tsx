@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { getClassNames } from '@utility/cssUtils';
 import { CheckCircleIcon, CloseIcon, CrossCircleIcon } from '@atoms';
-import { Button } from '@components';
+import Button from '@components/button/Button';
 import { AlertSeverity } from './types';
 import styles from './Alert.module.scss';
 
