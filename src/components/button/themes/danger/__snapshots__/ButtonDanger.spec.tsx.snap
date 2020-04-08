@@ -112,7 +112,7 @@ exports[`<ButtonDanger> global render should render 1`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bxivhb",
+                "componentId": "sc-htpNat",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -178,7 +178,7 @@ exports[`<ButtonDanger> global render should render 1`] = `
               "displayName": "styled.button",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bxivhb",
+              "styledComponentId": "sc-htpNat",
               "target": "button",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -206,7 +206,7 @@ exports[`<ButtonDanger> global render should render 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-EHOje",
+                      "componentId": "sc-ifAKCX",
                       "isStatic": true,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -223,10 +223,10 @@ exports[`<ButtonDanger> global render should render 1`] = `
                     },
                     "displayName": "Styled(styled.span)",
                     "foldedComponentIds": Array [
-                      "sc-bwzfXH",
+                      "sc-bdVaJa",
                     ],
                     "render": [Function],
-                    "styledComponentId": "sc-EHOje",
+                    "styledComponentId": "sc-ifAKCX",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -365,7 +365,7 @@ exports[`<ButtonDanger> global render should render 2`] = `
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bxivhb",
+                "componentId": "sc-htpNat",
                 "isStatic": false,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -431,7 +431,7 @@ exports[`<ButtonDanger> global render should render 2`] = `
               "displayName": "styled.button",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-bxivhb",
+              "styledComponentId": "sc-htpNat",
               "target": "button",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -459,7 +459,7 @@ exports[`<ButtonDanger> global render should render 2`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-EHOje",
+                      "componentId": "sc-ifAKCX",
                       "isStatic": true,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -476,10 +476,10 @@ exports[`<ButtonDanger> global render should render 2`] = `
                     },
                     "displayName": "Styled(styled.span)",
                     "foldedComponentIds": Array [
-                      "sc-bwzfXH",
+                      "sc-bdVaJa",
                     ],
                     "render": [Function],
-                    "styledComponentId": "sc-EHOje",
+                    "styledComponentId": "sc-ifAKCX",
                     "target": "span",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],

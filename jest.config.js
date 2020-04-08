@@ -16,7 +16,7 @@ module.exports = {
     '@ions': '<rootDir>/src/ions/index',
     '@colors': '<rootDir>/src/colors/colors.ts',
     '@colors/*': '<rootDir>/src/colors/*',
-    '@components': '<rootDir>/src/components/index',
-    '@components/*': '<rootDir>/src/components/*'
+    '^@components/(.*)$': '<rootDir>/src/components/$1',
+    '@components': '<rootDir>/src/components/index'
   }
 };
