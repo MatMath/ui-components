@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { functionalRed00, functionalRed01, functionalRed02 } from '@colors';
-import { ThemeColors, ThemeWrapperProps } from '@ions/button/themes/types';
-import { ThemeWrapper } from '@ions/button/themes/ThemeWrapper';
+import {
+  ThemeColors,
+  ThemeWrapperProps
+} from '@components/button/themes/types';
+import { ThemeWrapper } from '@components/button/themes/ThemeWrapper';
 
 const dangerColors: ThemeColors = {
   default: {

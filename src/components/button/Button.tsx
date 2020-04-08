@@ -4,7 +4,7 @@ import {
   ButtonGhost,
   ButtonPrimary,
   ButtonSecondary
-} from '@ions/button/themes';
+} from '@components/button/themes';
 import { assertUnreachable } from '@utility/helpers';
 
 // Downside: Docz will display all props including React.ButtonHTMLAttributes ones

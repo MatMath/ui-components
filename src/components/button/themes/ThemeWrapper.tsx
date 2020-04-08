@@ -1,6 +1,9 @@
 import * as React from 'react';
-import { BaseButton } from '@ions';
-import { ThemeColors, ThemeWrapperProps } from '@ions/button/themes/types';
+import { BaseButton } from '@components';
+import {
+  ThemeColors,
+  ThemeWrapperProps
+} from '@components/button/themes/types';
 import {
   DefaultTheme,
   FlattenInterpolation,

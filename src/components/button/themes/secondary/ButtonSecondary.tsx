@@ -7,8 +7,11 @@ import {
   dashGreen05,
   transparent
 } from '@colors';
-import { ThemeColors, ThemeWrapperProps } from '@ions/button/themes/types';
-import { ThemeWrapper } from '@ions/button/themes/ThemeWrapper';
+import {
+  ThemeColors,
+  ThemeWrapperProps
+} from '@components/button/themes/types';
+import { ThemeWrapper } from '@components/button/themes/ThemeWrapper';
 
 const secondaryColors: ThemeColors = {
   default: {

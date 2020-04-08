@@ -7,9 +7,9 @@ import styled, {
 } from 'styled-components';
 import { transparent, white } from '@colors';
 import { StyledText } from '@ions/text/StyledText';
-import { Props } from '@atoms/button/Button';
+import { Props } from '@components/button/Button';
 import { assertUnreachable } from '@utility/helpers';
-import { ButtonState } from '@ions/button/themes/types';
+import { ButtonState } from '@components/button/themes/types';
 
 export type BaseButtonProps = Omit<Props, 'nature' | 'theme'>;
 type Theme = {
