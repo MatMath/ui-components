@@ -68,6 +68,7 @@ describe('<Button>', () => {
       const button = mount(<Button>{text}</Button>);
 
       expect(button.text()).toEqual(text);
+      expect(button.find('span')).toBeTruthy();
     });
 
     it('should render the specified children', () => {

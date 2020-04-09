@@ -1,129 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button> Global render should render default 1`] = `
-<Component
+<Button
   nature="primary"
   size="medium"
   theme="light"
 >
   <button
     className="button primary medium light"
-  >
-    <span
-      className="content"
-    />
-  </button>
-</Component>
+  />
+</Button>
 `;
 
 exports[`<Button> Style properties should render danger nature 1`] = `
-<Component
+<Button
   nature="danger"
   size="medium"
   theme="light"
 >
   <button
     className="button danger medium light"
-  >
-    <span
-      className="content"
-    />
-  </button>
-</Component>
+  />
+</Button>
 `;
 
 exports[`<Button> Style properties should render danger nature and small size 1`] = `
-<Component
+<Button
   nature="danger"
   size="small"
   theme="light"
 >
   <button
     className="button danger small light"
-  >
-    <span
-      className="content"
-    />
-  </button>
-</Component>
+  />
+</Button>
 `;
 
 exports[`<Button> Style properties should render large size 1`] = `
-<Component
+<Button
   nature="primary"
   size="large"
   theme="light"
 >
   <button
     className="button primary large light"
-  >
-    <span
-      className="content"
-    />
-  </button>
-</Component>
+  />
+</Button>
 `;
 
 exports[`<Button> Style properties should render medium size 1`] = `
-<Component
+<Button
   nature="primary"
   size="medium"
   theme="light"
 >
   <button
     className="button primary medium light"
-  >
-    <span
-      className="content"
-    />
-  </button>
-</Component>
+  />
+</Button>
 `;
 
 exports[`<Button> Style properties should render primary nature 1`] = `
-<Component
+<Button
   nature="primary"
   size="medium"
   theme="light"
 >
   <button
     className="button primary medium light"
-  >
-    <span
-      className="content"
-    />
-  </button>
-</Component>
+  />
+</Button>
 `;
 
 exports[`<Button> Style properties should render secondary nature 1`] = `
-<Component
+<Button
   nature="secondary"
   size="medium"
   theme="light"
 >
   <button
     className="button secondary medium light"
-  >
-    <span
-      className="content"
-    />
-  </button>
-</Component>
+  />
+</Button>
 `;
 
 exports[`<Button> Style properties should render small size 1`] = `
-<Component
+<Button
   nature="primary"
   size="small"
   theme="light"
 >
   <button
     className="button primary small light"
-  >
-    <span
-      className="content"
-    />
-  </button>
-</Component>
+  />
+</Button>
 `;

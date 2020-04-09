@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
         styles[theme]
       )}
     >
-      <span className={styles.content}>{children}</span>
+      {children ? <span className={styles.content}>{children}</span> : null}
     </button>
   );
 };
