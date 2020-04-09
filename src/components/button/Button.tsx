@@ -1,55 +1,47 @@
 import * as React from 'react';
-import {
-  ButtonDanger,
-  ButtonGhost,
-  ButtonPrimary,
-  ButtonSecondary
-} from '@components/button/themes';
-import { assertUnreachable } from '@utility/helpers';
+import { getClassNames } from '@utility/cssUtils';
+import styles from './Button.module.scss';
 
-// Downside: Docz will display all props including React.ButtonHTMLAttributes ones
-// https://github.com/doczjs/docz/issues/895
-export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /**
-   * The button's nature
-   */
-  nature: 'danger' | 'secondary' | 'primary' | 'ghost';
-  /**
-   * Activates the button dark mode
-   */
-  theme?: 'default' | 'dark';
-  /**
-   * Disabled state of the button
-   * @default false
-   */
-  disabled?: boolean;
-  /**
-   * A large style option
-   @default false
-   */
-  size?: 'small' | 'medium' | 'large';
+type ButtonNature = 'primary' | 'secondary' | 'danger' | 'ghost';
+type ButtonSize = 'small' | 'medium' | 'large';
+type ButtonTheme = 'light' | 'dark';
+
+const defaultNature: ButtonNature = 'primary';
+const defaultSize: ButtonSize = 'medium';
+const defaultTheme: ButtonTheme = 'light';
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  nature?: ButtonNature;
+  size?: ButtonSize;
+  theme?: ButtonTheme;
 }
 
-const Button: React.FunctionComponent<Props> = (props): JSX.Element | null => {
-  const renderButtonByType = ({
-    nature,
-    ...props
-  }: Props): JSX.Element | null => {
-    switch (nature) {
-      case 'danger':
-        return <ButtonDanger {...props} />;
-      case 'secondary':
-        return <ButtonSecondary {...props} />;
-      case 'primary':
-        return <ButtonPrimary {...props} />;
-      case 'ghost':
-        return <ButtonGhost {...props} />;
-      default:
-        return assertUnreachable(nature);
-    }
-  };
+export const Button: React.FC<ButtonProps> = ({
+  nature = defaultNature,
+  size = defaultSize,
+  theme = defaultTheme,
+  children,
+  ...htmlButtonProps
+}) => {
+  return (
+    <button
+      {...htmlButtonProps}
+      className={getClassNames(
+        styles.button,
+        styles[nature],
+        styles[size],
+        styles[theme]
+      )}
+    >
+      <span className={styles.content}>{children}</span>
+    </button>
+  );
+};
 
-  return renderButtonByType(props);
+Button.defaultProps = {
+  nature: defaultNature,
+  size: defaultSize,
+  theme: defaultTheme
 };
 
 export default Button;

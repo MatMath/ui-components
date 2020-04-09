@@ -1,93 +1,105 @@
 import * as React from 'react';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
+import 'jest-styled-components';
 import Button from './Button';
-import {
-  dashDarkerGreen00,
-  dashGreen00,
-  dashGreen03,
-  dashGreen05,
-  functionalRed00,
-  functionalRed01,
-  functionalRed02,
-  midGreen00,
-  transparent
-} from '@colors';
 
 describe('<Button>', () => {
   describe('Global render', () => {
-    it('should render', () => {
-      const ButtonWrapper = mount(<Button nature='danger' />);
+    it('should render default', () => {
+      const button = mount(<Button />);
 
-      expect(ButtonWrapper).toMatchSnapshot();
+      expect(button).toMatchSnapshot();
     });
   });
 
-  describe('Themed button rendering', () => {
-    it('should render a danger button', () => {
-      const ButtonWrapper = mount(<Button nature='danger'>Danger</Button>);
-      expect(ButtonWrapper.find('BaseButton').prop('theme')).toMatchObject({
-        backgroundColor: {
-          idle: functionalRed02,
-          hover: functionalRed01,
-          active: functionalRed00
-        }
-      });
+  describe('Style properties', () => {
+    it('should render small size', () => {
+      const button = mount(<Button size='small' />);
+
+      expect(button).toMatchSnapshot();
     });
 
-    it('should render a primary button', () => {
-      const ButtonWrapper = mount(<Button nature='primary'>Primary</Button>);
-      expect(ButtonWrapper.find('BaseButton').prop('theme')).toMatchObject({
-        backgroundColor: {
-          idle: midGreen00,
-          hover: dashGreen00,
-          active: dashDarkerGreen00
-        }
-      });
+    it('should render medium size', () => {
+      const button = mount(<Button size='medium' />);
+
+      expect(button).toMatchSnapshot();
     });
 
-    it('should render a secondary button', () => {
-      const ButtonWrapper = mount(
-        <Button nature='secondary'>Secondary</Button>
-      );
-      expect(ButtonWrapper.find('BaseButton').prop('theme')).toMatchObject({
-        backgroundColor: {
-          idle: transparent,
-          hover: dashGreen05,
-          active: dashGreen03
-        },
-        textColor: dashGreen00,
-        borderColor: {
-          idle: dashGreen05,
-          hover: dashGreen05,
-          active: dashGreen03
-        }
-      });
+    it('should render large size', () => {
+      const button = mount(<Button size='large' />);
+
+      expect(button).toMatchSnapshot();
     });
 
-    it('should render a ghost button', () => {
-      const ButtonWrapper = mount(<Button nature='ghost'>Ghost</Button>);
-      expect(ButtonWrapper.find('BaseButton').prop('theme')).toMatchObject({
-        backgroundColor: {
-          idle: transparent,
-          hover: transparent,
-          active: dashGreen05
-        },
-        textColor: dashGreen00,
-        borderColor: {
-          idle: transparent,
-          hover: dashGreen05,
-          active: dashGreen05
-        }
-      });
+    it('should render primary nature', () => {
+      const button = mount(<Button nature='primary' />);
+
+      expect(button).toMatchSnapshot();
+    });
+
+    it('should render secondary nature', () => {
+      const button = mount(<Button nature='secondary' />);
+
+      expect(button).toMatchSnapshot();
+    });
+
+    it('should render danger nature', () => {
+      const button = mount(<Button nature='danger' />);
+
+      expect(button).toMatchSnapshot();
+    });
+
+    it('should render danger nature and small size', () => {
+      const button = mount(<Button nature='danger' size='small' />);
+
+      expect(button).toMatchSnapshot();
     });
   });
 
-  describe('No matching button type case', () => {
-    it('should throw when the nature is wrong', () => {
-      const ButtonWrapper = shallow(<Button nature='primary'>Unknown</Button>);
-      expect(() => ButtonWrapper.setProps({ nature: 'unknown' })).toThrowError(
-        /Unexpected value. Should have been never./
+  describe('Children render', () => {
+    it('should render Default when no children are specified', () => {
+      const button = mount(<Button />);
+
+      expect(button.text()).toBe('');
+    });
+
+    it('should render the specified text', () => {
+      const text = 'Hello There';
+      const button = mount(<Button>{text}</Button>);
+
+      expect(button.text()).toEqual(text);
+    });
+
+    it('should render the specified children', () => {
+      const text = 'Ok';
+      const button = mount(
+        <Button>
+          <label>{text}</label>
+        </Button>
       );
+
+      expect(button.find('label')).toBeTruthy();
+    });
+  });
+
+  describe('Interaction', () => {
+    it('should execute action on click', () => {
+      const button = mount(<Button onClick={() => window.alert('hello')} />);
+
+      window.alert = jest.fn();
+      button.simulate('click');
+      expect(window.alert).toHaveBeenCalledTimes(1);
+      expect(window.alert).toHaveBeenCalledWith('hello');
+    });
+
+    it('should not execute action on click when the button is disabled', () => {
+      const button = mount(
+        <Button onClick={() => window.alert('hello')} disabled />
+      );
+
+      window.alert = jest.fn();
+      button.simulate('click');
+      expect(window.alert).toHaveBeenCalledTimes(0);
     });
   });
 });

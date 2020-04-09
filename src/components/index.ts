@@ -6,9 +6,7 @@ export { TextInput } from './text-input/TextInput';
 export { Alert } from './alert/Alert';
 export { AlertSeverity } from './alert/types';
 export { default as Button } from './button/Button';
-export { default as BaseButton } from './button/base/BaseButton';
 export * from './tooltip/types';
-export * from './button/types';
 export {
   default as QuickActionsMenu
 } from './quick-actions-menu/QuickActionsMenu';
