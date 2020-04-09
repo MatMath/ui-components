@@ -8,7 +8,7 @@ export interface PasswordStrengthProps {
   /**
    * Any text you want to display under the strength indicator
    */
-  additionalInfo?: string;
+  additionalText?: string;
   /**
    * Score indicating the strength of a password
    * The scale (0 - 4) is based on the levels from the ZXCVBN algorithm
@@ -17,7 +17,7 @@ export interface PasswordStrengthProps {
   /**
    * Wether to display or not the additional info under the strength indicator
    */
-  showAdditionalInfo?: boolean;
+  showAdditionalText?: boolean;
 }
 
 const classNameColorScoreMapping = {
@@ -29,9 +29,9 @@ const classNameColorScoreMapping = {
 };
 
 export const PasswordStrength = ({
-  additionalInfo,
+  additionalText,
   score = 0,
-  showAdditionalInfo
+  showAdditionalText
 }: PasswordStrengthProps) => {
   const strengthClassName = classNameColorScoreMapping[score];
 
@@ -69,8 +69,8 @@ export const PasswordStrength = ({
           )}
         ></span>
       </div>
-      {showAdditionalInfo && additionalInfo && (
-        <span className={styles.additionalInfo}>{additionalInfo}</span>
+      {showAdditionalText && additionalText && (
+        <span className={styles.additionalInfo}>{additionalText}</span>
       )}
     </div>
   );

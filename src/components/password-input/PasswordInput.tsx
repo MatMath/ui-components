@@ -3,12 +3,8 @@ import * as React from 'react';
 import { getClassNames } from '@utility/cssUtils';
 import { HideIcon, RevealIcon } from '@atoms/icons';
 import { midGreen00 } from '@colors';
-import { Tooltip } from 'components';
+import { Tooltip } from '@components';
 
-import {
-  PasswordStrength,
-  PasswordStrengthProps
-} from './subcomponents/PasswordStrength/PasswordStrength';
 import styles from './PasswordInput.module.scss';
 
 type PasswordInputFeedbackType = 'error' | 'warning';
@@ -22,132 +18,91 @@ export interface PasswordInputProps
    */
   feedbackText?: string;
   /**
-   * Some text to display under the input when triggering a feedback type
+   * The feedback nature of the input
    */
   feedbackType?: PasswordInputFeedbackType;
   /**
    * The text that is displayed on hover on the hide icon when the
    * password is shown
-   * @default 'Hide'
    */
-  hidePasswordTooltipText?: string;
+  hidePasswordTooltipText: string;
   /**
    * The label used to describe the field, it's displayed on top.
    * Note that the text will be uppercase
-   * @default 'Password'
    */
   label?: string;
   /**
-   * A function that controls the behavior of the show / hide feature.
-   * You should use that with the `showPassword` property to make a controlled component
+   * A function that is triggered when the password gets revealed
    */
-  onShowHidePassword?: () => void;
+  onShowPassword?: () => void;
   /**
-   * Props for the password strength indicator, see below for better description.
+   * A function that is triggered when the password gets hidden
    */
-  passwordStrengthProps?: PasswordStrengthProps;
-  /**
-   * Boolean triggering the display / hide of the password
-   * @default false
-   */
-  showPassword?: boolean;
-  /**
-   * Password strength indicator (score from 0 to 4)
-   * @default false
-   */
-  showPasswordStrength?: boolean;
+  onHidePassword?: () => void;
   /**
    * The text that is displayed on hover on the reveal icon when the
    * password is hidden
-   * @default 'Reveal'
    */
-  showPasswordTooltipText?: string;
+  showPasswordTooltipText: string;
 }
-
-const shouldShowFeedback = ({
-  feedbackText,
-  feedbackType
-}: PasswordInputProps) => {
-  return feedbackText && feedbackType;
-};
-
-const shouldShowPasswordStrength = ({
-  showPasswordStrength,
-  passwordStrengthProps
-}: PasswordInputProps) => {
-  return showPasswordStrength && passwordStrengthProps;
-};
 
 export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
   const {
     feedbackText,
     feedbackType,
-    hidePasswordTooltipText = 'Hide',
-    label = 'Password',
-    onShowHidePassword,
-    passwordStrengthProps,
-    showPassword = false,
-    showPasswordStrength,
-    showPasswordTooltipText = 'Reveal',
+    hidePasswordTooltipText,
+    label,
+    onShowPassword,
+    onHidePassword,
+    showPasswordTooltipText,
     ...rest
   } = props;
 
-  const [showPasswordState, setShowPasswordState] = React.useState(
-    showPassword
-  );
-
-  React.useEffect(() => {
-    setShowPasswordState(showPassword);
-  }, [props.showPassword]);
+  const [showPassword, setShowPassword] = React.useState(false);
 
   const handleShowPassword = () => {
-    if (onShowHidePassword) {
-      onShowHidePassword();
-    } else {
-      setShowPasswordState(prevState => !prevState);
+    if (showPassword && onShowPassword) {
+      onShowPassword();
+    } else if (!showPassword && onHidePassword) {
+      onHidePassword();
     }
+    setShowPassword(prevState => !prevState);
   };
 
   const styledClassName =
     feedbackType && styles[feedbackType] ? styles[feedbackType] : '';
 
-  const Icon = showPasswordState ? HideIcon : RevealIcon;
+  const RevealOrHideIcon = showPassword ? HideIcon : RevealIcon;
 
   return (
     <div className={styles.root}>
-      <span className={styles.label}>{label}</span>
+      {label && <span className={styles.label}>{label}</span>}
       <div className={styles.container}>
         <input
           {...rest}
-          type={showPasswordState ? 'text' : 'password'}
+          type={showPassword ? 'text' : 'password'}
           className={getClassNames(styles.input, styledClassName)}
         />
-        <span className={styles.icon} onClick={handleShowPassword}>
+        <button className={styles.icon} onClick={handleShowPassword}>
           {rest.disabled ? (
-            <Icon disabled={rest.disabled} />
+            <RevealOrHideIcon disabled={rest.disabled} />
           ) : (
             <Tooltip
               placement='left'
               title={
-                showPasswordState
-                  ? hidePasswordTooltipText
-                  : showPasswordTooltipText
+                showPassword ? hidePasswordTooltipText : showPasswordTooltipText
               }
             >
-              <Icon hoverColor={midGreen00} />
+              <RevealOrHideIcon hoverColor={midGreen00} />
             </Tooltip>
           )}
-        </span>
+        </button>
       </div>
-      {shouldShowFeedback({ feedbackText, feedbackType }) && (
+      {feedbackText && feedbackType && (
         <span className={getClassNames(styles.feedback, styledClassName)}>
           {feedbackText}
         </span>
       )}
-      {shouldShowPasswordStrength({
-        showPasswordStrength,
-        passwordStrengthProps
-      }) && <PasswordStrength {...passwordStrengthProps} />}
     </div>
   );
 };
