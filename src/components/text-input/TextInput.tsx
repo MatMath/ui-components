@@ -3,7 +3,6 @@ import { getClassNames } from '@utility/cssUtils';
 import styles from './TextInput.module.scss';
 
 type TextInputFeedbackType = 'error' | 'warning';
-
 type _ForbiddenProps = 'size' | 'prefix' | 'type';
 
 interface TextInputProps
@@ -11,13 +10,6 @@ interface TextInputProps
   feedbackType?: TextInputFeedbackType;
   feedbackText?: string;
 }
-
-const shouldShowFeedback = (
-  feedbackText: string | undefined,
-  feedbackType: TextInputFeedbackType | undefined
-) => {
-  return feedbackText && feedbackType;
-};
 
 export const TextInput: React.FC<TextInputProps> = ({
   feedbackType,
@@ -34,7 +26,7 @@ export const TextInput: React.FC<TextInputProps> = ({
         className={getClassNames(styles.input, feedbackCssClass)}
         type='text'
       />
-      {shouldShowFeedback(feedbackText, feedbackType) ? (
+      {feedbackText && feedbackType ? (
         <span className={getClassNames(styles.feedback, feedbackCssClass)}>
           {feedbackText}
         </span>
