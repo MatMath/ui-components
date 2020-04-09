@@ -8,12 +8,7 @@ interface ToggleProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const HiddenInput: React.FC<ToggleProps> = props => {
-  const {
-    checked,
-    labelOn: labelon,
-    labelOff: labeloff,
-    ...inputProps
-  } = props;
+  const { checked, defaultChecked, labelOn, labelOff, ...inputProps } = props;
   return (
     <input
       className={styles.hiddenInput}
@@ -65,7 +60,7 @@ export const Toggle: React.FC<ToggleProps> = props => {
         [styles.disabled]: props.disabled
       })}
     >
-      <HiddenInput {...props} onChange={props.onChange} />
+      <HiddenInput {...props} />
       <Groove {...props}>
         <Handle {...props} />
       </Groove>
