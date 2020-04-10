@@ -1,80 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button> Global render should render default 1`] = `
-<Button>
+<Component>
   <button
     className="button primary medium light"
   />
-</Button>
+</Component>
 `;
 
 exports[`<Button> Style properties should render danger nature 1`] = `
-<Button
+<Component
   nature="danger"
 >
   <button
     className="button danger medium light"
   />
-</Button>
+</Component>
 `;
 
 exports[`<Button> Style properties should render danger nature and small size 1`] = `
-<Button
+<Component
   nature="danger"
   size="small"
 >
   <button
     className="button danger small light"
   />
-</Button>
+</Component>
 `;
 
 exports[`<Button> Style properties should render large size 1`] = `
-<Button
+<Component
   size="large"
 >
   <button
     className="button primary large light"
   />
-</Button>
+</Component>
 `;
 
 exports[`<Button> Style properties should render medium size 1`] = `
-<Button
+<Component
   size="medium"
 >
   <button
     className="button primary medium light"
   />
-</Button>
+</Component>
 `;
 
 exports[`<Button> Style properties should render primary nature 1`] = `
-<Button
+<Component
   nature="primary"
 >
   <button
     className="button primary medium light"
   />
-</Button>
+</Component>
 `;
 
 exports[`<Button> Style properties should render secondary nature 1`] = `
-<Button
+<Component
   nature="secondary"
 >
   <button
     className="button secondary medium light"
   />
-</Button>
+</Component>
 `;
 
 exports[`<Button> Style properties should render small size 1`] = `
-<Button
+<Component
   size="small"
 >
   <button
     className="button primary small light"
   />
-</Button>
+</Component>
 `;
