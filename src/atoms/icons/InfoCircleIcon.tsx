@@ -1,7 +1,7 @@
 import * as React from 'react';
-import SvgWrapper from '@ions/icon/wrapper/SvgWrapper';
+import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
 
-const InfoCircleIcon: React.FunctionComponent<
+export const InfoCircleIcon: React.FunctionComponent<
   import('../../ions/icon/types').IconProps
 > = (props: import('../../ions/icon/types').IconProps): JSX.Element => (
   <SvgWrapper {...props}>
@@ -12,5 +12,3 @@ const InfoCircleIcon: React.FunctionComponent<
     </React.Fragment>
   </SvgWrapper>
 );
-
-export default InfoCircleIcon;

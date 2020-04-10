@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { StyledText } from '@ions/text/StyledText';
 import styled from 'styled-components';
+import { StyledText } from '@ions/text/StyledText';
 import { dashGreen00, dashGreen06 } from '@colors';
 
 interface Props {
@@ -29,7 +29,7 @@ const Wrapper = styled.button`
   }
 `;
 
-const DropdownElement: React.FC<Props> = props => {
+export const DropdownElement: React.FC<Props> = props => {
   return (
     <Wrapper
       type='button'
@@ -40,5 +40,3 @@ const DropdownElement: React.FC<Props> = props => {
     </Wrapper>
   );
 };
-
-export default DropdownElement;

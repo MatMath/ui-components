@@ -12,7 +12,7 @@ const getHeight = ({ height, size }: Props) => `${size || height || 20}px`;
 const getColor = (propName: ColorProps = 'color') => (props: Props): string =>
   props.animated ? 'none' : props[propName] || props['color'] || dashGreen00;
 
-const Icon = styled.svg.attrs<Props>(({ viewBox }: Props) => ({
+export const Icon = styled.svg.attrs<Props>(({ viewBox }: Props) => ({
   viewBox: viewBox || '0 0 20 20',
   version: '1.1',
   xmlns: 'http://www.w3.org/2000/svg'
@@ -34,5 +34,3 @@ const Icon = styled.svg.attrs<Props>(({ viewBox }: Props) => ({
     fill: ${getColor('activeColor')};
   }
 `;
-
-export default Icon;

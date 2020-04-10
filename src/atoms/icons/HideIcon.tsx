@@ -1,7 +1,7 @@
 import * as React from 'react';
-import SvgWrapper from '@ions/icon/wrapper/SvgWrapper';
+import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
 
-const HideIcon: React.FunctionComponent<
+export const HideIcon: React.FunctionComponent<
   import('../../ions/icon/types').IconProps
 > = (props: import('../../ions/icon/types').IconProps): JSX.Element => (
   <SvgWrapper {...props}>
@@ -20,5 +20,3 @@ const HideIcon: React.FunctionComponent<
     </React.Fragment>
   </SvgWrapper>
 );
-
-export default HideIcon;

@@ -5,7 +5,7 @@ exports[`<Button> Global render should render 1`] = `
   <div>
     Dropdwon Menu controller
   </div>
-  <DropdownMenu
+  <Component
     controllerRef={
       Object {
         "current": <div>
@@ -136,7 +136,7 @@ exports[`<Button> Global render should render 1`] = `
               <div
                 className="sc-bdVaJa kurQmA"
               >
-                <DropdownElement
+                <Component
                   onClick={[Function]}
                 >
                   <styled.button
@@ -237,8 +237,8 @@ exports[`<Button> Global render should render 1`] = `
                       </button>
                     </StyledComponent>
                   </styled.button>
-                </DropdownElement>
-                <DropdownElement
+                </Component>
+                <Component
                   onClick={[Function]}
                 >
                   <styled.button
@@ -339,13 +339,13 @@ exports[`<Button> Global render should render 1`] = `
                       </button>
                     </StyledComponent>
                   </styled.button>
-                </DropdownElement>
+                </Component>
               </div>
             </StyledComponent>
           </styled.div>
         </div>
       </StyledComponent>
     </styled.div>
-  </DropdownMenu>
+  </Component>
 </div>
 `;

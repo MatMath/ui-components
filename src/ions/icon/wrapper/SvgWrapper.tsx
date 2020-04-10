@@ -1,12 +1,13 @@
 import * as React from 'react';
-import Icon from '@ions/icon/base/Icon';
+import { Icon } from '@ions/icon/base/Icon';
 import { Props } from '@ions/icon/types';
 
 const isAnimatedSvg = (children: React.ReactElement[]) =>
   !!Array.from<React.ReactElement>(children).find(
     child => child.type === 'animateTransform'
   );
-const SvgWrapper: React.FunctionComponent<Props> = ({
+
+export const SvgWrapper: React.FunctionComponent<Props> = ({
   title,
   children,
   ...props
@@ -22,5 +23,3 @@ const SvgWrapper: React.FunctionComponent<Props> = ({
     </Icon>
   );
 };
-
-export default SvgWrapper;

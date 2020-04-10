@@ -6,7 +6,7 @@ interface Props {
   className?: string;
 }
 
-const DropdownCard = styled.div<Props>`
+export const DropdownCard = styled.div<Props>`
   display: flex;
   flex-direction: column;
   background-color: ${white};
@@ -17,5 +17,3 @@ const DropdownCard = styled.div<Props>`
   max-height: ${props => props.maxHeight || 100}px;
   overflow-y: scroll;
 `;
-
-export default DropdownCard;

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import DropdownCard from './subcomponents/DropdownCard';
 import styled from 'styled-components';
+import { DropdownCard } from './subcomponents/DropdownCard';
 import { DockingSide, Placement } from './types';
 import {
   getControllerAndMenuDimensions,
@@ -21,6 +21,7 @@ interface Props {
   containerRef?: React.RefObject<HTMLElement>;
   menuClassName?: string;
 }
+
 export interface MenuWrapperProps {
   placement: Placement;
   dockingSide: DockingSide;
@@ -37,7 +38,7 @@ const MenuWrapper = styled.div<MenuWrapperProps>`
 const DEFAULT_PLACEMENT = 'bottom';
 const POSSIBLE_PLACEMENTS: Placement[] = ['top', 'bottom'];
 
-const DropdownMenu: React.FC<Props> = props => {
+export const DropdownMenu: React.FC<Props> = props => {
   const [placement, setPlacement] = React.useState<Placement | null>(null);
   const menuRef = React.useRef<HTMLDivElement>(null);
   const prevIsOpen = React.useRef(false);
@@ -96,5 +97,3 @@ const DropdownMenu: React.FC<Props> = props => {
     </>
   );
 };
-
-export default DropdownMenu;

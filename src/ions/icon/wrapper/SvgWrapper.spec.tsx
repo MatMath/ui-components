@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import SvgWrapper from './SvgWrapper';
+import { SvgWrapper } from './SvgWrapper';
 
 describe('<SvgIcon>', () => {
   describe('global render', () => {
