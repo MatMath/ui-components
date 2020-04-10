@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button> Global render should render default 1`] = `
-<Button
-  nature="primary"
-  size="medium"
-  theme="light"
->
+<Button>
   <button
     className="button primary medium light"
   />
@@ -15,8 +11,6 @@ exports[`<Button> Global render should render default 1`] = `
 exports[`<Button> Style properties should render danger nature 1`] = `
 <Button
   nature="danger"
-  size="medium"
-  theme="light"
 >
   <button
     className="button danger medium light"
@@ -28,7 +22,6 @@ exports[`<Button> Style properties should render danger nature and small size 1`
 <Button
   nature="danger"
   size="small"
-  theme="light"
 >
   <button
     className="button danger small light"
@@ -38,9 +31,7 @@ exports[`<Button> Style properties should render danger nature and small size 1`
 
 exports[`<Button> Style properties should render large size 1`] = `
 <Button
-  nature="primary"
   size="large"
-  theme="light"
 >
   <button
     className="button primary large light"
@@ -50,9 +41,7 @@ exports[`<Button> Style properties should render large size 1`] = `
 
 exports[`<Button> Style properties should render medium size 1`] = `
 <Button
-  nature="primary"
   size="medium"
-  theme="light"
 >
   <button
     className="button primary medium light"
@@ -63,8 +52,6 @@ exports[`<Button> Style properties should render medium size 1`] = `
 exports[`<Button> Style properties should render primary nature 1`] = `
 <Button
   nature="primary"
-  size="medium"
-  theme="light"
 >
   <button
     className="button primary medium light"
@@ -75,8 +62,6 @@ exports[`<Button> Style properties should render primary nature 1`] = `
 exports[`<Button> Style properties should render secondary nature 1`] = `
 <Button
   nature="secondary"
-  size="medium"
-  theme="light"
 >
   <button
     className="button secondary medium light"
@@ -86,9 +71,7 @@ exports[`<Button> Style properties should render secondary nature 1`] = `
 
 exports[`<Button> Style properties should render small size 1`] = `
 <Button
-  nature="primary"
   size="small"
-  theme="light"
 >
   <button
     className="button primary small light"
