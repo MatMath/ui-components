@@ -22,16 +22,16 @@ describe('<Toggle>', () => {
     });
 
     it('should render with labelOn', () => {
-      const labelOn = 'On';
-      const toggle = mount(<Toggle labelOn={labelOn} checked />);
-      expect(toggle.find('span').text()).toEqual(labelOn);
+      const labelChecked = 'On';
+      const toggle = mount(<Toggle labelChecked={labelChecked} checked />);
+      expect(toggle.find('span').text()).toEqual(labelChecked);
       expect(toggle).toMatchSnapshot();
     });
 
     it('should render with labelOff', () => {
-      const labelOff = 'Off';
-      const toggle = mount(<Toggle labelOff={labelOff} />);
-      expect(toggle.find('span').text()).toEqual(labelOff);
+      const labelUnchecked = 'Off';
+      const toggle = mount(<Toggle labelUnchecked={labelUnchecked} />);
+      expect(toggle.find('span').text()).toEqual(labelUnchecked);
       expect(toggle).toMatchSnapshot();
     });
   });

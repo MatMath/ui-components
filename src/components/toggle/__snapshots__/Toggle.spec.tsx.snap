@@ -21,14 +21,12 @@ exports[`<Toggle> Global render should render checked 1`] = `
     </HiddenInput>
     <Groove
       checked={true}
-      defaultChecked={true}
     >
       <div
         className="groove checked"
       >
         <Handle
           checked={true}
-          defaultChecked={true}
         >
           <div
             className="handle checked"
@@ -38,7 +36,6 @@ exports[`<Toggle> Global render should render checked 1`] = `
     </Groove>
     <Label
       checked={true}
-      defaultChecked={true}
     />
   </label>
 </Component>
@@ -102,37 +99,29 @@ exports[`<Toggle> Global render should render disabled 1`] = `
         </Handle>
       </div>
     </Groove>
-    <Label
-      disabled={true}
-    />
+    <Label />
   </label>
 </Component>
 `;
 
 exports[`<Toggle> Global render should render with labelOff 1`] = `
 <Component
-  labelOff="Off"
+  labelUnchecked="Off"
 >
   <label
     className="root"
   >
-    <HiddenInput
-      labelOff="Off"
-    >
+    <HiddenInput>
       <input
         className="hiddenInput"
         type="checkbox"
       />
     </HiddenInput>
-    <Groove
-      labelOff="Off"
-    >
+    <Groove>
       <div
         className="groove"
       >
-        <Handle
-          labelOff="Off"
-        >
+        <Handle>
           <div
             className="handle"
           />
@@ -140,7 +129,7 @@ exports[`<Toggle> Global render should render with labelOff 1`] = `
       </div>
     </Groove>
     <Label
-      labelOff="Off"
+      labelUnchecked="Off"
     >
       <span
         className="text"
@@ -155,14 +144,13 @@ exports[`<Toggle> Global render should render with labelOff 1`] = `
 exports[`<Toggle> Global render should render with labelOn 1`] = `
 <Component
   checked={true}
-  labelOn="On"
+  labelChecked="On"
 >
   <label
     className="root checked"
   >
     <HiddenInput
       checked={true}
-      labelOn="On"
     >
       <input
         checked={true}
@@ -172,14 +160,12 @@ exports[`<Toggle> Global render should render with labelOn 1`] = `
     </HiddenInput>
     <Groove
       checked={true}
-      labelOn="On"
     >
       <div
         className="groove checked"
       >
         <Handle
           checked={true}
-          labelOn="On"
         >
           <div
             className="handle checked"
@@ -189,7 +175,7 @@ exports[`<Toggle> Global render should render with labelOn 1`] = `
     </Groove>
     <Label
       checked={true}
-      labelOn="On"
+      labelChecked="On"
     >
       <span
         className="text"

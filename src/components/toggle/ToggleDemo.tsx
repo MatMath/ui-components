@@ -6,8 +6,8 @@ export const ToggleDemo = () => {
   return (
     <div>
       <Toggle
-        labelOn='Activated'
-        labelOff='Deactivated'
+        labelChecked='Activated'
+        labelUnchecked='Deactivated'
         checked={isChecked}
         onChange={e => setIsChecked(e.currentTarget.checked)}
       />

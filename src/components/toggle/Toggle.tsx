@@ -3,53 +3,74 @@ import { getClassNames } from '@utility/cssUtils';
 import styles from './Toggle.module.scss';
 
 interface ToggleProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  labelOff?: string;
-  labelOn?: string;
+  labelUnchecked?: string;
+  labelChecked?: string;
 }
 
-const HiddenInput: React.FC<ToggleProps> = props => {
-  // const { checked, defaultChecked, labelOn, labelOff, ...inputProps } = props;
-  const { labelOn, labelOff, ...inputProps } = props;
-  return (
-    <input className={styles.hiddenInput} type='checkbox' {...inputProps} />
-    // defaultChecked={checked}
-  );
+interface GrooveProps {
+  checked?: boolean;
+  disabled?: boolean;
+}
+
+interface HandleProps {
+  checked?: boolean;
+  disabled?: boolean;
+}
+
+interface LabelProps {
+  checked?: boolean;
+  labelUnchecked?: string;
+  labelChecked?: string;
+}
+
+const HiddenInput: React.FC<
+  React.InputHTMLAttributes<HTMLInputElement>
+> = props => {
+  return <input className={styles.hiddenInput} type='checkbox' {...props} />;
 };
 
-const Groove: React.FC<ToggleProps> = props => {
+const Groove: React.FC<GrooveProps> = ({ checked, disabled, children }) => {
   return (
     <div
       className={getClassNames(styles.groove, {
-        [styles.checked]: props.checked,
-        [styles.disabled]: props.disabled
+        [styles.checked]: checked,
+        [styles.disabled]: disabled
       })}
     >
-      {props.children}
+      {children}
     </div>
   );
 };
 
-const Handle: React.FC<ToggleProps> = props => {
+const Handle: React.FC<HandleProps> = ({ checked, disabled }) => {
   return (
     <div
       className={getClassNames(styles.handle, {
-        [styles.checked]: props.checked,
-        [styles.disabled]: props.disabled
+        [styles.checked]: checked,
+        [styles.disabled]: disabled
       })}
     />
   );
 };
 
-const Label: React.FC<ToggleProps> = props => {
-  return (props.checked && props.labelOn) ||
-    (!props.checked && props.labelOff) ? (
+const Label: React.FC<LabelProps> = ({
+  checked,
+  labelChecked,
+  labelUnchecked
+}) => {
+  const isLabelCheckedVisible = checked && labelChecked;
+  const isLabelUncheckedVisible = !checked && labelUnchecked;
+
+  return isLabelCheckedVisible || isLabelUncheckedVisible ? (
     <span className={styles.text}>
-      {props.checked ? props.labelOn : props.labelOff}
+      {checked ? labelChecked : labelUnchecked}
     </span>
   ) : null;
 };
 
 export const Toggle: React.FC<ToggleProps> = props => {
+  const { labelChecked, labelUnchecked, ...hiddenInputProps } = props;
+
   return (
     <label
       className={getClassNames(styles.root, {
@@ -57,11 +78,15 @@ export const Toggle: React.FC<ToggleProps> = props => {
         [styles.disabled]: props.disabled
       })}
     >
-      <HiddenInput {...props} />
-      <Groove {...props}>
-        <Handle {...props} />
+      <HiddenInput {...hiddenInputProps} />
+      <Groove checked={props.checked} disabled={props.disabled}>
+        <Handle checked={props.checked} disabled={props.disabled} />
       </Groove>
-      <Label {...props} />
+      <Label
+        checked={props.checked}
+        labelUnchecked={labelUnchecked}
+        labelChecked={labelChecked}
+      />
     </label>
   );
 };
