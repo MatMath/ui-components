@@ -3,19 +3,16 @@
 exports[`<Toggle> Global render should render checked 1`] = `
 <Component
   checked={true}
-  defaultChecked={true}
 >
   <label
     className="root checked"
   >
     <HiddenInput
       checked={true}
-      defaultChecked={true}
     >
       <input
         checked={true}
         className="hiddenInput"
-        defaultChecked={true}
         type="checkbox"
       />
     </HiddenInput>
@@ -95,6 +92,33 @@ exports[`<Toggle> Global render should render disabled 1`] = `
         >
           <div
             className="handle disabled"
+          />
+        </Handle>
+      </div>
+    </Groove>
+    <Label />
+  </label>
+</Component>
+`;
+
+exports[`<Toggle> Global render should render unchecked 1`] = `
+<Component>
+  <label
+    className="root"
+  >
+    <HiddenInput>
+      <input
+        className="hiddenInput"
+        type="checkbox"
+      />
+    </HiddenInput>
+    <Groove>
+      <div
+        className="groove"
+      >
+        <Handle>
+          <div
+            className="handle"
           />
         </Handle>
       </div>

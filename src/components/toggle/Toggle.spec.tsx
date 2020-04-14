@@ -16,8 +16,14 @@ describe('<Toggle>', () => {
     });
 
     it('should render checked', () => {
-      const toggle = mount(<Toggle checked defaultChecked />);
+      const toggle = mount(<Toggle checked />);
       expect(toggle.props().checked).toEqual(true);
+      expect(toggle).toMatchSnapshot();
+    });
+
+    it('should render unchecked', () => {
+      const toggle = mount(<Toggle />);
+      expect(toggle.props().checked).toEqual(false || undefined);
       expect(toggle).toMatchSnapshot();
     });
 

@@ -25,33 +25,29 @@ interface LabelProps {
 
 const HiddenInput: React.FC<
   React.InputHTMLAttributes<HTMLInputElement>
-> = props => {
-  return <input className={styles.hiddenInput} type='checkbox' {...props} />;
-};
+> = props => (
+  <input className={styles.hiddenInput} type='checkbox' {...props} />
+);
 
-const Groove: React.FC<GrooveProps> = ({ checked, disabled, children }) => {
-  return (
-    <div
-      className={getClassNames(styles.groove, {
-        [styles.checked]: checked,
-        [styles.disabled]: disabled
-      })}
-    >
-      {children}
-    </div>
-  );
-};
+const Groove: React.FC<GrooveProps> = ({ checked, disabled, children }) => (
+  <div
+    className={getClassNames(styles.groove, {
+      [styles.checked]: checked,
+      [styles.disabled]: disabled
+    })}
+  >
+    {children}
+  </div>
+);
 
-const Handle: React.FC<HandleProps> = ({ checked, disabled }) => {
-  return (
-    <div
-      className={getClassNames(styles.handle, {
-        [styles.checked]: checked,
-        [styles.disabled]: disabled
-      })}
-    />
-  );
-};
+const Handle: React.FC<HandleProps> = ({ checked, disabled }) => (
+  <div
+    className={getClassNames(styles.handle, {
+      [styles.checked]: checked,
+      [styles.disabled]: disabled
+    })}
+  />
+);
 
 const Label: React.FC<LabelProps> = ({
   checked,
