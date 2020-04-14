@@ -26,7 +26,7 @@ module.exports = plop => {
         unique: true,
         pattern: /(\/\*-- EXPORT ICON COMPONENTS --\*\/)/gi,
         template:
-          "export { default as {{pascalCase name}}Icon } from './{{pascalCase name}}Icon';"
+          "export { {{pascalCase name}}Icon } from './{{pascalCase name}}Icon';"
       }
     ]
   });
