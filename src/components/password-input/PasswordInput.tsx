@@ -55,7 +55,7 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
     onShowPassword,
     onHidePassword,
     showPasswordTooltipText,
-    ...rest
+    ...prop
   } = props;
 
   const [showPassword, setShowPassword] = React.useState(false);
@@ -79,13 +79,13 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
       {label && <span className={styles.label}>{label}</span>}
       <div className={styles.container}>
         <input
-          {...rest}
+          {...prop}
           type={showPassword ? 'text' : 'password'}
           className={getClassNames(styles.input, styledClassName)}
         />
         <button className={styles.icon} onClick={handleShowPassword}>
-          {rest.disabled ? (
-            <RevealOrHideIcon disabled={rest.disabled} />
+          {prop.disabled ? (
+            <RevealOrHideIcon disabled={prop.disabled} />
           ) : (
             <Tooltip
               placement='left'
