@@ -9,13 +9,19 @@ import replace from '@rollup/plugin-replace';
 
 const config = {
   input: 'src/index.ts',
+  /**
+   * When preserveModules is set to true, rollup mimics the file structure.
+   * Therefore, the .js files will be created in /lib/src. Move them back to /lib
+   * This also makes some modules "virtual" and put them into a special folder.
+   * We therefore need to update the referenced path as well
+   */
   preserveModules: true,
   external: [
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {})
   ],
   plugins: [
-    /** SCSS transformation step. Compiles into CSS modules and minify outpyt */
+    /** SCSS transformation step. Compiles into CSS modules and minify output */
     postcss({
       extract: false,
       plugins: [autoprefixer()],
@@ -26,12 +32,6 @@ const config = {
       objectHashIgnoreUnknownHack: true
     }),
     json({ preferConst: true }),
-    /**
-     * When preserveModules is set to true, rollup mimics the file structure.
-     * Therefore, the .js files will be created in /lib/src. Move them back to /lib
-     * This also makes some modules "virtual" and put them into a special folder.
-     * We therefore need to update the referenced path as well
-     */
     replace({
       '../_virtual/': '_virtual/',
       delimiters: ['', '']
