@@ -1,3 +1,11 @@
+# [1.7.0](https://github.com/Dashlane/ui-components/compare/v1.6.0...v1.7.0) (2020-04-14)
+
+
+### Features
+
+* remove cursor:pointer from icons ([824a2fa](https://github.com/Dashlane/ui-components/commit/824a2fad9415da66204e1f0b731ff4e4d34dba88))
+* set default icon color to [#0](https://github.com/Dashlane/ui-components/issues/0)E353D ([3f9ca17](https://github.com/Dashlane/ui-components/commit/3f9ca17a92a9ade6c8861f889372aef353267bc2)), closes [#0E353](https://github.com/Dashlane/ui-components/issues/0E353)
+
 # [1.6.0](https://github.com/Dashlane/ui-components/compare/v1.5.0...v1.6.0) (2020-04-06)
 
 
