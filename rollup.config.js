@@ -36,9 +36,13 @@ const config = {
       '../_virtual/': '_virtual/',
       delimiters: ['', '']
     }),
+    replace({
+      '../node_modules/style-inject/': 'style-inject/',
+      delimiters: ['', '']
+    }),
     renameExtensions({
       include: ['**/*'],
-      map: name => name.replace('src/', '')
+      map: name => name.replace(/(src\/|node_modules\/)/, '')
     })
   ],
   output: [{ dir: 'lib', format: 'esm', sourcemap: true }]
