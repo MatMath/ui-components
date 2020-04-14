@@ -2,11 +2,11 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-You can find step by step guides to add components:
+You can find step by step guides to add components 🧱, colors 🎨 and icons 🖼:
 
-- [Adding an color](./documentation/COLOR_STEPBYSTEP.md)
-- [Adding an icon](./documentation/ICON_STEPBYSTEP.md)
-- [Adding a component](./documentation/COMPONENT_STEPBYSTEPGUIDE.md)
+- [Adding a component](./documentation/COMPONENT_STEPBYSTEPGUIDE.md) 🧱
+- [Adding a color](./documentation/COLOR_STEPBYSTEP.md) 🎨
+- [Adding an icon](./documentation/ICON_STEPBYSTEP.md) 🖼
 
 ### Prerequisites
 
@@ -20,6 +20,14 @@ You need to install on your machine :
   - [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
   - [Vim plugin](https://github.com/editorconfig/editorconfig-vim)
   - WebStorm supports it natively.
+- Scss intellisense
+  - [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-scss)
+  - [Vim plugin](https://github.com/cakebaker/scss-syntax.vim)
+  - [IntelliJ plugin](https://plugins.jetbrains.com/plugin/7530-scss-lint)
+- MDX syntax highlighting
+  - [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx)
+  - [Vim plugin](https://github.com/findango/vim-mdx)
+  - [IntelliJ plugin](https://youtrack.jetbrains.com/issue/WEB-32599)
 
 ### Installing
 

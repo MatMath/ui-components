@@ -4,13 +4,13 @@ Are you working on a feature that requires a new component? Do you want to migra
 
 ## Add your component
 
-1. As a first step, create a folder for your component under [src/components](../src/components).
+1. As a first step, create a folder for your component under [src/components](../src/components). Naming convention for folder is [kebab-case](https://en.wiktionary.org/wiki/kebab_case).
 
 ```
-src/components/Button
+src/components/my-button
 ```
 
-2. Create a file for your component `Button.tsx`
+2. Create a file for your component `Button.tsx`. Naming convention for files is [PascalCase](https://en.wiktionary.org/wiki/Pascal_case#English).
 3. Add a props interface and a functional component implementation.
 
 ```typescript jsx
@@ -91,20 +91,20 @@ export const Button = (props: ButtonProps) => {
 }
 ```
 
-5. 🎨 Let's style your component. Add classNames to elements in your component. You can use `getClassNames` in `src/utility/cssUtils.ts` to build a className based on props. Import `styles` from the `.module.scss` to navigate the stylesheet as a javascript object
+5. Let's style your component 🎨. Add classNames to elements in your component. You can use `getClassNames` in `src/utility/cssUtils.ts` to build a className based on props. Import `styles` from the `.module.scss` to navigate the stylesheet as a javascript object
 
 ```typescript jsx
 import {getClassNames} from '@utility/cssUtils'
 import styles from './Button.module.scss'
 
 export const Button = (props: ButtonProps) => {
-  return <button {getClassNames(styles.button, styeles[props.size ?? "medium"]) {...props}></button>;
+  return <button {getClassNames(styles.button, styles[props.size ?? "medium"]) {...props}></button>;
 };
 ```
 
 6. You are almost done! Add a documentation file (`docz` file): create a `Button.mdx` file and add your component description
 
-```mdx
+```md
 ---
 name: Button
 menu: Components
@@ -128,14 +128,14 @@ A button component
 Examples below show usage of the Button
 
 <Playground
-  style={{
+style={{
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around'
-  }}
->
+  }}>
+
   <Button />
-  
+
   <Button size='small' />
 
   <Button nature='large'/>
