@@ -2,6 +2,7 @@ import * as React from 'react';
 import { mount } from 'enzyme';
 import 'jest-styled-components';
 import { Icon } from './Icon';
+import { dashGreen00 } from '@colors';
 
 describe('<Icon>', () => {
   describe('global render', () => {
