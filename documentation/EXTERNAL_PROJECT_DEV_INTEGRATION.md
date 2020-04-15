@@ -1,4 +1,4 @@
-# Use local dev version inside your project
+# Using a local dev version inside your project
 
 When you want to try some changes you've made on a local version in your project, there's an extra step required to ensure there won't be any React conflict between the 2 projects.
 
@@ -28,5 +28,5 @@ yarn link
 # inside the other project
 yarn link @dashlane/ui-components
 
-# Then build your project...
+# Then build / test your project...
 ```
