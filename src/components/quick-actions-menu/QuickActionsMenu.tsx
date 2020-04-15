@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { Button } from '@components/button/Button';
-import DropdownMenu from '@components/dropdown/DropdownMenu';
-import Tooltip from '@components/tooltip/Tooltip';
+import { DropdownMenu } from '@components/dropdown/DropdownMenu';
+import { Tooltip } from '@components/tooltip/Tooltip';
 import { dashGreen00 } from '@colors';
 
 interface Props {
@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const QuickActionsMenu: React.FC<Props> = props => {
+export const QuickActionsMenu: React.FC<Props> = props => {
   const controllerRef = React.useRef<HTMLDivElement>(null);
 
   return (
@@ -61,5 +61,3 @@ const QuickActionsMenu: React.FC<Props> = props => {
     </Wrapper>
   );
 };
-
-export default QuickActionsMenu;

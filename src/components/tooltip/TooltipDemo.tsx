@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Tooltip from '@components/tooltip/Tooltip';
+import { Tooltip } from '@components/tooltip/Tooltip';
 
 interface Props {
   item: number;
@@ -69,7 +69,7 @@ class ItemWithTooltip extends React.Component<
   }
 }
 
-class TooltipDemo extends React.Component<
+export class TooltipDemo extends React.Component<
   {},
   { ref: React.RefObject<HTMLUListElement> }
 > {
@@ -105,5 +105,3 @@ class TooltipDemo extends React.Component<
     );
   }
 }
-
-export default TooltipDemo;

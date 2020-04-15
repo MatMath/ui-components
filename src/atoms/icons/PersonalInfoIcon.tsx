@@ -1,7 +1,7 @@
 import * as React from 'react';
-import SvgWrapper from '@ions/icon/wrapper/SvgWrapper';
+import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
 
-const PersonalInfoIcon: React.FunctionComponent<
+export const PersonalInfoIcon: React.FunctionComponent<
   import('../../ions/icon/types').IconProps
 > = (props: import('../../ions/icon/types').IconProps): JSX.Element => (
   <SvgWrapper {...props}>
@@ -15,5 +15,3 @@ const PersonalInfoIcon: React.FunctionComponent<
     </React.Fragment>
   </SvgWrapper>
 );
-
-export default PersonalInfoIcon;

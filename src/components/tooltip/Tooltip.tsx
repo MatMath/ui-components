@@ -113,7 +113,7 @@ const TooltipWrapper = styled.span<WrapperProps>`
   }
 `;
 
-class Tooltip extends React.PureComponent<Props, State> {
+export class Tooltip extends React.PureComponent<Props, State> {
   private ref: React.RefObject<HTMLElement> = React.createRef();
   private coordinates: { top: number | null; left: number | null };
   private readonly tooltipPossiblePlacements: Placement[] = [];
@@ -222,5 +222,3 @@ class Tooltip extends React.PureComponent<Props, State> {
     );
   }
 }
-
-export default Tooltip;

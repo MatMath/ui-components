@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import DropdownMenu from './DropdownMenu';
-import DropdownElement from './DropdownElement';
+import { DropdownMenu } from './DropdownMenu';
+import { DropdownElement } from './DropdownElement';
 
 describe('<Button>', () => {
   describe('Global render', () => {

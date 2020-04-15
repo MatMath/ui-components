@@ -1,7 +1,7 @@
 import * as React from 'react';
-import SvgWrapper from '@ions/icon/wrapper/SvgWrapper';
+import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
 
-const PhoneIcon: React.FunctionComponent<
+export const PhoneIcon: React.FunctionComponent<
   import('../../ions/icon/types').IconProps
 > = (props: import('../../ions/icon/types').IconProps): JSX.Element => (
   <SvgWrapper {...props}>
@@ -10,5 +10,3 @@ const PhoneIcon: React.FunctionComponent<
     </React.Fragment>
   </SvgWrapper>
 );
-
-export default PhoneIcon;

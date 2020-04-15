@@ -1,7 +1,7 @@
 import * as React from 'react';
-import SvgWrapper from '@ions/icon/wrapper/SvgWrapper';
+import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
 
-const ShieldFlagIcon: React.FunctionComponent<
+export const ShieldFlagIcon: React.FunctionComponent<
   import('../../ions/icon/types').IconProps
 > = (props: import('../../ions/icon/types').IconProps): JSX.Element => (
   <SvgWrapper {...props}>
@@ -15,5 +15,3 @@ const ShieldFlagIcon: React.FunctionComponent<
     </React.Fragment>
   </SvgWrapper>
 );
-
-export default ShieldFlagIcon;
