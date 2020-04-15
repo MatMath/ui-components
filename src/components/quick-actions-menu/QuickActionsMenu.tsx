@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Button } from '@atoms';
-import { DropdownMenu, Tooltip } from '@components';
 import styled from 'styled-components';
+import { Button } from '@components/button/Button';
+import DropdownMenu from '@components/dropdown/DropdownMenu';
+import Tooltip from '@components/tooltip/Tooltip';
 import { dashGreen00 } from '@colors';
 
 interface Props {

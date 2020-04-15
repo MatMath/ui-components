@@ -5,6 +5,7 @@ export { default as Tooltip } from './tooltip/Tooltip';
 export { TextInput } from './text-input/TextInput';
 export { Alert } from './alert/Alert';
 export { AlertSeverity } from './alert/types';
+export { Button } from './button/Button';
 export * from './tooltip/types';
 export {
   default as QuickActionsMenu

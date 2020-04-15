@@ -1,0 +1,186 @@
+@use '../../colors/colors';
+@use '../../typography/typography';
+
+.button {
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 4px;
+  font-family: Public Sans;
+  justify-content: center;
+  outline: none;
+  transition: all 0.15s;
+  min-width: 60px;
+  cursor: pointer;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  /* Size */
+
+  &.small {
+    padding: 8px 16px;
+    height: 32px;
+    @include typography.body-small;
+  }
+
+  &.medium {
+    padding: 10px 16px;
+    height: 40px;
+    @include typography.body-medium;
+  }
+
+  &.large {
+    padding: 14px 24px;
+    height: 48px;
+    @include typography.body-medium;
+  }
+
+  /* Colors based on Nature and Theme */
+
+  &.light {
+    &.primary {
+      color: colors.$white;
+      background-color: colors.$mid-green-00;
+      border-color: colors.$mid-green-00;
+
+      &:focus,
+      &:hover:enabled {
+        background-color: colors.$dash-green-00;
+        border-color: colors.$dash-green-00;
+      }
+
+      &:active:enabled {
+        background-color: colors.$dash-darker-green-00;
+        border-color: colors.$dash-darker-green-00;
+      }
+    }
+
+    &.secondary {
+      color: colors.$mid-green-00;
+      background-color: rgba(colors.$mid-green-04, 0);
+      border-color: colors.$mid-green-04;
+
+      &:focus,
+      &:hover:enabled {
+        color: colors.$dash-green-00;
+        background-color: colors.$mid-green-04;
+        border-color: colors.$mid-green-04;
+      }
+
+      &:active:enabled {
+        color: colors.$dash-green-00;
+        background-color: colors.$mid-green-03;
+        border-color: colors.$mid-green-03;
+      }
+    }
+
+    &.danger {
+      color: colors.$white;
+      background-color: colors.$functional-red-02;
+      border-color: colors.$functional-red-02;
+
+      &:focus,
+      &:hover:enabled {
+        background-color: colors.$functional-red-01;
+        border-color: colors.$functional-red-01;
+      }
+
+      &:active:enabled {
+        background-color: colors.$functional-red-00;
+        border-color: colors.$functional-red-00;
+      }
+    }
+
+    &.ghost {
+      color: colors.$mid-green-00;
+      background-color: transparent;
+      border-color: transparent;
+
+      &:focus,
+      &:hover:enabled {
+        color: colors.$dash-green-00;
+      }
+
+      &:active:enabled {
+        color: colors.$dash-darker-green-00;
+      }
+    }
+  }
+
+  &.dark {
+    &.primary {
+      color: colors.$dash-green-00;
+      background-color: colors.$white;
+      border-color: colors.$white;
+
+      &:focus,
+      &:hover:enabled {
+        background-color: colors.$mid-green-03;
+        border-color: colors.$mid-green-03;
+      }
+
+      &:active:enabled {
+        background-color: colors.$mid-green-01;
+        border-color: colors.$mid-green-01;
+      }
+    }
+
+    &.secondary {
+      color: colors.$white;
+      background-color: rgba(colors.$dash-green-01, 0);
+      border-color: colors.$dash-green-01;
+
+      &:focus,
+      &:hover:enabled {
+        color: colors.$white;
+        background-color: colors.$dash-green-01;
+        border-color: colors.$dash-green-01;
+      }
+
+      &:active:enabled {
+        color: colors.$white;
+        background-color: colors.$dash-green-02;
+        border-color: colors.$dash-green-02;
+      }
+    }
+
+    &.ghost {
+      color: colors.$white;
+      background-color: transparent;
+      border-color: transparent;
+
+      &:focus,
+      &:hover:enabled {
+        color: colors.$mid-green-02;
+      }
+
+      &:active:enabled {
+        color: colors.$mid-green-00;
+      }
+    }
+  }
+
+  /* Disabled pseudo-state */
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    * {
+      pointer-events: none;
+    }
+  }
+
+  /* Content */
+
+  .content {
+    font-family: inherit;
+    font-weight: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
