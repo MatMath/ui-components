@@ -1,3 +1,7 @@
+/**
+ * Original source : https://github.com/doczjs/docz/blob/master/core/gatsby-theme-docz/src/components/Playground/index.js
+ */
+
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import React from 'react';
@@ -47,6 +51,7 @@ export const Playground = ({
   scope,
   language,
   useScoping = false,
+  /** Add custom style support */
   style = { preview: {} }
 }) => {
   const {
@@ -81,6 +86,7 @@ export const Playground = ({
             {showLivePreview && (
               <LivePreview
                 sx={styles.preview}
+                /** Add custom style support */
                 style={style.preview}
                 data-testid='live-preview'
               />
