@@ -73,7 +73,6 @@
     {
       "files": ["src/gatsby-theme-docz/**/*.js"],
       "rules": {
-        "sort-imports": "off",
         "react/prop-types": "off"
       }
     }

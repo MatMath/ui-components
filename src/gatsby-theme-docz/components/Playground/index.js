@@ -2,18 +2,19 @@
  * Original source : https://github.com/doczjs/docz/blob/master/core/gatsby-theme-docz/src/components/Playground/index.js
  */
 
+import * as Icons from 'gatsby-theme-docz/src/components/Icons';
+import * as styles from 'gatsby-theme-docz/src/components/Playground/styles';
+
+import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
+
+import React from 'react';
+import { Resizable } from 're-resizable';
+import { Wrapper } from 'gatsby-theme-docz/src/components/Playground/Wrapper';
+import copy from 'copy-text-to-clipboard';
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
-import React from 'react';
 import { useConfig } from 'docz';
-import { LiveProvider, LiveError, LivePreview, LiveEditor } from 'react-live';
-import { Resizable } from 're-resizable';
-import copy from 'copy-text-to-clipboard';
-
-import { Wrapper } from 'gatsby-theme-docz/src/components/Playground/Wrapper';
 import { usePrismTheme } from '~utils/theme';
-import * as styles from 'gatsby-theme-docz/src/components/Playground/styles';
-import * as Icons from 'gatsby-theme-docz/src/components/Icons';
 
 const getResizableProps = (width, setWidth) => ({
   minWidth: 260,

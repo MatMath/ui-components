@@ -1,5 +1,3 @@
-const TsConfigPathsPlugin = require('awesome-typescript-loader')
-  .TsConfigPathsPlugin;
 import { svgSpriteLoader } from 'docz-plugin-svg-sprite-loader';
 
 export default {
