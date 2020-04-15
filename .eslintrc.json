@@ -69,6 +69,13 @@
       "rules": {
         "@typescript-eslint/no-explicit-any": "off"
       }
+    },
+    {
+      "files": ["src/gatsby-theme-docz/**/*.js"],
+      "rules": {
+        "sort-imports": "off",
+        "react/prop-types": "off"
+      }
     }
   ],
   "env": {
