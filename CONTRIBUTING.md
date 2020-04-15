@@ -8,6 +8,8 @@ You can find step by step guides to add components 🧱, colors 🎨 and icons �
 - [Adding a color](./documentation/COLOR_STEPBYSTEP.md) 🎨
 - [Adding an icon](./documentation/ICON_STEPBYSTEP.md) 🖼
 
+Take a look at [the frequently asked question](./documentation/FAQ.md) for previously asked questions.
+
 ### Prerequisites
 
 You need to install on your machine :
