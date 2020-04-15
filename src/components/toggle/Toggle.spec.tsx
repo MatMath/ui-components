@@ -23,19 +23,19 @@ describe('<Toggle>', () => {
 
     it('should render unchecked', () => {
       const toggle = mount(<Toggle />);
-      expect(toggle.props().checked).toEqual(false || undefined);
+      expect(toggle.props().checked).toEqual(undefined);
       expect(toggle).toMatchSnapshot();
     });
 
-    it('should render with labelOn', () => {
-      const labelChecked = 'On';
+    it('should render with checked label', () => {
+      const labelChecked = 'labelChecked';
       const toggle = mount(<Toggle labelChecked={labelChecked} checked />);
       expect(toggle.find('span').text()).toEqual(labelChecked);
       expect(toggle).toMatchSnapshot();
     });
 
-    it('should render with labelOff', () => {
-      const labelUnchecked = 'Off';
+    it('should render with unchecked label', () => {
+      const labelUnchecked = 'labelUnchecked';
       const toggle = mount(<Toggle labelUnchecked={labelUnchecked} />);
       expect(toggle.find('span').text()).toEqual(labelUnchecked);
       expect(toggle).toMatchSnapshot();

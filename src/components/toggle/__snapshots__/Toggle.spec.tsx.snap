@@ -128,47 +128,10 @@ exports[`<Toggle> Global render should render unchecked 1`] = `
 </Component>
 `;
 
-exports[`<Toggle> Global render should render with labelOff 1`] = `
-<Component
-  labelUnchecked="Off"
->
-  <label
-    className="root"
-  >
-    <HiddenInput>
-      <input
-        className="hiddenInput"
-        type="checkbox"
-      />
-    </HiddenInput>
-    <Groove>
-      <div
-        className="groove"
-      >
-        <Handle>
-          <div
-            className="handle"
-          />
-        </Handle>
-      </div>
-    </Groove>
-    <Label
-      labelUnchecked="Off"
-    >
-      <span
-        className="text"
-      >
-        Off
-      </span>
-    </Label>
-  </label>
-</Component>
-`;
-
-exports[`<Toggle> Global render should render with labelOn 1`] = `
+exports[`<Toggle> Global render should render with checked label 1`] = `
 <Component
   checked={true}
-  labelChecked="On"
+  labelChecked="labelChecked"
 >
   <label
     className="root checked"
@@ -199,12 +162,49 @@ exports[`<Toggle> Global render should render with labelOn 1`] = `
     </Groove>
     <Label
       checked={true}
-      labelChecked="On"
+      labelChecked="labelChecked"
     >
       <span
         className="text"
       >
-        On
+        labelChecked
+      </span>
+    </Label>
+  </label>
+</Component>
+`;
+
+exports[`<Toggle> Global render should render with unchecked label 1`] = `
+<Component
+  labelUnchecked="labelUnchecked"
+>
+  <label
+    className="root"
+  >
+    <HiddenInput>
+      <input
+        className="hiddenInput"
+        type="checkbox"
+      />
+    </HiddenInput>
+    <Groove>
+      <div
+        className="groove"
+      >
+        <Handle>
+          <div
+            className="handle"
+          />
+        </Handle>
+      </div>
+    </Groove>
+    <Label
+      labelUnchecked="labelUnchecked"
+    >
+      <span
+        className="text"
+      >
+        labelUnchecked
       </span>
     </Label>
   </label>
