@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+}
+
+.wrapperItem {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+}
