@@ -2,10 +2,12 @@ import * as React from 'react';
 import { getClassNames } from '@utility/cssUtils';
 import styles from './Checkbox.module.scss';
 
-const CheckboxContainer = ({
-  className,
-  children
-}: React.InputHTMLAttributes<HTMLInputElement>) => {
+interface CheckboxContainerProps {
+  className: string | undefined;
+  children: React.ReactNode;
+}
+
+const CheckboxContainer = ({ className, children }: CheckboxContainerProps) => {
   return (
     <label className={getClassNames(styles.checkboxContainer, className || '')}>
       {children}
@@ -15,23 +17,29 @@ const CheckboxContainer = ({
 
 const HiddenCheckbox = ({
   checked = false,
-  ...props
+  ...otherProps
 }: React.InputHTMLAttributes<HTMLInputElement>) => {
   return (
     <input
       className={styles.hiddenCheckBox}
       type='checkbox'
       checked={checked}
-      {...props}
+      {...otherProps}
     />
   );
 };
+
+interface StyledCheckboxProps {
+  checked: boolean | undefined;
+  disabled: boolean | undefined;
+  children: React.ReactNode;
+}
 
 const StyledCheckbox = ({
   checked = false,
   disabled = false,
   children
-}: React.InputHTMLAttributes<HTMLInputElement>) => {
+}: StyledCheckboxProps) => {
   const className = getClassNames(styles.styledCheckbox, {
     [styles.checked]: checked,
     [styles.disabled]: disabled
@@ -63,6 +71,7 @@ export const Checkbox = ({
   className,
   checked,
   disabled,
+  children,
   ...props
 }: React.InputHTMLAttributes<HTMLInputElement>) => (
   <CheckboxContainer className={className}>
