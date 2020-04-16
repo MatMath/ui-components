@@ -53,7 +53,8 @@ export const Playground = ({
   language,
   useScoping = false,
   /** Add custom style support */
-  style = { preview: {} }
+  style = { preview: {} },
+  className = { preview: '' }
 }) => {
   const {
     themeConfig: { showPlaygroundEditor, showLiveError, showLivePreview }
@@ -89,6 +90,7 @@ export const Playground = ({
                 sx={styles.preview}
                 /** Add custom style support */
                 style={style.preview}
+                className={className.preview}
                 data-testid='live-preview'
               />
             )}

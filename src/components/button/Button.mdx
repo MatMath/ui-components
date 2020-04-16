@@ -21,7 +21,7 @@ A Button that allows users to take actions, and make choices, with a single tap.
 
 ### Nature
 
-<Playground style={{ preview: { display: 'flex', flexDirection: 'row', justifyContent: 'space-around' } }}>
+<Playground className={{preview: 'playground-base'}}>
 
     <Button nature='primary'>Primary</Button>
     <Button nature='secondary'>Secondary</Button>
@@ -34,7 +34,7 @@ A Button that allows users to take actions, and make choices, with a single tap.
 
 All buttons can display icons, text or mixed content.
 
-<Playground style={{ preview: { display: 'flex', flexDirection: 'row', justifyContent: 'space-around' } }}>
+<Playground className={{preview: 'playground-base'}}>
     <Button nature='primary'>
       <CopyPasswordIcon color={white} style={{ marginRight: '8px'}}/>
       Save
@@ -62,7 +62,7 @@ All buttons can display icons, text or mixed content.
 
 The default theme is `light` (white), but some buttons can be displayed in a `dark` theme (Dashlane's dash green, not an actual _dark_ theme).
 
-<Playground style={{ preview: {display: 'flex', flexDirection: 'row', justifyContent: 'space-around', backgroundColor: dashGreen00, alignItems: 'center' } }}>
+<Playground className={{preview: 'playground-base'}} style={{ preview: {backgroundColor: dashGreen00} }}>
     <Button nature='primary' theme='dark'>
       Save
     </Button>
@@ -87,7 +87,7 @@ The default theme is `light` (white), but some buttons can be displayed in a `da
 
 Buttons can be have different sizes [`small`, `medium`, `large`] with `medium` being the default value if none is specified.
 
-<Playground style={{ preview: {display: 'flex', flexDirection: 'row', justifyContent: 'space-around', minHeight: '150px' } }}>
+<Playground className={{preview: 'playground-base'}} style={{ preview: {minHeight: '150px'} }}>
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
       <Button nature='primary' size='small'>Save</Button>
       <Button nature='primary' size='medium'>Save</Button>
@@ -118,7 +118,7 @@ Buttons can be have different sizes [`small`, `medium`, `large`] with `medium` b
 
 In disabled pseudo-state, buttons behave as following.
 
-<Playground style={{ preview: { display: 'flex', flexDirection: 'row', justifyContent: 'space-around' } }}>
+<Playground className={{preview: 'playground-base'}}>
 
     <Button nature='primary' disabled>Save</Button>
     <Button nature='secondary' disabled>Cancel</Button>

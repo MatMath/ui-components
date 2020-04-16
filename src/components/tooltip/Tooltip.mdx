@@ -24,7 +24,7 @@ Also, if the text of the tooltip changes while its being displayed, then the pla
 
 Examples below show usage of the tooltip with different titles and types. You can change the size of the window (by opening the dev console for example) to see how the tooltip of the last button adapts to the new container size (placement goes from right to top).
 
-<Playground style={{ preview: { display: 'flex', flexDirection: 'row', justifyContent: 'space-around' } }} >
+<Playground className={{ preview: 'playground-base' }} >
     <div>
         <Tooltip options={{container: document.getElementById('list')}} title='Oups!' type='error'>
             <button>Tooltip me to the default (top)</button>
