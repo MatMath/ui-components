@@ -32,13 +32,10 @@ export interface PasswordInputProps
    */
   label?: string;
   /**
-   * A function that is triggered when the password gets revealed
+   * A function that is triggered when the visibility
+   * of the password is changed.
    */
-  onShowPassword?: () => void;
-  /**
-   * A function that is triggered when the password gets hidden
-   */
-  onHidePassword?: () => void;
+  onPasswordVisibilityChanged?: (visible: boolean) => void;
   /**
    * The text that is displayed on hover on the reveal icon when the
    * password is hidden
@@ -52,8 +49,7 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
     feedbackType,
     hidePasswordTooltipText,
     label,
-    onShowPassword,
-    onHidePassword,
+    onPasswordVisibilityChanged,
     showPasswordTooltipText,
     ...prop
   } = props;
@@ -61,16 +57,13 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
   const [showPassword, setShowPassword] = React.useState(false);
 
   const handleShowPassword = () => {
-    if (showPassword && onShowPassword) {
-      onShowPassword();
-    } else if (!showPassword && onHidePassword) {
-      onHidePassword();
+    if (onPasswordVisibilityChanged) {
+      onPasswordVisibilityChanged(!showPassword);
     }
     setShowPassword(prevState => !prevState);
   };
 
-  const styledClassName =
-    feedbackType && styles[feedbackType] ? styles[feedbackType] : '';
+  const styledClassName = (feedbackType && styles[feedbackType]) || '';
 
   const RevealOrHideIcon = showPassword ? HideIcon : RevealIcon;
 
