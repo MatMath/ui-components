@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle> Global render should render checked 1`] = `
+<Component
+  checked={true}
+>
+  <label
+    className="root checked"
+  >
+    <HiddenInput
+      checked={true}
+    >
+      <input
+        checked={true}
+        className="hiddenInput"
+        type="checkbox"
+      />
+    </HiddenInput>
+    <Groove
+      checked={true}
+    >
+      <div
+        className="groove checked"
+      >
+        <Handle
+          checked={true}
+        >
+          <div
+            className="handle checked"
+          />
+        </Handle>
+      </div>
+    </Groove>
+    <Label
+      checked={true}
+    />
+  </label>
+</Component>
+`;
+
+exports[`<Toggle> Global render should render default 1`] = `
+<Component>
+  <label
+    className="root"
+  >
+    <HiddenInput>
+      <input
+        className="hiddenInput"
+        type="checkbox"
+      />
+    </HiddenInput>
+    <Groove>
+      <div
+        className="groove"
+      >
+        <Handle>
+          <div
+            className="handle"
+          />
+        </Handle>
+      </div>
+    </Groove>
+    <Label />
+  </label>
+</Component>
+`;
+
+exports[`<Toggle> Global render should render disabled 1`] = `
+<Component
+  disabled={true}
+>
+  <label
+    className="root disabled"
+  >
+    <HiddenInput
+      disabled={true}
+    >
+      <input
+        className="hiddenInput"
+        disabled={true}
+        type="checkbox"
+      />
+    </HiddenInput>
+    <Groove
+      disabled={true}
+    >
+      <div
+        className="groove disabled"
+      >
+        <Handle
+          disabled={true}
+        >
+          <div
+            className="handle disabled"
+          />
+        </Handle>
+      </div>
+    </Groove>
+    <Label />
+  </label>
+</Component>
+`;
+
+exports[`<Toggle> Global render should render unchecked 1`] = `
+<Component>
+  <label
+    className="root"
+  >
+    <HiddenInput>
+      <input
+        className="hiddenInput"
+        type="checkbox"
+      />
+    </HiddenInput>
+    <Groove>
+      <div
+        className="groove"
+      >
+        <Handle>
+          <div
+            className="handle"
+          />
+        </Handle>
+      </div>
+    </Groove>
+    <Label />
+  </label>
+</Component>
+`;
+
+exports[`<Toggle> Global render should render with checked label 1`] = `
+<Component
+  checked={true}
+  labelChecked="labelChecked"
+>
+  <label
+    className="root checked"
+  >
+    <HiddenInput
+      checked={true}
+    >
+      <input
+        checked={true}
+        className="hiddenInput"
+        type="checkbox"
+      />
+    </HiddenInput>
+    <Groove
+      checked={true}
+    >
+      <div
+        className="groove checked"
+      >
+        <Handle
+          checked={true}
+        >
+          <div
+            className="handle checked"
+          />
+        </Handle>
+      </div>
+    </Groove>
+    <Label
+      checked={true}
+      labelChecked="labelChecked"
+    >
+      <span
+        className="text"
+      >
+        labelChecked
+      </span>
+    </Label>
+  </label>
+</Component>
+`;
+
+exports[`<Toggle> Global render should render with unchecked label 1`] = `
+<Component
+  labelUnchecked="labelUnchecked"
+>
+  <label
+    className="root"
+  >
+    <HiddenInput>
+      <input
+        className="hiddenInput"
+        type="checkbox"
+      />
+    </HiddenInput>
+    <Groove>
+      <div
+        className="groove"
+      >
+        <Handle>
+          <div
+            className="handle"
+          />
+        </Handle>
+      </div>
+    </Groove>
+    <Label
+      labelUnchecked="labelUnchecked"
+    >
+      <span
+        className="text"
+      >
+        labelUnchecked
+      </span>
+    </Label>
+  </label>
+</Component>
+`;

@@ -8,3 +8,4 @@ export { Alert } from './alert/Alert';
 export { AlertSeverity } from './alert/types';
 export { Button } from './button/Button';
 export { QuickActionsMenu } from './quick-actions-menu/QuickActionsMenu';
+export { Toggle } from './toggle/Toggle';

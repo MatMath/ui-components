@@ -1,0 +1,138 @@
+@use '../../colors/colors';
+@use '../../typography/typography';
+
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include typography.body-small;
+  color: colors.$black;
+  cursor: pointer;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Chrome, Opera and Firefox */
+
+  &:hover {
+    .handle {
+      background: colors.$dash-green-00;
+    }
+  }
+
+  &.checked {
+    .groove {
+      border-color: colors.$mid-green-00;
+      background: colors.$mid-green-00;
+    }
+
+    .handle {
+      transform: translateX(-100%);
+      left: calc(100% - 4px);
+      background: colors.$white;
+    }
+
+    &:hover {
+      .groove {
+        border-color: colors.$dash-green-00;
+        background: colors.$dash-green-00;
+      }
+      .handle {
+        background: colors.$white;
+      }
+    }
+  }
+
+  &.disabled {
+    color: colors.$dash-green-03;
+    cursor: default;
+    pointer-events: none;
+
+    .groove {
+      background: colors.$dash-green-06;
+      border-color: colors.$dash-green-05;
+    }
+
+    .handle {
+      background: colors.$mid-green-03;
+    }
+
+    &.checked {
+      .groove {
+        background: colors.$mid-green-03;
+        border: colors.$mid-green-03;
+      }
+
+      .handle {
+        background: colors.$white;
+      }
+    }
+  }
+}
+
+.hiddenInput {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+
+  &:focus {
+    & + .groove {
+      border-color: colors.$dash-green-05;
+      background: colors.$white;
+
+      .handle {
+        background: colors.$dash-green-00;
+      }
+    }
+
+    &:checked {
+      & + .groove {
+        border-color: colors.$dash-green-00;
+        background: colors.$dash-green-00;
+
+        .handle {
+          background: colors.$white;
+        }
+      }
+    }
+  }
+}
+
+.groove {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 32px;
+  height: 16px;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+  box-sizing: border-box;
+  border: 1px solid colors.$dash-green-05;
+}
+
+.handle {
+  content: '';
+  position: absolute;
+  top: 'calc(100% - 4px)';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: colors.$mid-green-00;
+  transform: none;
+  left: 4px;
+}
+
+.text {
+  margin-left: 8px;
+}
