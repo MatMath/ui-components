@@ -5,6 +5,7 @@ menu: Components
 
 import { Playground, Props } from 'docz';
 import { Logo } from './Logo';
+import '../../utility/playgroundStyles.css';
 
 # Logo
 
@@ -14,15 +15,6 @@ A Dashlane logo component
 
 <Props of={Logo} />
 
-<Playground
-  style={{
-    preview: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-around'
-    }
-  }}
->
-  <Logo />
+<Playground className={{ preview: 'playground-base' }}>
   <Logo width={210} height={30} />
 </Playground>

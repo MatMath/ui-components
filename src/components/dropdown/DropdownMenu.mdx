@@ -8,6 +8,7 @@ import { DropdownMenu } from '@components/dropdown/DropdownMenu';
 import { DropdownElement } from '@components/dropdown/DropdownElement';
 import { Button } from '@components/button/Button';
 import { PhoneIcon } from '@atoms/icons/PhoneIcon';
+import '../../utility/playgroundStyles.css';
 
 # Dropdown Menu
 
@@ -25,12 +26,10 @@ The dropdown can be defined alongside a controller. To display it correctly:
 - the controller's ref must be passed to the Dropdown
 
 <Playground
+  className={{preview: 'playground-base'}}
   style={{
     preview: {
-      display: 'flex',
-      flexDirection: 'row',
       alignItems: 'flex-start',
-      justifyContent: 'space-around',
       height: '200px'
     }
   }}
@@ -70,12 +69,10 @@ Dropdown can be defined as:
 - aligned on their controller left or right
 
 <Playground
+  className={{preview: 'playground-base'}}
   style={{
     preview: {
-      display: 'flex',
-      flexDirection: 'row',
       alignItems: 'flex-start',
-      justifyContent: 'space-around',
       height: '200px',
       position: 'relative',
       zIndex: 10
@@ -137,12 +134,10 @@ if you pass `top` as the placement prop but there is not enough space within the
 the menu position will be overwritten to `bottom`.
 
 <Playground
+  className={{ preview: 'playground-base' }}
   style={{
     preview: {
-      display: 'flex',
-      flexDirection: 'row',
       alignItems: 'flex-start',
-      justifyContent: 'space-around',
       position: 'relative',
       zIndex: 10
     }

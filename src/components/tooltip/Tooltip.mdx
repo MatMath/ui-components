@@ -6,6 +6,7 @@ menu: Components
 import { Playground, Props } from 'docz';
 import { Tooltip } from './Tooltip';
 import { TooltipDemo } from './TooltipDemo';
+import '../../utility/playgroundStyles.css';
 
 # Tooltip
 
@@ -23,7 +24,7 @@ Also, if the text of the tooltip changes while its being displayed, then the pla
 
 Examples below show usage of the tooltip with different titles and types. You can change the size of the window (by opening the dev console for example) to see how the tooltip of the last button adapts to the new container size (placement goes from right to top).
 
-<Playground style={{ preview: { display: 'flex', flexDirection: 'row', justifyContent: 'space-around' } }} >
+<Playground className={{ preview: 'playground-base' }} >
     <div>
         <Tooltip options={{container: document.getElementById('list')}} title='Oups!' type='error'>
             <button>Tooltip me to the default (top)</button>
@@ -65,6 +66,6 @@ Examples below show usage of the tooltip with different titles and types. You ca
 - You will notice as you test the behaviour below that for the fourth item the tooltip will be displayed on top instead of specified placement `bottom` since the space left doesn't allow it to be visible. And if you scroll in the list, then the space will be sufficient for it to be displayed so the placement will be set back to bottom.
 - You will notice as well that once you click on the "hover me" button of the item number `1` the tooltip title will be updated and its placement will be automatically calculated again to fit into the container with the new long text.
 
-<Playground style={{ display: 'flex', justifyContent: 'center' }}>
+<Playground className={{ preview: 'playground-base' }}>
   <TooltipDemo />
 </Playground>
