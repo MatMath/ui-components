@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox> Global render should render checked 1`] = `
+<Component
+  checked={true}
+>
+  <CheckboxContainer>
+    <label
+      className="checkboxContainer "
+    >
+      <HiddenCheckbox
+        checked={true}
+      >
+        <input
+          checked={true}
+          className="hiddenCheckBox"
+          type="checkbox"
+        />
+      </HiddenCheckbox>
+      <StyledCheckbox
+        checked={true}
+      >
+        <div
+          className="styledCheckbox checked"
+        >
+          <Checkmark>
+            <svg
+              className="checkmark"
+              fill="none"
+              height="20"
+              viewBox="0 0 20 20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="checkmark__check"
+                d="M5.5 10L8.45928 13L14.4796 7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Checkmark>
+        </div>
+      </StyledCheckbox>
+    </label>
+  </CheckboxContainer>
+</Component>
+`;
+
+exports[`<Checkbox> Global render should render default 1`] = `
+<Component>
+  <CheckboxContainer>
+    <label
+      className="checkboxContainer "
+    >
+      <HiddenCheckbox>
+        <input
+          checked={false}
+          className="hiddenCheckBox"
+          type="checkbox"
+        />
+      </HiddenCheckbox>
+      <StyledCheckbox>
+        <div
+          className="styledCheckbox"
+        >
+          <Checkmark>
+            <svg
+              className="checkmark"
+              fill="none"
+              height="20"
+              viewBox="0 0 20 20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="checkmark__check"
+                d="M5.5 10L8.45928 13L14.4796 7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Checkmark>
+        </div>
+      </StyledCheckbox>
+    </label>
+  </CheckboxContainer>
+</Component>
+`;
+
+exports[`<Checkbox> Global render should render disabled 1`] = `
+<Component
+  disabled={true}
+>
+  <CheckboxContainer>
+    <label
+      className="checkboxContainer "
+    >
+      <HiddenCheckbox>
+        <input
+          checked={false}
+          className="hiddenCheckBox"
+          type="checkbox"
+        />
+      </HiddenCheckbox>
+      <StyledCheckbox
+        disabled={true}
+      >
+        <div
+          className="styledCheckbox disabled"
+        >
+          <Checkmark>
+            <svg
+              className="checkmark"
+              fill="none"
+              height="20"
+              viewBox="0 0 20 20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="checkmark__check"
+                d="M5.5 10L8.45928 13L14.4796 7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Checkmark>
+        </div>
+      </StyledCheckbox>
+    </label>
+  </CheckboxContainer>
+</Component>
+`;
+
+exports[`<Checkbox> Global render should render unchecked 1`] = `
+<Component>
+  <CheckboxContainer>
+    <label
+      className="checkboxContainer "
+    >
+      <HiddenCheckbox>
+        <input
+          checked={false}
+          className="hiddenCheckBox"
+          type="checkbox"
+        />
+      </HiddenCheckbox>
+      <StyledCheckbox>
+        <div
+          className="styledCheckbox"
+        >
+          <Checkmark>
+            <svg
+              className="checkmark"
+              fill="none"
+              height="20"
+              viewBox="0 0 20 20"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                className="checkmark__check"
+                d="M5.5 10L8.45928 13L14.4796 7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Checkmark>
+        </div>
+      </StyledCheckbox>
+    </label>
+  </CheckboxContainer>
+</Component>
+`;

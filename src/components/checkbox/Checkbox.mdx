@@ -1,0 +1,47 @@
+---
+name: Checkbox
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Checkbox } from './Checkbox';
+import { CheckboxDemo } from './CheckboxDemo';
+
+# Checkbox
+
+A checkbox component
+
+## Properties
+
+<Props of={Checkbox} />
+
+## Usage
+
+### Basic usage
+
+Examples below show the `Checkbox` in its checked and unchecked states, both in enabled and disabled modes:
+
+<Playground
+  style={{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  }}
+>
+  <Checkbox readOnly />
+  <Checkbox defaultChecked checked readOnly />
+  <Checkbox disabled readOnly />
+  <Checkbox disabled defaultChecked checked readOnly />
+</Playground>
+
+The example below shows an interactive `Checkbox`.
+
+<Playground
+  style={{
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+  }}
+>
+  <CheckboxDemo />
+</Playground>
