@@ -1,4 +1,5 @@
 /*-- EXPORT ICON COMPONENTS --*/
+export { ShareIcon } from './ShareIcon';
 export { LinkIcon } from './LinkIcon';
 export { SettingsIcon } from './SettingsIcon';
 export { TaxIcon } from './TaxIcon';

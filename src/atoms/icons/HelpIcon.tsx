@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
+import { IconProps } from '@ions/icon/types';
 
-export const HelpIcon: React.FunctionComponent<
-  import('../../ions/icon/types').IconProps
-> = (props: import('../../ions/icon/types').IconProps): JSX.Element => (
+export const HelpIcon: React.FC<IconProps> = (props: IconProps) => (
   <SvgWrapper {...props}>
     <React.Fragment>
       <path d='M13.8526 15.2357C12.7745 16.0304 11.4421 16.5 10 16.5C6.41015 16.5 3.5 13.5898 3.5 10C3.5 6.41015 6.41015 3.5 10 3.5C13.5899 3.5 16.5 6.41015 16.5 10C16.5 11.4261 16.0407 12.745 15.262 13.8167L16.3334 14.8881C17.3783 13.5363 18 11.8407 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C11.8567 18 13.5656 17.3675 14.9231 16.3062L13.8526 15.2357Z' />
