@@ -1,11 +1,18 @@
 import * as React from 'react';
 import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
 import { IconProps } from '@ions/icon/types';
+import { dashGreen00 } from '@colors';
+
+const defaultProps = {
+  color: dashGreen00,
+  width: 135, //px
+  height: 22 //px
+};
 
 export const Logo: React.FunctionComponent<IconProps> = (
   props: IconProps
 ): JSX.Element => (
-  <SvgWrapper viewBox='0 0 110 17' {...props}>
+  <SvgWrapper viewBox='0 0 110 17' {...defaultProps} {...props}>
     <React.Fragment>
       <path
         fillRule='evenodd'
