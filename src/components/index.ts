@@ -10,7 +10,4 @@ export { Button } from './button/Button';
 export { QuickActionsMenu } from './quick-actions-menu/QuickActionsMenu';
 export { Toggle } from './toggle/Toggle';
 export { PasswordInput } from './password-input/PasswordInput';
-export {
-  PasswordStrength,
-  PasswordStrengthProps
-} from './password-strength/PasswordStrength';
+export { PasswordStrength } from './password-strength/PasswordStrength';
