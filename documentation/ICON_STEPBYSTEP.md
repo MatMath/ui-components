@@ -40,3 +40,15 @@ yarn generate-icon-components
 This commandline runs [this script](../config/generator/icons/generateIcons.js), that generates all specified icons in `icons-defs.json` following [this template](../config/generator/icons/IconComponentTemplate.tsx.hbs). It also updates the `src/atoms/svg/index.ts` to export the generated components.
 
 > Note: this process is safe: no duplicated components/exports will be generated (if files already exist they will be overridden)
+
+6. Add the newly created icon to the [documentation file](../src/atoms/icons/Icons.mdx)
+
+```md
+...
+import { SharedIcon } from './ShareIcon';
+...
+<IconsWrapper>
+...
+<MyIcon size={30} />
+</IconsWrapper>
+```
