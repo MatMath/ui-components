@@ -1,3 +1,7 @@
+---
+name: Color Step-by-Step
+---
+
 # How to add a color
 
 In order to avoid repetitive/manual work to create color stylesheets, we choose to generate them. Here's a step by step guide to add a color:

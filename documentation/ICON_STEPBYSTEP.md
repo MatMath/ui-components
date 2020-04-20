@@ -1,3 +1,7 @@
+---
+name: Icon Step-by-Step
+---
+
 # How to add an icon
 
 In order to avoid repetitive/manual work to create svg icons components (since they are all similar and only the content of the svg changes [see `src/atoms/icons` folder]), we choose to generate them. Here's a step by step guide to add an icon:

@@ -1,3 +1,7 @@
+---
+name: Component Step-by-Step
+---
+
 # Create your first component
 
 Are you working on a feature that requires a new component? Do you want to migrate a duplicated component into the component library? Do you want to have fun with Dashlane Design System? You are in the right place! Here you'll find a step by step guide to add a new component. In this example we create a `Button` component
