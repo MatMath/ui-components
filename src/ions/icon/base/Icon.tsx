@@ -15,21 +15,11 @@ const getTransform = ({ rotate }: Props) =>
   rotate ? 'rotate(' + rotate + 'deg)' : 'none';
 
 const getTransition = ({ svgAnimated, iconAnimated }: Props) => {
-  let transition;
-
-  if (svgAnimated) {
-    transition = 'none';
-  } else {
-    transition = 'all 0.1s ease-in';
-  }
+  let transition = svgAnimated ? 'none' : 'all 0.1s ease-in';
 
   if (typeof iconAnimated !== 'undefined') {
     //check if the user actually passed a iconAniamted prop
-    if (iconAnimated) {
-      transition = 'all 0.1s ease-in';
-    } else {
-      transition = 'none';
-    }
+    transition = iconAnimated ? 'all 0.1s ease-in' : 'none';
   }
 
   return transition;
