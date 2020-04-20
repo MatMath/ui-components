@@ -4,13 +4,36 @@ import { dashGreen00 } from '@colors';
 
 export type ColorProps = 'color' | 'hoverColor' | 'activeColor';
 interface Props extends Omit<IconProps, 'title' | 'children'> {
-  animated?: boolean;
+  svgAnimated?: boolean;
 }
 
 const getWidth = ({ width, size }: Props) => `${size || width || 20}px`;
 const getHeight = ({ height, size }: Props) => `${size || height || 20}px`;
 const getColor = (propName: ColorProps = 'color') => (props: Props): string =>
-  props.animated ? 'none' : props[propName] || props['color'] || dashGreen00;
+  props.svgAnimated ? 'none' : props[propName] || props['color'] || dashGreen00;
+const getTransform = ({ rotate }: Props) =>
+  rotate ? 'rotate(' + rotate + 'deg)' : 'none';
+
+const getTransition = ({ svgAnimated, iconAnimated }: Props) => {
+  let transition;
+
+  if (svgAnimated) {
+    transition = 'none';
+  } else {
+    transition = 'all 0.1s ease-in';
+  }
+
+  if (typeof iconAnimated !== 'undefined') {
+    //check if the user actually passed a iconAniamted prop
+    if (iconAnimated) {
+      transition = 'all 0.1s ease-in';
+    } else {
+      transition = 'none';
+    }
+  }
+
+  return transition;
+};
 
 export const Icon = styled.svg.attrs<Props>(({ viewBox }: Props) => ({
   viewBox: viewBox || '0 0 20 20',
@@ -24,9 +47,9 @@ export const Icon = styled.svg.attrs<Props>(({ viewBox }: Props) => ({
   outline: none;
   border-radius: 4px;
   fill: ${getColor()};
+  transform: ${getTransform};
   opacity: ${({ disabled }): number => (disabled ? 0.5 : 1)};
-  transition: ${({ animated }): string =>
-    animated ? 'none' : 'all 0.1s ease-in'};
+  transition: ${getTransition}
   &:hover {
     fill: ${getColor('hoverColor')};
   }

@@ -1,0 +1,138 @@
+---
+name: Accordion
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Accordion } from '@components/accordion/Accordion';
+import { Section } from '@components/accordion/Section';
+
+# Accordion
+
+An Accordion component built by Accordion.Sections.
+
+Notes on using the Accordion component wrapper : 
+  - Wrap the Accordion.Sections and take control over its open states. 
+  - When using the Accordion component use the "opened" prop on the Accordion component to specify the indexes(indexed by 0) of the Sections you want to be opened instead of using the open prop on the Section
+  - If maxOneSectionOpen is passed, it overrides allSectionsOpened.
+
+## Properties
+
+### Accordion Properties
+
+<Props of={Accordion} />
+
+### Accordion.Section Properties
+
+<Props of={Section} />
+
+## Usage
+
+In this example, we have Accordion.Section's wrapped in an Accordion Component. The Accordion then has fully control over the open states of its sections based on its prop configuration.
+
+<Playground
+  style={{
+    display: 'flex',
+    flexDirection: 'row',
+  }}
+>
+<div style={{ backgroundColor : "#F5F7F7", padding : "10px", width : "100%"}}>
+
+  <Accordion 
+    maxOneSectionOpen
+    opened={[1]}
+  >
+
+    <Accordion.Section
+      label="Sections can be wrapped in an Accordion"
+    >
+      <div style={{height : 150}}>
+        The Accordion will then have say of when its sections can be opened/closed based on its configuration.
+        <br/> <br/>
+        For example, if you want behaviour like this Accordion where it enforces only one Section to be open at a time you can set the "maxOneSectionOpen" to true. Try opening another section!
+      </div>
+    </Accordion.Section>
+
+    <Accordion.Section
+      label="Have as many sections as you want!"
+    >
+      <div style={{height : 250, fontSize : "7px"}}>
+        Up to you to define the content.
+      </div>
+    </Accordion.Section>
+
+    <Accordion.Section
+      label="A sections interactivitiy can be locked"
+      locked
+    >
+      <div style={{height : 100}}>
+        This content is viewable but no pointer-events will be passed to it.
+      </div>
+    </Accordion.Section>
+
+    <Accordion.Section
+      label="Sections can also be blocked from opening"
+      locked
+      toggable={false}
+    >
+      <div style={{height : 100}}>
+        This content is not accessbile yet.
+      </div>
+    </Accordion.Section>
+
+  </Accordion>
+
+</div>
+  
+</Playground>
+
+Here we have just an Accordion.Section. It is fully in control of when it is opened or closed.
+
+<Playground
+  style={{
+    display: 'flex',
+    flexDirection: 'row',
+  }}
+>
+<div style={{ backgroundColor : "#F5F7F7", padding : "10px", width : "100%"}}>
+
+  <Accordion.Section
+    label="Sections can exist standalone"
+  >
+    
+    <div style={{height : 100}}>
+      You don't always need to wrap Sections in an Accordion!
+    </div>
+
+  </Accordion.Section>
+
+</div>
+</Playground>
+
+You can use the "header" prop on the Accordion.Section to add a custom Title for the section.
+
+<Playground
+  style={{
+    display: 'flex',
+    flexDirection: 'row',
+  }}
+>
+<div style={{ backgroundColor : "#F5F7F7", padding : "10px", width : "100%"}}>
+
+  <Accordion.Section
+    open={false}
+    header={(
+      <div style={{width : "100%", textAlign : "center", cursor : "pointer", height : "40px", paddingTop : "15px"}}>
+        Can also define a completely custom Header as well 🌴
+      </div>
+    )}
+  >
+
+    <div style={{height : 100}}>
+      🌲🌲🌲
+    </div>
+
+  </Accordion.Section>
+
+</div>
+</Playground>
