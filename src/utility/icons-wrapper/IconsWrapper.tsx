@@ -3,7 +3,7 @@ import styles from './IconsWrapper.module.scss';
 
 const getName = (component: React.ReactElement) => {
   const type = (component as React.ReactElement).type as React.ComponentClass;
-  return type.name;
+  return type.displayName;
 };
 
 interface IconsWrapperProps {
