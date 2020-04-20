@@ -1,3 +1,47 @@
+# [1.8.0](https://github.com/Dashlane/ui-components/compare/v1.7.0...v1.8.0) (2020-04-20)
+
+
+### Bug Fixes
+
+* remove not exported props ([720a992](https://github.com/Dashlane/ui-components/commit/720a992109b5169b55c97529af63b5ab9e478f2b))
+* use displayName in IconsWrapper ([c425cea](https://github.com/Dashlane/ui-components/commit/c425cea8d89d6bf60be3f69f8e1910a1fb567e7f))
+
+
+### Features
+
+* add share icon ([f19077c](https://github.com/Dashlane/ui-components/commit/f19077c3f24492dc5d0bed77ede50e5757299882))
+* icons wrapper ([a25979d](https://github.com/Dashlane/ui-components/commit/a25979dffd493f3248c9da2804570e9539879cc0))
+* update already existing icons with standard FC syntax ([187c2ca](https://github.com/Dashlane/ui-components/commit/187c2ca4a659f560e943441609086f3d67bfaa2a))
+* **password-input:** change ...rest to ...prop for better clarity ([3b58eb9](https://github.com/Dashlane/ui-components/commit/3b58eb93d14dde03d3b79742534bcb66cee7d04e))
+* **password-input:** change visibility callbacks and border color CSS ([d706e0e](https://github.com/Dashlane/ui-components/commit/d706e0e069e32e8568a48aa0b909fcc2653cdd6a))
+* **password-input:** finished password input and tests ([c2c7e77](https://github.com/Dashlane/ui-components/commit/c2c7e77eb049f7101b297d66dca23cf66d2600b0))
+* **password-input:** refactored and splitted in multiple components ([80c5284](https://github.com/Dashlane/ui-components/commit/80c5284804d818f772086772931a235413aada95))
+* add toggle component ([f545f8d](https://github.com/Dashlane/ui-components/commit/f545f8dd96b8cf4a3eb514d3d623bd7c905bc6ac))
+* add toggle tests ([88ab529](https://github.com/Dashlane/ui-components/commit/88ab529d77dd203173fd8a07e48d0578d3552556))
+* clean toggle ([bbf2de5](https://github.com/Dashlane/ui-components/commit/bbf2de5e4858f78690f80eca88ba69777d62d365))
+* don't render content span if no children ([e28e553](https://github.com/Dashlane/ui-components/commit/e28e553129bb7e7fac544fd0d07825b0328b18b7))
+* fix error TextInput's DOM element props ([215a487](https://github.com/Dashlane/ui-components/commit/215a4871e507c6ce577014184339b3aa58befe73))
+* fix pr comments ([556bd19](https://github.com/Dashlane/ui-components/commit/556bd19f18283b4a21b72f2ee5cc362a5e52e48c))
+* fix pr comments ([d4a05dc](https://github.com/Dashlane/ui-components/commit/d4a05dce3c342ceaed13cc4ad3c5c41ae42de165))
+* fix tests following rebase ([168d142](https://github.com/Dashlane/ui-components/commit/168d14291b3606d08a168e02db759f07b8e417f6))
+* fix toggle test ([2ed30e2](https://github.com/Dashlane/ui-components/commit/2ed30e21f4f8cdbb2e163dd82f715910d4b75b06))
+* improve toggle props ([5ec74a4](https://github.com/Dashlane/ui-components/commit/5ec74a4739ac7e34f16a108a19cf1970a25f32ed))
+* move Button to components ([d8e9370](https://github.com/Dashlane/ui-components/commit/d8e9370320d6fcb2cb4114658debec2997c8a00e))
+* prefer named export for Button ([805257d](https://github.com/Dashlane/ui-components/commit/805257d0a79948017c110abacb48c434b75c50d5))
+* remove circular dependencies ([49b320f](https://github.com/Dashlane/ui-components/commit/49b320f6612bbb01cad87eec68925022947488f9))
+* remove useless named export for Button ([8951f39](https://github.com/Dashlane/ui-components/commit/8951f3969ca558920088d9fb15f5ada8752ef121))
+* replace function by  simple check ([a30d89d](https://github.com/Dashlane/ui-components/commit/a30d89dfeaa0087cbfd112be01e2737ef414fae9))
+* replace SC Button with CSS Button ([85834b0](https://github.com/Dashlane/ui-components/commit/85834b02f2553d1047063cfdfec3c9b6b0ed318d))
+* simplify default props for Button ([5ee8023](https://github.com/Dashlane/ui-components/commit/5ee8023941ad0cd8dc3fce4b4d74042aebcf7857))
+* standardize IconComponentTemplate import ([809758c](https://github.com/Dashlane/ui-components/commit/809758cb2465f473e052e706b1ea3ed3c599de45))
+* update Button doc with new Button location ([33c175f](https://github.com/Dashlane/ui-components/commit/33c175f94572cbed9a2f7496445f32fb70dfbfd3))
+* update imports of Button ([ebe06b5](https://github.com/Dashlane/ui-components/commit/ebe06b5759697740388f41ecdc20b4517088eaf9))
+* update plopfile for generated icons imports ([03f42e3](https://github.com/Dashlane/ui-components/commit/03f42e32bb4dcbe976156684a815423f47ae372e))
+* update tests with new button location ([10b32f9](https://github.com/Dashlane/ui-components/commit/10b32f964e9783961a8d613bfe597627f6c23fb3))
+* update toggle tests ([042d424](https://github.com/Dashlane/ui-components/commit/042d424536cd674df00b75b6e2794ca8144d6498))
+* use aliases for imports in Button doc ([7734366](https://github.com/Dashlane/ui-components/commit/77343662fe14c1342f88b159ce6a9d65506028f9))
+* use named exports for all components ([672b7a8](https://github.com/Dashlane/ui-components/commit/672b7a8b878b4b81800c7597c5bcbf2505f90d1b))
+
 # [1.7.0](https://github.com/Dashlane/ui-components/compare/v1.6.0...v1.7.0) (2020-04-14)
 
 
