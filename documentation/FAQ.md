@@ -1,3 +1,7 @@
+---
+name: FAQ
+---
+
 # Frequently Asked Questions
 
 ### Where do those `docs` files appearing in my PR come from?
