@@ -1,6 +1,7 @@
 export { DropdownMenu } from './dropdown/DropdownMenu';
 export { DropdownElement } from './dropdown/DropdownElement';
 export { Logo } from './logo/Logo';
+export { BusinessLogo } from './business-logo/BusinessLogo';
 export { Tooltip } from './tooltip/Tooltip';
 export * from './tooltip/types';
 export { TextInput } from './text-input/TextInput';
