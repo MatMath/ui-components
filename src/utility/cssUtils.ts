@@ -13,14 +13,16 @@ interface CssClasses {
 export const getClassNames = (...classes: (string | CssClasses)[]): string => {
   const result: string[] = [];
   classes.forEach(value => {
-    if (typeof value === 'string') {
-      result.push(value);
-    } else {
-      Object.entries(value).forEach(([key, value]) => {
-        if (value) {
-          result.push(key);
-        }
-      });
+    if (value) {
+      if (typeof value === 'string') {
+        result.push(value);
+      } else {
+        Object.entries(value).forEach(([key, value]) => {
+          if (value) {
+            result.push(key);
+          }
+        });
+      }
     }
   });
   return result.join(' ');
