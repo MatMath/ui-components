@@ -1,3 +1,16 @@
+# [1.9.0](https://github.com/Dashlane/ui-components/compare/v1.8.1...v1.9.0) (2020-04-22)
+
+
+### Bug Fixes
+
+* add logo defaults ([1c41271](https://github.com/Dashlane/ui-components/commit/1c4127148ca18581a4e39ad688f5a17a8ed0675c))
+
+
+### Features
+
+* add addIcon, order icons, update doc ([d47a95e](https://github.com/Dashlane/ui-components/commit/d47a95ed179d15043cd4a15959cb6a390ff32ec3))
+* business logo ([a0ba2ae](https://github.com/Dashlane/ui-components/commit/a0ba2ae49a15a32a23402cbd521aeabd656f7a53))
+
 ## [1.8.1](https://github.com/Dashlane/ui-components/compare/v1.8.0...v1.8.1) (2020-04-21)
 
 
