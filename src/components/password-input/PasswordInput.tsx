@@ -55,12 +55,14 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
   } = props;
 
   const [showPassword, setShowPassword] = React.useState(false);
+  const inputRef = React.createRef<HTMLInputElement>();
 
   const handleShowPassword = () => {
     if (onPasswordVisibilityChanged) {
       onPasswordVisibilityChanged(!showPassword);
     }
     setShowPassword(prevState => !prevState);
+    inputRef.current && inputRef.current.focus();
   };
 
   const styledClassName = (feedbackType && styles[feedbackType]) || '';
@@ -72,6 +74,7 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
       {label && <span className={styles.label}>{label}</span>}
       <div className={styles.container}>
         <input
+          ref={inputRef}
           {...prop}
           type={showPassword ? 'text' : 'password'}
           className={getClassNames(styles.input, styledClassName)}
