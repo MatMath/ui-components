@@ -6,7 +6,7 @@ exports[`<Checkbox> Global render should render checked 1`] = `
 >
   <CheckboxContainer>
     <label
-      className="checkboxContainer "
+      className="checkboxContainer"
     >
       <HiddenCheckbox
         checked={true}
@@ -51,7 +51,7 @@ exports[`<Checkbox> Global render should render default 1`] = `
 <Component>
   <CheckboxContainer>
     <label
-      className="checkboxContainer "
+      className="checkboxContainer"
     >
       <HiddenCheckbox>
         <input
@@ -94,7 +94,7 @@ exports[`<Checkbox> Global render should render disabled 1`] = `
 >
   <CheckboxContainer>
     <label
-      className="checkboxContainer "
+      className="checkboxContainer"
     >
       <HiddenCheckbox>
         <input
@@ -137,7 +137,7 @@ exports[`<Checkbox> Global render should render unchecked 1`] = `
 <Component>
   <CheckboxContainer>
     <label
-      className="checkboxContainer "
+      className="checkboxContainer"
     >
       <HiddenCheckbox>
         <input
