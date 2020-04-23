@@ -95,3 +95,18 @@ exports[`<TextInput> Global render should render warning and show feedback text 
   </div>
 </Component>
 `;
+
+exports[`<TextInput> Global render should render with fluid class 1`] = `
+<Component
+  fluid={true}
+>
+  <div
+    className="root fluid"
+  >
+    <input
+      className="input fluid"
+      type="text"
+    />
+  </div>
+</Component>
+`;
