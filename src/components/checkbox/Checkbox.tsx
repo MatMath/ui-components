@@ -30,8 +30,8 @@ const HiddenCheckbox = ({
 };
 
 interface StyledCheckboxProps {
-  checked: boolean | undefined;
-  disabled: boolean | undefined;
+  checked?: boolean;
+  disabled?: boolean;
   children: React.ReactNode;
 }
 
