@@ -59,7 +59,7 @@
       }
     },
     {
-      "files": ["**/*.tsx"],
+      "files": ["**/*.tsx", "src/gatsby-theme-docz/**/*.js"],
       "rules": {
         "react/prop-types": "off"
       }
