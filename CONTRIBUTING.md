@@ -38,7 +38,7 @@ In order to get your local development env running, you need to follow the steps
 1. Clone the project
 
    ```
-   git clone ssh://git@stash.dashlane.com:7999/wp/dashlane-components.git
+   git clone https://github.com/Dashlane/ui-components.git
    ```
 
 2. Install dependencies
