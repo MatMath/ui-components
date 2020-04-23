@@ -1,4 +1,7 @@
 /*-- EXPORT ICON COMPONENTS --*/
+export { BackIcon } from './BackIcon';
+export { ForwardIcon } from './ForwardIcon';
+export { DashlaneLogoIcon } from './DashlaneLogoIcon';
 export { WarningIcon } from './WarningIcon';
 export { WebIcon } from './WebIcon';
 export { VaultIcon } from './VaultIcon';
