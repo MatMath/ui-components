@@ -10,6 +10,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  &.fluid {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .input {
@@ -64,12 +69,22 @@
   &::-ms-input-placeholder {
     color: colors.$dash-green-03;
   }
+
+  &.fluid {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .feedback {
   @include typography.body-small;
   color: colors.$black;
   margin-top: 4px;
+
+  &.fluid {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .feedback.warning {
