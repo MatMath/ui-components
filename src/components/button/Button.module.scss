@@ -8,7 +8,8 @@
   flex-direction: row;
   align-items: center;
   border-radius: 4px;
-  font-family: Public Sans;
+  font-family: 'Public Sans';
+  font-style: normal;
   font-weight: 600;
   justify-content: center;
   outline: none;
@@ -25,19 +26,22 @@
   &.small {
     padding: 8px 16px;
     height: 32px;
-    @include typography.body-small;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   &.medium {
     padding: 10px 16px;
     height: 40px;
-    @include typography.body-medium;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   &.large {
     padding: 14px 24px;
     height: 48px;
-    @include typography.body-medium;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   /* Colors based on Nature and Theme */
