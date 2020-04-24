@@ -38,16 +38,23 @@ In order to get your local development env running, you need to follow the steps
 1. Clone the project
 
    ```
-   git clone ssh://git@stash.dashlane.com:7999/wp/dashlane-components.git
+   git clone ssh://github.com/Dashlane/ui-components.git
    ```
+   You need your gpg key and ssh key to be authenticated to work in the repo. Here are some helpful documentation to follow:
 
-2. Install dependencies
+   - [Adding ssh key] https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+
+   - [Adding gpg key] https://help.github.com/en/github/authenticating-to-github/adding-a-new-gpg-key-to-your-github-account
+
+2. You will also need to be added to the contributors list in the Dashlane GitHub organization before being allowed to push on this repo. To do so, please contact an admin of the team.
+
+3. Install dependencies
 
    ```
    yarn
    ```
 
-3. Build in watch mode
+4. Build in watch mode
 
    ```
    yarn start
