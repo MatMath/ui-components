@@ -12,3 +12,4 @@ export { QuickActionsMenu } from './quick-actions-menu/QuickActionsMenu';
 export { Toggle } from './toggle/Toggle';
 export { PasswordInput } from './password-input/PasswordInput';
 export { PasswordStrength } from './password-strength/PasswordStrength';
+export { Checkbox } from './checkbox/Checkbox';

@@ -1,0 +1,101 @@
+@use '../../colors/colors';
+
+.checkboxContainer {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Chrome, Opera and Firefox */
+
+  &:hover {
+    .styledCheckbox {
+      border-color: colors.$mid-green-00;
+    }
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+/*
+* Hide checkbox visually but remain accessible to screen readers.
+* Source: https://polished.js.org/docs/#hidevisually
+*/
+.hiddenCheckBox {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+
+  &:focus {
+    & + .styledCheckbox {
+      border-color: colors.$mid-green-00;
+
+      &.checked {
+        background: colors.$dash-green-00;
+        border-color: colors.$dash-green-00;
+      }
+    }
+  }
+}
+
+.styledCheckbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: colors.$white;
+  border: 1px solid colors.$dash-green-05;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: all 150ms;
+
+  &.checked {
+    background: colors.$mid-green-00;
+    border-color: colors.$mid-green-00;
+
+    .checkmark {
+      visibility: visible;
+    }
+
+    &.disabled {
+      background: colors.$mid-green-03;
+      border-color: colors.$mid-green-03;
+    }
+
+    &:hover {
+      background: colors.$dash-green-00;
+      border-color: colors.$dash-green-00;
+    }
+  }
+
+  &.disabled {
+    background: colors.$dash-green-06;
+    border-color: colors.$dash-green-05;
+  }
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+  visibility: hidden;
+  position: absolute;
+  margin-left: -1px;
+  margin-top: -1px;
+  stroke: colors.$white;
+}
