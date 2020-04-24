@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: flex-start;
 
-  &.fluid {
+  &.fullWidth {
     max-width: 100%;
     width: 100%;
   }
@@ -70,7 +70,7 @@
     color: colors.$dash-green-03;
   }
 
-  &.fluid {
+  &.fullWidth {
     max-width: 100%;
     width: 100%;
   }
@@ -81,7 +81,7 @@
   color: colors.$black;
   margin-top: 4px;
 
-  &.fluid {
+  &.fullWidth {
     max-width: 100%;
     width: 100%;
   }

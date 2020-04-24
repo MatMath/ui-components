@@ -19,31 +19,37 @@ interface TextInputProps
    * Make this field take 100% of the width of it's container
    * @default false
    */
-  fluid?: boolean;
+  fullWidth?: boolean;
 }
 
 export const TextInput: React.FC<TextInputProps> = ({
   feedbackType,
   feedbackText,
-  fluid = false,
+  fullWidth = false,
   ...htmlInputProps
 }) => {
   const feedbackCssClass =
     feedbackType && styles[feedbackType] ? styles[feedbackType] : '';
 
-  const fluidCssClass = fluid && styles.fluid ? styles.fluid : '';
-
   return (
     <div
-      className={getClassNames(styles.root, feedbackCssClass, fluidCssClass)}
+      className={getClassNames(styles.root, feedbackCssClass, {
+        [styles.fullWidth]: fullWidth
+      })}
     >
       <input
         {...htmlInputProps}
-        className={getClassNames(styles.input, feedbackCssClass, fluidCssClass)}
+        className={getClassNames(styles.input, feedbackCssClass, {
+          [styles.fullWidth]: fullWidth
+        })}
         type='text'
       />
       {feedbackText && feedbackType ? (
-        <span className={getClassNames(styles.feedback, feedbackCssClass)}>
+        <span
+          className={getClassNames(styles.feedback, feedbackCssClass, {
+            [styles.fullWidth]: fullWidth
+          })}
+        >
           {feedbackText}
         </span>
       ) : null}

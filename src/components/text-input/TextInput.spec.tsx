@@ -43,13 +43,13 @@ describe('<TextInput>', () => {
     });
 
     it('should render with fluid class', () => {
-      const textInput = mount(<TextInput fluid />);
+      const textInput = mount(<TextInput fullWidth />);
 
       expect(textInput).toMatchSnapshot();
-      expect(textInput.props().fluid).toBeTruthy();
+      expect(textInput.props().fullWidth).toEqual(true);
       expect(textInput.find('input').getElement().props).toHaveProperty(
         'className',
-        'input fluid'
+        'input fullWidth'
       );
     });
   });
