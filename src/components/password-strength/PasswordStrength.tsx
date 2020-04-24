@@ -13,7 +13,7 @@ export interface PasswordStrengthProps {
    * Make this field take 100% of the width of it's container
    * @default false
    */
-  fluid?: boolean;
+  fullWidth?: boolean;
   /**
    * Score indicating the strength of a password
    * The scale (0 - 4) is based on the levels from the ZXCVBN algorithm
@@ -35,16 +35,21 @@ const classNameColorScoreMapping = {
 
 export const PasswordStrength = ({
   additionalText,
-  fluid = false,
+  fullWidth = false,
   score = 0,
   showAdditionalText
 }: PasswordStrengthProps) => {
   const strengthClassName = classNameColorScoreMapping[score];
-  const fluidClassName = (fluid && styles.fluid) || '';
 
   return (
-    <div className={getClassNames(styles.root, fluidClassName)}>
-      <div className={getClassNames(styles.container, fluidClassName)}>
+    <div
+      className={getClassNames(styles.root, { [styles.fullWidth]: fullWidth })}
+    >
+      <div
+        className={getClassNames(styles.container, {
+          [styles.fullWidth]: fullWidth
+        })}
+      >
         <span
           className={getClassNames(
             styles.passwordStrength,
