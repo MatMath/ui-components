@@ -22,6 +22,11 @@ export interface PasswordInputProps
    */
   feedbackType?: PasswordInputFeedbackType;
   /**
+   * Make this field take 100% of the width of it's container
+   * @default false
+   */
+  fullWidth?: boolean;
+  /**
    * The text that is displayed on hover on the hide icon when the
    * password is shown
    */
@@ -47,6 +52,7 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
   const {
     feedbackText,
     feedbackType,
+    fullWidth = false,
     hidePasswordTooltipText,
     label,
     onPasswordVisibilityChanged,
@@ -70,16 +76,29 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
   const RevealOrHideIcon = showPassword ? HideIcon : RevealIcon;
 
   return (
-    <div className={styles.root}>
+    <div
+      className={getClassNames(styles.root, { [styles.fullWidth]: fullWidth })}
+    >
       {label && <span className={styles.label}>{label}</span>}
-      <div className={styles.container}>
+      <div
+        className={getClassNames(styles.container, {
+          [styles.fullWidth]: fullWidth
+        })}
+      >
         <input
           ref={inputRef}
           {...prop}
           type={showPassword ? 'text' : 'password'}
-          className={getClassNames(styles.input, styledClassName)}
+          className={getClassNames(styles.input, styledClassName, {
+            [styles.fullWidth]: fullWidth
+          })}
         />
-        <button className={styles.icon} onClick={handleShowPassword}>
+        <button
+          className={getClassNames(styles.icon, {
+            [styles.fullWidth]: fullWidth
+          })}
+          onClick={handleShowPassword}
+        >
           {prop.disabled ? (
             <RevealOrHideIcon disabled={prop.disabled} />
           ) : (

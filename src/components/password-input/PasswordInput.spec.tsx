@@ -148,4 +148,21 @@ describe('<PasswordInput />', () => {
     expect(onPasswordVisibilityChanged).toHaveBeenNthCalledWith(1, true);
     expect(onPasswordVisibilityChanged).toHaveBeenNthCalledWith(2, false);
   });
+
+  it('should have the fullWidth classname', () => {
+    const passwordInput = mount(
+      <PasswordInput
+        hidePasswordTooltipText='hide'
+        showPasswordTooltipText='show'
+        fullWidth
+      />
+    );
+
+    expect(passwordInput).toMatchSnapshot();
+
+    expect(passwordInput.find('input').getElement().props).toHaveProperty(
+      'className',
+      'input fullWidth'
+    );
+  });
 });
