@@ -10,6 +10,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  &.fullWidth {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .input {
@@ -28,12 +33,12 @@
   align-items: center;
 
   /* border */
-  border: 1px solid colors.$dash-green-03;
+  border: 1px solid colors.$dash-green-05;
   border-radius: 4px;
   box-sizing: border-box;
 
   &:focus {
-    border-color: colors.$mid-green-00;
+    border-color: colors.$mid-green-01;
   }
 
   &.warning,
@@ -64,12 +69,22 @@
   &::-ms-input-placeholder {
     color: colors.$dash-green-03;
   }
+
+  &.fullWidth {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .feedback {
   @include typography.body-small;
   color: colors.$black;
   margin-top: 4px;
+
+  &.fullWidth {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .feedback.warning {

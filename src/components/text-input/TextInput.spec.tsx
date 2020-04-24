@@ -41,5 +41,16 @@ describe('<TextInput>', () => {
 
       expect(textInput).toMatchSnapshot();
     });
+
+    it('should render with fluid class', () => {
+      const textInput = mount(<TextInput fullWidth />);
+
+      expect(textInput).toMatchSnapshot();
+      expect(textInput.props().fullWidth).toEqual(true);
+      expect(textInput.find('input').getElement().props).toHaveProperty(
+        'className',
+        'input fullWidth'
+      );
+    });
   });
 });

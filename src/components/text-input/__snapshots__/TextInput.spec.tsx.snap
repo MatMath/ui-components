@@ -95,3 +95,18 @@ exports[`<TextInput> Global render should render warning and show feedback text 
   </div>
 </Component>
 `;
+
+exports[`<TextInput> Global render should render with fluid class 1`] = `
+<Component
+  fullWidth={true}
+>
+  <div
+    className="root fullWidth"
+  >
+    <input
+      className="input fullWidth"
+      type="text"
+    />
+  </div>
+</Component>
+`;
