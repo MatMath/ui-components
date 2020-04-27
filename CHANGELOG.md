@@ -1,3 +1,42 @@
+# [1.10.0](https://github.com/Dashlane/ui-components/compare/v1.9.0...v1.10.0) (2020-04-27)
+
+
+### Bug Fixes
+
+* remove references to document inside tooltip documentation ([21ba97b](https://github.com/Dashlane/ui-components/commit/21ba97b5dda0c33aab35a0bb90802706c5836a54))
+* **text-input:** edit border colors when focused and not to match design ([b557473](https://github.com/Dashlane/ui-components/commit/b557473a7abd0ca1055636ce05c985db84570dba))
+* **text-input:** edit field to take fluid prop ([01dc685](https://github.com/Dashlane/ui-components/commit/01dc685830bddfa64dd99cf81bfa8329ea6c9160))
+* dropdown documentation was crashing the parser ([12d9fd3](https://github.com/Dashlane/ui-components/commit/12d9fd30f8ce5389b9bb642c2108f8010778df02))
+* linting & style ([985bb7e](https://github.com/Dashlane/ui-components/commit/985bb7eb1567db81501dd4b9041d130eabb6d19b))
+* linting & style ([0e209b3](https://github.com/Dashlane/ui-components/commit/0e209b3cb1bb486abe628c4212822d77f4fe1907))
+* remove the warning messages about native props in button.mdx ([871b476](https://github.com/Dashlane/ui-components/commit/871b476730c4559623737be368005e64f293ada9))
+* update components doc to support the style.preview ([c38936a](https://github.com/Dashlane/ui-components/commit/c38936a79aa33bf102db95e712e2253f69db081b))
+* update components doc to support the style.preview ([45f6a5f](https://github.com/Dashlane/ui-components/commit/45f6a5f1ef0966bafc414b33d12f1f8839c8c967))
+
+
+### Features
+
+* update contribution.md ([a7abe09](https://github.com/Dashlane/ui-components/commit/a7abe09c44e44eba83ce454c3e87e18a5f864381))
+* **contributing.md:** update repository link ([944df94](https://github.com/Dashlane/ui-components/commit/944df946343ee047f36df2961d9e9be5cb4e53e4))
+* **password-input:** add fluid prop to take 100% of the container width ([65f3cd8](https://github.com/Dashlane/ui-components/commit/65f3cd801931772257a7462e35713f15722ebcfe))
+* **password-input:** make component take 100% width ([2f61793](https://github.com/Dashlane/ui-components/commit/2f61793c64b1d4ae3a0083ca94c8f597fe546446))
+* **password-input:** rename fluid prop to fullWidth & add test ([742ac6d](https://github.com/Dashlane/ui-components/commit/742ac6df03ce9bd01bd1c82fc77c946afa140c8e))
+* **password-strength:** add fluid prop to take 100% of container width ([6b21285](https://github.com/Dashlane/ui-components/commit/6b2128554b03a8a9fd3a66a34948ba5be5a3a046))
+* **password-strength:** rename fluid prop to fullWidth for more meaning ([4d339a7](https://github.com/Dashlane/ui-components/commit/4d339a7839d25dda5ca6ffddfa443274a0e876cd))
+* **text-input:** rename fluid prop to fullWidth for more meaning ([6dc78f6](https://github.com/Dashlane/ui-components/commit/6dc78f6907dbeac2e74c4e6b91459a4409c0efa3))
+* add checkbox component ([ae4ae34](https://github.com/Dashlane/ui-components/commit/ae4ae34308a0519ab4d41df214319debceba677f))
+* added the back, forward, and dashlane icon ([c30d971](https://github.com/Dashlane/ui-components/commit/c30d97119de099b51279d897c2259ae5c2aa388c))
+* export Checkbox ([2c46051](https://github.com/Dashlane/ui-components/commit/2c46051f6e72d73abcce072372257f7e3b9f996a))
+* **password-strength:** take 100% width and indicators take 20% ([1dd12f4](https://github.com/Dashlane/ui-components/commit/1dd12f4bb11b3a46c049dff47ec24275457e331b))
+* **text-input:** add test for the new fluid prop ([25f32f4](https://github.com/Dashlane/ui-components/commit/25f32f402cf70401cdd2b044408f9517817dd104))
+* link the source of playground ([dd1e771](https://github.com/Dashlane/ui-components/commit/dd1e7714230a1f814d164f7c02eff0ff421c01fc))
+* link the source of playground ([7508f37](https://github.com/Dashlane/ui-components/commit/7508f37575ec47e8da8b4ea23e4d31dfbd37a962))
+* playground support className, chore: cleaned eslint and ts version ([bf02159](https://github.com/Dashlane/ui-components/commit/bf02159e1d47031b6e746a8a3193cb94a8b65264))
+* playground support className, chore: cleaned eslint and ts version ([2046f3d](https://github.com/Dashlane/ui-components/commit/2046f3d9322fb9ed2383873758e523ec60c9fa3e))
+* update docz to 2.3 ([c4a49b9](https://github.com/Dashlane/ui-components/commit/c4a49b9f64059758f8252889a7ec8807e74aba34))
+* update docz to 2.3 ([067f013](https://github.com/Dashlane/ui-components/commit/067f013c71df4f5eae850d567cf074542414f10f))
+* **password-input:** focus field on show/hide button click ([8817e04](https://github.com/Dashlane/ui-components/commit/8817e04d74ad56a89b717800f6ef0fef9891e9e8))
+
 # [1.9.0](https://github.com/Dashlane/ui-components/compare/v1.8.1...v1.9.0) (2020-04-22)
 
 
