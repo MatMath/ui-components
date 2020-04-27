@@ -30,6 +30,7 @@
   },
   "sideEffects": false,
   "dependencies": {
+    "@tippyjs/react": "^4.0.2",
     "styled-components": "^4.3.1"
   },
   "peerDependencies": {
