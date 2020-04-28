@@ -1,3 +1,4 @@
+/* Text */
 @mixin body-medium {
   font-family: 'Public Sans';
   font-style: normal;
@@ -35,6 +36,15 @@
 
 @mixin button-large {
   @include button-common;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* Password */
+@mixin mono-medium {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
 }
