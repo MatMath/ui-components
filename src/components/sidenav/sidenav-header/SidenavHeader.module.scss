@@ -1,0 +1,12 @@
+@use '../../../colors/colors';
+
+.sidenavHeader {
+  align-items: flex-start;
+  border-bottom: 1px solid colors.$dash-green-01;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 88px;
+  justify-content: center;
+  padding: 0 32px 0 32px;
+}
