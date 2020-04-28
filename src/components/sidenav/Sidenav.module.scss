@@ -1,0 +1,10 @@
+@use '../../colors/colors';
+
+.sidenav {
+  background-color: colors.$dash-green-00;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 256px;
+}
