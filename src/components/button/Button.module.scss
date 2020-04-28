@@ -6,9 +6,6 @@
   border-style: solid;
   align-items: center;
   border-radius: 4px;
-  font-family: 'Public Sans';
-  font-style: normal;
-  font-weight: 600;
   justify-content: center;
   outline: none;
   transition: all 0.15s;
@@ -22,24 +19,21 @@
   /* Size */
 
   &.small {
+    @include typography.button-small;
     padding: 8px 16px;
     height: 32px;
-    font-size: 12px;
-    line-height: 16px;
   }
 
   &.medium {
+    @include typography.button-medium;
     padding: 10px 16px;
     height: 40px;
-    font-size: 16px;
-    line-height: 20px;
   }
 
   &.large {
+    @include typography.button-large;
     padding: 14px 24px;
     height: 48px;
-    font-size: 16px;
-    line-height: 20px;
   }
 
   /* Colors based on Nature and Theme */

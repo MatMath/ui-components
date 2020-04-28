@@ -13,3 +13,28 @@
   font-size: 12px;
   line-height: 16px;
 }
+
+/* Button */
+@mixin button-common {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin button-small {
+  @include button-common;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin button-medium {
+  @include button-common;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin button-large {
+  @include button-common;
+  font-size: 16px;
+  line-height: 20px;
+}
