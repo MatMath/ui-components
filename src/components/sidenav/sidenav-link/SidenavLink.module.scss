@@ -1,0 +1,36 @@
+@use '../../../colors/colors';
+
+.sidenavLink {
+  align-items: center;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: flex;
+  height: 52px;
+  margin-bottom: 2px;
+  padding: 16px 24px;
+  text-decoration: none;
+
+  .sidenavLabel {
+    color: colors.$dash-green-04;
+    padding-left: 16px;
+  }
+
+  .sidenavIcon svg {
+    fill: colors.$dash-green-04;
+  }
+
+  &:hover {
+    background-color: colors.$dash-green-01;
+  }
+
+  &:active {
+    .sidenavLabel {
+      color: colors.$white;
+    }
+
+    .sidenavIcon svg {
+      fill: colors.$white;
+    }
+  }
+}
+
