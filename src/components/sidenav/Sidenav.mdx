@@ -5,6 +5,10 @@ menu: Components
 
 import { Playground } from 'docz';
 import { Sidenav } from './Sidenav';
+import { SidenavHeader } from './sidenav-header/SidenavHeader';
+import { SidenavBody } from './sidenav-body/SidenavBody';
+import { SidenavLink } from './sidenav-link/SidenavLink';
+import { HelpIcon } from '../../atoms/icons/HelpIcon';
 
 # Sidenav
 
@@ -12,8 +16,15 @@ A vertical side navigation panel.
 
 ## Usage
 
-<Playground>
+<Playground style={{ preview: { height: 400, position: 'relative' }}}>
   <Sidenav>
-    <div style={{ color: 'white' }}>Nav content</div>
+    <SidenavHeader>
+      <div style={{ color: 'white' }}>Header content</div>
+    </SidenavHeader>
+    <SidenavBody>
+      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
+      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
+      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
+    </SidenavBody>
   </Sidenav>
 </Playground>
