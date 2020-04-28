@@ -1,3 +1,16 @@
+# [1.11.0](https://github.com/Dashlane/ui-components/compare/v1.10.0...v1.11.0) (2020-04-28)
+
+
+### Bug Fixes
+
+* add button font weight ([ffa9b33](https://github.com/Dashlane/ui-components/commit/ffa9b33d34b9681eb9fb677bcc2543fc80daa540))
+* remove useless flex properties ([cbe42b3](https://github.com/Dashlane/ui-components/commit/cbe42b3f2fd5c695119d3bd8d50f6e07a096f421))
+
+
+### Features
+
+* **sidenav:** implement sidenav ([1d6bc12](https://github.com/Dashlane/ui-components/commit/1d6bc127c703646c3b039f10277a340ce2a1e5eb))
+
 # [1.10.0](https://github.com/Dashlane/ui-components/compare/v1.9.0...v1.10.0) (2020-04-27)
 
 
