@@ -1,3 +1,15 @@
+# [1.12.0](https://github.com/Dashlane/ui-components/compare/v1.11.0...v1.12.0) (2020-04-29)
+
+
+### Features
+
+* accordion component, recommitted with gpg key ([6bea821](https://github.com/Dashlane/ui-components/commit/6bea8217d722df58b6aab2ab63b2c436211f64b7))
+* add thumbnail component ([93c0825](https://github.com/Dashlane/ui-components/commit/93c082516aaa79cf37f87c5d078e2ddd8b92889e))
+* implement colored password ([fbaf7d2](https://github.com/Dashlane/ui-components/commit/fbaf7d23d714d5a52268424e416a28831abc683f))
+* **sidenav:** implement sidenav-body ([3ab782c](https://github.com/Dashlane/ui-components/commit/3ab782c7c57f10239d557c0c4b8105cc495d6c3f))
+* **sidenav:** implement sidenav-header ([32f6381](https://github.com/Dashlane/ui-components/commit/32f63817e79e36a1d0e7922fd39dac6c0defb754))
+* **sidenav:** implement sidenav-link ([ad166fb](https://github.com/Dashlane/ui-components/commit/ad166fb5a8f0db65cb9dd053d1d297a756155f0d))
+
 # [1.11.0](https://github.com/Dashlane/ui-components/compare/v1.10.0...v1.11.0) (2020-04-28)
 
 
