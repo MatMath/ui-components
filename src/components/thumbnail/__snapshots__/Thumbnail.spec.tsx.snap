@@ -84,7 +84,7 @@ exports[`<Thumbnail/> Small render should render small 1`] = `
 </Component>
 `;
 
-exports[`<Thumbnail/> Yellow render should render yello 1`] = `
+exports[`<Thumbnail/> Yellow render should render yellow 1`] = `
 <Component
   backgroundColor="yellow"
   size="small"
