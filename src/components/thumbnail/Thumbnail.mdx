@@ -1,0 +1,54 @@
+---
+name: Thumbnail
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Thumbnail } from './Thumbnail';
+import '../../utility/playgroundStyles.css';
+
+# Thumbnail
+
+A thumbnail component
+
+## Properties
+
+<Props of={Thumbnail} />
+
+## Usage
+
+### Basic usage
+
+Examples below show usage of the Thumbnail
+
+<Playground
+    style={{
+        preview: {
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-evenly'
+        }
+    }}
+>
+
+  <Thumbnail size='small' text='Logo' backgroundColor='grey' />
+  <Thumbnail
+    size='small'
+    text='Logo'
+    backgroundColor='papayawhip'
+    iconSource='https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-amazon-512.png'
+  />
+  <Thumbnail
+    size='medium'
+    text='Logo'
+    backgroundColor='orange'
+    iconSource='https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-amazon-512.png'
+  />
+  <Thumbnail
+    size='large'
+    text='Logo'
+    backgroundColor='white'
+    iconSource='https://cdn3.iconfinder.com/data/icons/glypho-social-and-other-logos/64/logo-amazon-512.png'
+  />
+</Playground>

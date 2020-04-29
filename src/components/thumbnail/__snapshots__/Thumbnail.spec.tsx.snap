@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Thumbnail/> Large render should render large 1`] = `
+<Component
+  backgroundColor="gray"
+  size="large"
+  text="Logo"
+>
+  <div
+    className="container large"
+    style={
+      Object {
+        "backgroundColor": "gray",
+      }
+    }
+  >
+    <Logo
+      size="large"
+      text="Logo"
+    >
+      <span
+        className="letters large"
+      >
+        Lo
+      </span>
+    </Logo>
+  </div>
+</Component>
+`;
+
+exports[`<Thumbnail/> Medium render should render medium 1`] = `
+<Component
+  backgroundColor="gray"
+  size="medium"
+  text="Logo"
+>
+  <div
+    className="container medium"
+    style={
+      Object {
+        "backgroundColor": "gray",
+      }
+    }
+  >
+    <Logo
+      size="medium"
+      text="Logo"
+    >
+      <span
+        className="letters medium"
+      >
+        Lo
+      </span>
+    </Logo>
+  </div>
+</Component>
+`;
+
+exports[`<Thumbnail/> Small render should render small 1`] = `
+<Component
+  backgroundColor="gray"
+  size="small"
+  text="Logo"
+>
+  <div
+    className="container small"
+    style={
+      Object {
+        "backgroundColor": "gray",
+      }
+    }
+  >
+    <Logo
+      size="small"
+      text="Logo"
+    >
+      <span
+        className="letters small"
+      >
+        Lo
+      </span>
+    </Logo>
+  </div>
+</Component>
+`;
+
+exports[`<Thumbnail/> Yellow render should render yello 1`] = `
+<Component
+  backgroundColor="yellow"
+  size="small"
+  text="Logo"
+>
+  <div
+    className="container small"
+    style={
+      Object {
+        "backgroundColor": "yellow",
+      }
+    }
+  >
+    <Logo
+      size="small"
+      text="Logo"
+    >
+      <span
+        className="letters small"
+      >
+        Lo
+      </span>
+    </Logo>
+  </div>
+</Component>
+`;
