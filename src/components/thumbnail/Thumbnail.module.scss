@@ -1,0 +1,58 @@
+@use '../../colors/colors';
+
+.container {
+  border: 1px solid rgba(colors.$black, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.small {
+    width: 48px;
+    height: 32px;
+  }
+  &.medium {
+    width: 96px;
+    height: 64px;
+  }
+  &.large {
+    width: 147px;
+    height: 98px;
+  }
+}
+
+.letters {
+  color: colors.$white;
+  text-transform: capitalize;
+  font-family: 'GT Walsheim Pro';
+  font-weight: 600;
+  user-select: none;
+  text-align: center;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.small {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &.medium {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  &.large {
+    font-size: 64px;
+    line-height: 75px;
+  }
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
