@@ -1,0 +1,13 @@
+@use '../../colors/colors';
+@use '../../typography/typography';
+
+.card {
+  background: colors.$white;
+  border-color: colors.$dash-green-05;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  color: colors.$black;
+  @include typography.body-medium;
+}
