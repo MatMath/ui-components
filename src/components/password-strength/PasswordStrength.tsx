@@ -40,6 +40,7 @@ export const PasswordStrength = ({
   showAdditionalText
 }: PasswordStrengthProps) => {
   const strengthClassName = classNameColorScoreMapping[score];
+  const strengthLevel = (score * 100) / 4;
 
   return (
     <div
@@ -50,36 +51,17 @@ export const PasswordStrength = ({
           [styles.fullWidth]: fullWidth
         })}
       >
-        <span
-          className={getClassNames(
-            styles.passwordStrength,
-            score >= 0 ? strengthClassName : ''
-          )}
-        ></span>
-        <span
-          className={getClassNames(
-            styles.passwordStrength,
-            score >= 1 ? strengthClassName : ''
-          )}
-        ></span>
-        <span
-          className={getClassNames(
-            styles.passwordStrength,
-            score >= 2 ? strengthClassName : ''
-          )}
-        ></span>
-        <span
-          className={getClassNames(
-            styles.passwordStrength,
-            score >= 3 ? strengthClassName : ''
-          )}
-        ></span>
-        <span
-          className={getClassNames(
-            styles.passwordStrength,
-            score >= 4 ? strengthClassName : ''
-          )}
-        ></span>
+        <div className={getClassNames(styles.passwordStrengthBackground)}>
+          <span
+            style={{
+              width: `${strengthLevel}%`
+            }}
+            className={getClassNames(
+              styles.passwordStrength,
+              strengthClassName
+            )}
+          ></span>
+        </div>
       </div>
       {showAdditionalText && additionalText && (
         <span className={styles.additionalInfo}>{additionalText}</span>
