@@ -1,0 +1,44 @@
+@use '../../colors/colors';
+@use '../../typography/typography';
+
+.AccordionContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.AccordionSectionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 16px;
+  font-weight: 700;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.AccordionSectionContainer {
+  background-color: colors.$white;
+  opacity: 1;
+  margin-bottom: 8px;
+}
+
+.AccordionSectionContent {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.AccordionSectionContentLocked {
+  pointer-events: none;
+}
+
+.AccordionContentDivider {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 20px;
+  background-color: colors.$grey-05;
+}

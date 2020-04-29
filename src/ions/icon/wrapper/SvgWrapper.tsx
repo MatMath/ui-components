@@ -17,7 +17,7 @@ export const SvgWrapper: React.FunctionComponent<Props> = ({
       ? isAnimatedSvg(children.props.children)
       : false;
   return (
-    <Icon animated={isAnimated} {...props}>
+    <Icon svgAnimated={isAnimated} {...props}>
       {title ? <title>{title}</title> : null}
       {children}
     </Icon>

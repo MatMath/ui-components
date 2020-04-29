@@ -52,6 +52,16 @@ export interface Props {
    * @default '0 0 20 20'
    **/
   viewBox?: string;
+  /**
+   * Set the degrees the icon is rotated
+   * @default '0'
+   */
+  rotate?: number;
+  /**
+   * Set if the transformations are animated. Overrides any SVG animations.
+   * @default false
+   */
+  iconAnimated?: boolean;
 }
 
 export type IconProps = Pick<Props, Exclude<keyof Props, 'children'>>; // Using this rather than Omit<Props, 'children'> because Docz is not able to understand the Omit syntax and to parse the props
