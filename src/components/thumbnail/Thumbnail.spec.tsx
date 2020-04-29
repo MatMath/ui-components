@@ -35,7 +35,7 @@ describe('<Thumbnail/>', () => {
   });
 
   describe('Yellow render', () => {
-    it('should render yello', () => {
+    it('should render yellow', () => {
       const thumbnail = mount(
         <Thumbnail size='small' backgroundColor='yellow' text='Logo' />
       );
