@@ -1,3 +1,10 @@
+## [1.12.1](https://github.com/Dashlane/ui-components/compare/v1.12.0...v1.12.1) (2020-04-30)
+
+
+### Bug Fixes
+
+* export thumbnail ([e2f8294](https://github.com/Dashlane/ui-components/commit/e2f8294362e83773e546ac7339b1368d82d28127))
+
 # [1.12.0](https://github.com/Dashlane/ui-components/compare/v1.11.0...v1.12.0) (2020-04-29)
 
 
