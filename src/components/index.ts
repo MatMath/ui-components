@@ -14,3 +14,4 @@ export { PasswordInput } from './password-input/PasswordInput';
 export { PasswordStrength } from './password-strength/PasswordStrength';
 export { Checkbox } from './checkbox/Checkbox';
 export { Accordion } from './accordion/Accordion';
+export { Thumbnail } from './thumbnail/Thumbnail';
