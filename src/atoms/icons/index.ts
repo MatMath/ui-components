@@ -1,4 +1,5 @@
 /*-- EXPORT ICON COMPONENTS --*/
+export { WindowsIcon } from './WindowsIcon';
 export { WebIcon } from './WebIcon';
 export { UserCircleIcon } from './UserCircleIcon';
 export { WarningIcon } from './WarningIcon';
@@ -54,5 +55,7 @@ export { CaretDownIcon } from './CaretDownIcon';
 export { BuildingIcon } from './BuildingIcon';
 export { BackIcon } from './BackIcon';
 export { ArrowDownIcon } from './ArrowDownIcon';
+export { AppleIcon } from './AppleIcon';
+export { AndroidIcon } from './AndroidIcon';
 export { AddIcon } from './AddIcon';
 export { ActivityLogIcon } from './ActivityLogIcon';
