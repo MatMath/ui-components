@@ -7,7 +7,8 @@ import { Playground } from 'docz';
 import { Sidenav } from './Sidenav';
 import { SidenavHeader } from './sidenav-header/SidenavHeader';
 import { SidenavBody } from './sidenav-body/SidenavBody';
-import { SidenavLink } from './sidenav-link/SidenavLink';
+import { SidenavLinkItem } from './sidenav-link-item/SidenavLinkItem';
+import { SidenavItem } from './sidenav-item/SidenavItem';
 import { HelpIcon } from '../../atoms/icons/HelpIcon';
 
 # Sidenav
@@ -22,9 +23,24 @@ A vertical side navigation panel.
       <div style={{ color: 'white' }}>Header content</div>
     </SidenavHeader>
     <SidenavBody>
-      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
-      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
-      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
+      <SidenavLinkItem><a href="#"><HelpIcon /> Link item w. icon</a></SidenavLinkItem>
+      <SidenavLinkItem><a href="#">Link item without icon</a></SidenavLinkItem>
+      <SidenavItem><span className="custom">Custom item</span></SidenavItem>
     </SidenavBody>
   </Sidenav>
+  <style dangerouslySetInnerHTML={{
+    __html: `
+      .custom {
+        align-items: center;
+        color: #fdb5af;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        padding: 0 24px;
+      }
+      .custom:active {
+        color: #fdc4bf;
+      }
+    `
+  }}/>
 </Playground>
