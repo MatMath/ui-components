@@ -9,16 +9,16 @@ describe('<SidenavMenu>', () => {
     it('should have sidenavMenu class', () => {
       const wrapper = mount(<SidenavMenu />);
       const elem = wrapper.find('ul').first();
-      const hasSidenavClass = elem.hasClass('sidenavMenu');
-      expect(hasSidenavClass).toBe(true);
+      const hasBaseClass = elem.hasClass('sidenavMenu');
+      expect(hasBaseClass).toBe(true);
     });
     it('should have sidenavMenu class and custom class', () => {
       const className = 'test';
       const wrapper = mount(<SidenavMenu className={className} />);
       const elem = wrapper.find('ul').first();
 
-      const hasSidenavClass = elem.hasClass('sidenavMenu');
-      expect(hasSidenavClass).toBe(true);
+      const hasBaseClass = elem.hasClass('sidenavMenu');
+      expect(hasBaseClass).toBe(true);
 
       const hasCustomClass = elem.hasClass(className);
       expect(hasCustomClass).toBe(true);

@@ -6,19 +6,19 @@ import { SidenavLinkItem } from './SidenavLinkItem';
 describe('<SidenavLinkItem>', () => {
   describe('Global render', () => {
     const label = 'label';
-    it('should have sidenavItem class', () => {
+    it('should have sidenavLinkItem class', () => {
       const wrapper = mount(<SidenavLinkItem />);
       const elem = wrapper.find('li').first();
-      const hasLinkItemClass = elem.hasClass('linkItem');
-      expect(hasLinkItemClass).toBe(true);
+      const hasBaseClass = elem.hasClass('sidenavLinkItem');
+      expect(hasBaseClass).toBe(true);
     });
-    it('should have linkItem class and custom class', () => {
+    it('should have sidenavLinkItem class and custom class', () => {
       const className = 'test';
       const wrapper = mount(<SidenavLinkItem className={className} />);
       const elem = wrapper.find('li').first();
 
-      const hasLinkItemClass = elem.hasClass('linkItem');
-      expect(hasLinkItemClass).toBe(true);
+      const hasBaseClass = elem.hasClass('sidenavLinkItem');
+      expect(hasBaseClass).toBe(true);
 
       const hasCustomClass = elem.hasClass(className);
       expect(hasCustomClass).toBe(true);
