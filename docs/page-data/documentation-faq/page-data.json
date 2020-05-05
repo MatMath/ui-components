@@ -1,4 +1,5 @@
 <<<<<<< master
+<<<<<<< master
 {"componentChunkName":"component---documentation-faq-md","path":"/documentation-faq","result":{"pageContext":{"frontmatter":{"name":"FAQ"},"entry":{"id":"53d153259af4ccf8cd243ec5e5cb590f","filepath":"documentation/FAQ.md","fullpath":"/home/qlhours/projects/dashlane/ui-components/documentation/FAQ.md","route":"/documentation-faq","slug":"documentation-faq","name":"FAQ","menu":"","headings":[{"slug":"frequently-asked-questions","depth":1,"value":"Frequently Asked Questions"},{"slug":"where-do-those-docs-files-appearing-in-my-pr-come-from","depth":3,"value":"Where do those  docs  files appearing in my PR come from?"}]}}}}
 =======
 <<<<<<< master
@@ -7,3 +8,6 @@
 {"componentChunkName":"component---documentation-faq-md","path":"/documentation-faq","result":{"pageContext":{"frontmatter":{"name":"FAQ"},"entry":{"id":"53d153259af4ccf8cd243ec5e5cb590f","filepath":"documentation/FAQ.md","fullpath":"/home/quentin/dev/ui-components/documentation/FAQ.md","route":"/documentation-faq","slug":"documentation-faq","name":"FAQ","menu":"","headings":[{"slug":"frequently-asked-questions","depth":1,"value":"Frequently Asked Questions"},{"slug":"where-do-those-docs-files-appearing-in-my-pr-come-from","depth":3,"value":"Where do those  docs  files appearing in my PR come from?"}]}}}}
 >>>>>>> docs: update docz documentation
 >>>>>>> docs: update docz documentation
+=======
+{"componentChunkName":"component---documentation-faq-md","path":"/documentation-faq","result":{"pageContext":{"frontmatter":{"name":"FAQ"},"entry":{"id":"53d153259af4ccf8cd243ec5e5cb590f","filepath":"documentation/FAQ.md","fullpath":"/home/quentin/dev/ui-components/documentation/FAQ.md","route":"/documentation-faq","slug":"documentation-faq","name":"FAQ","menu":"","headings":[{"slug":"frequently-asked-questions","depth":1,"value":"Frequently Asked Questions"},{"slug":"where-do-those-docs-files-appearing-in-my-pr-come-from","depth":3,"value":"Where do those  docs  files appearing in my PR come from?"}]}}}}
+>>>>>>> fix: sidenav documentation

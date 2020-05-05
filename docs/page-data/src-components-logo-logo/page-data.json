@@ -1,4 +1,5 @@
 <<<<<<< master
+<<<<<<< master
 {"componentChunkName":"component---src-components-logo-logo-mdx","path":"/src-components-logo-logo","result":{"pageContext":{"frontmatter":{"name":"Logo","menu":"Components"},"entry":{"id":"808fc92825fffff34a7b589931ba68a0","filepath":"src/components/logo/Logo.mdx","fullpath":"/home/qlhours/projects/dashlane/ui-components/src/components/logo/Logo.mdx","route":"/src-components-logo-logo","slug":"src-components-logo-logo","name":"Logo","menu":"Components","headings":[{"slug":"logo","depth":1,"value":"Logo"},{"slug":"properties","depth":2,"value":"Properties"}]}}}}
 =======
 <<<<<<< master
@@ -7,3 +8,6 @@
 {"componentChunkName":"component---src-components-logo-logo-mdx","path":"/src-components-logo-logo","result":{"pageContext":{"frontmatter":{"name":"Logo","menu":"Components"},"entry":{"id":"808fc92825fffff34a7b589931ba68a0","filepath":"src/components/logo/Logo.mdx","fullpath":"/home/quentin/dev/ui-components/src/components/logo/Logo.mdx","route":"/src-components-logo-logo","slug":"src-components-logo-logo","name":"Logo","menu":"Components","headings":[{"slug":"logo","depth":1,"value":"Logo"},{"slug":"properties","depth":2,"value":"Properties"}]}}}}
 >>>>>>> docs: update docz documentation
 >>>>>>> docs: update docz documentation
+=======
+{"componentChunkName":"component---src-components-logo-logo-mdx","path":"/src-components-logo-logo","result":{"pageContext":{"frontmatter":{"name":"Logo","menu":"Components"},"entry":{"id":"808fc92825fffff34a7b589931ba68a0","filepath":"src/components/logo/Logo.mdx","fullpath":"/home/quentin/dev/ui-components/src/components/logo/Logo.mdx","route":"/src-components-logo-logo","slug":"src-components-logo-logo","name":"Logo","menu":"Components","headings":[{"slug":"logo","depth":1,"value":"Logo"},{"slug":"properties","depth":2,"value":"Properties"}]}}}}
+>>>>>>> fix: sidenav documentation

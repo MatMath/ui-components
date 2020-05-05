@@ -1,4 +1,5 @@
 <<<<<<< master
+<<<<<<< master
 {"componentChunkName":"component---src-components-tooltip-tooltip-mdx","path":"/src-components-tooltip-tooltip","result":{"pageContext":{"frontmatter":{"name":"Tooltip","menu":"Components"},"entry":{"id":"5610f72072903ecdd9a2e53560f0d4af","filepath":"src/components/tooltip/Tooltip.mdx","fullpath":"/home/qlhours/projects/dashlane/ui-components/src/components/tooltip/Tooltip.mdx","route":"/src-components-tooltip-tooltip","slug":"src-components-tooltip-tooltip","name":"Tooltip","menu":"Components","headings":[{"slug":"tooltip","depth":1,"value":"Tooltip"},{"slug":"properties","depth":2,"value":"Properties"},{"slug":"usage","depth":2,"value":"Usage"},{"slug":"basic-usage","depth":3,"value":"Basic usage"},{"slug":"advanced-settings","depth":3,"value":"Advanced settings"}]}}}}
 =======
 <<<<<<< master
@@ -7,3 +8,6 @@
 {"componentChunkName":"component---src-components-tooltip-tooltip-mdx","path":"/src-components-tooltip-tooltip","result":{"pageContext":{"frontmatter":{"name":"Tooltip","menu":"Components"},"entry":{"id":"5610f72072903ecdd9a2e53560f0d4af","filepath":"src/components/tooltip/Tooltip.mdx","fullpath":"/home/quentin/dev/ui-components/src/components/tooltip/Tooltip.mdx","route":"/src-components-tooltip-tooltip","slug":"src-components-tooltip-tooltip","name":"Tooltip","menu":"Components","headings":[{"slug":"tooltip","depth":1,"value":"Tooltip"},{"slug":"properties","depth":2,"value":"Properties"},{"slug":"usage","depth":2,"value":"Usage"},{"slug":"basic-usage","depth":3,"value":"Basic usage"},{"slug":"advanced-settings","depth":3,"value":"Advanced settings"}]}}}}
 >>>>>>> docs: update docz documentation
 >>>>>>> docs: update docz documentation
+=======
+{"componentChunkName":"component---src-components-tooltip-tooltip-mdx","path":"/src-components-tooltip-tooltip","result":{"pageContext":{"frontmatter":{"name":"Tooltip","menu":"Components"},"entry":{"id":"5610f72072903ecdd9a2e53560f0d4af","filepath":"src/components/tooltip/Tooltip.mdx","fullpath":"/home/quentin/dev/ui-components/src/components/tooltip/Tooltip.mdx","route":"/src-components-tooltip-tooltip","slug":"src-components-tooltip-tooltip","name":"Tooltip","menu":"Components","headings":[{"slug":"tooltip","depth":1,"value":"Tooltip"},{"slug":"properties","depth":2,"value":"Properties"},{"slug":"usage","depth":2,"value":"Usage"},{"slug":"basic-usage","depth":3,"value":"Basic usage"},{"slug":"advanced-settings","depth":3,"value":"Advanced settings"}]}}}}
+>>>>>>> fix: sidenav documentation
