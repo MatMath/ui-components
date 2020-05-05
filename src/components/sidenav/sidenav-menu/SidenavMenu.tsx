@@ -11,7 +11,7 @@ export type SidenavMenuProps = React.HTMLAttributes<HTMLUListElement>;
  */
 export const SidenavMenu: React.FC<SidenavMenuProps> = props => {
   const { children, className, ...otherProps } = props;
-  const classname = getClassNames(styles.sidenavItem, className);
+  const classname = getClassNames(styles.sidenavMenu, className);
   return (
     <ul className={classname} {...otherProps}>
       {children}

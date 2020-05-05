@@ -7,11 +7,11 @@ describe('<SidenavHeader>', () => {
   describe('Global render', () => {
     it('should be a header with sidenavHeader class', () => {
       const wrapper = mount(<SidenavHeader></SidenavHeader>);
-      const hasClass = wrapper
+      const hasBaseClass = wrapper
         .find('header')
         .first()
         .hasClass('sidenavHeader');
-      expect(hasClass).toBe(true);
+      expect(hasBaseClass).toBe(true);
     });
     it('should render its children', () => {
       const text = 'text';
