@@ -2,7 +2,8 @@
 @use '../../../typography/typography';
 
 .linkItem {
-  a, a:hover {
+  a,
+  a:hover {
     @include typography.body-medium;
 
     color: colors.$dash-green-04;
@@ -29,5 +30,3 @@
     }
   }
 }
-
-
