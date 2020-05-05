@@ -21,6 +21,15 @@ describe('getClassNames', () => {
     });
   });
 
+  describe('Undefined parameters', () => {
+    it('should ignore undefined parameters', () => {
+      const className = 'class-name';
+      const result = getClassNames(undefined, className, undefined);
+
+      expect(result).toEqual(className);
+    })
+  })
+
   describe('Object parameters', () => {
     it('should have the class name', () => {
       const className = 'class-name';
