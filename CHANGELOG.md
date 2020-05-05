@@ -1,3 +1,10 @@
+## [1.12.2](https://github.com/Dashlane/ui-components/compare/v1.12.1...v1.12.2) (2020-05-05)
+
+
+### Bug Fixes
+
+* **thumbnail:** crop content when it's too big ([32668ea](https://github.com/Dashlane/ui-components/commit/32668ea1fa9c4da68c54b8e4e41f29e98cd52713))
+
 ## [1.12.1](https://github.com/Dashlane/ui-components/compare/v1.12.0...v1.12.1) (2020-04-30)
 
 
