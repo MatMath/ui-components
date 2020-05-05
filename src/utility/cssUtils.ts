@@ -19,8 +19,8 @@ export const getClassNames = (
       if (typeof value === 'string') {
         result.push(value);
       } else {
-        Object.entries(value).forEach(([className, useClassName]) => {
-          if (useClassName) {
+        Object.entries(value).forEach(([className, shouldUseClassName]) => {
+          if (shouldUseClassName) {
             result.push(className);
           }
         });

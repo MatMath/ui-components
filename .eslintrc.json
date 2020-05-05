@@ -33,6 +33,10 @@
         "ignoreCase": true,
         "ignoreDeclarationSort": true
       }
+    ],
+    "no-shadow": [
+      "error",
+      { "builtinGlobals": false, "hoist": "functions", "allow": [] }
     ]
   },
   "overrides": [

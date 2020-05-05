@@ -113,7 +113,7 @@ it to a different project. To do so:
    yarn typing:watch
    ```
 
-You will see the doc on http://localhost:3000
+You will see the doc on http://localhost:3001
 
 ### Contributing
 

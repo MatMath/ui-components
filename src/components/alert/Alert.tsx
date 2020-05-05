@@ -24,8 +24,8 @@ export const Alert = ({
     return null;
   }
 
-  const getIconBySeverity = (severity: AlertSeverity) => {
-    switch (severity) {
+  const getIconBySeverity = (alertSeverity: AlertSeverity) => {
+    switch (alertSeverity) {
       case AlertSeverity.ERROR:
         return <CrossCircleIcon size={30} color='white' />;
       case AlertSeverity.SUCCESS:
@@ -34,8 +34,8 @@ export const Alert = ({
     }
   };
 
-  const renderIcon = (severity: AlertSeverity) => {
-    const icon = getIconBySeverity(severity);
+  const renderIcon = (alertSeverity: AlertSeverity) => {
+    const icon = getIconBySeverity(alertSeverity);
     return <div className={styles.icon}>{icon}</div>;
   };
 

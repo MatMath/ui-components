@@ -75,16 +75,14 @@ const Accordion = ({
   return (
     <div className={containerClass}>
       {children
-        ? React.Children.toArray(children).map(
-            (Section: any, index: number) => {
-              return React.cloneElement(Section, {
-                className: containerClass,
-                open: openedSections.has(index),
-                toggleSection: (requestedState: boolean) =>
-                  toggleSection(index, requestedState)
-              });
-            }
-          )
+        ? React.Children.toArray(children).map((child: any, index: number) => {
+            return React.cloneElement(child, {
+              className: containerClass,
+              open: openedSections.has(index),
+              toggleSection: (requestedState: boolean) =>
+                toggleSection(index, requestedState)
+            });
+          })
         : null}
     </div>
   );

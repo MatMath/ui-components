@@ -10,7 +10,7 @@ export interface AccordionSectionProps {
   children?: React.ReactNode;
 
   /** Only used by the Accordion Wrapper, not to be passed anything. */
-  toggleSection?: (requestedState: boolean) => void; 
+  toggleSection?: (requestedState: boolean) => void;
 
   /** Whether the section is open or not, used when not wrapped in an Accordion. */
   open?: boolean;
@@ -51,7 +51,7 @@ const Section = ({
     if (toggleSection) {
       toggleSection(!isOpen);
     } else {
-      setIsOpen(open => !open);
+      setIsOpen(sectionIsOpen => !sectionIsOpen);
     }
   };
 
@@ -92,7 +92,11 @@ const Section = ({
   const contentClass = getClassNames(
     styles.AccordionSectionContent,
     sectionContentClassName ? sectionContentClassName : '',
-    locked ? lockedClassName ? lockedClassName : styles.AccordionSectionContentLocked : ''
+    locked
+      ? lockedClassName
+        ? lockedClassName
+        : styles.AccordionSectionContentLocked
+      : ''
   );
 
   return (
