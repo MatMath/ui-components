@@ -1,8 +1,14 @@
 import * as React from 'react';
-import { getClassNames } from '@utility/cssUtils';
-import { CheckCircleIcon, CloseIcon, CrossCircleIcon } from '@atoms';
-import { Button } from '@components/button/Button';
+
+import {
+  CheckCircleIcon,
+  CloseIcon,
+  CrossCircleIcon
+} from '@components/icons/Icons';
+
 import { AlertSeverity } from './types';
+import { Button } from '@components/button/Button';
+import { getClassNames } from '@utility/cssUtils';
 import styles from './Alert.module.scss';
 
 export interface AlertProps {
