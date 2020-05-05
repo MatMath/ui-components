@@ -6,9 +6,11 @@ menu: Components
 import { Playground } from 'docz';
 import { Sidenav } from './Sidenav';
 import { SidenavHeader } from './sidenav-header/SidenavHeader';
-import { SidenavBody } from './sidenav-body/SidenavBody';
-import { SidenavLink } from './sidenav-link/SidenavLink';
+import { SidenavMenu } from './sidenav-menu/SidenavMenu';
+import { SidenavLinkItem } from './sidenav-link-item/SidenavLinkItem';
+import { SidenavItem } from './sidenav-item/SidenavItem';
 import { HelpIcon } from '../../atoms/icons/HelpIcon';
+import { Logo } from '../logo/Logo';
 
 # Sidenav
 
@@ -19,12 +21,28 @@ A vertical side navigation panel.
 <Playground style={{ preview: { height: 400, position: 'relative' }}}>
   <Sidenav>
     <SidenavHeader>
-      <div style={{ color: 'white' }}>Header content</div>
+      <Logo color="white" />
     </SidenavHeader>
-    <SidenavBody>
-      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
-      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
-      <SidenavLink icon={<HelpIcon />} label={'label'} href={'#'} />
-    </SidenavBody>
+    <SidenavMenu>
+      <SidenavLinkItem><a href="#"><HelpIcon /> Link item with icon</a></SidenavLinkItem>
+      <SidenavLinkItem><a href="#">Link item without icon</a></SidenavLinkItem>
+      <SidenavLinkItem><a href="#"><HelpIcon /> Link item truncated text is too long</a></SidenavLinkItem>
+      <SidenavItem><span className="custom">Custom item</span></SidenavItem>
+    </SidenavMenu>
   </Sidenav>
+  <style dangerouslySetInnerHTML={{
+    __html: `
+      .custom {
+        align-items: center;
+        color: #fdb5af;
+        display: flex;
+        flex-grow: 1;
+        height: 100%;
+        padding: 0 24px;
+      }
+      .custom:active {
+        color: #fdc4bf;
+      }
+    `
+  }}/>
 </Playground>

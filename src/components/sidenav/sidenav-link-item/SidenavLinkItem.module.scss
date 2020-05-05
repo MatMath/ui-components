@@ -1,0 +1,32 @@
+@use '../../../colors/colors';
+@use '../../../typography/typography';
+
+.linkItem {
+  a,
+  a:hover {
+    @include typography.body-medium;
+
+    color: colors.$dash-green-04;
+    display: block;
+    overflow: hidden;
+    padding: 16px 24px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    svg {
+      display: inline;
+      fill: colors.$dash-green-04;
+      float: left;
+      margin-right: 16px;
+      min-width: 20px;
+    }
+  }
+
+  &:active a {
+    color: colors.$white;
+    svg {
+      fill: colors.$white;
+    }
+  }
+}
