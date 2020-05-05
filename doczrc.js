@@ -9,5 +9,6 @@ export default {
   hashRouter: true,
   base: '/ui-components/',
   plugins: [svgSpriteLoader()],
-  menu: ['Getting Started', 'Components']
+  menu: ['Getting Started', 'Components'],
+  port: 3001
 };
