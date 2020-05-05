@@ -13,13 +13,9 @@ import { Section } from './Section';
  */
 
 function sectionDivCount(accordion: ReactWrapper): number[] {
-  const sectionDivCount = accordion
-    .find(Section)
-    .map((sectionComponent: ReactWrapper) => {
-      return sectionComponent.find('div').length;
-    });
-
-  return sectionDivCount;
+  return accordion.find(Section).map((sectionComponent: ReactWrapper) => {
+    return sectionComponent.find('div').length;
+  });
 }
 
 describe('<Accordion />', () => {
