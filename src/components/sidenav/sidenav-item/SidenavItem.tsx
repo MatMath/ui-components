@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from './SidenavItem.module.scss';
+import { getClassNames } from '@utility/cssUtils';
 
 export type SidenavItemProps = React.HTMLAttributes<HTMLLIElement>;
 
@@ -10,8 +11,7 @@ export type SidenavItemProps = React.HTMLAttributes<HTMLLIElement>;
  */
 export const SidenavItem: React.FC<SidenavItemProps> = props => {
   const { children, className, ...otherProps } = props;
-  const customClassName = className ? ` ${className}` : '';
-  const classname = `${styles.sidenavItem}${customClassName}`;
+  const classname = getClassNames(styles.sidenavItem, className);
   return (
     <li className={classname} {...otherProps}>
       {children}
