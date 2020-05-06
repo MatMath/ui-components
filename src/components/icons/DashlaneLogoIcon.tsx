@@ -7,11 +7,6 @@ import { SvgWrapper } from '@components/icons/utils/SvgWrapper';
  * Please refer to the doc in `documentation/ICON_STEPBYSTEP.md` to learn how to deal with icons.
  */
 
-/*
- * /!\ This is a generated file, do not update it or create a similar one by hand.
- * Please refer to the doc in `documentation/ICON_STEPBYSTEP.md` to learn how to deal with icons.
- */
-
 export const DashlaneLogoIcon: React.FC<IconProps> = (props: IconProps) => (
   <SvgWrapper {...props}>
     <React.Fragment>
