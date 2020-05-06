@@ -10,4 +10,16 @@
     width: 32px;
     padding: 4px;
   }
+
+  &.medium {
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+  }
+
+  &.large {
+    height: 48px;
+    width: 48px;
+    padding: 12px;
+  }
 }

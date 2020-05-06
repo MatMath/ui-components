@@ -1,9 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { Button } from '@components/button/Button';
 import { DropdownMenu } from '@components/dropdown/DropdownMenu';
 import { Tooltip } from '@components/tooltip/Tooltip';
-import { dashGreen00 } from '@colors';
+import { IconButton } from '@components/icon-button/IconButton';
 
 interface Props {
   isOpen: boolean;
@@ -15,12 +14,6 @@ interface Props {
   isDisabled?: boolean;
   menuClassName?: string;
 }
-
-const SquareButton = styled(Button)`
-  width: 32px;
-  height: 32px;
-  fill: ${dashGreen00};
-`;
 
 const Wrapper = styled.div`
   width: 32px;
@@ -39,13 +32,11 @@ export const QuickActionsMenu: React.FC<Props> = props => {
           title={props.tooltipTitle}
           options={{ tooltipMaxWidth: 172 }}
         >
-          <SquareButton
-            nature='ghost'
+          <IconButton
+            icon={props.icon}
             onClick={props.onClick}
             disabled={props.isDisabled}
-          >
-            {props.icon}
-          </SquareButton>
+          />
         </Tooltip>
       </div>
       <DropdownMenu
