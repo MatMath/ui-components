@@ -3,7 +3,10 @@ import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
 import { IconProps } from '@ions/icon/types';
 import { dashGreen00, midGreen00, white } from '@colors/colors';
 
-const defaultIconProps: IconProps = {
+import { IconProps } from '@components/icons/types';
+import { SvgWrapper } from '@components/icons/utils/SvgWrapper';
+
+const defaultProps = {
   width: 187, //px
   height: 63 //px
 };

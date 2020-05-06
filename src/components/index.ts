@@ -18,4 +18,4 @@ export { Checkbox } from './checkbox/Checkbox';
 export { Accordion } from './accordion/Accordion';
 export { Thumbnail } from './thumbnail/Thumbnail';
 export * from './sidenav';
-export * from './icons/Icons';
+export * from './icons';

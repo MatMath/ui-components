@@ -45,7 +45,7 @@ exports[`<Accordion /> should render default 1`] = `
                 width={30}
               >
                 <svg
-                  className="svgWrapper animated "
+                  className="svgWrapper"
                   style={
                     Object {
                       "--icon-active-color": "#0E353D",

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { HideIcon, RevealIcon } from '@components/icons/Icons';
+import { HideIcon, RevealIcon } from '@components/icons';
 
 import { Tooltip } from '@components/tooltip/Tooltip';
 import { getClassNames } from '@utility/cssUtils';

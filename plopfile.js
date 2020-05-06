@@ -16,17 +16,17 @@ module.exports = plop => {
     actions: [
       {
         type: 'add',
-        path: 'src/components/icons/all/{{pascalCase name}}Icon.tsx',
+        path: 'src/components/icons/{{pascalCase name}}Icon.tsx',
         templateFile: 'config/generator/icons/IconComponentTemplate.tsx.hbs',
         force: true
       },
       {
         type: 'append',
-        path: 'src/components/icons/Icons.ts',
+        path: 'src/components/icons/index.ts',
         unique: true,
         pattern: /(\/\*-- EXPORT ICON COMPONENTS --\*\/)/gi,
         template:
-          "export { {{pascalCase name}}Icon } from './all/{{pascalCase name}}Icon';"
+          "export { {{pascalCase name}}Icon } from './{{pascalCase name}}Icon';"
       }
     ]
   });

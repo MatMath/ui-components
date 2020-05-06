@@ -1,10 +1,6 @@
 import * as React from 'react';
 
-import {
-  CheckCircleIcon,
-  CloseIcon,
-  CrossCircleIcon
-} from '@components/icons/Icons';
+import { CheckCircleIcon, CloseIcon, CrossCircleIcon } from '@components/icons';
 
 import { AlertSeverity } from './types';
 import { Button } from '@components/button/Button';

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { IconProps } from '@components/icons/types';
-import { SvgWrapper } from '@components/icons/SvgWrapper';
+import { SvgWrapper } from '@components/icons/utils/SvgWrapper';
 import { dashGreen00 } from '@colors';
 
 const defaultProps = {

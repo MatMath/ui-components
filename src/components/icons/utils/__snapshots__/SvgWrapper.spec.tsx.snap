@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SvgIcon> component style should handle disabled mode 1`] = `
+<Component
+  disabled={true}
+  title="Test"
+>
+  <svg
+    className="svgWrapper animated disabled"
+    style={
+      Object {
+        "--icon-active-color": "#0E353D",
+        "--icon-height": "20px",
+        "--icon-hover-color": "#0E353D",
+        "--icon-idle-color": "#0E353D",
+        "--icon-rotate": "none",
+        "--icon-width": "20px",
+      }
+    }
+    version="1.1"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Test
+    </title>
+    <path
+      d="123"
+    />
+  </svg>
+</Component>
+`;
+
+exports[`<SvgIcon> component style should set a default style if none is provided 1`] = `
+<Component
+  title="Test"
+>
+  <svg
+    className="svgWrapper animated"
+    style={
+      Object {
+        "--icon-active-color": "#0E353D",
+        "--icon-height": "20px",
+        "--icon-hover-color": "#0E353D",
+        "--icon-idle-color": "#0E353D",
+        "--icon-rotate": "none",
+        "--icon-width": "20px",
+      }
+    }
+    version="1.1"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Test
+    </title>
+    <path
+      d="123"
+    />
+  </svg>
+</Component>
+`;
+
+exports[`<SvgIcon> component style should set the provided style 1`] = `
+<Component
+  color="red"
+  size={40}
+  title="Test"
+>
+  <svg
+    className="svgWrapper animated"
+    style={
+      Object {
+        "--icon-active-color": "red",
+        "--icon-height": "40px",
+        "--icon-hover-color": "red",
+        "--icon-idle-color": "red",
+        "--icon-rotate": "none",
+        "--icon-width": "40px",
+      }
+    }
+    version="1.1"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Test
+    </title>
+    <path
+      d="123"
+    />
+  </svg>
+</Component>
+`;
+
+exports[`<SvgIcon> global render should render 1`] = `
+<Component>
+  <svg
+    className="svgWrapper animated"
+    style={
+      Object {
+        "--icon-active-color": "#0E353D",
+        "--icon-height": "20px",
+        "--icon-hover-color": "#0E353D",
+        "--icon-idle-color": "#0E353D",
+        "--icon-rotate": "none",
+        "--icon-width": "20px",
+      }
+    }
+    version="1.1"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="123"
+    />
+  </svg>
+</Component>
+`;

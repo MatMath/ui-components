@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ArrowDownIcon } from '@components/icons/Icons';
+import { ArrowDownIcon } from '@components/icons';
 import { dashGreen00 } from '@colors';
 import { getClassNames } from '@utility/cssUtils';
 import styles from './Accordion.module.scss';
