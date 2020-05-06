@@ -1,0 +1,13 @@
+@use '../../colors/colors';
+@use '../../typography/typography';
+
+.iconButton {
+  min-width: unset;
+  min-height: unset;
+
+  &.small {
+    height: 32px;
+    width: 32px;
+    padding: 4px;
+  }
+}
