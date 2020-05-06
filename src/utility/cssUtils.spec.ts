@@ -27,8 +27,8 @@ describe('getClassNames', () => {
       const result = getClassNames(undefined, className, undefined);
 
       expect(result).toEqual(className);
-    })
-  })
+    });
+  });
 
   describe('Object parameters', () => {
     it('should have the class name', () => {
