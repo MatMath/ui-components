@@ -24,8 +24,8 @@ export const ActivityLogIcon: React.FC<IconProps> = (props: IconProps) => (
       />
       <path d='M8.5 10.5L13.6016 10.4997L14.5 9.00097L8.5 9V10.5Z' />
       <path d='M13.5996 13.7477L8.5 13.75V12.25H14.4975L13.5996 13.7477Z' />
-      <path d='M5.5 9H7V10.5H5.5V9Z' fill='#0E353D' />
-      <path d='M7 12.25H5.5V13.75H7V12.25Z' fill='#0E353D' />
+      <path d='M5.5 9H7V10.5H5.5V9Z' />
+      <path d='M7 12.25H5.5V13.75H7V12.25Z' />
     </React.Fragment>
   </SvgWrapper>
 );
