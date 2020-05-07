@@ -32,7 +32,7 @@ A Button that allows users to take actions, and make choices, with a single tap.
 
 ### Possibilities
 
-All buttons can display icons, text or mixed content.
+All buttons can display icons, text or mixed content. If you need a square button with only an icon inside, refer to the IconButton component.
 
 <Playground className={{preview: 'playground-base'}}>
     <Button nature='primary'>
@@ -52,10 +52,6 @@ All buttons can display icons, text or mixed content.
 
     <Button nature='ghost'>Decline</Button>
 
-    <Button nature='ghost'>
-      <CopyPasswordIcon color={midGreen00} />
-    </Button>
-
 </Playground>
 
 ### Theme
@@ -73,10 +69,6 @@ The default theme is `light` (white), but some buttons can be displayed in a `da
 
     <Button nature='ghost' theme='dark'>
       Decline
-    </Button>
-
-    <Button nature='ghost' size='small' theme='dark'>
-      <CopyPasswordIcon color={white} />
     </Button>
 
 </Playground>
@@ -124,8 +116,5 @@ In disabled pseudo-state, buttons behave as following.
     <Button nature='secondary' disabled>Cancel</Button>
     <Button nature='danger' disabled>Delete</Button>
     <Button nature='ghost' size='medium' disabled>Decline</Button>
-    <Button nature='ghost' disabled>
-      <CopyPasswordIcon color={midGreen00}/>
-    </Button>
 
 </Playground>

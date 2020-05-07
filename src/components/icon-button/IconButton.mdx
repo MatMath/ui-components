@@ -1,0 +1,82 @@
+---
+name: IconButton
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { IconButton } from './IconButton';
+import { CopyPasswordIcon, OpenWebsiteIcon, MoreIcon } from '../../atoms/icons';
+import { white, midGreen00, dashGreen00 } from '../../colors/colors.ts';
+import '../../utility/playgroundStyles.css';
+
+# IconButton
+
+A wrapper of the Button component but that holds a single icon.
+
+## Properties
+
+<Props of={IconButton} />
+
+## Usage
+
+<Playground className={{preview: 'playground-base'}}>
+    <IconButton icon={<MoreIcon/>} />
+
+    <IconButton icon={<OpenWebsiteIcon/>} />
+
+    <IconButton icon={<CopyPasswordIcon/>} />
+
+</Playground>
+
+### Theme
+
+The default theme is `light` (white), but some buttons can be displayed in a `dark` theme (Dashlane's dash green, not an actual _dark_ theme).
+
+<Playground className={{preview: 'playground-base'}} style={{ preview: {backgroundColor: dashGreen00} }}>
+    <IconButton theme='dark' icon={<MoreIcon color={white}/>} />
+
+    <IconButton theme='dark' icon={<OpenWebsiteIcon color={white}/>} />
+
+    <IconButton theme='dark' icon={<CopyPasswordIcon color={white}/>} />
+
+</Playground>
+
+### Size
+
+Buttons can be have different sizes [`small`, `medium`, `large`] with `small` being the default value if none is specified.
+
+<Playground className={{preview: 'playground-base'}} style={{ preview: {minHeight: '150px'} }}>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
+      <IconButton icon={<MoreIcon/>} size='small'/>
+      <IconButton icon={<MoreIcon/>} size='medium'/>
+      <IconButton icon={<MoreIcon/>} size='large'/>
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
+      <IconButton icon={<OpenWebsiteIcon/>} size='small'/>
+      <IconButton icon={<OpenWebsiteIcon/>} size='medium'/>
+      <IconButton icon={<OpenWebsiteIcon/>} size='large'/>
+    </div>
+
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between' }}>
+      <IconButton icon={<CopyPasswordIcon/>} size='small'/>
+      <IconButton icon={<CopyPasswordIcon/>} size='medium'/>
+      <IconButton icon={<CopyPasswordIcon/>} size='large'/>
+    </div>
+
+</Playground>
+
+### Disabled
+
+In disabled pseudo-state, buttons behave as following.
+
+<Playground className={{preview: 'playground-base'}}>
+
+    <IconButton disabled icon={<MoreIcon/>} />
+
+    <IconButton disabled icon={<OpenWebsiteIcon/>} />
+
+    <IconButton disabled icon={<CopyPasswordIcon/>} />
+
+</Playground>

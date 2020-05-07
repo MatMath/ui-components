@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { getClassNames } from '@utility/cssUtils';
+import {
+  ButtonNature,
+  ButtonSize,
+  ButtonTheme
+} from '@components/button/types';
 import styles from './Button.module.scss';
-
-type ButtonNature = 'primary' | 'secondary' | 'danger' | 'ghost';
-type ButtonSize = 'small' | 'medium' | 'large';
-type ButtonTheme = 'light' | 'dark';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   nature?: ButtonNature;
@@ -17,6 +18,7 @@ export const Button: React.FC<ButtonProps> = ({
   size = 'medium',
   theme = 'light',
   children,
+  className,
   ...htmlButtonProps
 }) => {
   return (
@@ -26,7 +28,8 @@ export const Button: React.FC<ButtonProps> = ({
         styles.button,
         styles[nature],
         styles[size],
-        styles[theme]
+        styles[theme],
+        className
       )}
     >
       {children ? <span className={styles.content}>{children}</span> : null}
