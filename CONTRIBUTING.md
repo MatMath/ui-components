@@ -28,7 +28,7 @@ You need to install on your machine :
   - [IntelliJ plugin](https://plugins.jetbrains.com/plugin/7530-scss-lint)
 - MDX syntax highlighting
   - [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx)
-  - [Vim plugin](https://github.com/findango/vim-mdx)
+  - [Vim plugin](https://github.com/jxnblk/vim-mdx-js)
   - [IntelliJ plugin](https://youtrack.jetbrains.com/issue/WEB-32599)
 
 ### Installing
