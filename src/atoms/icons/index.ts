@@ -1,8 +1,8 @@
 /*-- EXPORT ICON COMPONENTS --*/
 export { WindowsIcon } from './WindowsIcon';
 export { WebIcon } from './WebIcon';
-export { UserCircleIcon } from './UserCircleIcon';
 export { WarningIcon } from './WarningIcon';
+export { UserCircleIcon } from './UserCircleIcon';
 export { VaultIcon } from './VaultIcon';
 export { UnlockIcon } from './UnlockIcon';
 export { ToolsIcon } from './ToolsIcon';
@@ -42,8 +42,8 @@ export { GeneratorIcon } from './GeneratorIcon';
 export { ForwardIcon } from './ForwardIcon';
 export { EditIcon } from './EditIcon';
 export { DotsIcon } from './DotsIcon';
-export { DashboardIcon } from './DashboardIcon';
 export { DashlaneLogoIcon } from './DashlaneLogoIcon';
+export { DashboardIcon } from './DashboardIcon';
 export { CrossCircleIcon } from './CrossCircleIcon';
 export { CopyPasswordIcon } from './CopyPasswordIcon';
 export { CopyIcon } from './CopyIcon';
