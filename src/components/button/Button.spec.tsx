@@ -54,6 +54,13 @@ describe('<Button>', () => {
 
       expect(button).toMatchSnapshot();
     });
+
+    it('should render with the custom class name', () => {
+      const customClassName = 'customClassName';
+      const button = mount(<Button className={customClassName} />);
+
+      expect(button.find('button').hasClass(customClassName)).toBe(true);
+    });
   });
 
   describe('Children render', () => {
