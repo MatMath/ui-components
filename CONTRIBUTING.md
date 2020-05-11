@@ -28,7 +28,7 @@ You need to install on your machine :
   - [IntelliJ plugin](https://plugins.jetbrains.com/plugin/7530-scss-lint)
 - MDX syntax highlighting
   - [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx)
-  - [Vim plugin](https://github.com/findango/vim-mdx)
+  - [Vim plugin](https://github.com/jxnblk/vim-mdx-js)
   - [IntelliJ plugin](https://youtrack.jetbrains.com/issue/WEB-32599)
 
 ### Installing
@@ -40,6 +40,7 @@ In order to get your local development env running, you need to follow the steps
    ```
    git clone ssh://github.com/Dashlane/ui-components.git
    ```
+
    You need your gpg key and ssh key to be authenticated to work in the repo. Here are some helpful documentation to follow:
 
    - [Adding ssh key] https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
