@@ -4,7 +4,7 @@ This library contains Dashlane's reusable ui components built with React 🎉 ht
 
 ## Getting Started
 
-These instructions will get you the latest version of the `ui-components` lib installed in your project, so you start integrating ans using the components.
+These instructions will get you the latest version of the `ui-components` lib installed in your project, so you start integrating and using the components.
 
 ### Compatibility
 

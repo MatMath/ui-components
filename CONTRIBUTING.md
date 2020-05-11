@@ -17,7 +17,7 @@ You need to install on your machine :
 - a recent version of [Node.js](https://nodejs.org/)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) as version control system
 - [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) as a dependency manager
-- [Prettier IDE Plugin](https://prettier.io/docs/en/editors.html) to format files consistently with the repository. 🙏Configure it to format on save🙏
+- [Prettier IDE Plugin](https://prettier.io/docs/en/editors.html) to format files consistently with the repository. 🙏Configure it to format on save 🙏
 - To ensure your IDE is already correctly configured, we use [EditorConfig](https://editorconfig.org/). Please install the required plugin for it, if your IDE needs one:
   - [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
   - [Vim plugin](https://github.com/editorconfig/editorconfig-vim)
@@ -40,6 +40,7 @@ In order to get your local development env running, you need to follow the steps
    ```
    git clone ssh://github.com/Dashlane/ui-components.git
    ```
+
    You need your gpg key and ssh key to be authenticated to work in the repo. Here are some helpful documentation to follow:
 
    - [Adding ssh key] https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
@@ -81,18 +82,26 @@ All you need to do is:
    ```
 
 3. You also need to link React version to your project's as it is a peer-dependency
+
    ```
    npm link PATH/TO/YOUR/PROJECT/node_modules/react
    ```
+
    (You will need to unlink React in order for tests to pass)
 
-4) Build the ui-component project
+4. Install the ui-component dependencies
+
+   ```
+   yarn install
+   ```
+
+5. Build the ui-component project
 
    ```
    yarn build
    ```
 
-5) Start devServer on your project
+6. Start devServer on your project
    ```
    yarn start
    ```
