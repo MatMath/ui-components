@@ -82,4 +82,18 @@ describe('getClassNames', () => {
       expect(result).toEqual(expectedResult);
     });
   });
+
+  describe('Mix of Object, String and undefined parameters', () => {
+    it('should have all required class names separated by space', () => {
+      const className1 = 'class-name-1';
+      const className2 = 'class-name-2';
+      const undefinedValue = undefined;
+      const result = getClassNames(className1, undefinedValue, {
+        [className2]: true
+      });
+
+      const expectedResult = `${className1} ${className2}`;
+      expect(result).toEqual(expectedResult);
+    });
+  });
 });
