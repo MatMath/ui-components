@@ -23,7 +23,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
       size={size}
       theme={theme}
       {...htmlButtonProps}
-      className={getClassNames(styles.iconButton, styles[size])}
+      className={getClassNames(styles.iconButton, styles[size], styles[theme])}
     >
       {icon}
     </Button>
