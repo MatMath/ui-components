@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { dashGreen04, white } from '@colors';
 
 interface Props {
@@ -14,6 +14,10 @@ export const DropdownCard = styled.div<Props>`
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 8px 0;
-  max-height: ${props => props.maxHeight || 100}px;
-  overflow-y: scroll;
+  ${props =>
+    props.maxHeight &&
+    css`
+      max-height: ${props.maxHeight}px;
+      overflow-y: scroll;
+    `}
 `;
