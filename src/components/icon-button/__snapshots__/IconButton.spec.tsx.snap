@@ -32,13 +32,13 @@ exports[`<IconButton> Global render should render default 1`] = `
   icon={<Unknown />}
 >
   <Component
-    className="iconButton small"
+    className="iconButton small light"
     nature="ghost"
     size="small"
     theme="light"
   >
     <button
-      className="button ghost small light iconButton small"
+      className="button ghost small light iconButton small light"
     >
       <span
         className="content"
@@ -186,13 +186,13 @@ exports[`<IconButton> Style properties should render large size 1`] = `
   size="large"
 >
   <Component
-    className="iconButton large"
+    className="iconButton large light"
     nature="ghost"
     size="large"
     theme="light"
   >
     <button
-      className="button ghost large light iconButton large"
+      className="button ghost large light iconButton large light"
     >
       <span
         className="content"
@@ -340,13 +340,13 @@ exports[`<IconButton> Style properties should render medium size 1`] = `
   size="medium"
 >
   <Component
-    className="iconButton medium"
+    className="iconButton medium light"
     nature="ghost"
     size="medium"
     theme="light"
   >
     <button
-      className="button ghost medium light iconButton medium"
+      className="button ghost medium light iconButton medium light"
     >
       <span
         className="content"
@@ -494,13 +494,13 @@ exports[`<IconButton> Style properties should render small size 1`] = `
   size="small"
 >
   <Component
-    className="iconButton small"
+    className="iconButton small light"
     nature="ghost"
     size="small"
     theme="light"
   >
     <button
-      className="button ghost small light iconButton small"
+      className="button ghost small light iconButton small light"
     >
       <span
         className="content"

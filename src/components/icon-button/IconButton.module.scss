@@ -5,6 +5,8 @@
   min-width: unset;
   min-height: unset;
 
+  /* Size */
+
   &.small {
     height: 32px;
     width: 32px;
@@ -21,5 +23,32 @@
     height: 48px;
     width: 48px;
     padding: 12px;
+  }
+
+  /* Colors based on Theme */
+
+  &.light {
+    &:focus,
+    &:hover:enabled {
+      border-color: colors.$dash-green-05;
+    }
+
+    &:active:enabled {
+      border-color: colors.$dash-green-05;
+      background-color: colors.$dash-green-05;
+    }
+  }
+
+  &.dark {
+    &:focus,
+    &:hover:enabled {
+      background-color: colors.$dash-green-01;
+      border-color: colors.$dash-green-01;
+    }
+
+    &:active:enabled {
+      background-color: colors.$dash-green-02;
+      border-color: colors.$dash-green-02;
+    }
   }
 }
