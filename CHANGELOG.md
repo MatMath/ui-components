@@ -1,3 +1,20 @@
+# [1.13.0](https://github.com/Dashlane/ui-components/compare/v1.12.2...v1.13.0) (2020-05-12)
+
+
+### Bug Fixes
+
+* **activity-log-icon:** remove remaining svg path fill ([f5e6870](https://github.com/Dashlane/ui-components/commit/f5e6870a744c7dcfc9d5197a63cc74da60cdd839))
+* **icon-button:** fix background and border colors ([ffb499b](https://github.com/Dashlane/ui-components/commit/ffb499b9d098534a63b64f14fedecf655a8393ec))
+* **quick-actions-menu:** fix actions menu icon button size ([07e391a](https://github.com/Dashlane/ui-components/commit/07e391af3f567704084c1a553a16b70437edd817))
+* **style:** add missing semicolons ([07ba4c4](https://github.com/Dashlane/ui-components/commit/07ba4c453b6b2929cae29e11f8c19f7a9606e978))
+
+
+### Features
+
+* **icon-button:** add IconButton component ([2665cc7](https://github.com/Dashlane/ui-components/commit/2665cc727219f8f15403928f36566c512bc63510))
+* **icons:** add android, apple & windows icons ([05eefd8](https://github.com/Dashlane/ui-components/commit/05eefd812e4f2f6ea94d820a99fa05dfda34a2b5))
+* **icons:** add new icons set ([c0b2de7](https://github.com/Dashlane/ui-components/commit/c0b2de71150c8d429a508068f5bc232722248efd))
+
 ## [1.12.2](https://github.com/Dashlane/ui-components/compare/v1.12.1...v1.12.2) (2020-05-05)
 
 
