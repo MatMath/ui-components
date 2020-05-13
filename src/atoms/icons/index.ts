@@ -2,8 +2,8 @@
 export { WindowsIcon } from './WindowsIcon';
 export { WebIcon } from './WebIcon';
 export { WarningIcon } from './WarningIcon';
-export { UserCircleIcon } from './UserCircleIcon';
 export { VaultIcon } from './VaultIcon';
+export { UserCircleIcon } from './UserCircleIcon';
 export { UnlockIcon } from './UnlockIcon';
 export { ToolsIcon } from './ToolsIcon';
 export { TaxIcon } from './TaxIcon';
