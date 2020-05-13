@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
-import { IconProps } from '@ions/icon/types';
+import { SvgWrapper } from '@components/icons/utils/SvgWrapper';
+import { IconProps } from '@components/icons/types';
 
 // Colors are in the SVG path for the circle itself since they
 // cannot be changed for that specific part of the SVG

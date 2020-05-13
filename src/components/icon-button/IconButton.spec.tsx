@@ -2,7 +2,7 @@ import * as React from 'react';
 import { mount } from 'enzyme';
 import 'jest-styled-components';
 import { IconButton } from './IconButton';
-import { CopyPasswordIcon } from '@atoms/icons';
+import { CopyPasswordIcon } from '@components/icons';
 
 describe('<IconButton>', () => {
   describe('Global render', () => {
