@@ -11,8 +11,8 @@ const execAsync = util.promisify(exec);
 
 const applyPrettier = async () =>
   Promise.all([
-    execAsync('npx prettier --write "src/atoms/icons/*.tsx"'),
-    execAsync('npx prettier --write "src/atoms/icons/index.ts"')
+    execAsync('npx prettier --write "src/components/icons/*.tsx"'),
+    execAsync('npx prettier --write "src/components/icons/index.ts"')
   ]);
 
 const generateIcon = async (name, path) => {
@@ -23,7 +23,7 @@ const generateIcon = async (name, path) => {
 
 const generateIconComponents = async () => {
   try {
-    for (let key of Object.keys(iconsDef)) {
+    for (let key of Object.keys(iconsDef).reverse()) {
       await generateIcon(key, iconsDef[key]);
     }
     await applyPrettier();

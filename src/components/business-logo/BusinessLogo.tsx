@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { SvgWrapper } from '@ions/icon/wrapper/SvgWrapper';
-import { IconProps } from '@ions/icon/types';
+import { IconProps } from '@components/icons/types';
+import { SvgWrapper } from '@components/icons/utils/SvgWrapper';
 import { dashGreen00, midGreen00, white } from '@colors/colors';
 
 const defaultIconProps: IconProps = {

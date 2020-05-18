@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import { getClassNames } from '@utility/cssUtils';
-import { HideIcon, RevealIcon } from '@atoms/icons';
-import { midGreen00 } from '@colors';
-import { Tooltip } from '@components';
+import { HideIcon, RevealIcon } from '@components/icons';
 
+import { Tooltip } from '@components/tooltip/Tooltip';
+import { getClassNames } from '@utility/cssUtils';
+import { midGreen00 } from '@colors';
 import styles from './PasswordInput.module.scss';
 
 type PasswordInputFeedbackType = 'error' | 'warning';

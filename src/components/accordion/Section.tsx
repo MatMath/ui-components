@@ -1,8 +1,9 @@
 import * as React from 'react';
-import styles from './Accordion.module.scss';
-import { ArrowDownIcon } from '@atoms';
+
+import { ArrowDownIcon } from '@components/icons';
 import { dashGreen00 } from '@colors';
 import { getClassNames } from '@utility/cssUtils';
+import styles from './Accordion.module.scss';
 
 export interface AccordionSectionProps {
   label?: string;

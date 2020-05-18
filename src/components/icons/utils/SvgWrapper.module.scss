@@ -1,0 +1,28 @@
+.svgWrapper {
+  display: flex;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  outline: none;
+  fill: var(--icon-idle-color);
+  cursor: inherit;
+  opacity: 1;
+  transform: var(--icon-rotate);
+  transition: 'none';
+
+  &:hover {
+    fill: var(--icon-hover-color);
+  }
+
+  &:active {
+    fill: var(--icon-active-color);
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.animated {
+  transition: 'all 0.1s ease-in';
+}
