@@ -1,3 +1,21 @@
+# [1.14.0](https://github.com/Dashlane/ui-components/compare/v1.13.0...v1.14.0) (2020-05-19)
+
+
+### Bug Fixes
+
+* password input snapshot ([ca60750](https://github.com/Dashlane/ui-components/commit/ca607507bca23a4c24de6201b454f5f3bbb8a7c0))
+* put icons in alphabetical order ([cea084e](https://github.com/Dashlane/ui-components/commit/cea084e82b6ec35bb0a599b114fab8cfafe26928))
+* remove hard-coded stroke property from mobile icon ([45f0a69](https://github.com/Dashlane/ui-components/commit/45f0a6907b1f8e0a16b89df802c8194f72f1d543))
+* reorder imports, improve file organization ([f2304ef](https://github.com/Dashlane/ui-components/commit/f2304ef1e1a284eb5f3f15ff1bae6d3a9f29fbd3))
+* sidenav documentation ([98ff091](https://github.com/Dashlane/ui-components/commit/98ff0918e785e243a5a19b3857b7c3176aee1469))
+
+
+### Features
+
+* update the new bell icon ([bdbdf38](https://github.com/Dashlane/ui-components/commit/bdbdf38b8e2398a3ec2f87402f475c26b3d0979f))
+* **bell:** add bell icons with and without badge ([3b93e46](https://github.com/Dashlane/ui-components/commit/3b93e46627b5b1a564440bddb4c6c25d17564baa))
+* **card:** implement basic card ([8c15d69](https://github.com/Dashlane/ui-components/commit/8c15d69bb292829cbd89de07b80b003535bb9311))
+
 # [1.13.0](https://github.com/Dashlane/ui-components/compare/v1.12.2...v1.13.0) (2020-05-12)
 
 
