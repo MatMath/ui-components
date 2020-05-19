@@ -1,3 +1,4 @@
+import ttypescript from 'ttypescript';
 import postcss from 'rollup-plugin-postcss';
 import compiler from '@ampproject/rollup-plugin-closure-compiler';
 import typescript from 'rollup-plugin-typescript2';
@@ -19,7 +20,7 @@ const config = {
       plugins: [autoprefixer()]
     }),
     typescript({
-      typescript: require('typescript'),
+      typescript: ttypescript,
       objectHashIgnoreUnknownHack: true
     }),
     json({ preferConst: true })
