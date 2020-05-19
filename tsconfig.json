@@ -26,7 +26,13 @@
       "@typings/*": ["typings/*"],
       "@utility/*": ["utility/*"],
       "@design-tokens/*": ["design-tokens/*"]
-    }
+    },
+    "plugins": [
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "src/**/*.spec.ts"]
