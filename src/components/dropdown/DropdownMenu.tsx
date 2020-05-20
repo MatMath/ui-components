@@ -12,7 +12,7 @@ import {
   getElementPlacement
 } from '@utility/positionCompute';
 
-interface Props {
+interface DropdownMenuProps {
   isOpen: boolean;
   controllerRef: React.RefObject<HTMLElement>;
   menuMaxHeight?: number;
@@ -38,34 +38,42 @@ const MenuWrapper = styled.div<MenuWrapperProps>`
 const DEFAULT_PLACEMENT = 'bottom';
 const POSSIBLE_PLACEMENTS: Placement[] = ['top', 'bottom'];
 
-export const DropdownMenu: React.FC<Props> = props => {
+export const DropdownMenu = ({
+  isOpen,
+  controllerRef,
+  menuMaxHeight,
+  dockingSide,
+  placement: dropdownPlacement,
+  containerRef,
+  menuClassName,
+  children
+}: React.PropsWithChildren<DropdownMenuProps>) => {
   const [placement, setPlacement] = React.useState<Placement | null>(null);
   const menuRef = React.useRef<HTMLDivElement>(null);
   const prevIsOpen = React.useRef(false);
 
   React.useEffect(() => {
-    if (props.isOpen === prevIsOpen.current) {
+    if (isOpen === prevIsOpen.current) {
       return;
     }
-    prevIsOpen.current = props.isOpen;
+    prevIsOpen.current = isOpen;
     setPlacement(null);
 
-    if (!menuRef.current || !props.controllerRef.current) {
+    if (!menuRef.current || !controllerRef.current) {
       return;
     }
     const elementDimensions = getControllerAndMenuDimensions({
       menuRef,
-      controllerRef: props.controllerRef
+      controllerRef
     });
 
-    const containerElement =
-      (props.containerRef && props.containerRef.current) || window;
+    const containerElement = (containerRef && containerRef.current) || window;
     const containerDimensions = getContainerBoundaries(containerElement);
 
     try {
       const newPlacement = getElementPlacement({
         isElementOutOfContainerMethod: isDropdownOutOfContainer,
-        placement: props.placement || DEFAULT_PLACEMENT,
+        placement: dropdownPlacement || DEFAULT_PLACEMENT,
         possibilities: POSSIBLE_PLACEMENTS,
         elementDimensions,
         containerDimensions
@@ -75,22 +83,19 @@ export const DropdownMenu: React.FC<Props> = props => {
       console.error('Error while computing DropdownMenu position', e);
       setPlacement(DEFAULT_PLACEMENT);
     }
-  });
+  }, [containerRef, controllerRef, dropdownPlacement, isOpen]);
 
   return (
     <>
-      {props.isOpen && (
+      {isOpen && (
         <MenuWrapper
           placement={placement || DEFAULT_PLACEMENT}
           ref={menuRef}
-          dockingSide={props.dockingSide || 'left'}
+          dockingSide={dockingSide || 'left'}
           isReadyForDisplay={placement !== null}
         >
-          <DropdownCard
-            maxHeight={props.menuMaxHeight}
-            className={props.menuClassName}
-          >
-            {props.children}
+          <DropdownCard maxHeight={menuMaxHeight} className={menuClassName}>
+            {children}
           </DropdownCard>
         </MenuWrapper>
       )}

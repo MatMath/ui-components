@@ -39,7 +39,7 @@ const Accordion = ({
     } else {
       setOpenedSections(new Set<number>(opened));
     }
-  }, [opened]);
+  }, [opened, allSectionsOpened, children, oneSectionAlwaysOpen]);
 
   const toggleSection = (index: number, requestedOpen: boolean) => {
     if (requestedOpen) {
