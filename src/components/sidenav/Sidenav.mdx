@@ -3,60 +3,104 @@ name: Sidenav
 menu: Components
 ---
 
-import { Playground } from 'docz';
-import { Sidenav } from './Sidenav';
-import { SidenavHeader } from './sidenav-header/SidenavHeader';
-import { SidenavMenu } from './sidenav-menu/SidenavMenu';
-import { SidenavLinkItem } from './sidenav-link-item/SidenavLinkItem';
-import { SidenavItem } from './sidenav-item/SidenavItem';
-import { HelpIcon } from '../icons/HelpIcon';
-import { Logo } from '../logo/Logo';
+import { BusinessLogo } from '@components/business-logo/BusinessLogo';
+import { HelpIcon } from '@components/icons/HelpIcon';
+import { Playground, Props } from 'docz';
+import { Sidenav } from '@components/sidenav/Sidenav';
+import { SidenavHeader } from '@components/sidenav/sidenav-header/SidenavHeader';
+import { SidenavItem } from '@components/sidenav/sidenav-item/SidenavItem';
+import { SidenavLink } from '@components/sidenav/sidenav-link/SidenavLink';
+import { SidenavMenu } from '@components/sidenav/sidenav-menu/SidenavMenu';
 
 # Sidenav
 
-A vertical side navigation panel.
+A vertical side navigation panel. Takes all available height.
+
+## Properties
+
+### Sidenav
+<Props of={Sidenav} />
+
+### SidenavLink
+<Props of={SidenavLink} />
 
 ## Usage
 
-<Playground style={{ preview: { height: 400, position: 'relative' } }}>
-  <Sidenav>
-    <SidenavHeader>
-      <Logo color='white' />
-    </SidenavHeader>
-    <SidenavMenu>
-      <SidenavLinkItem>
-        <a href='#'>
-          <HelpIcon /> Link item with icon
-        </a>
-      </SidenavLinkItem>
-      <SidenavLinkItem>
-        <a href='#'>Link item without icon</a>
-      </SidenavLinkItem>
-      <SidenavLinkItem>
-        <a href='#'>
-          <HelpIcon /> Link item truncated text is too long
-        </a>
-      </SidenavLinkItem>
-      <SidenavItem>
-        <span className='custom'>Custom item</span>
-      </SidenavItem>
-    </SidenavMenu>
-  </Sidenav>
-  <style
-    dangerouslySetInnerHTML={{
-      __html: `
-      .custom {
-        align-items: center;
-        color: #fdb5af;
-        display: flex;
-        flex-grow: 1;
-        height: 100%;
-        padding: 0 24px;
-      }
-      .custom:active {
-        color: #fdc4bf;
-      }
-    `
-    }}
-  />
+<Playground style={{ preview: {
+  height: '500px',
+  position: 'relative',
+  display: 'grid',
+  gridTemplateColumns: '256px 96px',
+  gridTemplateRows: '89px 1fr',
+  gridGap: '0 24px',
+}}}>
+
+  <div style={{ gridColumn: 1, gridRow: 1 }}>
+    <Sidenav>
+      <SidenavHeader>
+        <BusinessLogo darkMode height={40} width={120} />
+      </SidenavHeader>
+    </Sidenav>
+  </div>
+
+  <div style={{ gridColumn: 1, gridRow: 2 }}>
+    <Sidenav>
+      <SidenavMenu>
+        <SidenavItem>
+          <a href='#'>
+            <SidenavLink
+              hasNotification
+              icon={<HelpIcon />}
+              label="Notification, truncated label is too long"
+            />
+          </a>
+        </SidenavItem>
+        <SidenavItem>
+          <a href='#'>
+            <SidenavLink
+              icon={<HelpIcon />}
+              label="Selected"
+              selected
+            />
+          </a>
+        </SidenavItem>
+      </SidenavMenu>
+    </Sidenav>
+  </div>
+
+  <div style={{ gridColumn: 2, gridRow: 1 }}>
+    <Sidenav collapsed>
+      <SidenavHeader>
+        { /* D Logo */ }
+      </SidenavHeader>
+    </Sidenav>
+  </div>
+
+  <div style={{ gridColumn: 2, gridRow: 2 }}>
+    <Sidenav collapsed>
+      <SidenavMenu>
+        <SidenavItem collapsed>
+          <a href='#'>
+            <SidenavLink
+              collapsed
+              hasNotification
+              icon={<HelpIcon />}
+              label="Notification, truncated label is too long"
+            />
+          </a>
+        </SidenavItem>
+        <SidenavItem >
+          <a href='#'>
+            <SidenavLink
+              collapsed
+              icon={<HelpIcon />}
+              label="Selected"
+              selected
+            />
+          </a>
+        </SidenavItem>
+      </SidenavMenu>
+    </Sidenav>
+  </div>
+
 </Playground>

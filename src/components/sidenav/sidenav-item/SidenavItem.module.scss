@@ -1,13 +1,16 @@
 @use '../../../colors/colors';
+@use '../../../typography/typography';
 
 .sidenavItem {
-  border-radius: 4px;
   box-sizing: border-box;
-  cursor: pointer;
   height: 52px;
   margin-bottom: 2px;
 
-  &:hover {
-    background-color: colors.$dash-green-01;
+  a {
+    text-decoration: none;
+  }
+
+  &.collapsed {
+    margin-bottom: 12px;
   }
 }
