@@ -1,0 +1,85 @@
+@use '../../../colors/colors';
+@use '../../../typography/typography';
+
+.link {
+  @include typography.body-medium;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  padding: 16px 24px;
+  position: relative;
+
+  .icon {
+    margin-bottom: 0px;
+    margin-right: 16px;
+    min-width: 20px;
+    svg {
+      fill: colors.$dash-green-04;
+    }
+  }
+
+  .label {
+    @include typography.body-medium;
+    color: colors.$dash-green-04;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .notification {
+    align-self: flex-start;
+    background-color: colors.$accessible-validator-red;
+    border-radius: 50%;
+    flex-shrink: 0;
+    height: 8px;
+    margin-left: 4px;
+    width: 8px;
+  }
+
+  &:hover {
+    background-color: colors.$dash-green-01;
+    .icon svg {
+      fill: colors.$dash-green-04;
+    }
+  }
+
+  &:active {
+    .icon svg {
+      fill: colors.$white;
+    }
+    .label {
+      color: colors.$white;
+    }
+  }
+
+  &.collapsed {
+    align-items: center;
+    flex-direction: column;
+    padding: 6px;
+    .icon {
+      margin-right: 0;
+      margin-bottom: 4px;
+    }
+    .label {
+      @include typography.body-small;
+      width: 100%;
+      text-align: center;
+    }
+    .notification {
+      position: absolute;
+      right: 18px;
+    }
+  }
+
+  &.selected,
+  &.selected:hover {
+    background-color: colors.$dash-green-01;
+    .icon svg {
+      fill: colors.$white;
+    }
+    .label {
+      color: colors.$white;
+    }
+  }
+}
