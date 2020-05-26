@@ -17,7 +17,7 @@ export interface SidenavLinkProps
    */
   hasNotification?: boolean;
   /**
-   * The icon component do display in the link
+   * The icon component to display in the link
    */
   icon: React.ReactNode;
   /**
