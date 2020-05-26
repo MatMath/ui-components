@@ -25,39 +25,45 @@ const successTooltip: Props = {
   placement: 'right'
 };
 
+interface IconWrapperProps {
+  child: React.ReactElement;
+}
+
+const IconWrapper = ({ child }: IconWrapperProps) => {
+  const [tooltipState, setTooltipState] = React.useState<Props>(defaultTooltip);
+  const name = getName(child);
+
+  const copyToClipboard = React.useCallback(() => {
+    navigator.clipboard.writeText(`<${name} />`);
+    setTooltipState(successTooltip);
+  }, [name]);
+
+  const resetTooltip = React.useCallback(() => {
+    setTooltipState(defaultTooltip);
+  }, []);
+
+  return (
+    <div
+      key={name}
+      className={styles.wrapperItem}
+      onClick={copyToClipboard}
+      onMouseLeave={resetTooltip}
+    >
+      <Tooltip {...tooltipState}>
+        <div style={{ display: 'flex' }}>
+          <div className={styles.item}>{child}</div>
+          <p className={styles.item}>{name}</p>
+        </div>
+      </Tooltip>
+    </div>
+  );
+};
+
 // This is a utility to show components and their name side by side in the component library
 export const IconsWrapper = ({ children }: IconsWrapperProps) => (
   <div className={styles.wrapper}>
-    {React.Children.map(children, child => {
-      const [tooltipState, setTooltipState] = React.useState<Props>(
-        defaultTooltip
-      );
-      const name = getName(child);
-
-      const copyToClipboard = React.useCallback(() => {
-        navigator.clipboard.writeText(`<${name} />`);
-        setTooltipState(successTooltip);
-      }, []);
-
-      const resetTooltip = React.useCallback(() => {
-        setTooltipState(defaultTooltip);
-      }, []);
-
-      return (
-        <div
-          key={name}
-          className={styles.wrapperItem}
-          onClick={copyToClipboard}
-          onMouseLeave={resetTooltip}
-        >
-          <Tooltip {...tooltipState}>
-            <div style={{ display: 'flex' }}>
-              <div className={styles.item}>{child}</div>
-              <p className={styles.item}>{name}</p>
-            </div>
-          </Tooltip>
-        </div>
-      );
-    })}
+    {React.Children.map(children, child => (
+      <IconWrapper child={child} />
+    ))}
   </div>
 );

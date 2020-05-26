@@ -3,7 +3,14 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "prettier", "react", "json", "import"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "react",
+    "react-hooks",
+    "json",
+    "import"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -21,6 +28,9 @@
   "rules": {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-var-requires": "error",
+    "react/no-string-refs": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "prettier/prettier": "error",
     "import/no-relative-parent-imports": "error",
     "no-console": ["error", { "allow": ["error"] }],
