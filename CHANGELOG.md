@@ -1,3 +1,12 @@
+## [1.14.1](https://github.com/Dashlane/ui-components/compare/v1.14.0...v1.14.1) (2020-05-26)
+
+
+### Bug Fixes
+
+* accordion and dropdown not handling useEffect properly ([cd26ad2](https://github.com/Dashlane/ui-components/commit/cd26ad2ff8edc1b9de9efcd01fdcb9340ab338ac))
+* **doc:** repair live documentation ([231f044](https://github.com/Dashlane/ui-components/commit/231f0443bc343ffd085e1d1032286ba24e89dede))
+* **types:** fix type declaration import alias ([b65f9d1](https://github.com/Dashlane/ui-components/commit/b65f9d152e775a5c51871eae47631a840d4a7b41))
+
 # [1.14.0](https://github.com/Dashlane/ui-components/compare/v1.13.0...v1.14.0) (2020-05-19)
 
 
