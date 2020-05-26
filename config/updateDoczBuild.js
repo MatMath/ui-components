@@ -27,7 +27,9 @@ exec('git show HEAD --name-only', (err, stdout) => {
 
   console.log('Building the documentation...');
   exec('yarn docz:build', error => {
-    if (!error) {
+    if (error) {
+      throw error;
+    } else {
       console.log('Committing the new changes');
       commitChange();
     }
