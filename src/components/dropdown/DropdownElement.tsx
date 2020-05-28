@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { StyledText } from '@ions/text/StyledText';
-import { dashGreen00, dashGreen06 } from '@colors';
+import { dashGreen00, midGreen05, white } from '@colors';
 
 interface Props {
   onClick: (e: React.MouseEvent) => void;
@@ -17,15 +17,16 @@ const Wrapper = styled.button`
   outline: none;
   display: flex;
   box-sizing: border-box;
-  height: 36px;
+  height: 40px;
   flex-shrink: 0;
   padding: 8px 16px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  background-color: ${white};
 
   &:hover {
-    background-color: ${dashGreen06};
+    background-color: ${midGreen05};
   }
 `;
 

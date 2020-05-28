@@ -14,9 +14,11 @@ import { MenuWrapperProps } from './DropdownMenu';
 
 const MARGIN = 4;
 
-export const isDropdownOutOfContainer: IsElementOutOfContainerMethod<
-  Placement
-> = ({ elementDimensions, containerDimensions, placement }) => {
+export const isDropdownOutOfContainer: IsElementOutOfContainerMethod<Placement> = ({
+  elementDimensions,
+  containerDimensions,
+  placement
+}) => {
   switch (placement) {
     case 'top':
       return (

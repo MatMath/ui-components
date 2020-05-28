@@ -12,9 +12,12 @@ import {
   getElementPlacement
 } from '@utility/positionCompute';
 
-interface DropdownMenuProps {
+export interface DropdownMenuProps {
   isOpen: boolean;
   controllerRef: React.RefObject<HTMLElement>;
+  /**
+   * using menuMaxHeight will add max-height and overflow-y: scroll css properties
+   */
   menuMaxHeight?: number;
   dockingSide?: DockingSide;
   placement?: Placement;

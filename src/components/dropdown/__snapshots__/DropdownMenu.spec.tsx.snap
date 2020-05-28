@@ -1,19 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button> Global render should render 1`] = `
+exports[`<DropdownMenu> Global render should have scroll enabled when using max height 1`] = `
 <div>
   <div>
-    Dropdwon Menu controller
+    Dropdown Menu controller
   </div>
   <Component
     controllerRef={
       Object {
         "current": <div>
-          Dropdwon Menu controller
+          Dropdown Menu controller
         </div>,
       }
     }
     isOpen={true}
+    menuMaxHeight={100}
   >
     <styled.div
       dockingSide="left"
@@ -59,10 +60,10 @@ exports[`<Button> Global render should render 1`] = `
               class="sc-bwzfXH izZuan"
             >
               <div
-                class="sc-bdVaJa kurQmA"
+                class="sc-bdVaJa jOpScq"
               >
                 <button
-                  class="sc-bxivhb hHBGtV"
+                  class="sc-bxivhb kTePkg"
                   type="button"
                 >
                   <span
@@ -72,7 +73,7 @@ exports[`<Button> Global render should render 1`] = `
                   </span>
                 </button>
                 <button
-                  class="sc-bxivhb hHBGtV"
+                  class="sc-bxivhb kTePkg"
                   type="button"
                 >
                   <span
@@ -91,7 +92,9 @@ exports[`<Button> Global render should render 1`] = `
         <div
           className="sc-bwzfXH izZuan"
         >
-          <styled.div>
+          <styled.div
+            maxHeight={100}
+          >
             <StyledComponent
               forwardedComponent={
                 Object {
@@ -100,7 +103,7 @@ exports[`<Button> Global render should render 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "kurQmA",
+                    "lastClassName": "jOpScq",
                     "rules": Array [
                       "
   display: flex;
@@ -114,10 +117,9 @@ exports[`<Button> Global render should render 1`] = `
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 8px 0;
-  max-height: ",
+  ",
                       [Function],
-                      "px;
-  overflow-y: scroll;
+                      "
 ",
                     ],
                   },
@@ -132,9 +134,10 @@ exports[`<Button> Global render should render 1`] = `
                 }
               }
               forwardedRef={null}
+              maxHeight={100}
             >
               <div
-                className="sc-bdVaJa kurQmA"
+                className="sc-bdVaJa jOpScq"
               >
                 <Component
                   onClick={[Function]}
@@ -151,7 +154,7 @@ exports[`<Button> Global render should render 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bxivhb",
                             "isStatic": true,
-                            "lastClassName": "hHBGtV",
+                            "lastClassName": "kTePkg",
                             "rules": Array [
                               "
   color: ",
@@ -164,16 +167,19 @@ exports[`<Button> Global render should render 1`] = `
   outline: none;
   display: flex;
   box-sizing: border-box;
-  height: 36px;
+  height: 40px;
   flex-shrink: 0;
   padding: 8px 16px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  background-color: ",
+                              "#FFFFFF",
+                              ";
 
   &:hover {
     background-color: ",
-                              "#F5F7F7",
+                              "#D9E6E9",
                               ";
   }
 ",
@@ -194,7 +200,7 @@ exports[`<Button> Global render should render 1`] = `
                       type="button"
                     >
                       <button
-                        className="sc-bxivhb hHBGtV"
+                        className="sc-bxivhb kTePkg"
                         onClick={[Function]}
                         type="button"
                       >
@@ -253,7 +259,7 @@ exports[`<Button> Global render should render 1`] = `
                           "componentStyle": ComponentStyle {
                             "componentId": "sc-bxivhb",
                             "isStatic": true,
-                            "lastClassName": "hHBGtV",
+                            "lastClassName": "kTePkg",
                             "rules": Array [
                               "
   color: ",
@@ -266,16 +272,19 @@ exports[`<Button> Global render should render 1`] = `
   outline: none;
   display: flex;
   box-sizing: border-box;
-  height: 36px;
+  height: 40px;
   flex-shrink: 0;
   padding: 8px 16px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  background-color: ",
+                              "#FFFFFF",
+                              ";
 
   &:hover {
     background-color: ",
-                              "#F5F7F7",
+                              "#D9E6E9",
                               ";
   }
 ",
@@ -296,7 +305,362 @@ exports[`<Button> Global render should render 1`] = `
                       type="button"
                     >
                       <button
-                        className="sc-bxivhb hHBGtV"
+                        className="sc-bxivhb kTePkg"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <styled.span>
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-htpNat",
+                                  "isStatic": true,
+                                  "lastClassName": "cAleLB",
+                                  "rules": Array [
+                                    "
+  font-family: inherit;
+  font-weight: 600;
+",
+                                  ],
+                                },
+                                "displayName": "styled.span",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-htpNat",
+                                "target": "span",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                          >
+                            <span
+                              className="sc-htpNat cAleLB"
+                            >
+                              Element 2
+                            </span>
+                          </StyledComponent>
+                        </styled.span>
+                      </button>
+                    </StyledComponent>
+                  </styled.button>
+                </Component>
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </div>
+      </StyledComponent>
+    </styled.div>
+  </Component>
+</div>
+`;
+
+exports[`<DropdownMenu> Global render should not have scroll enabled when not using max height 1`] = `
+<div>
+  <div>
+    Dropdown Menu controller
+  </div>
+  <Component
+    controllerRef={
+      Object {
+        "current": <div>
+          Dropdown Menu controller
+        </div>,
+      }
+    }
+    isOpen={true}
+  >
+    <styled.div
+      dockingSide="left"
+      isReadyForDisplay={true}
+      placement="bottom"
+    >
+      <StyledComponent
+        dockingSide="left"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bwzfXH",
+              "isStatic": false,
+              "lastClassName": "izZuan",
+              "rules": Array [
+                "
+  position: absolute;
+  opacity: ",
+                [Function],
+                ";
+  ",
+                [Function],
+                "
+  max-width: 318px;
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={
+          Object {
+            "current": <div
+              class="sc-bwzfXH izZuan"
+            >
+              <div
+                class="sc-bdVaJa bIoTfe"
+              >
+                <button
+                  class="sc-bxivhb kTePkg"
+                  type="button"
+                >
+                  <span
+                    class="sc-htpNat cAleLB"
+                  >
+                    Element 1
+                  </span>
+                </button>
+                <button
+                  class="sc-bxivhb kTePkg"
+                  type="button"
+                >
+                  <span
+                    class="sc-htpNat cAleLB"
+                  >
+                    Element 2
+                  </span>
+                </button>
+              </div>
+            </div>,
+          }
+        }
+        isReadyForDisplay={true}
+        placement="bottom"
+      >
+        <div
+          className="sc-bwzfXH izZuan"
+        >
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bdVaJa",
+                    "isStatic": false,
+                    "lastClassName": "bIoTfe",
+                    "rules": Array [
+                      "
+  display: flex;
+  flex-direction: column;
+  background-color: ",
+                      "#FFFFFF",
+                      ";
+  border: 1px solid ",
+                      "#CFD7D8",
+                      ";
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px 0;
+  ",
+                      [Function],
+                      "
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bdVaJa",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bdVaJa bIoTfe"
+              >
+                <Component
+                  onClick={[Function]}
+                >
+                  <styled.button
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bxivhb",
+                            "isStatic": true,
+                            "lastClassName": "kTePkg",
+                            "rules": Array [
+                              "
+  color: ",
+                              "#0E353D",
+                              ";
+  line-height: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: transparent 0px;
+  outline: none;
+  display: flex;
+  box-sizing: border-box;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: ",
+                              "#FFFFFF",
+                              ";
+
+  &:hover {
+    background-color: ",
+                              "#D9E6E9",
+                              ";
+  }
+",
+                            ],
+                          },
+                          "displayName": "styled.button",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bxivhb",
+                          "target": "button",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <button
+                        className="sc-bxivhb kTePkg"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <styled.span>
+                          <StyledComponent
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-htpNat",
+                                  "isStatic": true,
+                                  "lastClassName": "cAleLB",
+                                  "rules": Array [
+                                    "
+  font-family: inherit;
+  font-weight: 600;
+",
+                                  ],
+                                },
+                                "displayName": "styled.span",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-htpNat",
+                                "target": "span",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                          >
+                            <span
+                              className="sc-htpNat cAleLB"
+                            >
+                              Element 1
+                            </span>
+                          </StyledComponent>
+                        </styled.span>
+                      </button>
+                    </StyledComponent>
+                  </styled.button>
+                </Component>
+                <Component
+                  onClick={[Function]}
+                >
+                  <styled.button
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bxivhb",
+                            "isStatic": true,
+                            "lastClassName": "kTePkg",
+                            "rules": Array [
+                              "
+  color: ",
+                              "#0E353D",
+                              ";
+  line-height: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: transparent 0px;
+  outline: none;
+  display: flex;
+  box-sizing: border-box;
+  height: 40px;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: ",
+                              "#FFFFFF",
+                              ";
+
+  &:hover {
+    background-color: ",
+                              "#D9E6E9",
+                              ";
+  }
+",
+                            ],
+                          },
+                          "displayName": "styled.button",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bxivhb",
+                          "target": "button",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <button
+                        className="sc-bxivhb kTePkg"
                         onClick={[Function]}
                         type="button"
                       >
