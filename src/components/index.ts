@@ -1,3 +1,4 @@
+export { DLogo } from './d-logo/DLogo';
 export { DropdownMenu } from './dropdown/DropdownMenu';
 export { DropdownElement } from './dropdown/DropdownElement';
 export { Logo } from './logo/Logo';
