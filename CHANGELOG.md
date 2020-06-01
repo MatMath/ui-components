@@ -1,3 +1,18 @@
+# [2.0.0](https://github.com/Dashlane/ui-components/compare/v1.14.1...v2.0.0) (2020-06-01)
+
+
+### Features
+
+* add d-logo component ([21427d6](https://github.com/Dashlane/ui-components/commit/21427d6a192d4cc8c3bb0e2730580407750c7fd5))
+* **dropdown:** optional scroll bar (+ style update) ([3993c41](https://github.com/Dashlane/ui-components/commit/3993c4123895ee680f8cb0393eaef60bef29eee0))
+
+
+### BREAKING CHANGES
+
+* **dropdown:** - dropdown menu elements height changed from 36px to 40px
+- default dropdown card max-height of 100px not enforced anymore
+  resulting in no scroll bar and no max-height properties when not used.
+
 ## [1.14.1](https://github.com/Dashlane/ui-components/compare/v1.14.0...v1.14.1) (2020-05-26)
 
 
