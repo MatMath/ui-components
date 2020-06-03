@@ -5,10 +5,14 @@ exports[`<TextInput> Global render should render default 1`] = `
   <div
     className="root"
   >
-    <input
-      className="input"
-      type="text"
-    />
+    <InlineTextWrapper
+      inlineCss="default"
+    >
+      <input
+        className="input"
+        type="text"
+      />
+    </InlineTextWrapper>
   </div>
 </Component>
 `;
@@ -20,11 +24,15 @@ exports[`<TextInput> Global render should render disabled 1`] = `
   <div
     className="root"
   >
-    <input
-      className="input"
-      disabled={true}
-      type="text"
-    />
+    <InlineTextWrapper
+      inlineCss="default"
+    >
+      <input
+        className="input"
+        disabled={true}
+        type="text"
+      />
+    </InlineTextWrapper>
   </div>
 </Component>
 `;
@@ -36,10 +44,14 @@ exports[`<TextInput> Global render should render error 1`] = `
   <div
     className="root error"
   >
-    <input
-      className="input error"
-      type="text"
-    />
+    <InlineTextWrapper
+      inlineCss="error"
+    >
+      <input
+        className="input error"
+        type="text"
+      />
+    </InlineTextWrapper>
   </div>
 </Component>
 `;
@@ -51,11 +63,15 @@ exports[`<TextInput> Global render should render placeholder 1`] = `
   <div
     className="root"
   >
-    <input
-      className="input"
-      placeholder="placeholder"
-      type="text"
-    />
+    <InlineTextWrapper
+      inlineCss="default"
+    >
+      <input
+        className="input"
+        placeholder="placeholder"
+        type="text"
+      />
+    </InlineTextWrapper>
   </div>
 </Component>
 `;
@@ -67,10 +83,14 @@ exports[`<TextInput> Global render should render warning 1`] = `
   <div
     className="root warning"
   >
-    <input
-      className="input warning"
-      type="text"
-    />
+    <InlineTextWrapper
+      inlineCss="warning"
+    >
+      <input
+        className="input warning"
+        type="text"
+      />
+    </InlineTextWrapper>
   </div>
 </Component>
 `;
@@ -83,10 +103,14 @@ exports[`<TextInput> Global render should render warning and show feedback text 
   <div
     className="root warning"
   >
-    <input
-      className="input warning"
-      type="text"
-    />
+    <InlineTextWrapper
+      inlineCss="warning"
+    >
+      <input
+        className="input warning"
+        type="text"
+      />
+    </InlineTextWrapper>
     <span
       className="feedback warning"
     >
@@ -103,10 +127,14 @@ exports[`<TextInput> Global render should render with fluid class 1`] = `
   <div
     className="root fullWidth"
   >
-    <input
-      className="input fullWidth"
-      type="text"
-    />
+    <InlineTextWrapper
+      inlineCss="default"
+    >
+      <input
+        className="input fullWidth"
+        type="text"
+      />
+    </InlineTextWrapper>
   </div>
 </Component>
 `;
