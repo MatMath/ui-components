@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import { getClassNames } from '@utility/cssUtils';
 
+import { dashGreen05 } from '@colors';
+
 import styles from './PasswordStrength.module.scss';
 
 export interface PasswordStrengthProps {
@@ -18,6 +20,10 @@ export interface PasswordStrengthProps {
    * Wether to display or not the additional info under the strength indicator
    */
   showAdditionalText?: boolean;
+  /**
+   * Background of the strength indicator
+   */
+  backgroundColor?: string;
 }
 
 const classNameColorScoreMapping = {
@@ -31,14 +37,18 @@ const classNameColorScoreMapping = {
 export const PasswordStrength = ({
   additionalText,
   score = 0,
-  showAdditionalText
+  showAdditionalText,
+  backgroundColor = dashGreen05
 }: PasswordStrengthProps) => {
   const strengthClassName = classNameColorScoreMapping[score];
   const strengthLevel = (score * 100) / 4;
 
   return (
     <div className={getClassNames(styles.root)}>
-      <div className={getClassNames(styles.container)}>
+      <div
+        className={getClassNames(styles.container)}
+        style={{ backgroundColor: `${backgroundColor}` }}
+      >
         <div className={getClassNames(styles.passwordStrengthBackground)}>
           <span
             style={{
