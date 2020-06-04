@@ -1,3 +1,11 @@
+# [2.1.0](https://github.com/Dashlane/ui-components/compare/v2.0.0...v2.1.0) (2020-06-04)
+
+
+### Features
+
+* add inline text to input box ([52b5409](https://github.com/Dashlane/ui-components/commit/52b540934739236aa8b72c2e0dc1f3c5e587764f))
+* password strength background color is a prop ([996b9a6](https://github.com/Dashlane/ui-components/commit/996b9a609df476a0e409281171f2d93ac35f79f2))
+
 # [2.0.0](https://github.com/Dashlane/ui-components/compare/v1.14.1...v2.0.0) (2020-06-01)
 
 
