@@ -22,13 +22,18 @@ const isAnimatedSvg = (children: React.ReactElement[]) =>
 
 export const SvgWrapper = ({
   children,
+  title,
   size,
   width,
   height,
+  disabled,
+  color,
+  hoverColor,
+  activeColor,
+  viewBox,
   rotate,
   iconAnimated,
-  disabled,
-  ...props
+  ...otherProps
 }: Props) => {
   const wrapperWidth = size || width || DEFAULT_SIZE;
   const wrapperHeight = size || height || DEFAULT_SIZE;
@@ -39,7 +44,8 @@ export const SvgWrapper = ({
       : false;
 
   const getIconColor = (propName: ColorProps = 'color'): string => {
-    return isAnimated ? 'none' : props[propName] || props.color || dashGreen00;
+    const colors = { color, hoverColor, activeColor };
+    return isAnimated ? 'none' : colors[propName] || color || dashGreen00;
   };
 
   /**
@@ -66,8 +72,9 @@ export const SvgWrapper = ({
 
   return (
     <svg
+      {...otherProps}
       xmlns='http://www.w3.org/2000/svg'
-      viewBox={props.viewBox || '0 0 20 20'}
+      viewBox={viewBox || '0 0 20 20'}
       version='1.1'
       className={getClassNames(styles.svgWrapper, {
         [styles.animated]: hasTransition(),
@@ -75,7 +82,7 @@ export const SvgWrapper = ({
       })}
       style={styleVars}
     >
-      {props.title ? <title>{props.title}</title> : null}
+      {title ? <title>{title}</title> : null}
       {children}
     </svg>
   );
