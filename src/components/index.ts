@@ -18,5 +18,8 @@ export { PasswordStrength } from './password-strength/PasswordStrength';
 export { Checkbox } from './checkbox/Checkbox';
 export { Accordion } from './accordion/Accordion';
 export { Thumbnail } from './thumbnail/Thumbnail';
+export {
+  BankAccountThumbnail
+} from './bankAccountThumbnail/BankAccountThumbnail';
 export * from './sidenav';
 export * from './icons';
