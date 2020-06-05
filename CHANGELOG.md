@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/Dashlane/ui-components/compare/v2.1.0...v2.1.1) (2020-06-05)
+
+
+### Bug Fixes
+
+* apply html props to SvgWrapper ([2287f4b](https://github.com/Dashlane/ui-components/commit/2287f4b97e987a990825cc74c2cd5057ed1743a9))
+
 # [2.1.0](https://github.com/Dashlane/ui-components/compare/v2.0.0...v2.1.0) (2020-06-04)
 
 
