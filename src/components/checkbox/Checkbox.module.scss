@@ -1,8 +1,10 @@
 @use '../../colors/colors';
+@use '../../typography/typography';
 
 .checkboxContainer {
-  display: inline-block;
-  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   cursor: pointer;
 
   -webkit-touch-callout: none; /* iOS Safari */
@@ -53,7 +55,7 @@
 }
 
 .styledCheckbox {
-  display: inline-block;
+  cursor: pointer;
   width: 20px;
   height: 20px;
   background: colors.$white;
@@ -61,6 +63,9 @@
   box-sizing: border-box;
   border-radius: 4px;
   transition: all 150ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.checked {
     background: colors.$mid-green-00;
@@ -95,7 +100,10 @@
     scale 0.3s ease-in-out 0.9s both;
   visibility: hidden;
   position: absolute;
-  margin-left: -1px;
-  margin-top: -1px;
   stroke: colors.$white;
+}
+
+.text {
+  @include typography.paragraph-small;
+  margin-left: 8px;
 }
