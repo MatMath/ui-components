@@ -15,6 +15,14 @@
   line-height: 16px;
 }
 
+@mixin paragraph-small {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 /* Button */
 @mixin button-common {
   font-family: 'Public Sans';
