@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/Dashlane/ui-components/compare/v2.1.1...v2.2.0) (2020-06-08)
+
+
+### Features
+
+* **components:** add BankAccountThumbnail component ([7b688ba](https://github.com/Dashlane/ui-components/commit/7b688ba6427b8512973a594fdac6b248266857c5))
+* add label to checkbox ([a6535c0](https://github.com/Dashlane/ui-components/commit/a6535c027f8ee54f118d56a22f4e0e8884c9b0ae))
+* add paragraph small typography ([b8bdd0d](https://github.com/Dashlane/ui-components/commit/b8bdd0d4e9a0f84db87585de4f1e0fecbc29c646))
+
 ## [2.1.1](https://github.com/Dashlane/ui-components/compare/v2.1.0...v2.1.1) (2020-06-05)
 
 
