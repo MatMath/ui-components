@@ -3,7 +3,7 @@ export { Alert } from './alert/Alert';
 export { AlertSeverity } from './alert/types';
 export {
   BankAccountThumbnail
-} from './bankAccountThumbnail/BankAccountThumbnail';
+} from './bank-account-thumbnail/BankAccountThumbnail';
 export { BusinessLogo } from './business-logo/BusinessLogo';
 export { Button } from './button/Button';
 export { Card } from './card/Card';
