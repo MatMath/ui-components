@@ -26,5 +26,11 @@ describe('<Checkbox>', () => {
       expect(checkbox.props().checked).toEqual(undefined);
       expect(checkbox).toMatchSnapshot();
     });
+
+    it('should render unchecked and with a label', () => {
+      const checkbox = mount(<Checkbox label='Label' />);
+      expect(checkbox.props().checked).toEqual(undefined);
+      expect(checkbox).toMatchSnapshot();
+    });
   });
 });
