@@ -31,6 +31,7 @@ export { LoaderIcon } from './LoaderIcon';
 export { LockIcon } from './LockIcon';
 export { LogOutIcon } from './LogOutIcon';
 export { MailIcon } from './MailIcon';
+export { MagicWandIcon } from './MagicWandIcon';
 export { MobileIcon } from './MobileIcon';
 export { MoreIcon } from './MoreIcon';
 export { NoNetworkIcon } from './NoNetworkIcon';
