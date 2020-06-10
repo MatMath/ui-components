@@ -1,0 +1,41 @@
+---
+name: HorizontalNav
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { HorizontalNavLink } from '@components/horizontal-nav/horizontal-nav-link/HorizontalNavLink';
+import { HorizontalNavMenu } from '@components/horizontal-nav/horizontal-nav-menu/HorizontalNavMenu';
+
+# HorizontalNav
+
+A horizontal navitagion menu
+
+## Properties
+
+### HorizontalNavLink
+<Props of={HorizontalNavLink} />
+
+## Usage
+
+<Playground>
+  <nav>
+    <HorizontalNavMenu>
+      <li>
+        <a href="#">
+          <HorizontalNavLink label="link 1" selected />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <HorizontalNavLink label="link 2"/>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <HorizontalNavLink label="link 3"/>
+        </a>
+      </li>
+    </HorizontalNavMenu>
+  </nav>
+</Playground>

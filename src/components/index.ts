@@ -23,3 +23,4 @@ export { Tooltip } from './tooltip/Tooltip';
 export * from './tooltip/types'; // TODO check if it really needs to be exported from ui-components
 export * from './sidenav';
 export * from './icons';
+export * from './horizontal-nav';

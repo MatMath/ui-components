@@ -1,0 +1,25 @@
+@use '../../../colors/colors';
+@use '../../../typography/typography';
+
+.link {
+  @include typography.body-medium;
+  align-items: center;
+  background: transparent;
+  border-radius: 4px;
+  color: colors.$dash-green-01;
+  cursor: pointer;
+  display: flex;
+  margin-right: 8px;
+  padding: 10px 16px;
+  text-transform: capitalize;
+
+  &:hover {
+    background: colors.$dash-green-05;
+  }
+
+  &.selected,
+  &:active {
+    color: colors.$dash-green-00;
+    background: colors.$dash-green-05;
+  }
+}
