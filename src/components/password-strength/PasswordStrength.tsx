@@ -41,7 +41,7 @@ export const PasswordStrength = ({
   backgroundColor = dashGreen05
 }: PasswordStrengthProps) => {
   const strengthClassName = classNameColorScoreMapping[score];
-  const strengthLevel = (score * 100) / 4;
+  const strengthLevel = ((score + 1) * 100) / 5;
 
   return (
     <div className={getClassNames(styles.root)}>
