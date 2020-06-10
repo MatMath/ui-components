@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/Dashlane/ui-components/compare/v2.2.0...v2.2.1) (2020-06-10)
+
+
+### Bug Fixes
+
+* **password-strength:** update width calculation to match design ([60be742](https://github.com/Dashlane/ui-components/commit/60be7421c919b7f75115669bb346a996d4840a0b))
+
 # [2.2.0](https://github.com/Dashlane/ui-components/compare/v2.1.1...v2.2.0) (2020-06-08)
 
 
