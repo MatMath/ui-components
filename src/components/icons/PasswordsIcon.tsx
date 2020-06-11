@@ -10,16 +10,16 @@ import { SvgWrapper } from '@components/icons/utils/SvgWrapper';
 export const PasswordsIcon: React.FC<IconProps> = (props: IconProps) => (
   <SvgWrapper {...props}>
     <React.Fragment>
-      <path d='M4.5 10.5H15.5V18H17V9H3V18H14L13 16.5H4.5V10.5Z' />{' '}
+      <path d='M9 21H31V36H34V18H6V36H28.0001L26.0001 33H9V21Z' />
       <path
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M9.5 13.5H9V12H11V15H9.5V13.5Z'
-      />{' '}
+        d='M19 27H18V24H22V30H19V27Z'
+      />
       <path
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M10 3.5C7.97561 3.5 6.5 5.22354 6.5 7.18462V9H5V7.18462C5 4.52349 7.02439 2 10 2C12.9756 2 15 4.52349 15 7.18462V9H13.5V7.18462C13.5 5.22354 12.0244 3.5 10 3.5Z'
+        d='M20 7C15.9512 7 13 10.4471 13 14.3692V18H10V14.3692C10 9.04698 14.0488 4 20 4C25.9512 4 30 9.04698 30 14.3692V18H27V14.3692C27 10.4471 24.0488 7 20 7Z'
       />
     </React.Fragment>
   </SvgWrapper>
