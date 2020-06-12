@@ -1,3 +1,17 @@
+# [2.3.0](https://github.com/Dashlane/ui-components/compare/v2.2.1...v2.3.0) (2020-06-12)
+
+
+### Bug Fixes
+
+* **icons:** adjust sizing via designer ([a4df1f8](https://github.com/Dashlane/ui-components/commit/a4df1f8a6506e91c6fa0b4d770988184606bd78d))
+* reorder new icon alphabetically ([d688528](https://github.com/Dashlane/ui-components/commit/d688528de8ab0ba11324fb98c23d66c01fedef57))
+
+
+### Features
+
+* **components:** add horizontal-nav components ([c8c92b7](https://github.com/Dashlane/ui-components/commit/c8c92b7fde5aefaefc20d0e802fb3f2522886c85))
+* **icons:** add magic wand icon ([38f09ee](https://github.com/Dashlane/ui-components/commit/38f09ee496123cc21358c1159aac4d75920f040d))
+
 ## [2.2.1](https://github.com/Dashlane/ui-components/compare/v2.2.0...v2.2.1) (2020-06-10)
 
 
