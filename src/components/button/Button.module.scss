@@ -57,21 +57,18 @@
     }
 
     &.secondary {
-      color: colors.$mid-green-00;
-      background-color: rgba(colors.$mid-green-04, 0);
-      border-color: colors.$mid-green-04;
+      color: colors.$dash-green-00;
+      background-color: rgba(colors.$dash-green-05, 0);
+      border-color: colors.$dash-green-05;
 
       &:focus,
       &:hover:enabled {
-        color: colors.$dash-green-00;
-        background-color: colors.$mid-green-04;
-        border-color: colors.$mid-green-04;
+        background-color: colors.$dash-green-05;
       }
 
       &:active:enabled {
-        color: colors.$dash-green-00;
-        background-color: colors.$mid-green-03;
-        border-color: colors.$mid-green-03;
+        background-color: colors.$dash-green-03;
+        border-color: colors.$dash-green-03;
       }
     }
 
