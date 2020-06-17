@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/Dashlane/ui-components/compare/v3.0.0...v3.0.1) (2020-06-17)
+
+
+### Bug Fixes
+
+* fix showQueerColors type ([d704e90](https://github.com/Dashlane/ui-components/commit/d704e908411de842d671cb1ae5051f6f25f487f5))
+
 # [3.0.0](https://github.com/Dashlane/ui-components/compare/v2.3.0...v3.0.0) (2020-06-17)
 
 
