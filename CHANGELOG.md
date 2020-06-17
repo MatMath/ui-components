@@ -1,3 +1,16 @@
+# [3.0.0](https://github.com/Dashlane/ui-components/compare/v2.3.0...v3.0.0) (2020-06-17)
+
+
+### Features
+
+* queerify password strength ([6282d5b](https://github.com/Dashlane/ui-components/commit/6282d5bb10b5183734c80e2b2981ccf4fca57251))
+* update secondary button colors ([513beb4](https://github.com/Dashlane/ui-components/commit/513beb42cea5f53aed06b32d4c313c2bb4d5b0a2))
+
+
+### BREAKING CHANGES
+
+* accessibility can be broken
+
 # [2.3.0](https://github.com/Dashlane/ui-components/compare/v2.2.1...v2.3.0) (2020-06-12)
 
 
