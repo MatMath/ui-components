@@ -27,7 +27,7 @@ export interface PasswordStrengthProps {
   /**
    * Use Philly Pride flag colors for score 4 strength
    */
-  showQueerColors?: false;
+  showQueerColors?: boolean;
 }
 
 const classNameColorScoreMapping = {
