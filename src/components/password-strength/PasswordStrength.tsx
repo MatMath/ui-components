@@ -24,6 +24,10 @@ export interface PasswordStrengthProps {
    * Background of the strength indicator
    */
   backgroundColor?: string;
+  /**
+   * Use Philly Pride flag colors for score 4 strength
+   */
+  showQueerColors?: false;
 }
 
 const classNameColorScoreMapping = {
@@ -38,7 +42,8 @@ export const PasswordStrength = ({
   additionalText,
   score = 0,
   showAdditionalText,
-  backgroundColor = dashGreen05
+  backgroundColor = dashGreen05,
+  showQueerColors = false
 }: PasswordStrengthProps) => {
   const strengthClassName = classNameColorScoreMapping[score];
   const strengthLevel = ((score + 1) * 100) / 5;
@@ -56,7 +61,8 @@ export const PasswordStrength = ({
             }}
             className={getClassNames(
               styles.passwordStrength,
-              strengthClassName
+              strengthClassName,
+              { [styles.queer]: score === 4 && showQueerColors }
             )}
           ></span>
         </div>
