@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { getClassNames } from '@utility/cssUtils';
+import { computeFilledPerimiter } from '@components/otp-field/helpers';
 import styles from './TimerClock.module.scss';
 
 const PERIMITER = 38;
@@ -59,7 +60,11 @@ export const TimerClock = ({
     };
   }, [timeLeft, validityEndDate, onTimerEnd]);
 
-  const circleDashArray = ((timeLeft / validityPeriod) * PERIMITER).toFixed(0);
+  const circleDashArray = computeFilledPerimiter(
+    timeLeft,
+    validityPeriod,
+    PERIMITER
+  ).toFixed();
   const isClockStatusAlert = timeLeft < alertThreshold;
 
   return (
