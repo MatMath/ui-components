@@ -16,6 +16,7 @@ export { Logo } from './logo/Logo';
 export { PasswordInput } from './password-input/PasswordInput';
 export { PasswordStrength } from './password-strength/PasswordStrength';
 export { QuickActionsMenu } from './quick-actions-menu/QuickActionsMenu';
+export { Slider } from './Slider/Slider';
 export { TextInput } from './text-input/TextInput';
 export { Thumbnail } from './thumbnail/Thumbnail';
 export { Toggle } from './toggle/Toggle';
