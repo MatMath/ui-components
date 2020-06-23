@@ -88,6 +88,9 @@
     }
 
     /* All the same for Firefox and IE */
+    // Cannot group these selectors within a selector list because
+    // a single unsupported selector in a selector list invalidates the whole rule.
+    // from: https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list
     &::-moz-range-thumb {
       @include thumb;
     }
@@ -96,14 +99,24 @@
     }
 
     /* Track */
-    &::-webkit-slider-runnable-track,
-    &::-moz-range-track,
+    // Cannot group these selectors within a selector list because
+    // a single unsupported selector in a selector list invalidates the whole rule.
+    // from: https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+    &::-moz-range-track {
+      @include track;
+    }
     &::-ms-track {
       @include track;
     }
 
     &:hover,
     &:focus {
+      // Cannot group these selectors within a selector list because
+      // a single unsupported selector in a selector list invalidates the whole rule.
+      // from: https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list
       &::-webkit-slider-thumb {
         background-color: var(--thumb-hover-color);
       }
@@ -116,6 +129,9 @@
     }
 
     &:active {
+      // Cannot group these selectors within a selector list because
+      // a single unsupported selector in a selector list invalidates the whole rule.
+      // from: https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list
       &::-webkit-slider-thumb {
         background: var(--thumb-active-color);
       }
