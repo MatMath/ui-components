@@ -38,17 +38,12 @@ export const InfoBox = ({
         return functionalRed00;
       case InfoBoxSeverity.STRONG:
         return white;
-      case InfoBoxSeverity.SUBTLE:
-        return dashGreen00;
       case InfoBoxSeverity.WARNING:
         return orange00;
+      case InfoBoxSeverity.SUBTLE:
       default:
         return dashGreen00;
     }
-  };
-
-  const showDescription = () => {
-    return <p className={styles.description}> {children} </p>;
   };
 
   const showActions = () => {
@@ -60,7 +55,7 @@ export const InfoBox = ({
             size='small'
             theme={severity === InfoBoxSeverity.STRONG ? 'dark' : 'light'}
             className={styles.actionsBtn}
-            onClick={() => secondary}
+            onClick={() => secondary()}
           >
             {secondaryLabel}
           </Button>
@@ -72,7 +67,7 @@ export const InfoBox = ({
             size='small'
             theme={severity === InfoBoxSeverity.STRONG ? 'dark' : 'light'}
             className={styles.actionsBtn}
-            onClick={() => primary}
+            onClick={() => primary()}
           >
             {primaryLabel}
           </Button>
@@ -89,7 +84,9 @@ export const InfoBox = ({
         </div>
         <p className={getClassNames(styles.title, styles[size])}>{title}</p>
       </div>
-      {size === InfoBoxSize.DESCRIPTIVE ? showDescription() : null}
+      {size === InfoBoxSize.DESCRIPTIVE ? (
+        <p className={styles.description}> {children} </p>
+      ) : null}
       {showActions()}
     </div>
   );
