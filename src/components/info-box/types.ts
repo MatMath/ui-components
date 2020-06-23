@@ -1,12 +1,12 @@
-export enum InfoBoxSeverity {
-  ALERT = 'alert',
-  STRONG = 'strong',
-  SUBTLE = 'subtle',
-  WARNING = 'warning'
-}
+export const InfoBoxSeverity = {
+  ALERT: 'alert',
+  STRONG: 'strong',
+  SUBTLE: 'subtle',
+  WARNING: 'warning'
+} as const;
 
-export enum InfoBoxSize {
-  SMALL = 'small',
-  SIMPLE = 'simple',
-  DESCRIPTIVE = 'descriptive'
-}
+export const InfoBoxSize = {
+  SMALL: 'small',
+  SIMPLE: 'simple',
+  DESCRIPTIVE: 'descriptive'
+} as const;

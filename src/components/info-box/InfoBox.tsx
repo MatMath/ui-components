@@ -1,33 +1,36 @@
 import * as React from 'react';
 
 import { InfoCircleIcon } from '@components/icons';
+import { Button } from '@components/button/Button';
 import { dashGreen00, functionalRed00, orange00, white } from '@colors';
+import { getClassNames } from '@utility/cssUtils';
 
 import { InfoBoxSeverity, InfoBoxSize } from './types';
-import { getClassNames } from '@utility/cssUtils';
 import styles from './InfoBox.module.scss';
-import { Button } from '@components/button/Button';
+
+type InfoBoxSizeList = 'small' | 'simple' | 'descriptive'; // To display via mdx
+type InfoBoxSeverityList = 'alert' | 'strong' | 'subtle' | 'warning'; // To display via mdx
 
 export interface InfoBoxProps {
-  severity?: InfoBoxSeverity;
   title: string;
-  description: string;
-  size: InfoBoxSize;
+  size?: InfoBoxSizeList;
+  severity?: InfoBoxSeverityList;
+  children?: string;
   primary?: Function;
-  primaryTitle?: string;
+  primaryLabel?: string;
   secondary?: Function;
-  secondaryTitle: string;
+  secondaryLabel?: string;
 }
 
 export const InfoBox = ({
-  severity = InfoBoxSeverity.SUBTLE,
-  size = InfoBoxSize.SIMPLE,
   title,
-  description,
+  size = InfoBoxSize.SIMPLE,
+  severity = InfoBoxSeverity.SUBTLE,
+  children,
   primary,
-  primaryTitle,
+  primaryLabel,
   secondary,
-  secondaryTitle
+  secondaryLabel
 }: InfoBoxProps) => {
   const selectIconColor = () => {
     switch (severity) {
@@ -45,7 +48,7 @@ export const InfoBox = ({
   };
 
   const showDescription = () => {
-    return <p className={styles.description}> {description} </p>;
+    return <p className={styles.description}> {children} </p>;
   };
 
   const showActions = () => {
@@ -55,10 +58,11 @@ export const InfoBox = ({
           <Button
             nature='secondary'
             size='small'
-            className={getClassNames(styles.actionsBtn, styles[severity])}
+            theme={severity === InfoBoxSeverity.STRONG ? 'dark' : 'light'}
+            className={styles.actionsBtn}
             onClick={() => secondary}
           >
-            {secondaryTitle}
+            {secondaryLabel}
           </Button>
         ) : null}
 
@@ -66,10 +70,11 @@ export const InfoBox = ({
           <Button
             nature='primary'
             size='small'
-            className={getClassNames(styles.actionsBtn, styles[severity])}
+            theme={severity === InfoBoxSeverity.STRONG ? 'dark' : 'light'}
+            className={styles.actionsBtn}
             onClick={() => primary}
           >
-            {primaryTitle}
+            {primaryLabel}
           </Button>
         ) : null}
       </div>

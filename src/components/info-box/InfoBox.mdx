@@ -39,15 +39,15 @@ Examples below show usage of the InfoBox with Color theme
 </div>
 
 <div style={{ marginBottom: '10px' }}>
-  <InfoBox
-    severity='warning'
-    size='small'
-    title='This is a warning message but I think it should be in a wrapping thing!'
-  />
+  <InfoBox severity='warning' size='small' title='This is a warning message' />
 </div>
 
-<div style={{ marginBottom: '10px' }}>
-  <InfoBox severity='alert' size='small' title='This is an alert message!' />
+<div style={{ marginBottom: '10px', maxWidth: '300px' }}>
+  <InfoBox
+    severity='alert'
+    size='small'
+    title='This is an long alert message but if the box is smaller the text will wrap properly!'
+  />
 </div>
 
 </Playground>
@@ -77,9 +77,14 @@ Examples below show usage of the InfoBox with size
 <div style={{ marginBottom: '10px' }}>
   <InfoBox
     size='descriptive'
-    title='This is a descriptive box'
-    description='More details about what it will impacts and what to do about it.'
+    title='This is a descriptive box without description'
   />
+</div>
+
+<div style={{ marginBottom: '10px' }}>
+  <InfoBox size='descriptive' title='This is a descriptive box'>
+    More details about what it will impacts and what to do about it.
+  </InfoBox>
 </div>
 
 </Playground>
@@ -92,45 +97,61 @@ Examples below show usage of the InfoBox with action
   style={{
     preview: {
       display: 'flex',
-      flexDirection: 'row',
+      flexDirection: 'column',
       justifyContent: 'flex-start'
     }
   }}
 >
 
-<div style={{ margin: '10px', maxWidth: '400px' }}>
+<div style={{ margin: '10px', maxWidth: '500px' }}>
+  <InfoBox
+    size='descriptive'
+    title='Descriptive box with precious additional information'
+    primary={() => null}
+    primaryLabel='Primary'
+    secondary={() => null}
+    secondaryLabel='Secondary'
+  >
+    More details about what it impacts and what to do about it.
+  </InfoBox>
+</div>
+
+<div style={{ margin: '10px', maxWidth: '500px' }}>
   <InfoBox
     severity='warning'
     size='descriptive'
-    title='This is a descriptive box'
-    description='More details about what it will impacts and what to do about it. Even a long text should be displayable here'
-    primary={() => console.log('Primary click')}
-    primaryTitle='Primary'
-  />
+    title='Descriptive box with precious additional information'
+    primary={() => null}
+    primaryLabel='Primary'
+    secondary={() => null}
+    secondaryLabel='Secondary'
+  >
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit</strong>,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+    ex ea commodo consequat.
+  </InfoBox>
 </div>
 
-<div style={{ margin: '10px', maxWidth: '400px' }}>
+<div style={{ margin: '10px', maxWidth: '500px' }}>
   <InfoBox
+    severity='strong'
     size='descriptive'
-    title='This is a descriptive box'
-    description='More details about what it will impacts and what to do about it. Even a long text should be displayable here'
-    primary={() => console.log('Primary click')}
-    primaryTitle='Primary'
-    secondary={() => console.log('secondary click')}
-    secondaryTitle='Secondary'
+    title='This is missing a description box'
+    primary={() => null}
+    primaryLabel='Primary'
+    secondary={() => null}
+    secondaryLabel='Secondary'
   />
 </div>
 
-<div style={{ margin: '10px', maxWidth: '400px' }}>
+<div style={{ margin: '10px', maxWidth: '500px' }}>
   <InfoBox
     severity='alert'
     size='descriptive'
-    title='This is a descriptive box'
-    description='More details about what it will impacts and what to do about it. Even a long text should be displayable here'
-    primary={() => console.log('Primary click')}
-    primaryTitle='Primary'
-    secondary={() => console.log('secondary click')}
-    secondaryTitle='Secondary'
+    title='This is missing a seconday action'
+    primary={() => null}
+    primaryLabel='Primary'
   />
 </div>
 
