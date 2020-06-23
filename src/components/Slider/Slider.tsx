@@ -1,6 +1,11 @@
 import * as React from 'react';
 import styles from './Slider.module.scss';
 import { getClassNames } from '@utility/cssUtils';
+import {
+  evaluateSliderTooltipLeftPosition,
+  evaluateSliderValuePercentage,
+  parseIntFromDOMPropertyValueInPixel
+} from './SliderGeometry';
 
 export interface SliderProps {
   label: string;
@@ -28,7 +33,7 @@ export const Slider = ({
   ...otherProps
 }: SliderProps) => {
   const sliderRef = React.useRef<HTMLInputElement>(null);
-  const tooltipRef = React.useRef<HTMLDivElement>(null);
+  const tooltipRef = React.useRef<HTMLOutputElement>(null);
 
   React.useEffect(() => {
     const slider = sliderRef.current;
@@ -37,17 +42,18 @@ export const Slider = ({
       return;
     }
 
-    const range = max - min;
-    const valuePercentage = ((value - min) / range) * 100;
-    slider.style.setProperty('--fill-percentage-value', `${valuePercentage}%`);
+    slider.style.setProperty(
+      '--fill-percentage-value',
+      `${evaluateSliderValuePercentage(value, min, max) * 100}%`
+    );
   }, [sliderRef, value, max, min]);
 
-  const handleChangeDone = () => {
-    onChangeComplete && onChangeComplete(value);
-  };
+  const handleChangeDone = React.useCallback(() => {
+    onChangeComplete ? onChangeComplete(value) : null;
+  }, [value, onChangeComplete]);
 
   React.useEffect(() => {
-    const slider = sliderRef.current;
+    const { current: slider } = sliderRef;
 
     if (!slider) {
       return;
@@ -62,7 +68,7 @@ export const Slider = ({
       slider.removeEventListener('mouseup', handleChangeDone);
       slider.removeEventListener('keyup', handleChangeDone);
     };
-  }, [sliderRef, value, handleChangeDone]);
+  }, [sliderRef, handleChangeDone]);
 
   React.useEffect(() => {
     const { current: slider } = sliderRef;
@@ -71,28 +77,25 @@ export const Slider = ({
       return;
     }
 
-    const halfThumbWidth =
-      parseInt(
-        getComputedStyle(slider)
-          .getPropertyValue('--thumb-size')
-          .replace('px', '')
-      ) / 2;
-
-    const halfTooltipWidth = tooltipElement.clientWidth / 2 - 2;
-
-    const centerPosition = slider.clientWidth / 2;
-
-    const percentOfRange = (value - min) / (max - min);
-    const valuePxPosition = percentOfRange * slider.clientWidth;
-    const distFromCenter = valuePxPosition - centerPosition;
-    const percentDistFromCenter = distFromCenter / centerPosition;
-
-    const offset = percentDistFromCenter * halfThumbWidth;
-
-    const tooltipPosition = valuePxPosition - halfTooltipWidth - offset;
-
-    tooltipElement.style.left = `${tooltipPosition}px`;
+    tooltipElement.style.left = `${evaluateSliderTooltipLeftPosition({
+      sliderWidth: slider.clientWidth,
+      tooltipWidth: tooltipElement.clientWidth,
+      thumbWidth: parseIntFromDOMPropertyValueInPixel(slider, '--thumb-size'),
+      value,
+      max,
+      min
+    })}px`;
   }, [value, sliderRef, tooltipRef, max, min]);
+
+  const handleOnChange = React.useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const floatValue = parseFloat(event.target.value);
+      if (!isNaN(floatValue) && onChange) {
+        onChange(floatValue);
+      }
+    },
+    [onChange]
+  );
 
   return (
     <div className={getClassNames(styles.sliderContainer, className)}>
@@ -109,12 +112,7 @@ export const Slider = ({
         max={max}
         step={step}
         className={styles.sliderRange}
-        onChange={event => {
-          const floatValue = parseFloat(event.currentTarget.value);
-          if (!isNaN(floatValue) && onChange) {
-            onChange(floatValue);
-          }
-        }}
+        onChange={handleOnChange}
       />
       {tooltip ? (
         <output
