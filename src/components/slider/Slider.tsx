@@ -2,10 +2,10 @@ import * as React from 'react';
 import styles from './Slider.module.scss';
 import { getClassNames } from '@utility/cssUtils';
 import {
+  evaluateRangeValuePercentage,
   evaluateSliderTooltipLeftPosition,
-  evaluateSliderValuePercentage,
   parseIntFromDOMPropertyValueInPixel
-} from './SliderGeometry';
+} from './geometry/SliderGeometry';
 
 export interface SliderProps {
   label: string;
@@ -44,7 +44,7 @@ export const Slider = ({
 
     slider.style.setProperty(
       '--fill-percentage-value',
-      `${evaluateSliderValuePercentage(value, min, max) * 100}%`
+      `${evaluateRangeValuePercentage(value, min, max) * 100}%`
     );
   }, [sliderRef, value, max, min]);
 
@@ -81,9 +81,7 @@ export const Slider = ({
       sliderWidth: slider.clientWidth,
       tooltipWidth: tooltipElement.clientWidth,
       thumbWidth: parseIntFromDOMPropertyValueInPixel(slider, '--thumb-size'),
-      value,
-      max,
-      min
+      valuePercentage: evaluateRangeValuePercentage(value, min, max)
     })}px`;
   }, [value, sliderRef, tooltipRef, max, min]);
 

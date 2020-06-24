@@ -1,4 +1,4 @@
-export const evaluateSliderValuePercentage = (
+export const evaluateRangeValuePercentage = (
   value: number,
   min: number,
   max: number
@@ -14,25 +14,20 @@ interface SliderTooltipPositionProps {
   thumbWidth: number;
   sliderWidth: number;
   tooltipWidth: number;
-  value: number;
-  min: number;
-  max: number;
+  valuePercentage: number;
 }
 
 export const evaluateSliderTooltipLeftPosition = ({
   thumbWidth,
   sliderWidth,
   tooltipWidth,
-  value,
-  min,
-  max
+  valuePercentage
 }: SliderTooltipPositionProps) => {
   const halfThumbWidth = thumbWidth / 2;
   const halfTooltipWidth = tooltipWidth / 2 - 2;
   const centerPosition = sliderWidth / 2;
 
-  const percentOfRange = evaluateSliderValuePercentage(value, min, max);
-  const valuePxPosition = percentOfRange * sliderWidth;
+  const valuePxPosition = valuePercentage * sliderWidth;
   const distFromCenter = valuePxPosition - centerPosition;
   const percentDistFromCenter = distFromCenter / centerPosition;
 
@@ -41,13 +36,15 @@ export const evaluateSliderTooltipLeftPosition = ({
   return valuePxPosition - halfTooltipWidth - offset;
 };
 
+export const parseIntFromValueInPixel = (valueInPixel: string) => {
+  return parseInt(valueInPixel.replace('px', ''));
+};
+
 export const parseIntFromDOMPropertyValueInPixel = (
   element: HTMLElement,
   propertyName: string
 ) => {
-  return parseInt(
-    getComputedStyle(element)
-      .getPropertyValue(propertyName)
-      .replace('px', '')
+  return parseIntFromValueInPixel(
+    getComputedStyle(element).getPropertyValue(propertyName)
   );
 };
