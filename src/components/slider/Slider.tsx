@@ -49,7 +49,10 @@ export const Slider = ({
   }, [sliderRef, value, max, min]);
 
   const handleChangeDone = React.useCallback(() => {
-    onChangeComplete ? onChangeComplete(value) : null;
+    if (onChangeComplete) {
+      return onChangeComplete(value);
+    }
+    return null;
   }, [value, onChangeComplete]);
 
   React.useEffect(() => {
@@ -89,8 +92,9 @@ export const Slider = ({
     (event: React.ChangeEvent<HTMLInputElement>) => {
       const floatValue = parseFloat(event.target.value);
       if (!isNaN(floatValue) && onChange) {
-        onChange(floatValue);
+        return onChange(floatValue);
       }
+      return null;
     },
     [onChange]
   );
