@@ -156,6 +156,16 @@
         var(--track-background-color) var(--fill-percentage-value)
       );
 
+      &::-webkit-slider-runnable-track {
+        cursor: default;
+      }
+      &::-moz-range-track {
+        cursor: default;
+      }
+      &::-ms-track {
+        cursor: default;
+      }
+
       &::-webkit-slider-thumb {
         cursor: default;
         background-color: var(--disabled-color);
