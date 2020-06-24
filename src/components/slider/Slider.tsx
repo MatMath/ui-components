@@ -102,7 +102,7 @@ export const Slider = ({
       </label>
       <input
         {...otherProps}
-        name={`slider-${label}`}
+        id={`slider-${label}`}
         type='range'
         ref={sliderRef}
         min={min}
