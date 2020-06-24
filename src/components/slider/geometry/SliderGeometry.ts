@@ -24,14 +24,15 @@ export const evaluateSliderTooltipLeftPosition = ({
   valuePercentage
 }: SliderTooltipPositionProps) => {
   const halfThumbWidth = thumbWidth / 2;
-  const halfTooltipWidth = tooltipWidth / 2 - 2;
+  const halfTooltipWidth = tooltipWidth / 2;
   const centerPosition = sliderWidth / 2;
 
   const valuePxPosition = valuePercentage * sliderWidth;
   const distFromCenter = valuePxPosition - centerPosition;
   const percentDistFromCenter = distFromCenter / centerPosition;
 
-  const offset = percentDistFromCenter * halfThumbWidth;
+  // not clear why offset needs an extra 2 pixel to be centered with thumb
+  const offset = percentDistFromCenter * halfThumbWidth - 2;
 
   return valuePxPosition - halfTooltipWidth - offset;
 };
