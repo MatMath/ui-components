@@ -5,16 +5,15 @@ import { Button } from '@components/button/Button';
 import { dashGreen00, functionalRed00, orange00, white } from '@colors';
 import { getClassNames } from '@utility/cssUtils';
 
-import { InfoBoxSeverity, InfoBoxSize } from './types';
 import styles from './InfoBox.module.scss';
 
-type InfoBoxSizeList = 'small' | 'simple' | 'descriptive'; // To display via mdx
-type InfoBoxSeverityList = 'alert' | 'strong' | 'subtle' | 'warning'; // To display via mdx
+type InfoBoxSize = 'small' | 'simple' | 'descriptive';
+type InfoBoxSeverity = 'alert' | 'strong' | 'subtle' | 'warning';
 
 export interface InfoBoxProps {
   title: string;
-  size?: InfoBoxSizeList;
-  severity?: InfoBoxSeverityList;
+  size?: InfoBoxSize;
+  severity?: InfoBoxSeverity;
   children?: string;
   primary?: Function;
   primaryLabel?: string;
@@ -22,72 +21,84 @@ export interface InfoBoxProps {
   secondaryLabel?: string;
 }
 
+const showActions = ({
+  severity,
+  primary,
+  primaryLabel,
+  secondary,
+  secondaryLabel
+}: Partial<InfoBoxProps>) => {
+  return (
+    <div className={styles.actionBox}>
+      {secondary ? (
+        <Button
+          nature='secondary'
+          size='small'
+          theme={severity === 'strong' ? 'dark' : 'light'}
+          className={styles.actionsBtn}
+          onClick={() => secondary()}
+        >
+          {secondaryLabel}
+        </Button>
+      ) : null}
+
+      {primary ? (
+        <Button
+          nature='primary'
+          size='small'
+          theme={severity === 'strong' ? 'dark' : 'light'}
+          className={styles.actionsBtn}
+          onClick={() => primary()}
+        >
+          {primaryLabel}
+        </Button>
+      ) : null}
+    </div>
+  );
+};
+
+const selectIconColor = (severity: InfoBoxSeverity) => {
+  switch (severity) {
+    case 'alert':
+      return functionalRed00;
+    case 'strong':
+      return white;
+    case 'warning':
+      return orange00;
+    case 'subtle':
+    default:
+      return dashGreen00;
+  }
+};
+
 export const InfoBox = ({
   title,
-  size = InfoBoxSize.SIMPLE,
-  severity = InfoBoxSeverity.SUBTLE,
+  size = 'simple',
+  severity = 'subtle',
   children,
   primary,
   primaryLabel,
   secondary,
   secondaryLabel
 }: InfoBoxProps) => {
-  const selectIconColor = () => {
-    switch (severity) {
-      case InfoBoxSeverity.ALERT:
-        return functionalRed00;
-      case InfoBoxSeverity.STRONG:
-        return white;
-      case InfoBoxSeverity.WARNING:
-        return orange00;
-      case InfoBoxSeverity.SUBTLE:
-      default:
-        return dashGreen00;
-    }
-  };
-
-  const showActions = () => {
-    return (
-      <div className={styles.actionBox}>
-        {secondary ? (
-          <Button
-            nature='secondary'
-            size='small'
-            theme={severity === InfoBoxSeverity.STRONG ? 'dark' : 'light'}
-            className={styles.actionsBtn}
-            onClick={() => secondary()}
-          >
-            {secondaryLabel}
-          </Button>
-        ) : null}
-
-        {primary ? (
-          <Button
-            nature='primary'
-            size='small'
-            theme={severity === InfoBoxSeverity.STRONG ? 'dark' : 'light'}
-            className={styles.actionsBtn}
-            onClick={() => primary()}
-          >
-            {primaryLabel}
-          </Button>
-        ) : null}
-      </div>
-    );
-  };
-
   return (
     <div className={getClassNames(styles.root, styles[severity])}>
       <div className={styles.headerRow}>
         <div className={getClassNames(styles.icon, styles[size])}>
-          <InfoCircleIcon color={selectIconColor()} />
+          <InfoCircleIcon color={selectIconColor(severity)} />
         </div>
         <p className={getClassNames(styles.title, styles[size])}>{title}</p>
       </div>
-      {size === InfoBoxSize.DESCRIPTIVE ? (
+      {size === 'descriptive' ? (
         <p className={styles.description}> {children} </p>
       ) : null}
-      {showActions()}
+      {showActions({
+        severity,
+        primary,
+        primaryLabel,
+        secondary,
+        secondaryLabel
+      })}
     </div>
   );
 };
