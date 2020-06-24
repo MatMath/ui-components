@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { fireEvent, render } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
 import { Slider } from './Slider';
 
@@ -13,8 +14,8 @@ describe('<Slider />', () => {
 
     expect(asFragment()).toMatchSnapshot();
     expect(queryByText(`${label} (${value})`)).not.toBe(null);
-    expect(queryByText('0')).not.toBe(null);
-    expect(queryByText('100')).not.toBe(null);
+    expect(queryByText('0')).toBeInTheDocument();
+    expect(queryByText('100')).toBeInTheDocument();
   });
 
   it('should render with a tooltip on press', () => {
@@ -25,7 +26,7 @@ describe('<Slider />', () => {
     );
     const slider = getByLabelText(`${label} (${value})`);
     fireEvent.mouseDown(slider);
-    expect(queryByText(value.toString())).not.toBe(null);
+    expect(queryByText(value.toString())).toBeInTheDocument();
   });
 
   it('should not render with a tooltip on press when tooltip is set to false', () => {
@@ -36,6 +37,6 @@ describe('<Slider />', () => {
     );
     const slider = getByLabelText(`${label} (${value})`);
     fireEvent.mouseDown(slider);
-    expect(queryByText(value.toString())).toBe(null);
+    expect(queryByText(value.toString())).not.toBeInTheDocument();
   });
 });
