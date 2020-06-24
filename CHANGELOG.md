@@ -1,3 +1,11 @@
+# [3.1.0](https://github.com/Dashlane/ui-components/compare/v3.0.1...v3.1.0) (2020-06-24)
+
+
+### Features
+
+* **icon:** trash and download icons ([b0c6552](https://github.com/Dashlane/ui-components/commit/b0c65529ab22f5789dae9776a405923b726bba1a))
+* **otp-field:** add docs ([92eba03](https://github.com/Dashlane/ui-components/commit/92eba032999cb00645fbee337d1fc1f06127f0b7))
+
 ## [3.0.1](https://github.com/Dashlane/ui-components/compare/v3.0.0...v3.0.1) (2020-06-17)
 
 
