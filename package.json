@@ -139,12 +139,6 @@
     "*": [
       "yarn pretty-quick"
     ],
-    "*.{tsx,ts,js,json}": [
-      "eslint"
-    ],
-    "*.{tsx,ts,css}": [
-      "yarn stylelint --fix",
-      "git add"
-    ]
+    "*.{tsx,ts,js,json}": "eslint"
   }
 }

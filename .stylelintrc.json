@@ -1,0 +1,42 @@
+{
+  "ignoreFiles": ["./docs/*"],
+
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-prettier",
+    "stylelint-config-css-modules"
+  ],
+  "plugins": ["stylelint-declaration-strict-value"],
+  "rules": {
+    "declaration-no-important": true,
+    "selector-max-specificity": "0,3,0",
+    "selector-max-type": 0,
+    "scale-unlimited/declaration-strict-value": [
+      [
+        "border",
+        "border-top",
+        "border-right",
+        "border-bottom",
+        "border-left",
+        "/color/",
+        "font-size",
+        "line-height",
+        "fill"
+      ],
+      {
+        "ignoreKeywords": [
+          "transparent",
+          "inherit",
+          "none",
+          "currentColor",
+          "solid"
+        ],
+        "disableFix": true
+      }
+    ],
+    "font-family-no-missing-generic-family-keyword": null,
+    "shorthand-property-no-redundant-values": true,
+    "selector-class-pattern": "^[a-z][a-zA-Z]*$"
+  }
+}
