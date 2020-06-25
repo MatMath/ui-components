@@ -24,23 +24,30 @@ exports[`<OTPField> Global render should render default 1`] = `
         000 000
       </div>
       <Component
+        key="1592829231510"
         onTimerEnd={[Function]}
         validityEndDate={1592829231510}
         validityPeriod={30000}
       >
-        <div>
+        <div
+          className="baseTimer"
+        >
           <svg
+            className="baseTimerSvg"
             viewBox="0 0 14 14"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g>
+            <g
+              className="baseTimerCircle"
+            >
               <circle
+                className="baseTimerPathElapsed"
                 cx="7"
                 cy="7"
                 r="6"
               />
               <path
-                className=""
+                className="baseTimerPathRemaining"
                 d="
               M 7, 7
               m -6, 0
