@@ -5,7 +5,7 @@ import { Slider } from './Slider';
 
 describe('<Slider />', () => {
   it('should render default', () => {
-    const label = 'Slider';
+    const label = 'slider';
     const value = 50;
     const { asFragment } = render(<Slider value={value} label={label} />);
 

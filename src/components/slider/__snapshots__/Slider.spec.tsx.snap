@@ -9,7 +9,7 @@ exports[`<Slider /> should render default 1`] = `
       class="sliderLabel"
       for="slider"
     >
-      Slider
+      slider
     </label>
     <input
       class="sliderRange"
