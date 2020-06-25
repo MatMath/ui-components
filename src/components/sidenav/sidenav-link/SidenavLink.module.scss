@@ -3,6 +3,7 @@
 
 .link {
   @include typography.body-medium;
+
   border-radius: 4px;
   cursor: pointer;
   display: flex;
@@ -10,9 +11,10 @@
   position: relative;
 
   .icon {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-right: 16px;
     min-width: 20px;
+
     svg {
       fill: colors.$dash-green-04;
     }
@@ -20,6 +22,7 @@
 
   .label {
     @include typography.body-medium;
+
     color: colors.$dash-green-04;
     min-width: 0;
     overflow: hidden;
@@ -39,6 +42,7 @@
 
   &:hover {
     background-color: colors.$dash-green-01;
+
     .icon svg {
       fill: colors.$dash-green-04;
     }
@@ -48,6 +52,7 @@
     .icon svg {
       fill: colors.$white;
     }
+
     .label {
       color: colors.$white;
     }
@@ -57,15 +62,19 @@
     align-items: center;
     flex-direction: column;
     padding: 6px;
+
     .icon {
-      margin-right: 0;
       margin-bottom: 4px;
+      margin-right: 0;
     }
+
     .label {
       @include typography.body-small;
-      width: 100%;
+
       text-align: center;
+      width: 100%;
     }
+
     .notification {
       position: absolute;
       right: 18px;
@@ -75,9 +84,11 @@
   &.selected,
   &.selected:hover {
     background-color: colors.$dash-green-01;
+
     .icon svg {
       fill: colors.$white;
     }
+
     .label {
       color: colors.$white;
     }

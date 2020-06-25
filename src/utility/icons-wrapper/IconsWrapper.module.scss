@@ -3,10 +3,10 @@
 }
 
 .wrapperItem {
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  cursor: pointer;
 
   &:hover {
     text-decoration: underline;

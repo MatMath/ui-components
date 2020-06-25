@@ -2,11 +2,10 @@
 @use '../../typography/typography';
 
 .checkboxContainer {
-  display: flex;
   align-items: center;
-  justify-content: flex-start;
   cursor: pointer;
-
+  display: flex;
+  justify-content: flex-start;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -26,6 +25,7 @@
     stroke-dashoffset: 0;
   }
 }
+
 /*
 * Hide checkbox visually but remain accessible to screen readers.
 * Source: https://polished.js.org/docs/#hidevisually
@@ -34,13 +34,13 @@
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  width: 1px;
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
   white-space: nowrap;
+  width: 1px;
 
   &:focus {
     & + .styledCheckbox {
@@ -55,17 +55,17 @@
 }
 
 .styledCheckbox {
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
+  align-items: center;
   background: colors.$white;
   border: 1px solid colors.$dash-green-05;
-  box-sizing: border-box;
   border-radius: 4px;
-  transition: all 150ms;
+  box-sizing: border-box;
+  cursor: pointer;
   display: flex;
-  align-items: center;
+  height: 20px;
   justify-content: center;
+  transition: all 150ms;
+  width: 20px;
 
   &.checked {
     background: colors.$mid-green-00;
@@ -93,17 +93,18 @@
 }
 
 .checkmark {
-  width: 20px;
-  height: 20px;
-  stroke-width: 2;
   animation: fill 0.4s ease-in-out 0.4s forwards,
     scale 0.3s ease-in-out 0.9s both;
-  visibility: hidden;
+  height: 20px;
   position: absolute;
   stroke: colors.$white;
+  stroke-width: 2;
+  visibility: hidden;
+  width: 20px;
 }
 
 .text {
   @include typography.paragraph-small;
+
   margin-left: 8px;
 }

@@ -3,6 +3,7 @@
 
 .link {
   @include typography.body-medium;
+
   align-items: center;
   background: transparent;
   border-radius: 4px;
@@ -19,7 +20,7 @@
 
   &.selected,
   &:active {
-    color: colors.$dash-green-00;
     background: colors.$dash-green-05;
+    color: colors.$dash-green-00;
   }
 }

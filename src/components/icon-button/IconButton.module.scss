@@ -2,27 +2,27 @@
 @use '../../typography/typography';
 
 .iconButton {
-  min-width: unset;
   min-height: unset;
+  min-width: unset;
 
   /* Size */
 
   &.small {
     height: 32px;
-    width: 32px;
     padding: 4px;
+    width: 32px;
   }
 
   &.medium {
     height: 40px;
-    width: 40px;
     padding: 8px;
+    width: 40px;
   }
 
   &.large {
     height: 48px;
-    width: 48px;
     padding: 12px;
+    width: 48px;
   }
 
   /* Colors based on Theme */
@@ -34,8 +34,8 @@
     }
 
     &:active:enabled {
-      border-color: colors.$dash-green-05;
       background-color: colors.$dash-green-05;
+      border-color: colors.$dash-green-05;
     }
   }
 
