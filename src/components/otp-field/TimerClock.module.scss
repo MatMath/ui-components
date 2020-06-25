@@ -1,7 +1,7 @@
 @use '../../colors/colors';
 @use '../../typography/typography';
 
-.base-timer {
+.baseTimer {
   position: relative;
   height: 14px;
   width: 14px;
@@ -10,17 +10,17 @@
   padding: 2px;
 }
 
-.base-timer-circle {
+.baseTimerCircle {
   fill: none;
   stroke: none;
 }
 
-.base-timer-path-elapsed {
+.baseTimerPathElapsed {
   stroke-width: 2px;
   stroke: colors.$dash-green-04;
 }
 
-.base-timer-path-remaining {
+.baseTimerPathRemaining {
   stroke-width: 2px;
   transform: rotate(90deg);
   transform-origin: center;
@@ -28,11 +28,11 @@
   transition: stroke-dasharray 1s linear;
   stroke: colors.$mid-green-00;
 
-  &.alert-path {
+  &.alertPath {
     stroke: colors.$orange-00;
   }
 }
 
-.base-timer-svg {
+.baseTimerSvg {
   transform: scaleX(-1);
 }

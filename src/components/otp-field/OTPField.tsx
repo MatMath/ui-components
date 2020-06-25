@@ -43,7 +43,11 @@ export const OTPField = ({
       <span className={styles.label}>{label}</span>
       <div className={styles.container}>
         <div className={styles.code}>{formattedCode}</div>
-        <TimerClock onTimerEnd={resetCode} {...clockProps} />
+        <TimerClock
+          key={clockProps.validityEndDate}
+          onTimerEnd={resetCode}
+          {...clockProps}
+        />
       </div>
     </div>
   );
