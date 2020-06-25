@@ -5,7 +5,10 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest'
   },
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupFilesAfterEnv: ['<rootDir>/config/setupEnzyme.ts'],
+  setupFilesAfterEnv: [
+    '<rootDir>/config/setupEnzyme.ts',
+    '<rootDir>/config/setupReactTestingLibrary.ts'
+  ],
   coverageReporters: ['text'],
   moduleNameMapper: {
     '^@typings/(.*)$': '<rootDir>/src/typings/$1',

@@ -1,0 +1,101 @@
+---
+name: OTP Field
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { OTPField } from './OTPField';
+
+# OTP Field
+
+An OTP Field component showing a generated OTP code and its time left using a timer clock.
+
+## Properties
+
+<Props of={OTPField} />
+
+## Usage
+
+### Basic usage
+
+Examples below show usage of the OTP Field
+
+<Playground className={{preview: 'playground-base'}}>
+  <OTPField
+    label={'security code'}
+    code={'145236'}
+    validityPeriod={5000}
+    validityEndDate={Date.now() + 5000}
+  />
+
+<OTPField
+  label={'security code'}
+  code={'145236'}
+  validityPeriod={10000}
+  validityEndDate={Date.now() + 10000}
+/>
+
+  <OTPField
+    label={'security code'}
+    code={'145236'}
+    validityPeriod={30000}
+    validityEndDate={Date.now() + 30000}
+  />
+</Playground>
+
+### Delay logic
+
+If the initial `validityEndDate` is not equal to `Date.now() + validityPeriod`, then the clock will automatically catch up the delay.
+
+<Playground className={{preview: 'playground-base'}}>
+  <OTPField
+    label={'security code'}
+    code={'145236'}
+    validityPeriod={5000}
+    validityEndDate={Date.now() + 2000}
+  />
+
+<OTPField
+  label={'security code'}
+  code={'145236'}
+  validityPeriod={30000}
+  validityEndDate={Date.now() + 15000}
+/>
+
+  <OTPField
+    label={'security code'}
+    code={'145236'}
+    validityPeriod={60000}
+    validityEndDate={Date.now() + 20000}
+  />
+</Playground>
+
+### Alert Threshold
+
+Use the `alertThreshold` prop to change the color to an alert color when the the threshold is reached.
+
+<Playground className={{preview: 'playground-base'}}>
+  <OTPField
+    label={'security code'}
+    code={'145236'}
+    validityPeriod={5000}
+    validityEndDate={Date.now() + 5000}
+    alertThreshold={1000}
+  />
+
+<OTPField
+  label={'security code'}
+  code={'145236'}
+  validityPeriod={10000}
+  validityEndDate={Date.now() + 10000}
+  alertThreshold={2000}
+/>
+
+  <OTPField
+    label={'security code'}
+    code={'145236'}
+    validityPeriod={30000}
+    validityEndDate={Date.now() + 30000}
+    alertThreshold={5000}
+  />
+</Playground>

@@ -1,0 +1,245 @@
+@use '../../colors/colors';
+@use '../../typography/typography';
+
+.sliderContainer {
+  // CSS variables
+  --label-color: #{colors.$dash-green-01};
+  --label-disabled-color: #{colors.$dash-green-03};
+  --thumb-size: 20px;
+  --track-height: 4px;
+  --track-fill-color: #{colors.$mid-green-00};
+  --track-background-color: #{colors.$dash-green-05};
+  --disabled-color: #{colors.$mid-green-03};
+  --thumb-idle-color: #{colors.$mid-green-00};
+  --thumb-hover-color: #{colors.$dash-green-00};
+  --thumb-active-color: #{colors.$dash-darker-green-00};
+  --tooltip-width: 42px;
+  --tooltip-height: 36px;
+  --tooltip-border-radius: 4px;
+  --tooltip-background-color: #{colors.$dash-green-00};
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: 16px 20px 16px;
+  grid-template-areas:
+    ' label label '
+    ' slider slider'
+    ' min  max';
+
+  .sliderLabel {
+    grid-area: label;
+    @include typography.label;
+    margin-left: 4px;
+    color: var(--label-color);
+  }
+
+  // Cross-browser compatible input range
+  // https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+  .sliderRange {
+    @mixin track {
+      cursor: pointer;
+      height: var(--track-height);
+      width: 100%;
+    }
+
+    @mixin thumb {
+      background-color: var(--thumb-idle-color);
+      border-radius: calc(var(--thumb-size) / 2);
+      border: none;
+      box-sizing: border-box;
+      cursor: pointer;
+      height: var(--thumb-size);
+      width: var(--thumb-size);
+    }
+
+    /* Remove browser default style */
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+
+    width: 100%; /* Specific width is required for Firefox. */
+    height: var(--track-height);
+    border-radius: 4px;
+    grid-area: slider;
+    align-self: center;
+    // Fill percentage depends on value, evaluated in js
+    --fill-percentage-value: 50%;
+    background: linear-gradient(
+      to right,
+      var(--track-fill-color) var(--fill-percentage-value),
+      var(--track-background-color) var(--fill-percentage-value)
+    );
+
+    /*
+    * Removes the focus border.
+    */
+    &:focus {
+      outline: none;
+    }
+    &::-moz-focus-outer {
+      border: 0;
+    }
+
+    /* Thumb - the widget that you click or drag along the track */
+    /* Special styling for WebKit/Blink */
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      @include thumb;
+      margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    }
+
+    /* All the same for Firefox and IE */
+    // Cannot group these selectors within a selector list because
+    // a single unsupported selector in a selector list invalidates the whole rule.
+    // from: https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+    &::-ms-thumb {
+      @include thumb;
+    }
+
+    /* Track */
+    // Cannot group these selectors within a selector list because
+    // a single unsupported selector in a selector list invalidates the whole rule.
+    // from: https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+    &::-moz-range-track {
+      @include track;
+    }
+    &::-ms-track {
+      @include track;
+    }
+
+    &:hover,
+    &:focus {
+      // Cannot group these selectors within a selector list because
+      // a single unsupported selector in a selector list invalidates the whole rule.
+      // from: https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list
+      &::-webkit-slider-thumb {
+        background-color: var(--thumb-hover-color);
+      }
+      &::-moz-range-thumb {
+        background-color: var(--thumb-hover-color);
+      }
+      &::-ms-thumb {
+        background-color: var(--thumb-hover-color);
+      }
+    }
+
+    &:active {
+      // Cannot group these selectors within a selector list because
+      // a single unsupported selector in a selector list invalidates the whole rule.
+      // from: https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list
+      &::-webkit-slider-thumb {
+        background: var(--thumb-active-color);
+      }
+      &::-moz-range-thumb {
+        background: var(--thumb-active-color);
+      }
+      &::-ms-thumb {
+        background: var(--thumb-active-color);
+      }
+      // Show tooltip on mouse pressed
+      &:not(:disabled) + .tooltip {
+        visibility: visible;
+        opacity: 100;
+      }
+    }
+
+    &:disabled {
+      cursor: default;
+      background: linear-gradient(
+        to right,
+        var(--disabled-color) var(--fill-percentage-value),
+        var(--track-background-color) var(--fill-percentage-value)
+      );
+
+      &::-webkit-slider-runnable-track {
+        cursor: default;
+      }
+      &::-moz-range-track {
+        cursor: default;
+      }
+      &::-ms-track {
+        cursor: default;
+      }
+
+      &::-webkit-slider-thumb {
+        cursor: default;
+        background-color: var(--disabled-color);
+      }
+      &::-moz-range-thumb {
+        cursor: default;
+        background-color: var(--disabled-color);
+      }
+      &::-ms-thumb {
+        cursor: default;
+        background-color: var(--disabled-color);
+      }
+
+      & ~ .sliderMin {
+        color: var(--label-disabled-color);
+      }
+
+      & ~ .sliderMax {
+        color: var(--label-disabled-color);
+      }
+    }
+  }
+
+  /* Tooltip */
+  .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-background-color);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    border-radius: var(--tooltip-border-radius);
+    position: absolute;
+    top: -29px;
+    text-align: center;
+    transition: opacity 0.1s ease-in-out;
+
+    .tooltipContent {
+      display: inline-block;
+      @include typography.paragraph-small;
+      vertical-align: middle;
+      color: colors.$white;
+    }
+
+    // Tooltip triangle
+    // https://css-tricks.com/snippets/css/css-triangle/
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 100%;
+      left: 50%;
+      margin-left: -6px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+
+      border-top: 6px solid var(--tooltip-background-color);
+    }
+  }
+
+  .sliderMin {
+    grid-area: min;
+    @include typography.body-small;
+    color: var(--label-color);
+    justify-self: start;
+    margin-left: 8px;
+  }
+
+  .sliderMax {
+    grid-area: max;
+    @include typography.body-small;
+    color: var(--label-color);
+    justify-self: end;
+    margin-right: 4px;
+  }
+}

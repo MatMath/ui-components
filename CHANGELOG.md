@@ -1,3 +1,25 @@
+# [3.2.0](https://github.com/Dashlane/ui-components/compare/v3.1.0...v3.2.0) (2020-06-24)
+
+
+### Bug Fixes
+
+* fix thumb vetical alignment on chrome ([c809433](https://github.com/Dashlane/ui-components/commit/c809433e6629bf5dddda57971937028745abcffb))
+* use deafult pointer on track when slider is disabled ([c1547bb](https://github.com/Dashlane/ui-components/commit/c1547bb72a5d23f3c3db292b2e6498d88d5c40aa))
+
+
+### Features
+
+* add label typography ([e7071fb](https://github.com/Dashlane/ui-components/commit/e7071fb9acb41bf318ef95f848ecf466dc1e7945))
+* add slider component ([448b7cb](https://github.com/Dashlane/ui-components/commit/448b7cbac8368ef84d246ef9899869b7d9f2ee6a))
+
+# [3.1.0](https://github.com/Dashlane/ui-components/compare/v3.0.1...v3.1.0) (2020-06-24)
+
+
+### Features
+
+* **icon:** trash and download icons ([b0c6552](https://github.com/Dashlane/ui-components/commit/b0c65529ab22f5789dae9776a405923b726bba1a))
+* **otp-field:** add docs ([92eba03](https://github.com/Dashlane/ui-components/commit/92eba032999cb00645fbee337d1fc1f06127f0b7))
+
 ## [3.0.1](https://github.com/Dashlane/ui-components/compare/v3.0.0...v3.0.1) (2020-06-17)
 
 

@@ -1,0 +1,58 @@
+---
+name: Slider
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Slider } from './Slider.tsx';
+
+# Slider
+
+A slider
+
+## Properties
+
+<Props of={Slider} />
+
+## Usage
+
+### Basic usage
+
+Examples below show usage of the Slider
+
+<Playground
+  style={{
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: 430,
+    flex: 1
+  }}
+>
+  {() => {
+    const [value, setValue] = React.useState(50);
+    const [value2, setValue2] = React.useState(30);
+    return (
+      <>
+        <Slider
+          value={value}
+          onChange={setValue}
+          label='Slider'
+          min={0}
+          max={100}
+          onChangeComplete={val => console.log(`done ${val}`)}
+        />
+        <Slider
+          value={value2}
+          onChange={setValue2}
+          label='Disabled'
+          min={0}
+          max={100}
+          disabled
+          onChangeComplete={val => console.log(`done ${val}`)}
+        />
+      </>
+    );
+  }}
+</Playground>
