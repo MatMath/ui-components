@@ -158,7 +158,7 @@ We use `prettier` to format and `eslint` with typescript settings to lint our co
 
 ### Running tests
 
-We use [Jest](https://jestjs.io/) as testing framework and assertion library. We use [Enzyme](https://airbnb.io/enzyme/) as a testing utility for react components and [snapshot tests](https://jestjs.io/docs/en/snapshot-testing) to make sure that our UI does not change unexpectedly.
+We use [Jest](https://jestjs.io/) as testing framework and assertion library. We use [React Testing Library](https://testing-library.com) as a testing utility for react components and [snapshot tests](https://jestjs.io/docs/en/snapshot-testing) to make sure that our UI does not change unexpectedly.
 
 - To run tests, please execute
 

@@ -150,19 +150,18 @@ Now you [can launch docz](../CONTRIBUTING.md#developing-on-docz) and see your wo
 
 > 🐞docz has a known bug with props cache and TypeScript, sometimes Props aren't displayed in the documentation. docz tasks (`yarn docz:dev` and `yarn docz:build`) will clean up docz cache automatically, but if you experience this while docz is runing in watch mode, kill it and relaunch it
 
-7. Last but not least, let's add some tests. We use [jest](https://jestjs.io/) and [Enzyme](https://enzymejs.github.io/enzyme/) to run snapshot and unit tests. Create a file `Button.spec.tsx`
+7. Last but not least, let's add some tests. We use [jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com) to run snapshot and unit tests. Create a file `Button.spec.tsx`
 
 ```typescript jsx
 import * as React from 'react';
-import { mount, ReactWrapper } from 'enzyme';
-import 'jest-styled-components';
+import { render } from '@testing-library/react';
 import { Button, ButtonProps } from './Button';
 
 describe('<Button>', () => {
   let wrapper: ReactWrapper;
 
   const createWrapper = ({ nature, size, children }: ButtonProps) => {
-    return mount(
+    return render(
       <Button nature={nature} size={size}>
         {children}
       </Button>
@@ -171,25 +170,25 @@ describe('<Button>', () => {
 
   describe('Global render', () => {
     it('should render default', () => {
-      wrapper = createWrapper({});
-      expect(wrapper).toMatchSnapshot();
-      expect(wrapper.exists('.medium')).toEqual(true);
+      const { asFragment, container } = createWrapper({});
+      expect(asFragment).toMatchSnapshot();
+      expect(container.firstChild).toHaveClass('medium');
     });
 
     it('should render small', () => {
-      wrapper = createWrapper({
+      const { asFragment, container } = createWrapper({
         size: 'small'
       });
-      expect(wrapper).toMatchSnapshot();
-      expect(wrapper.exists('.small')).toEqual(true);
+      expect(asFragment()).toMatchSnapshot();
+      expect(container.firstChild).toHaveClass('small');
     });
 
     it('should render large', () => {
-      wrapper = createWrapper({
+      const { asFragment, container } = createWrapper({
         size: 'large'
       });
-      expect(wrapper).toMatchSnapshot();
-      expect(wrapper.exists('.large')).toEqual(true);
+      expect(asFragment()).toMatchSnapshot();
+      expect(container.firstChild).toHaveClass('large');
     });
   });
 });
