@@ -1,3 +1,10 @@
+## [3.2.1](https://github.com/Dashlane/ui-components/compare/v3.2.0...v3.2.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* **otp-field:** fix style not loading ([4f9fc9e](https://github.com/Dashlane/ui-components/commit/4f9fc9eac2fcb7a6d5d0811bfaae92f9362bf8ff))
+
 # [3.2.0](https://github.com/Dashlane/ui-components/compare/v3.1.0...v3.2.0) (2020-06-24)
 
 
