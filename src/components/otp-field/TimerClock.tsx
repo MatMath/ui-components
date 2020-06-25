@@ -38,16 +38,15 @@ export const TimerClock = ({
   const [timeLeft, setTimeLeft] = React.useState(validityPeriod);
 
   React.useEffect(() => {
+    // Set the timeLeft to the real time left to catch up the possible delay
+    setTimeLeft(validityEndDate - Date.now());
+  }, [validityEndDate, onTimerEnd]);
+
+  React.useEffect(() => {
     if (timeRef.current && timeLeft < 0) {
       timeRef.current && clearTimeout(timeRef.current);
       onTimerEnd && onTimerEnd();
       return;
-    }
-
-    // Set the timeLeft to the real time left to catch up the possible delay
-    // Important to have a 'catch up' animation
-    if (!timeRef.current) {
-      setTimeLeft(validityEndDate - Date.now());
     }
 
     // Update the timeLeft each second (in sync with the 1s animation of the SVG)

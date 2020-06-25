@@ -8,6 +8,7 @@ export { BusinessLogo } from './business-logo/BusinessLogo';
 export { Button } from './button/Button';
 export { Card } from './card/Card';
 export { Checkbox } from './checkbox/Checkbox';
+export { OTPField } from './otp-field/OTPField';
 export { DLogo } from './d-logo/DLogo';
 export { DropdownElement } from './dropdown/DropdownElement';
 export { DropdownMenu } from './dropdown/DropdownMenu';
