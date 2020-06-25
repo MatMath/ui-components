@@ -1,112 +1,112 @@
 import * as React from 'react';
-import { mount } from 'enzyme';
-import 'jest-styled-components';
+import { fireEvent, render } from '@testing-library/react';
 import { Button } from './Button';
 
 describe('<Button>', () => {
   describe('Global render', () => {
     it('should render default', () => {
-      const button = mount(<Button />);
+      const { asFragment } = render(<Button />);
 
-      expect(button).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
   });
 
   describe('Style properties', () => {
     it('should render small size', () => {
-      const button = mount(<Button size='small' />);
+      const { asFragment } = render(<Button />);
 
-      expect(button).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render medium size', () => {
-      const button = mount(<Button size='medium' />);
+      const { asFragment } = render(<Button size='medium' />);
 
-      expect(button).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render large size', () => {
-      const button = mount(<Button size='large' />);
+      const { asFragment } = render(<Button size='large' />);
 
-      expect(button).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render primary nature', () => {
-      const button = mount(<Button nature='primary' />);
+      const { asFragment } = render(<Button nature='primary' />);
 
-      expect(button).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render secondary nature', () => {
-      const button = mount(<Button nature='secondary' />);
+      const { asFragment } = render(<Button nature='secondary' />);
 
-      expect(button).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render danger nature', () => {
-      const button = mount(<Button nature='danger' />);
+      const { asFragment } = render(<Button nature='danger' />);
 
-      expect(button).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render danger nature and small size', () => {
-      const button = mount(<Button nature='danger' size='small' />);
+      const { asFragment } = render(<Button nature='danger' size='small' />);
 
-      expect(button).toMatchSnapshot();
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render with the custom class name', () => {
       const customClassName = 'customClassName';
-      const button = mount(<Button className={customClassName} />);
+      const { container } = render(<Button className={customClassName} />);
 
-      expect(button.find('button').hasClass(customClassName)).toBe(true);
+      expect(container.firstChild).toHaveClass(customClassName);
     });
   });
 
   describe('Children render', () => {
-    it('should render Default when no children are specified', () => {
-      const button = mount(<Button />);
-
-      expect(button.text()).toBe('');
-    });
-
     it('should render the specified text', () => {
       const text = 'Hello There';
-      const button = mount(<Button>{text}</Button>);
+      const { asFragment, queryByText } = render(<Button>{text}</Button>);
 
-      expect(button.text()).toEqual(text);
-      expect(button.find('span')).toBeTruthy();
+      expect(asFragment()).toMatchSnapshot();
+      expect(queryByText(text)).toBeInTheDocument();
     });
 
     it('should render the specified children', () => {
       const text = 'Ok';
-      const button = mount(
+      const { asFragment, queryByText } = render(
         <Button>
           <label>{text}</label>
         </Button>
       );
 
-      expect(button.find('label')).toBeTruthy();
+      expect(asFragment()).toMatchSnapshot();
+      expect(queryByText(text)).toBeInTheDocument();
     });
   });
 
   describe('Interaction', () => {
     it('should execute action on click', () => {
-      const button = mount(<Button onClick={() => window.alert('hello')} />);
+      const text = 'A button';
+      const { getByText } = render(
+        <Button onClick={() => window.alert('hello')}>{text}</Button>
+      );
 
       window.alert = jest.fn();
-      button.simulate('click');
+      fireEvent.click(getByText(text));
       expect(window.alert).toHaveBeenCalledTimes(1);
       expect(window.alert).toHaveBeenCalledWith('hello');
     });
 
-    it('should not execute action on click when the button is disabled', () => {
-      const button = mount(
-        <Button onClick={() => window.alert('hello')} disabled />
+    it('should not execute action on click when it is disabled', () => {
+      const text = 'A button';
+      const { getByText } = render(
+        <Button onClick={() => window.alert('hello')} disabled>
+          {text}
+        </Button>
       );
 
       window.alert = jest.fn();
-      button.simulate('click');
+      fireEvent.click(getByText(text));
       expect(window.alert).toHaveBeenCalledTimes(0);
     });
   });
