@@ -7,7 +7,7 @@
     "stylelint-config-prettier",
     "stylelint-config-css-modules"
   ],
-  "plugins": ["stylelint-declaration-strict-value"],
+  "plugins": ["stylelint-declaration-strict-value", "stylelint-scss"],
   "rules": {
     "declaration-no-important": true,
     "selector-max-specificity": "0,3,0",
@@ -37,6 +37,8 @@
     ],
     "font-family-no-missing-generic-family-keyword": null,
     "shorthand-property-no-redundant-values": true,
-    "selector-class-pattern": "^[a-z][a-zA-Z]*$"
+    "selector-class-pattern": "^[a-z][a-zA-Z]*$",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
   }
 }
