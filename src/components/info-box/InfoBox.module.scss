@@ -1,0 +1,78 @@
+@use '../../colors/colors';
+@use '../../typography/typography';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 4px;
+
+  &.subtle {
+    background-color: colors.$mid-green-05;
+    color: colors.$dash-green-00;
+  }
+
+  &.strong {
+    background-color: colors.$dash-green-00;
+    color: colors.$white;
+  }
+
+  &.warning {
+    background-color: colors.$orange-05;
+    color: colors.$orange-00;
+  }
+
+  &.alert {
+    background-color: colors.$red-05;
+    color: colors.$functional-red-01;
+  }
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  .icon {
+    padding-left: 16px;
+    padding-right: 10px;
+    &.descriptive {
+      padding-top: 16px;
+    }
+  }
+
+  .title {
+    padding-right: 16px;
+    &.small {
+      @include typography.body-small;
+    }
+
+    &.simple {
+      @include typography.paragraph-small;
+    }
+
+    &.descriptive {
+      @include typography.body-medium;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.description {
+  @include typography.body-small;
+  padding: 0 16px;
+  margin-top: 0px;
+}
+
+.actionBox {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  .actionsBtn {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+}

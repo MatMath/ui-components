@@ -13,6 +13,7 @@ export { DLogo } from './d-logo/DLogo';
 export { DropdownElement } from './dropdown/DropdownElement';
 export { DropdownMenu } from './dropdown/DropdownMenu';
 export { IconButton } from './icon-button/IconButton';
+export { InfoBox } from './info-box/InfoBox';
 export { Logo } from './logo/Logo';
 export { PasswordInput } from './password-input/PasswordInput';
 export { PasswordStrength } from './password-strength/PasswordStrength';

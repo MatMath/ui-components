@@ -1,0 +1,158 @@
+---
+name: InfoBox
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { InfoBox } from './InfoBox';
+
+# InfoBox
+
+An InfoBox component
+
+## Properties
+
+<Props of={InfoBox} />
+
+## Usage
+
+### Color usage
+
+Examples below show the usage of the InfoBox with Color theme
+
+<Playground
+  style={{
+    preview: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }
+  }}
+>
+
+<div style={{ marginBottom: '10px' }}>
+  <InfoBox severity='subtle' size='small' title='This is a subtle message!' />
+</div>
+
+<div style={{ marginBottom: '10px' }}>
+  <InfoBox severity='strong' size='small' title='This is a strong message!' />
+</div>
+
+<div style={{ marginBottom: '10px' }}>
+  <InfoBox severity='warning' size='small' title='This is a warning message' />
+</div>
+
+<div style={{ marginBottom: '10px', maxWidth: '300px' }}>
+  <InfoBox
+    severity='alert'
+    size='small'
+    title='This is a long alert message, but if the box is smaller the text will wrap properly!'
+  />
+</div>
+
+</Playground>
+
+### Size usage
+
+Examples below show the usage of the InfoBox with size
+
+<Playground
+  style={{
+    preview: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }
+  }}
+>
+
+<div style={{ marginBottom: '10px' }}>
+  <InfoBox severity='subtle' size='small' title='This is a subtle message!' />
+</div>
+
+<div style={{ marginBottom: '10px' }}>
+  <InfoBox size='simple' title='This is a simple box' />
+</div>
+
+<div style={{ marginBottom: '10px' }}>
+  <InfoBox
+    size='descriptive'
+    title='This is a descriptive box without description'
+  />
+</div>
+
+<div style={{ marginBottom: '10px' }}>
+  <InfoBox size='descriptive' title='This is a descriptive box'>
+    More details about what it will impacts and what to do about it.
+  </InfoBox>
+</div>
+
+</Playground>
+
+### Action usage
+
+Examples below show the usage of the InfoBox with action
+
+<Playground
+  style={{
+    preview: {
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start'
+    }
+  }}
+>
+
+<div style={{ margin: '10px', maxWidth: '500px' }}>
+  <InfoBox
+    size='descriptive'
+    title='Descriptive box with precious additional information'
+    primary={() => null}
+    primaryLabel='Primary'
+    secondary={() => null}
+    secondaryLabel='Secondary'
+  >
+    More details about what it impacts and what to do about it.
+  </InfoBox>
+</div>
+
+<div style={{ margin: '10px', maxWidth: '500px' }}>
+  <InfoBox
+    severity='warning'
+    size='descriptive'
+    title='Descriptive box with precious additional information'
+    primary={() => null}
+    primaryLabel='Primary'
+    secondary={() => null}
+    secondaryLabel='Secondary'
+  >
+    <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit</strong>,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+    ex ea commodo consequat.
+  </InfoBox>
+</div>
+
+<div style={{ margin: '10px', maxWidth: '500px' }}>
+  <InfoBox
+    severity='strong'
+    size='descriptive'
+    title='This is missing a description box'
+    primary={() => null}
+    primaryLabel='Primary'
+    secondary={() => null}
+    secondaryLabel='Secondary'
+  />
+</div>
+
+<div style={{ margin: '10px', maxWidth: '500px' }}>
+  <InfoBox
+    severity='alert'
+    size='descriptive'
+    title='This is missing a seconday action'
+    primary={() => null}
+    primaryLabel='Primary'
+  />
+</div>
+
+</Playground>
