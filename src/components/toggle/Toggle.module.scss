@@ -2,13 +2,13 @@
 @use '../../typography/typography';
 
 .root {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   @include typography.body-small;
+
+  align-items: center;
   color: colors.$black;
   cursor: pointer;
-
+  display: flex;
+  flex-direction: row;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -24,21 +24,22 @@
 
   &.checked {
     .groove {
-      border-color: colors.$mid-green-00;
       background: colors.$mid-green-00;
+      border-color: colors.$mid-green-00;
     }
 
     .handle {
-      transform: translateX(-100%);
-      left: calc(100% - 4px);
       background: colors.$white;
+      left: calc(100% - 4px);
+      transform: translateX(-100%);
     }
 
     &:hover {
       .groove {
-        border-color: colors.$dash-green-00;
         background: colors.$dash-green-00;
+        border-color: colors.$dash-green-00;
       }
+
       .handle {
         background: colors.$white;
       }
@@ -86,8 +87,8 @@
 
   &:focus {
     & + .groove {
-      border-color: colors.$dash-green-05;
       background: colors.$white;
+      border-color: colors.$dash-green-05;
 
       .handle {
         background: colors.$dash-green-00;
@@ -96,8 +97,8 @@
 
     &:checked {
       & + .groove {
-        border-color: colors.$dash-green-00;
         background: colors.$dash-green-00;
+        border-color: colors.$dash-green-00;
 
         .handle {
           background: colors.$white;
@@ -108,29 +109,29 @@
 }
 
 .groove {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 32px;
-  height: 16px;
+  border: 1px solid colors.$dash-green-05;
   border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  height: 16px;
+  justify-content: space-between;
   position: relative;
   transition: background-color 0.2s, border-color 0.2s;
-  box-sizing: border-box;
-  border: 1px solid colors.$dash-green-05;
+  width: 32px;
 }
 
 .handle {
+  background: colors.$mid-green-00;
+  border-radius: 50%;
   content: '';
+  height: 8px;
+  left: 4px;
   position: absolute;
   top: 'calc(100% - 4px)';
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  transition: 0.2s;
-  background: colors.$mid-green-00;
   transform: none;
-  left: 4px;
+  transition: 0.2s;
+  width: 8px;
 }
 
 .text {

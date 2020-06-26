@@ -2,15 +2,15 @@
 @use '../../typography/typography';
 
 .button {
-  border-width: 1px;
-  border-style: solid;
   align-items: center;
   border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
   justify-content: center;
+  min-width: 60px;
   outline: none;
   transition: all 0.15s;
-  min-width: 60px;
-  cursor: pointer;
 
   &::-moz-focus-inner {
     border: 0;
@@ -20,29 +20,32 @@
 
   &.small {
     @include typography.button-small;
-    padding: 8px 16px;
+
     height: 32px;
+    padding: 8px 16px;
   }
 
   &.medium {
     @include typography.button-medium;
-    padding: 10px 16px;
+
     height: 40px;
+    padding: 10px 16px;
   }
 
   &.large {
     @include typography.button-large;
-    padding: 14px 24px;
+
     height: 48px;
+    padding: 14px 24px;
   }
 
   /* Colors based on Nature and Theme */
 
   &.light {
     &.primary {
-      color: colors.$white;
       background-color: colors.$mid-green-00;
       border-color: colors.$mid-green-00;
+      color: colors.$white;
 
       &:focus,
       &:hover:enabled {
@@ -57,9 +60,9 @@
     }
 
     &.secondary {
-      color: colors.$dash-green-00;
       background-color: rgba(colors.$dash-green-05, 0);
       border-color: colors.$dash-green-05;
+      color: colors.$dash-green-00;
 
       &:focus,
       &:hover:enabled {
@@ -73,9 +76,9 @@
     }
 
     &.danger {
-      color: colors.$white;
       background-color: colors.$functional-red-02;
       border-color: colors.$functional-red-02;
+      color: colors.$white;
 
       &:focus,
       &:hover:enabled {
@@ -90,9 +93,9 @@
     }
 
     &.ghost {
-      color: colors.$mid-green-00;
       background-color: transparent;
       border-color: transparent;
+      color: colors.$mid-green-00;
 
       &:focus,
       &:hover:enabled {
@@ -107,9 +110,9 @@
 
   &.dark {
     &.primary {
-      color: colors.$dash-green-00;
       background-color: colors.$white;
       border-color: colors.$white;
+      color: colors.$dash-green-00;
 
       &:focus,
       &:hover:enabled {
@@ -124,28 +127,28 @@
     }
 
     &.secondary {
-      color: colors.$white;
       background-color: rgba(colors.$dash-green-01, 0);
       border-color: colors.$dash-green-01;
+      color: colors.$white;
 
       &:focus,
       &:hover:enabled {
-        color: colors.$white;
         background-color: colors.$dash-green-01;
         border-color: colors.$dash-green-01;
+        color: colors.$white;
       }
 
       &:active:enabled {
-        color: colors.$white;
         background-color: colors.$dash-green-02;
         border-color: colors.$dash-green-02;
+        color: colors.$white;
       }
     }
 
     &.ghost {
-      color: colors.$white;
       background-color: transparent;
       border-color: transparent;
+      color: colors.$white;
 
       &:focus,
       &:hover:enabled {
@@ -161,8 +164,9 @@
   /* Disabled pseudo-state */
 
   &:disabled {
-    opacity: 0.6;
     cursor: not-allowed;
+    opacity: 0.6;
+
     * {
       pointer-events: none;
     }
@@ -171,11 +175,11 @@
   /* Content */
 
   .content {
+    align-items: center;
+    display: flex;
     font-family: inherit;
     font-weight: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
+    justify-content: center;
   }
 }

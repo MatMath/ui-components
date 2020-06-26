@@ -1,13 +1,13 @@
 .svgWrapper {
-  display: flex;
-  width: var(--icon-width);
-  height: var(--icon-height);
-  outline: none;
-  fill: var(--icon-idle-color);
   cursor: inherit;
+  display: flex;
+  fill: var(--icon-idle-color);
+  height: var(--icon-height);
   opacity: 1;
+  outline: none;
   transform: var(--icon-rotate);
   transition: 'none';
+  width: var(--icon-width);
 
   &:hover {
     fill: var(--icon-hover-color);

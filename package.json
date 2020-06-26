@@ -26,7 +26,9 @@
     "check-lint": "eslint --ext tsx,ts,js,json .",
     "exec-docz-update": "node config/updateDoczBuild.js",
     "generate-icon-components": "node config/generator/icons/generateIcons.js",
-    "generate-colors-stylesheets": "node config/generator/colors/generateColorStylesheets.js"
+    "generate-colors-stylesheets": "node config/generator/colors/generateColorStylesheets.js",
+    "stylelint": "npx stylelint",
+    "stylelint:all": "yarn stylelint '**/*.{scss,css}'"
   },
   "sideEffects": false,
   "dependencies": {
@@ -91,6 +93,13 @@
     "sass": "^1.26.3",
     "sass-loader": "^8.0.2",
     "semantic-release": "^15.13.27",
+    "stylelint": "^13.6.1",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-strict-value": "^1.5.0",
+    "stylelint-scss": "^3.18.0",
     "ts-jest": "^24.0.2",
     "ttypescript": "^1.5.10",
     "typescript": "^3.7.3",
@@ -133,6 +142,10 @@
     "*": [
       "yarn pretty-quick"
     ],
-    "*.{tsx,ts,js,json}": "eslint"
+    "*.{tsx,ts,js,json}": "eslint",
+    "*.{tsx,ts,css}": [
+      "yarn stylelint --fix",
+      "git add"
+    ]
   }
 }

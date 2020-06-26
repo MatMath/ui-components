@@ -1,25 +1,27 @@
+/* stylelint-disable scale-unlimited/declaration-strict-value */
+
 /* Text */
 @mixin body-medium {
   font-family: 'Public Sans';
+  font-size: 16px;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
   line-height: 20px;
 }
 
 @mixin body-small {
   font-family: 'Public Sans';
+  font-size: 12px;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
   line-height: 16px;
 }
 
 @mixin paragraph-small {
   font-family: 'Public Sans';
+  font-size: 14px;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
   line-height: 20px;
 }
 
@@ -32,18 +34,21 @@
 
 @mixin button-small {
   @include button-common;
+
   font-size: 12px;
   line-height: 16px;
 }
 
 @mixin button-medium {
   @include button-common;
+
   font-size: 16px;
   line-height: 20px;
 }
 
 @mixin button-large {
   @include button-common;
+
   font-size: 16px;
   line-height: 20px;
 }
@@ -51,9 +56,9 @@
 /* Password */
 @mixin mono-medium {
   font-family: 'Space Mono';
+  font-size: 16px;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
   line-height: 20px;
 }
 

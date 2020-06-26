@@ -2,6 +2,8 @@
 @use '../../typography/typography';
 
 .card {
+  @include typography.body-medium;
+
   background: colors.$white;
   border-color: colors.$dash-green-05;
   border-radius: 8px;
@@ -9,5 +11,4 @@
   border-width: 1px;
   box-sizing: border-box;
   color: colors.$black;
-  @include typography.body-medium;
 }
