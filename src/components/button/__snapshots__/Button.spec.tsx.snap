@@ -89,7 +89,7 @@ exports[`<Button> Style properties should render secondary nature 1`] = `
 exports[`<Button> Style properties should render small size 1`] = `
 <DocumentFragment>
   <button
-    class="button primary medium light"
+    class="button primary small light"
   />
 </DocumentFragment>
 `;

@@ -169,26 +169,46 @@ describe('<Button>', () => {
   };
 
   describe('Global render', () => {
-    it('should render default', () => {
-      const { asFragment, container } = createWrapper({});
+    it('should render default as medium', () => {
+      const { asFragment } = createWrapper({});
       expect(asFragment).toMatchSnapshot();
-      expect(container.firstChild).toHaveClass('medium');
     });
 
     it('should render small', () => {
-      const { asFragment, container } = createWrapper({
+      const { asFragment } = createWrapper({
         size: 'small'
       });
       expect(asFragment()).toMatchSnapshot();
-      expect(container.firstChild).toHaveClass('small');
     });
 
     it('should render large', () => {
-      const { asFragment, container } = createWrapper({
+      const { asFragment } = createWrapper({
         size: 'large'
       });
       expect(asFragment()).toMatchSnapshot();
-      expect(container.firstChild).toHaveClass('large');
+    });
+  });
+
+  describe('Interaction', () => {
+    it('should execute action on click', () => {
+      const { getByRole } = render(
+        <Button onClick={() => window.alert('hello')} />
+      );
+
+      window.alert = jest.fn();
+      userEvent.click(getByRole('button'));
+      expect(window.alert).toHaveBeenCalledTimes(1);
+      expect(window.alert).toHaveBeenCalledWith('hello');
+    });
+
+    it('should not execute action on click when it is disabled', () => {
+      const { getByRole } = render(
+        <Button onClick={() => window.alert('hello')} disabled />
+      );
+
+      window.alert = jest.fn();
+      userEvent.click(getByRole('button'));
+      expect(window.alert).toHaveBeenCalledTimes(0);
     });
   });
 });

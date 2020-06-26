@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { fireEvent, render } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Button } from './Button';
 
 describe('<Button>', () => {
@@ -13,7 +14,7 @@ describe('<Button>', () => {
 
   describe('Style properties', () => {
     it('should render small size', () => {
-      const { asFragment } = render(<Button />);
+      const { asFragment } = render(<Button size='small' />);
 
       expect(asFragment()).toMatchSnapshot();
     });
@@ -86,27 +87,23 @@ describe('<Button>', () => {
 
   describe('Interaction', () => {
     it('should execute action on click', () => {
-      const text = 'A button';
-      const { getByText } = render(
-        <Button onClick={() => window.alert('hello')}>{text}</Button>
+      const { getByRole } = render(
+        <Button onClick={() => window.alert('hello')} />
       );
 
       window.alert = jest.fn();
-      fireEvent.click(getByText(text));
+      userEvent.click(getByRole('button'));
       expect(window.alert).toHaveBeenCalledTimes(1);
       expect(window.alert).toHaveBeenCalledWith('hello');
     });
 
     it('should not execute action on click when it is disabled', () => {
-      const text = 'A button';
-      const { getByText } = render(
-        <Button onClick={() => window.alert('hello')} disabled>
-          {text}
-        </Button>
+      const { getByRole } = render(
+        <Button onClick={() => window.alert('hello')} disabled />
       );
 
       window.alert = jest.fn();
-      fireEvent.click(getByText(text));
+      userEvent.click(getByRole('button'));
       expect(window.alert).toHaveBeenCalledTimes(0);
     });
   });
