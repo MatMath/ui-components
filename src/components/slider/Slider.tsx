@@ -18,6 +18,7 @@ export interface SliderProps {
   step?: number;
   tooltip?: boolean;
   className?: string;
+  id?: string;
 }
 
 export const Slider = ({
@@ -28,6 +29,7 @@ export const Slider = ({
   max = 100,
   step = 1,
   tooltip = true,
+  id = 'slider',
   onChange,
   onChangeComplete,
   ...otherProps
@@ -101,12 +103,12 @@ export const Slider = ({
 
   return (
     <div className={getClassNames(styles.sliderContainer, className)}>
-      <label htmlFor={`slider-${label}`} className={styles.sliderLabel}>
-        {label} ({value})
+      <label htmlFor={id} className={styles.sliderLabel}>
+        {label}
       </label>
       <input
         {...otherProps}
-        id={`slider-${label}`}
+        id={id}
         type='range'
         ref={sliderRef}
         min={min}
@@ -117,11 +119,7 @@ export const Slider = ({
         onChange={handleOnChange}
       />
       {tooltip ? (
-        <output
-          className={styles.tooltip}
-          ref={tooltipRef}
-          htmlFor={`slider-${label}`}
-        >
+        <output className={styles.tooltip} ref={tooltipRef} htmlFor={id}>
           <span className={styles.tooltipContent}>{value}</span>
         </output>
       ) : null}

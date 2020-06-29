@@ -7,13 +7,13 @@ exports[`<Slider /> should render default 1`] = `
   >
     <label
       class="sliderLabel"
-      for="slider-Slider"
+      for="slider"
     >
-      Slider (50)
+      Slider
     </label>
     <input
       class="sliderRange"
-      id="slider-Slider"
+      id="slider"
       max="100"
       min="0"
       step="1"
@@ -22,7 +22,7 @@ exports[`<Slider /> should render default 1`] = `
     />
     <output
       class="tooltip"
-      for="slider-Slider"
+      for="slider"
     >
       <span
         class="tooltipContent"
