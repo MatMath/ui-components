@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/Dashlane/ui-components/compare/v3.2.1...v3.3.0) (2020-06-29)
+
+
+### Features
+
+* making a info box component ([fe4d927](https://github.com/Dashlane/ui-components/commit/fe4d9277058220db67d465965f5819d8d35390e9))
+
 ## [3.2.1](https://github.com/Dashlane/ui-components/compare/v3.2.0...v3.2.1) (2020-06-25)
 
 
