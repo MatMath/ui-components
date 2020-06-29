@@ -1,3 +1,10 @@
+## [3.3.1](https://github.com/Dashlane/ui-components/compare/v3.3.0...v3.3.1) (2020-06-29)
+
+
+### Bug Fixes
+
+* center value in tooltip ([1350e95](https://github.com/Dashlane/ui-components/commit/1350e956fb4b44289f3232087437e5b28d0412d3))
+
 # [3.3.0](https://github.com/Dashlane/ui-components/compare/v3.2.1...v3.3.0) (2020-06-29)
 
 
