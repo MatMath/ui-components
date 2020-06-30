@@ -14,10 +14,10 @@ export interface InfoBoxProps {
   title: string;
   size?: InfoBoxSize;
   severity?: InfoBoxSeverity;
-  children?: string;
-  primary?: Function;
+  children?: React.ReactNode;
+  primary?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   primaryLabel?: string;
-  secondary?: Function;
+  secondary?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   secondaryLabel?: string;
 }
 
@@ -36,7 +36,7 @@ const showActions = ({
           size='small'
           theme={severity === 'strong' ? 'dark' : 'light'}
           className={styles.actionsBtn}
-          onClick={() => secondary()}
+          onClick={secondary}
         >
           {secondaryLabel}
         </Button>
@@ -48,7 +48,7 @@ const showActions = ({
           size='small'
           theme={severity === 'strong' ? 'dark' : 'light'}
           className={styles.actionsBtn}
-          onClick={() => primary()}
+          onClick={primary}
         >
           {primaryLabel}
         </Button>
@@ -90,7 +90,7 @@ export const InfoBox = ({
         <p className={getClassNames(styles.title, styles[size])}>{title}</p>
       </div>
       {size === 'descriptive' ? (
-        <p className={styles.description}> {children} </p>
+        <div className={styles.description}> {children} </div>
       ) : null}
       {showActions({
         severity,
