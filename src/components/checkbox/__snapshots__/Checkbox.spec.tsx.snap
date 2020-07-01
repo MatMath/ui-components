@@ -27,9 +27,6 @@ exports[`<Checkbox> Global render should render checked 1`] = `
         />
       </svg>
     </div>
-    <span
-      class="label"
-    />
   </label>
 </div>
 `;
@@ -60,9 +57,6 @@ exports[`<Checkbox> Global render should render default 1`] = `
         />
       </svg>
     </div>
-    <span
-      class="label"
-    />
   </label>
 </div>
 `;
@@ -94,9 +88,6 @@ exports[`<Checkbox> Global render should render disabled 1`] = `
         />
       </svg>
     </div>
-    <span
-      class="label"
-    />
   </label>
 </div>
 `;
