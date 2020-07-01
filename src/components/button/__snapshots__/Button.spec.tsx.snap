@@ -1,80 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button> Global render should render default 1`] = `
-<Component>
+exports[`<Button> Children render should render the specified children 1`] = `
+<div>
   <button
-    className="button primary medium light"
+    class="button primary medium light"
+  >
+    <span
+      class="content"
+    >
+      <label>
+        Ok
+      </label>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button> Children render should render the specified text 1`] = `
+<div>
+  <button
+    class="button primary medium light"
+  >
+    <span
+      class="content"
+    >
+      Hello There
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<Button> Global render should render default 1`] = `
+<div>
+  <button
+    class="button primary medium light"
   />
-</Component>
+</div>
 `;
 
 exports[`<Button> Style properties should render danger nature 1`] = `
-<Component
-  nature="danger"
->
+<div>
   <button
-    className="button danger medium light"
+    class="button danger medium light"
   />
-</Component>
+</div>
 `;
 
 exports[`<Button> Style properties should render danger nature and small size 1`] = `
-<Component
-  nature="danger"
-  size="small"
->
+<div>
   <button
-    className="button danger small light"
+    class="button danger small light"
   />
-</Component>
+</div>
 `;
 
 exports[`<Button> Style properties should render large size 1`] = `
-<Component
-  size="large"
->
+<div>
   <button
-    className="button primary large light"
+    class="button primary large light"
   />
-</Component>
+</div>
 `;
 
 exports[`<Button> Style properties should render medium size 1`] = `
-<Component
-  size="medium"
->
+<div>
   <button
-    className="button primary medium light"
+    class="button primary medium light"
   />
-</Component>
+</div>
 `;
 
 exports[`<Button> Style properties should render primary nature 1`] = `
-<Component
-  nature="primary"
->
+<div>
   <button
-    className="button primary medium light"
+    class="button primary medium light"
   />
-</Component>
+</div>
 `;
 
 exports[`<Button> Style properties should render secondary nature 1`] = `
-<Component
-  nature="secondary"
->
+<div>
   <button
-    className="button secondary medium light"
+    class="button secondary medium light"
   />
-</Component>
+</div>
 `;
 
 exports[`<Button> Style properties should render small size 1`] = `
-<Component
-  size="small"
->
+<div>
   <button
-    className="button primary small light"
+    class="button primary small light"
   />
-</Component>
+</div>
 `;
