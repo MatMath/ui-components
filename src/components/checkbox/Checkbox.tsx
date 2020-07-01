@@ -48,11 +48,18 @@ export const Checkbox = ({
   ...otherProps
 }: CheckboxProps) => {
   return (
-    <label className={getClassNames(styles.checkboxContainer, className || '')}>
+    <label
+      className={getClassNames(
+        styles.checkboxContainer,
+        { [styles.disabled]: disabled },
+        className || ''
+      )}
+    >
       <input
         className={styles.hiddenCheckBox}
         type='checkbox'
         checked={checked}
+        disabled={disabled}
         {...otherProps}
       />
       <StyledCheckbox checked={checked} disabled={disabled}>
