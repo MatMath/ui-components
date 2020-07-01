@@ -1,36 +1,38 @@
 import * as React from 'react';
-import { mount } from 'enzyme';
-import 'jest-styled-components';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Checkbox } from './Checkbox';
 
 describe('<Checkbox>', () => {
   describe('Global render', () => {
     it('should render default', () => {
-      const checkbox = mount(<Checkbox />);
-      expect(checkbox).toMatchSnapshot();
+      const { container } = render(<Checkbox />);
+      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('checkbox')).not.toHaveAttribute('checked');
     });
 
     it('should render disabled', () => {
-      const checkbox = mount(<Checkbox disabled />);
-      expect(checkbox).toMatchSnapshot();
+      const { container } = render(<Checkbox disabled />);
+      expect(container).toMatchSnapshot();
     });
 
     it('should render checked', () => {
-      const checkbox = mount(<Checkbox checked />);
-      expect(checkbox.props().checked).toEqual(true);
-      expect(checkbox).toMatchSnapshot();
+      const { container } = render(<Checkbox checked />);
+      expect(container).toMatchSnapshot();
+      expect(screen.getByRole('checkbox')).toHaveAttribute('checked');
     });
 
-    it('should render unchecked', () => {
-      const checkbox = mount(<Checkbox />);
-      expect(checkbox.props().checked).toEqual(undefined);
-      expect(checkbox).toMatchSnapshot();
+    it('should be checked on click', () => {
+      render(<Checkbox />);
+      expect(screen.getByRole('checkbox')).not.toBeChecked();
+      userEvent.click(screen.getByRole('checkbox'));
+      expect(screen.getByRole('checkbox')).toBeChecked();
     });
 
     it('should render unchecked and with a label', () => {
-      const checkbox = mount(<Checkbox label='Label' />);
-      expect(checkbox.props().checked).toEqual(undefined);
-      expect(checkbox).toMatchSnapshot();
+      const label = 'Label';
+      render(<Checkbox label={label} />);
+      expect(screen.getByLabelText(label)).toBeInTheDocument();
     });
   });
 });
