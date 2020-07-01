@@ -1,58 +1,58 @@
 import * as React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Button } from './Button';
 
 describe('<Button>', () => {
   describe('Global render', () => {
     it('should render default', () => {
-      const { asFragment } = render(<Button />);
+      const { container } = render(<Button />);
 
-      expect(asFragment()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe('Style properties', () => {
     it('should render small size', () => {
-      const { asFragment } = render(<Button size='small' />);
+      const { container } = render(<Button size='small' />);
 
-      expect(asFragment()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it('should render medium size', () => {
-      const { asFragment } = render(<Button size='medium' />);
+      const { container } = render(<Button size='medium' />);
 
-      expect(asFragment()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it('should render large size', () => {
-      const { asFragment } = render(<Button size='large' />);
+      const { container } = render(<Button size='large' />);
 
-      expect(asFragment()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it('should render primary nature', () => {
-      const { asFragment } = render(<Button nature='primary' />);
+      const { container } = render(<Button nature='primary' />);
 
-      expect(asFragment()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it('should render secondary nature', () => {
-      const { asFragment } = render(<Button nature='secondary' />);
+      const { container } = render(<Button nature='secondary' />);
 
-      expect(asFragment()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it('should render danger nature', () => {
-      const { asFragment } = render(<Button nature='danger' />);
+      const { container } = render(<Button nature='danger' />);
 
-      expect(asFragment()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it('should render danger nature and small size', () => {
-      const { asFragment } = render(<Button nature='danger' size='small' />);
+      const { container } = render(<Button nature='danger' size='small' />);
 
-      expect(asFragment()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     it('should render with the custom class name', () => {
@@ -66,44 +66,40 @@ describe('<Button>', () => {
   describe('Children render', () => {
     it('should render the specified text', () => {
       const text = 'Hello There';
-      const { asFragment, queryByText } = render(<Button>{text}</Button>);
+      const { container } = render(<Button>{text}</Button>);
 
-      expect(asFragment()).toMatchSnapshot();
-      expect(queryByText(text)).toBeInTheDocument();
+      expect(container).toMatchSnapshot();
+      expect(screen.queryByText(text)).toBeInTheDocument();
     });
 
     it('should render the specified children', () => {
       const text = 'Ok';
-      const { asFragment, queryByText } = render(
+      const { container } = render(
         <Button>
           <label>{text}</label>
         </Button>
       );
 
-      expect(asFragment()).toMatchSnapshot();
-      expect(queryByText(text)).toBeInTheDocument();
+      expect(container).toMatchSnapshot();
+      expect(screen.queryByText(text)).toBeInTheDocument();
     });
   });
 
   describe('Interaction', () => {
     it('should execute action on click', () => {
-      const { getByRole } = render(
-        <Button onClick={() => window.alert('hello')} />
-      );
+      render(<Button onClick={() => window.alert('hello')} />);
 
       window.alert = jest.fn();
-      userEvent.click(getByRole('button'));
+      userEvent.click(screen.getByRole('button'));
       expect(window.alert).toHaveBeenCalledTimes(1);
       expect(window.alert).toHaveBeenCalledWith('hello');
     });
 
     it('should not execute action on click when it is disabled', () => {
-      const { getByRole } = render(
-        <Button onClick={() => window.alert('hello')} disabled />
-      );
+      render(<Button onClick={() => window.alert('hello')} disabled />);
 
       window.alert = jest.fn();
-      userEvent.click(getByRole('button'));
+      userEvent.click(screen.getByRole('button'));
       expect(window.alert).toHaveBeenCalledTimes(0);
     });
   });

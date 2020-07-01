@@ -155,37 +155,88 @@ Now you [can launch docz](../CONTRIBUTING.md#developing-on-docz) and see your wo
 ```typescript jsx
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
-import { Button, ButtonProps } from './Button';
+import userEvent from '@testing-library/user-event';
+import { Button } from './Button';
 
 describe('<Button>', () => {
-  let wrapper: ReactWrapper;
-
-  const createWrapper = ({ nature, size, children }: ButtonProps) => {
-    return render(
-      <Button nature={nature} size={size}>
-        {children}
-      </Button>
-    );
-  };
-
   describe('Global render', () => {
-    it('should render default as medium', () => {
-      const { asFragment } = createWrapper({});
-      expect(asFragment).toMatchSnapshot();
+    it('should render default', () => {
+      const { container } = render(<Button />);
+
+      expect(container).toMatchSnapshot();
+    });
+  });
+
+  describe('Style properties', () => {
+    it('should render small size', () => {
+      const { container } = render(<Button size='small' />);
+
+      expect(container).toMatchSnapshot();
     });
 
-    it('should render small', () => {
-      const { asFragment } = createWrapper({
-        size: 'small'
-      });
-      expect(asFragment()).toMatchSnapshot();
+    it('should render medium size', () => {
+      const { container } = render(<Button size='medium' />);
+
+      expect(container).toMatchSnapshot();
     });
 
-    it('should render large', () => {
-      const { asFragment } = createWrapper({
-        size: 'large'
-      });
-      expect(asFragment()).toMatchSnapshot();
+    it('should render large size', () => {
+      const { container } = render(<Button size='large' />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should render primary nature', () => {
+      const { container } = render(<Button nature='primary' />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should render secondary nature', () => {
+      const { container } = render(<Button nature='secondary' />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should render danger nature', () => {
+      const { container } = render(<Button nature='danger' />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should render danger nature and small size', () => {
+      const { container } = render(<Button nature='danger' size='small' />);
+
+      expect(container).toMatchSnapshot();
+    });
+
+    it('should render with the custom class name', () => {
+      const customClassName = 'customClassName';
+      const { container } = render(<Button className={customClassName} />);
+
+      expect(container.firstChild).toHaveClass(customClassName);
+    });
+  });
+
+  describe('Children render', () => {
+    it('should render the specified text', () => {
+      const text = 'Hello There';
+      const { container } = render(<Button>{text}</Button>);
+
+      expect(container).toMatchSnapshot();
+      expect(screen.queryByText(text)).toBeInTheDocument();
+    });
+
+    it('should render the specified children', () => {
+      const text = 'Ok';
+      const { container } = render(
+        <Button>
+          <label>{text}</label>
+        </Button>
+      );
+
+      expect(container).toMatchSnapshot();
+      expect(screen.queryByText(text)).toBeInTheDocument();
     });
   });
 

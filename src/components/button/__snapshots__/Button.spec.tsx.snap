@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button> Children render should render the specified children 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button primary medium light"
   >
@@ -13,11 +13,11 @@ exports[`<Button> Children render should render the specified children 1`] = `
       </label>
     </span>
   </button>
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Children render should render the specified text 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button primary medium light"
   >
@@ -27,69 +27,69 @@ exports[`<Button> Children render should render the specified text 1`] = `
       Hello There
     </span>
   </button>
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Global render should render default 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button primary medium light"
   />
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Style properties should render danger nature 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button danger medium light"
   />
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Style properties should render danger nature and small size 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button danger small light"
   />
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Style properties should render large size 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button primary large light"
   />
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Style properties should render medium size 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button primary medium light"
   />
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Style properties should render primary nature 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button primary medium light"
   />
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Style properties should render secondary nature 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button secondary medium light"
   />
-</DocumentFragment>
+</div>
 `;
 
 exports[`<Button> Style properties should render small size 1`] = `
-<DocumentFragment>
+<div>
   <button
     class="button primary small light"
   />
-</DocumentFragment>
+</div>
 `;
