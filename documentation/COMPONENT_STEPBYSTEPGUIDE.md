@@ -154,7 +154,7 @@ Now you [can launch docz](../CONTRIBUTING.md#developing-on-docz) and see your wo
 
 ```typescript jsx
 import * as React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Button, ButtonProps } from './Button';
 
 describe('<Button>', () => {
@@ -191,23 +191,19 @@ describe('<Button>', () => {
 
   describe('Interaction', () => {
     it('should execute action on click', () => {
-      const { getByRole } = render(
-        <Button onClick={() => window.alert('hello')} />
-      );
+      render(<Button onClick={() => window.alert('hello')} />);
 
       window.alert = jest.fn();
-      userEvent.click(getByRole('button'));
+      userEvent.click(screen.getByRole('button'));
       expect(window.alert).toHaveBeenCalledTimes(1);
       expect(window.alert).toHaveBeenCalledWith('hello');
     });
 
     it('should not execute action on click when it is disabled', () => {
-      const { getByRole } = render(
-        <Button onClick={() => window.alert('hello')} disabled />
-      );
+      render(<Button onClick={() => window.alert('hello')} disabled />);
 
       window.alert = jest.fn();
-      userEvent.click(getByRole('button'));
+      userEvent.click(screen.getByRole('button'));
       expect(window.alert).toHaveBeenCalledTimes(0);
     });
   });
