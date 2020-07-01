@@ -5,7 +5,7 @@ menu: Components
 
 import { Playground, Props } from 'docz';
 import { Checkbox } from './Checkbox';
-import { CheckboxDemo } from './CheckboxDemo';
+import '../../utility/playgroundStyles.css';
 
 # Checkbox
 
@@ -22,28 +22,35 @@ A checkbox component
 Examples below show the `Checkbox` in its checked and unchecked states, both in enabled and disabled modes:
 
 <Playground
-  style={{
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  }}
+  className={{preview: 'playground-base'}}
 >
-  <Checkbox readOnly />
-  <Checkbox defaultChecked checked readOnly />
-  <Checkbox disabled readOnly />
-  <Checkbox disabled checked readOnly />
-  <Checkbox checked label='Checked' />
-  <Checkbox label='Unchecked' />
+  {() => {
+      const [isChecked, setIsChecked] = React.useState(false);
+  const label = isChecked ? 'Checked' : 'Unchecked';
+return (
+  <>
+    <Checkbox label={label} checked={isChecked} onChange={e => setIsChecked(e.currentTarget.checked)}/>
+    <Checkbox disabled />
+    <Checkbox disabled checked />
+  </>
+  )}}
+
 </Playground>
 
-The example below shows an interactive `Checkbox`.
+### Custom label
+
+`label` can be a React Component
 
 <Playground
-  style={{
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-around'
-  }}
+  className={{preview: 'playground-base'}}
 >
-  <CheckboxDemo />
+  {() => {
+      const [isChecked, setIsChecked] = React.useState(false);
+  const label = (<span style={{color: 'red'}}>Component Label</span>);
+return (
+<>
+<Checkbox label={label} checked={isChecked} onChange={e => setIsChecked(e.currentTarget.checked)}/>
+</>
+)}}
+
 </Playground>
