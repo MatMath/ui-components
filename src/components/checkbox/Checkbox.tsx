@@ -37,7 +37,7 @@ const Checkmark = () => {
 
 export interface CheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
+  label?: string | React.ReactNode;
 }
 
 export const Checkbox = ({
@@ -48,17 +48,24 @@ export const Checkbox = ({
   ...otherProps
 }: CheckboxProps) => {
   return (
-    <label className={getClassNames(styles.checkboxContainer, className || '')}>
+    <label
+      className={getClassNames(
+        styles.checkboxContainer,
+        { [styles.disabled]: disabled },
+        className || ''
+      )}
+    >
       <input
         className={styles.hiddenCheckBox}
         type='checkbox'
         checked={checked}
+        disabled={disabled}
         {...otherProps}
       />
       <StyledCheckbox checked={checked} disabled={disabled}>
         <Checkmark />
       </StyledCheckbox>
-      {label ? <span className={styles.text}>{label}</span> : null}
+      {label && <span className={styles.label}>{label}</span>}
     </label>
   );
 };

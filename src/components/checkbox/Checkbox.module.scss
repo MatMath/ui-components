@@ -18,6 +18,13 @@
       border-color: colors.$mid-green-00;
     }
   }
+
+  &.disabled {
+    cursor: default;
+    .styledCheckbox {
+      border-color: colors.$mid-green-00;
+    }
+  }
 }
 
 @keyframes stroke {
@@ -52,6 +59,17 @@
       }
     }
   }
+
+  &:disabled {
+    & + .styledCheckbox {
+      border-color: colors.$dash-green-05;
+
+      &.checked {
+        background: colors.$mid-green-03;
+        border-color: colors.$mid-green-03;
+      }
+    }
+  }
 }
 
 .styledCheckbox {
@@ -60,12 +78,23 @@
   border: 1px solid colors.$dash-green-05;
   border-radius: 4px;
   box-sizing: border-box;
-  cursor: pointer;
+  cursor: inherit;
   display: flex;
   height: 20px;
   justify-content: center;
   transition: all 150ms;
   width: 20px;
+
+  .checkmark {
+    animation: fill 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+    height: 20px;
+    position: absolute;
+    stroke: colors.$white;
+    stroke-width: 2;
+    visibility: hidden;
+    width: 20px;
+  }
 
   &.checked {
     background: colors.$mid-green-00;
@@ -75,14 +104,14 @@
       visibility: visible;
     }
 
-    &.disabled {
-      background: colors.$mid-green-03;
-      border-color: colors.$mid-green-03;
-    }
-
     &:hover {
       background: colors.$dash-green-00;
       border-color: colors.$dash-green-00;
+    }
+
+    &.disabled {
+      background: colors.$mid-green-03;
+      border-color: colors.$mid-green-03;
     }
   }
 
@@ -92,19 +121,8 @@
   }
 }
 
-.checkmark {
-  animation: fill 0.4s ease-in-out 0.4s forwards,
-    scale 0.3s ease-in-out 0.9s both;
-  height: 20px;
-  position: absolute;
-  stroke: colors.$white;
-  stroke-width: 2;
-  visibility: hidden;
-  width: 20px;
-}
-
-.text {
+.label {
   @include typography.paragraph-small;
-
+  cursor: inherit;
   margin-left: 8px;
 }

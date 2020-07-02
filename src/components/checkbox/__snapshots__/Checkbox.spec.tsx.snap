@@ -1,187 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Checkbox> Global render should render checked 1`] = `
-<Component
-  checked={true}
->
+<div>
   <label
-    className="checkboxContainer"
+    class="checkboxContainer"
   >
     <input
-      checked={true}
-      className="hiddenCheckBox"
+      checked=""
+      class="hiddenCheckBox"
       type="checkbox"
     />
-    <StyledCheckbox
-      checked={true}
+    <div
+      class="styledCheckbox checked"
     >
-      <div
-        className="styledCheckbox checked"
+      <svg
+        class="checkmark"
+        fill="none"
+        height="20"
+        viewBox="0 0 20 20"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <Checkmark>
-          <svg
-            className="checkmark"
-            fill="none"
-            height="20"
-            viewBox="0 0 20 20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6 10L9 13L15.0407 7"
-              strokeLinecap="round"
-            />
-          </svg>
-        </Checkmark>
-      </div>
-    </StyledCheckbox>
+        <path
+          d="M6 10L9 13L15.0407 7"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
   </label>
-</Component>
+</div>
 `;
 
 exports[`<Checkbox> Global render should render default 1`] = `
-<Component>
+<div>
   <label
-    className="checkboxContainer"
+    class="checkboxContainer"
   >
     <input
-      className="hiddenCheckBox"
+      class="hiddenCheckBox"
       type="checkbox"
     />
-    <StyledCheckbox>
-      <div
-        className="styledCheckbox"
+    <div
+      class="styledCheckbox"
+    >
+      <svg
+        class="checkmark"
+        fill="none"
+        height="20"
+        viewBox="0 0 20 20"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <Checkmark>
-          <svg
-            className="checkmark"
-            fill="none"
-            height="20"
-            viewBox="0 0 20 20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6 10L9 13L15.0407 7"
-              strokeLinecap="round"
-            />
-          </svg>
-        </Checkmark>
-      </div>
-    </StyledCheckbox>
+        <path
+          d="M6 10L9 13L15.0407 7"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
   </label>
-</Component>
+</div>
 `;
 
 exports[`<Checkbox> Global render should render disabled 1`] = `
-<Component
-  disabled={true}
->
+<div>
   <label
-    className="checkboxContainer"
+    class="checkboxContainer disabled"
   >
     <input
-      className="hiddenCheckBox"
+      class="hiddenCheckBox"
+      disabled=""
       type="checkbox"
     />
-    <StyledCheckbox
-      disabled={true}
+    <div
+      class="styledCheckbox disabled"
     >
-      <div
-        className="styledCheckbox disabled"
+      <svg
+        class="checkmark"
+        fill="none"
+        height="20"
+        viewBox="0 0 20 20"
+        width="20"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <Checkmark>
-          <svg
-            className="checkmark"
-            fill="none"
-            height="20"
-            viewBox="0 0 20 20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6 10L9 13L15.0407 7"
-              strokeLinecap="round"
-            />
-          </svg>
-        </Checkmark>
-      </div>
-    </StyledCheckbox>
+        <path
+          d="M6 10L9 13L15.0407 7"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
   </label>
-</Component>
-`;
-
-exports[`<Checkbox> Global render should render unchecked 1`] = `
-<Component>
-  <label
-    className="checkboxContainer"
-  >
-    <input
-      className="hiddenCheckBox"
-      type="checkbox"
-    />
-    <StyledCheckbox>
-      <div
-        className="styledCheckbox"
-      >
-        <Checkmark>
-          <svg
-            className="checkmark"
-            fill="none"
-            height="20"
-            viewBox="0 0 20 20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6 10L9 13L15.0407 7"
-              strokeLinecap="round"
-            />
-          </svg>
-        </Checkmark>
-      </div>
-    </StyledCheckbox>
-  </label>
-</Component>
-`;
-
-exports[`<Checkbox> Global render should render unchecked and with a label 1`] = `
-<Component
-  label="Label"
->
-  <label
-    className="checkboxContainer"
-  >
-    <input
-      className="hiddenCheckBox"
-      type="checkbox"
-    />
-    <StyledCheckbox>
-      <div
-        className="styledCheckbox"
-      >
-        <Checkmark>
-          <svg
-            className="checkmark"
-            fill="none"
-            height="20"
-            viewBox="0 0 20 20"
-            width="20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M6 10L9 13L15.0407 7"
-              strokeLinecap="round"
-            />
-          </svg>
-        </Checkmark>
-      </div>
-    </StyledCheckbox>
-    <span
-      className="text"
-    >
-      Label
-    </span>
-  </label>
-</Component>
+</div>
 `;
