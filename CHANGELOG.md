@@ -1,3 +1,16 @@
+# [3.4.0](https://github.com/Dashlane/ui-components/compare/v3.3.2...v3.4.0) (2020-07-02)
+
+
+### Bug Fixes
+
+* **password-input:** set reveal password button type to "button" ([8ab6fb4](https://github.com/Dashlane/ui-components/commit/8ab6fb4b88a979e44f207554fae06a0b26e890f1))
+* fix checkbox disable state ([2f8e178](https://github.com/Dashlane/ui-components/commit/2f8e1784edd8330efd9ee5032ea7ca8dd2ff42a6))
+
+
+### Features
+
+* enable custom label content ([6adeead](https://github.com/Dashlane/ui-components/commit/6adeeadc4ca7614338630f1fc48567551ed819c8))
+
 ## [3.3.2](https://github.com/Dashlane/ui-components/compare/v3.3.1...v3.3.2) (2020-07-02)
 
 
