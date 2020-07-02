@@ -1,3 +1,10 @@
+## [3.3.2](https://github.com/Dashlane/ui-components/compare/v3.3.1...v3.3.2) (2020-07-02)
+
+
+### Bug Fixes
+
+* properly use screenfor queries  and content for snapshots ([8179f3d](https://github.com/Dashlane/ui-components/commit/8179f3d15bc7d78ea2c538d15b9622b89024ce8e))
+
 ## [3.3.1](https://github.com/Dashlane/ui-components/compare/v3.3.0...v3.3.1) (2020-06-29)
 
 
