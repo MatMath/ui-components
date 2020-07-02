@@ -82,6 +82,7 @@ export const PasswordInput = (props: PasswordInputProps): JSX.Element => {
         <button
           className={getClassNames(styles.icon)}
           onClick={handleShowPassword}
+          type='button'
         >
           {prop.disabled ? (
             <RevealOrHideIcon disabled={prop.disabled} />
