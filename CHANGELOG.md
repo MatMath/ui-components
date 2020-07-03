@@ -1,3 +1,10 @@
+# [3.5.0](https://github.com/Dashlane/ui-components/compare/v3.4.0...v3.5.0) (2020-07-03)
+
+
+### Features
+
+* **icon:** add light bulb icon ([6137558](https://github.com/Dashlane/ui-components/commit/61375582ed1d1f98e013e6e15b0d35e0242d7afa))
+
 # [3.4.0](https://github.com/Dashlane/ui-components/compare/v3.3.2...v3.4.0) (2020-07-02)
 
 
