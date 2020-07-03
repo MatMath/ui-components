@@ -23,7 +23,7 @@ In order to avoid repetitive/manual work to create svg icons components, we choo
 3. Escape all `"` replacing them with `\"`, and replace `kebab-named` properties to `camelCase`.
 
    ```xml
-   <path fillRule=\"evenodd\" clipRule=\"evenodd\" d=\"M0 0H22V14.9398H11.3508L5 20V14.9398H0V0ZM2 1.99197V12.9478H7V15.8555L10.6492 12.9478H20V1.99197H2ZM7 7.96788H6V5.97591H9V9.95985H7V7.96788ZM13 7.96788H12V5.97591H15V9.95985H13V7.96788Z\" fill=\"#0E353D\"/>
+   <path fillRule=\"evenodd\" clipRule=\"evenodd\" d=\"M0 0H22V14.9398H11.3508L5 20V14.9398H0V0ZM2 1.99197V12.9478H7V15.8555L10.6492 12.9478H20V1.99197H2ZM7 7.96788H6V5.97591H9V9.95985H7V7.96788ZM13 7.96788H12V5.97591H15V9.95985H13V7.96788Z\"/>
    ```
 
 4. Add the escaped content to [`src/design-tokens/icons/icons-defs.json`](../src/design-tokens/icons/icons-defs.json), or update it if already existing. Please keep the alphabetical order.
@@ -31,7 +31,7 @@ In order to avoid repetitive/manual work to create svg icons components, we choo
    ```json
    {
      ...,
-     "my icon": "<path fillRule=\"evenodd\" clipRule=\"evenodd\" d=\"M0 0H22V14.9398H11.3508L5 20V14.9398H0V0ZM2 1.99197V12.9478H7V15.8555L10.6492 12.9478H20V1.99197H2ZM7 7.96788H6V5.97591H9V9.95985H7V7.96788ZM13 7.96788H12V5.97591H15V9.95985H13V7.96788Z\" fill=\"#0E353D\"/>"
+     "my icon": "<path fillRule=\"evenodd\" clipRule=\"evenodd\" d=\"M0 0H22V14.9398H11.3508L5 20V14.9398H0V0ZM2 1.99197V12.9478H7V15.8555L10.6492 12.9478H20V1.99197H2ZM7 7.96788H6V5.97591H9V9.95985H7V7.96788ZM13 7.96788H12V5.97591H15V9.95985H13V7.96788Z\"/>"
    }
    ```
 
@@ -45,14 +45,14 @@ In order to avoid repetitive/manual work to create svg icons components, we choo
 
    > Note: this process is safe: no duplicated components/exports will be generated (if files already exist they will be overridden)
 
-6. Add the newly created icon to the [documentation file](../src/atoms/icons/Icons.mdx). Please keep the alphabetical order.
+6. Add the newly created icon to the [documentation file](../src/components/icons/Icons.mdx). Please keep the alphabetical order.
 
    ```md
    ...
-   import { SharedIcon } from './ShareIcon';
+   import { MyIcon } from './MyIcon';
    ...
    <IconsWrapper>
-   ...
-   <MyIcon size={30} />
+     ...
+     <MyIcon size={30} />
    </IconsWrapper>
    ```

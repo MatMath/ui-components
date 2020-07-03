@@ -27,6 +27,7 @@ export { HideIcon } from './HideIcon';
 export { HouseIcon } from './HouseIcon';
 export { IdIcon } from './IdIcon';
 export { InfoCircleIcon } from './InfoCircleIcon';
+export { LightBulbIcon } from './LightBulbIcon';
 export { LinkIcon } from './LinkIcon';
 export { LoaderIcon } from './LoaderIcon';
 export { LockIcon } from './LockIcon';
