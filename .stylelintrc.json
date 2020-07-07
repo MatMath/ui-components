@@ -1,5 +1,5 @@
 {
-  "ignoreFiles": ["./docs/*"],
+  "ignoreFiles": ["./docs/*", "**/*.tsx"],
 
   "extends": [
     "stylelint-config-standard",
