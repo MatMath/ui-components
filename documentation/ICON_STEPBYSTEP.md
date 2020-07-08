@@ -14,7 +14,7 @@ In order to avoid repetitive/manual work to create svg icons components, we choo
    </svg>
    ```
 
-2. Copy the svg content, removing the `<svg>` container and `fill` attributes.
+2. Copy the svg content, removing the `<svg>` container and `fill` attributes from `path` elements. `mask` elements should be kept as they are, for more information about `mask` elements you can take a look at [mozilla's documentation on svg masks](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/mask).
 
    ```xml
    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H22V14.9398H11.3508L5 20V14.9398H0V0ZM2 1.99197V12.9478H7V15.8555L10.6492 12.9478H20V1.99197H2ZM7 7.96788H6V5.97591H9V9.95985H7V7.96788ZM13 7.96788H12V5.97591H15V9.95985H13V7.96788Z"/>
