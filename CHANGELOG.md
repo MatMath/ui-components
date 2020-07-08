@@ -1,3 +1,10 @@
+# [3.6.0](https://github.com/Dashlane/ui-components/compare/v3.5.0...v3.6.0) (2020-07-08)
+
+
+### Features
+
+* add sharing center and exclamation icons ([d769acc](https://github.com/Dashlane/ui-components/commit/d769acc0c980bfd57c961e0fa2936626a668069a))
+
 # [3.5.0](https://github.com/Dashlane/ui-components/compare/v3.4.0...v3.5.0) (2020-07-03)
 
 
