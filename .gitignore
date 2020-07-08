@@ -4,6 +4,5 @@
 .docz
 yarn-error.log
 .DS_Store
-docs
 *.css.map
 .nvimrc
