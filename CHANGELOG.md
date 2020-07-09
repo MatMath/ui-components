@@ -1,3 +1,15 @@
+# [3.7.0](https://github.com/Dashlane/ui-components/compare/v3.6.0...v3.7.0) (2020-07-09)
+
+
+### Bug Fixes
+
+* fix order of icons ([96c7702](https://github.com/Dashlane/ui-components/commit/96c7702690fbc4812fdb26aa384855c16402a163))
+
+
+### Features
+
+* add include icon ([f08a8fd](https://github.com/Dashlane/ui-components/commit/f08a8fd38f9999ead9926a243dc773966595bd73))
+
 # [3.6.0](https://github.com/Dashlane/ui-components/compare/v3.5.0...v3.6.0) (2020-07-08)
 
 
