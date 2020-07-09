@@ -35,6 +35,15 @@ Examples below show the usage of the InfoBox with Color theme
 </div>
 
 <div style={{ marginBottom: '10px' }}>
+  <InfoBox
+    iconSizePx={12}
+    severity='subtle'
+    size='small'
+    title='This is a subtle message with a custom icon size!'
+  />
+</div>
+
+<div style={{ marginBottom: '10px' }}>
   <InfoBox severity='strong' size='small' title='This is a strong message!' />
 </div>
 
@@ -149,7 +158,7 @@ Examples below show the usage of the InfoBox with action
   <InfoBox
     severity='alert'
     size='descriptive'
-    title='This is missing a seconday action'
+    title='This is missing a secondary action'
     primary={() => null}
     primaryLabel='Primary'
   />

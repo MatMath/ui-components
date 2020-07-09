@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: flex-start;
   border-radius: 4px;
+  padding: 16px;
 
   &.subtle {
     background-color: colors.$mid-green-05;
@@ -35,15 +36,13 @@
   align-items: center;
 
   .icon {
-    padding-left: 16px;
-    padding-right: 10px;
-    &.descriptive {
-      padding-top: 16px;
-    }
+    align-self: flex-start;
+    margin-right: 10px;
   }
 
   .title {
-    padding-right: 16px;
+    margin: 0;
+
     &.small {
       @include typography.body-small;
     }
@@ -54,15 +53,13 @@
 
     &.descriptive {
       @include typography.body-medium;
-      margin-bottom: 0px;
     }
   }
 }
 
 .description {
   @include typography.body-small;
-  padding: 0 16px 16px 16px;
-  margin-top: 0px;
+  margin-top: 10px;
 }
 
 .actionBox {
@@ -70,9 +67,9 @@
   width: 100%;
   flex-direction: row;
   justify-content: flex-end;
+  margin-top: 16px;
 
-  .actionsBtn {
+  button:not(:last-child) {
     margin-right: 16px;
-    margin-bottom: 16px;
   }
 }
