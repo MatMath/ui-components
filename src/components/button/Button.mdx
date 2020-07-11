@@ -6,7 +6,13 @@ menu: Components
 import { Playground, Props } from 'docz';
 import { Button } from './Button';
 import { CopyPasswordIcon } from '../../components/icons';
-import { white, midGreen00, dashGreen00 } from '../../colors/colors.ts';
+import {
+  white,
+  midGreen00,
+  dashGreen00,
+  orange05,
+  red05
+} from '../../colors/colors.ts';
 import '../../utility/playgroundStyles.css';
 
 # Button
@@ -74,6 +80,44 @@ The default theme is `light` (white), but some buttons can be displayed in a `da
 </Playground>
 
 > ⚠️ `danger` nature is not supported in `dark` theme.
+
+#### Warning
+
+<Playground className={{preview: 'playground-base'}} style={{ preview: {backgroundColor: orange05} }}>
+    <Button nature='primary' theme='warning'>
+      Save
+    </Button>
+
+    <Button nature='secondary' theme='warning'>
+      Cancel
+    </Button>
+
+    <Button nature='ghost' theme='warning'>
+      Decline
+    </Button>
+
+</Playground>
+
+> ⚠️ `danger` nature is not supported in `warning` theme.
+
+#### Alert
+
+<Playground className={{preview: 'playground-base'}} style={{ preview: {backgroundColor: red05} }}>
+    <Button nature='primary' theme='alert'>
+      Save
+    </Button>
+
+    <Button nature='secondary' theme='alert'>
+      Cancel
+    </Button>
+
+    <Button nature='ghost' theme='alert'>
+      Decline
+    </Button>
+
+</Playground>
+
+> ⚠️ `danger` nature is not supported in `alert` theme.
 
 ### Size
 

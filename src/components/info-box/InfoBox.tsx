@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { InfoCircleIcon } from '@components/icons';
 import { Button } from '@components/button/Button';
-import { dashGreen00, functionalRed00, orange00, white } from '@colors';
+import { dashGreen00, functionalRed00, warning00, white } from '@colors';
 import { getClassNames } from '@utility/cssUtils';
 
 import styles from './InfoBox.module.scss';
@@ -22,6 +22,18 @@ export interface InfoBoxProps {
   iconSizePx?: number;
 }
 
+const severitySelector = (severity: InfoBoxSeverity | undefined) => {
+  switch (severity) {
+    case undefined:
+    case 'subtle':
+      return 'light';
+    case 'strong':
+      return 'dark';
+    default:
+      return severity;
+  }
+};
+
 const showActions = ({
   severity,
   primary,
@@ -35,7 +47,7 @@ const showActions = ({
         <Button
           nature='secondary'
           size='small'
-          theme={severity === 'strong' ? 'dark' : 'light'}
+          theme={severitySelector(severity)}
           onClick={secondary}
         >
           {secondaryLabel}
@@ -46,7 +58,7 @@ const showActions = ({
         <Button
           nature='primary'
           size='small'
-          theme={severity === 'strong' ? 'dark' : 'light'}
+          theme={severitySelector(severity)}
           onClick={primary}
         >
           {primaryLabel}
@@ -63,7 +75,7 @@ const selectIconColor = (severity: InfoBoxSeverity) => {
     case 'strong':
       return white;
     case 'warning':
-      return orange00;
+      return warning00;
     case 'subtle':
     default:
       return dashGreen00;
