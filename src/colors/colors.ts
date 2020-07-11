@@ -48,6 +48,9 @@ export const red03 = '#E59DAD';
 export const red04 = '#F2CED6';
 export const red05 = '#F5D8DE';
 
+/* -- WARNING -- */
+export const warning00 = '#BF2600';
+
 /* -- GREY -- */
 export const grey00 = '#615B57';
 export const grey01 = '#999592';
