@@ -1,3 +1,19 @@
+# [4.0.0](https://github.com/Dashlane/ui-components/compare/v3.7.0...v4.0.0) (2020-07-16)
+
+
+### Features
+
+* add darkweb icon ([daa130c](https://github.com/Dashlane/ui-components/commit/daa130cfc5f6a5ed02994926f36941b01d88bf0d))
+* add password health icon ([f1b300c](https://github.com/Dashlane/ui-components/commit/f1b300ceaaf554b180cedfa7ed5e021a48e71798))
+* change dashboard icon design ([893b54e](https://github.com/Dashlane/ui-components/commit/893b54eafc13787c0bca0cb79fc661dd50bdf178))
+* infobox layout and icon adjustments ([8ad8020](https://github.com/Dashlane/ui-components/commit/8ad8020b6950aa746cda218e665ae74cf502bea2))
+
+
+### BREAKING CHANGES
+
+* new design for dashboard icon
+* inner elements spacing and icon positioning adjustments
+
 # [3.7.0](https://github.com/Dashlane/ui-components/compare/v3.6.0...v3.7.0) (2020-07-09)
 
 
