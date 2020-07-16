@@ -42,6 +42,7 @@ export { MoreIcon } from './MoreIcon';
 export { NoNetworkIcon } from './NoNetworkIcon';
 export { OpenWebsiteIcon } from './OpenWebsiteIcon';
 export { PasswordChangerIcon } from './PasswordChangerIcon';
+export { PasswordHealthIcon } from './PasswordHealthIcon';
 export { PasswordHistoryIcon } from './PasswordHistoryIcon';
 export { PasswordsIcon } from './PasswordsIcon';
 export { PaymentsIcon } from './PaymentsIcon';
