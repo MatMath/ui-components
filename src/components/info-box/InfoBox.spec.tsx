@@ -94,7 +94,6 @@ describe('<InfoBox />', () => {
 
       expect(wrapper.exists('.root.subtle')).toEqual(true);
       expect(wrapper.exists('.title.small')).toEqual(true);
-      expect(wrapper.exists('.actionsBtn')).toEqual(true);
       expect(wrapper.contains('Ok BTN')).toEqual(true);
       expect(wrapper.contains('Cancel BTN')).toEqual(true);
     });
@@ -112,7 +111,6 @@ describe('<InfoBox />', () => {
 
       expect(wrapper.exists('.root.strong')).toEqual(true);
       expect(wrapper.exists('.title.simple')).toEqual(true);
-      expect(wrapper.exists('.actionsBtn')).toEqual(true);
       expect(wrapper.contains('Ok BTN')).toEqual(true);
       expect(wrapper.contains('Cancel BTN')).toEqual(true);
     });
@@ -127,7 +125,6 @@ describe('<InfoBox />', () => {
         secondaryLabel: 'Cancel BTN'
       });
 
-      expect(wrapper.exists('.actionsBtn')).toEqual(true);
       expect(wrapper.contains('Ok BTN')).toEqual(true);
       expect(wrapper.contains('Cancel BTN')).toEqual(false);
     });
@@ -138,7 +135,6 @@ describe('<InfoBox />', () => {
         size: 'descriptive'
       });
 
-      expect(wrapper.exists('.actionsBtn')).toEqual(false);
       expect(wrapper.contains('button')).toEqual(false);
     });
   });

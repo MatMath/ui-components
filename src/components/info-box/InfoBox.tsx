@@ -11,7 +11,7 @@ type InfoBoxSize = 'small' | 'simple' | 'descriptive';
 type InfoBoxSeverity = 'alert' | 'strong' | 'subtle' | 'warning';
 
 export interface InfoBoxProps {
-  title: string;
+  title: React.ReactNode;
   size?: InfoBoxSize;
   severity?: InfoBoxSeverity;
   children?: React.ReactNode;
@@ -19,6 +19,7 @@ export interface InfoBoxProps {
   primaryLabel?: string;
   secondary?: (event?: React.SyntheticEvent<HTMLElement>) => void;
   secondaryLabel?: string;
+  iconSizePx?: number;
 }
 
 const showActions = ({
@@ -35,7 +36,6 @@ const showActions = ({
           nature='secondary'
           size='small'
           theme={severity === 'strong' ? 'dark' : 'light'}
-          className={styles.actionsBtn}
           onClick={secondary}
         >
           {secondaryLabel}
@@ -47,7 +47,6 @@ const showActions = ({
           nature='primary'
           size='small'
           theme={severity === 'strong' ? 'dark' : 'light'}
-          className={styles.actionsBtn}
           onClick={primary}
         >
           {primaryLabel}
@@ -79,26 +78,29 @@ export const InfoBox = ({
   primary,
   primaryLabel,
   secondary,
-  secondaryLabel
+  secondaryLabel,
+  iconSizePx
 }: InfoBoxProps) => {
   return (
     <div className={getClassNames(styles.root, styles[severity])}>
       <div className={styles.headerRow}>
-        <div className={getClassNames(styles.icon, styles[size])}>
-          <InfoCircleIcon color={selectIconColor(severity)} />
+        <div className={styles.icon}>
+          <InfoCircleIcon size={iconSizePx} color={selectIconColor(severity)} />
         </div>
         <p className={getClassNames(styles.title, styles[size])}>{title}</p>
       </div>
-      {size === 'descriptive' ? (
+      {(children === 0 || children) && size === 'descriptive' ? (
         <div className={styles.description}> {children} </div>
       ) : null}
-      {showActions({
-        severity,
-        primary,
-        primaryLabel,
-        secondary,
-        secondaryLabel
-      })}
+      {primary || secondary
+        ? showActions({
+            severity,
+            primary,
+            primaryLabel,
+            secondary,
+            secondaryLabel
+          })
+        : null}
     </div>
   );
 };
