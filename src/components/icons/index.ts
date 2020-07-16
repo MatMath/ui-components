@@ -15,6 +15,7 @@ export { ComputerIcon } from './ComputerIcon';
 export { CopyIcon } from './CopyIcon';
 export { CopyPasswordIcon } from './CopyPasswordIcon';
 export { CrossCircleIcon } from './CrossCircleIcon';
+export { DarkWebIcon } from './DarkWebIcon';
 export { DashboardIcon } from './DashboardIcon';
 export { DashlaneLogoIcon } from './DashlaneLogoIcon';
 export { DotsIcon } from './DotsIcon';
