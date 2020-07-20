@@ -1,0 +1,11 @@
+@use '../../typography/typography';
+
+.badge {
+  @include typography.label;
+
+  display: flex;
+  padding: 0 4px;
+  height: 20px;
+  align-items: center;
+  border-radius: 2px;
+}

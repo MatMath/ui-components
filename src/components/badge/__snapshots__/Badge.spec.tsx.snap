@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge> Global render should render default 1`] = `
+<div>
+  <div
+    class="badge"
+    style="color: white; background-color: black;"
+  >
+    Custom badge
+  </div>
+</div>
+`;

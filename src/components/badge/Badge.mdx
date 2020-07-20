@@ -1,0 +1,36 @@
+---
+name: Badge
+menu: Components
+---
+
+import { Playground, Props } from 'docz';
+import { Badge } from './Badge';
+import '../../utility/playgroundStyles.css';
+
+# Badge
+
+A badge component
+
+## Properties
+
+<Props of={Badge} />
+
+## Usage
+
+### Basic usage
+
+Examples below show a basic `Badge`
+
+<Playground
+  className={{preview: 'playground-base'}}
+>
+  <Badge text='Active' textColor='#FFFFFF' backgroundColor='#20B422'/>
+
+</Playground>
+
+<Playground
+  className={{preview: 'playground-base'}}
+>
+  <Badge text='Pending' textColor='#0E353D' backgroundColor='#FDB5AF'/>
+
+</Playground>
