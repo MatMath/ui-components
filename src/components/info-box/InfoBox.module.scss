@@ -60,6 +60,10 @@
 .description {
   @include typography.body-small;
   margin-top: 10px;
+
+  a {
+    color: inherit;
+  }
 }
 
 .actionBox {
