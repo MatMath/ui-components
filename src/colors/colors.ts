@@ -50,6 +50,7 @@ export const red05 = '#F5D8DE';
 
 /* -- WARNING -- */
 export const warning00 = '#BF2600';
+export const warning01 = '#8D0000';
 
 /* -- GREY -- */
 export const grey00 = '#615B57';

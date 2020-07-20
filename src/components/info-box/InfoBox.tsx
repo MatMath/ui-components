@@ -26,6 +26,7 @@ const severitySelector = (severity: InfoBoxSeverity | undefined) => {
   switch (severity) {
     case undefined:
     case 'subtle':
+    case 'alert':
       return 'light';
     case 'strong':
       return 'dark';
@@ -56,7 +57,7 @@ const showActions = ({
 
       {primary ? (
         <Button
-          nature='primary'
+          nature={severity === 'alert' ? 'danger' : 'primary'}
           size='small'
           theme={severitySelector(severity)}
           onClick={primary}

@@ -169,13 +169,13 @@
 
       &:focus,
       &:hover:enabled {
-        background-color: colors.$dash-green-00;
-        border-color: colors.$dash-green-00;
+        background-color: colors.$warning-01;
+        border-color: colors.$warning-01;
       }
 
       &:active:enabled {
-        background-color: colors.$dash-darker-green-00;
-        border-color: colors.$dash-darker-green-00;
+        background-color: colors.$warning-01;
+        border-color: colors.$warning-01;
       }
     }
 
@@ -186,12 +186,12 @@
 
       &:focus,
       &:hover:enabled {
-        background-color: colors.$dash-green-05;
+        background-color: colors.$orange-03;
       }
 
       &:active:enabled {
-        background-color: colors.$dash-green-03;
-        border-color: colors.$dash-green-03;
+        background-color: colors.$orange-03;
+        border-color: colors.$orange-03;
       }
     }
 
@@ -202,61 +202,11 @@
 
       &:focus,
       &:hover:enabled {
-        color: colors.$mid-green-02;
+        color: colors.$orange-03;
       }
 
       &:active:enabled {
-        color: colors.$mid-green-00;
-      }
-    }
-  }
-
-  &.alert {
-    &.primary {
-      background-color: colors.$functional-red-00;
-      border-color: colors.$functional-red-00;
-      color: colors.$white;
-
-      &:focus,
-      &:hover:enabled {
-        background-color: colors.$dash-green-00;
-        border-color: colors.$dash-green-00;
-      }
-
-      &:active:enabled {
-        background-color: colors.$dash-darker-green-00;
-        border-color: colors.$dash-darker-green-00;
-      }
-    }
-
-    &.secondary {
-      background-color: rgba(colors.$red-05, 0);
-      border-color: colors.$functional-red-00;
-      color: colors.$functional-red-00;
-
-      &:focus,
-      &:hover:enabled {
-        background-color: colors.$dash-green-05;
-      }
-
-      &:active:enabled {
-        background-color: colors.$dash-green-03;
-        border-color: colors.$dash-green-03;
-      }
-    }
-
-    &.ghost {
-      background-color: transparent;
-      border-color: transparent;
-      color: colors.$functional-red-00;
-
-      &:focus,
-      &:hover:enabled {
-        color: colors.$mid-green-02;
-      }
-
-      &:active:enabled {
-        color: colors.$mid-green-00;
+        color: colors.$orange-03;
       }
     }
   }
