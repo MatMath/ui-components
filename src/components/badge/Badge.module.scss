@@ -1,11 +1,11 @@
+@use '../../typography/typography';
+
 .badge {
+  @include typography.label;
+
   display: flex;
   padding: 0 4px;
   height: 20px;
-  font-size: 10px;
-  line-height: 16px;
-  text-transform: uppercase;
   align-items: center;
   border-radius: 2px;
-  font-family: 'Public Sans';
 }
