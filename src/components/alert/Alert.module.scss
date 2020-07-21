@@ -6,16 +6,19 @@
   border-radius: 8px;
   display: flex;
   flex-direction: row;
-  height: 70px;
   justify-content: space-between;
-}
-
-.root.success {
-  background-color: colors.$accessible-validator-green;
-}
-
-.root.error {
-  background-color: colors.$accessible-validator-red;
+  &.medium {
+    height: 70px;
+  }
+  &.small {
+    height: 52px;
+  }
+  &.error {
+    background-color: colors.$accessible-validator-red;
+  }
+  &.success {
+    background-color: colors.$accessible-validator-green;
+  }
 }
 
 .content {
@@ -26,12 +29,18 @@
 }
 
 .description {
-  @include typography.body-small;
-
   color: colors.$white;
-  font-size: 18px;
-  line-height: 20px;
-  padding-left: 20px;
+
+  &.medium {
+    font-family: 'Public Sans';
+    line-height: 20px;
+    font-size: 18px;
+    padding-left: 20px;
+  }
+  &.small {
+    @include typography.paragraph-small;
+    padding-left: 16px;
+  }
 }
 
 .icon {
