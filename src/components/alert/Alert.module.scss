@@ -44,13 +44,15 @@
 }
 
 .icon {
-  padding-left: 20px;
+  &.small {
+    margin-left: 16px;
+  }
+  &.medium {
+    margin-left: 20px;
+  }
 }
 
 .closeIcon {
-  padding-left: 20px;
-  padding-right: 20px;
-
   &:hover:not(:disabled),
   &:focus:not(:disabled) {
     background-color: transparent;
