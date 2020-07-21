@@ -163,26 +163,26 @@
 
   &.warning {
     &.primary {
-      background-color: colors.$warning-00;
-      border-color: colors.$warning-00;
+      background-color: colors.$warning-red-00;
+      border-color: colors.$warning-red-00;
       color: colors.$white;
 
       &:focus,
       &:hover:enabled {
-        background-color: colors.$warning-01;
-        border-color: colors.$warning-01;
+        background-color: colors.$warning-red-01;
+        border-color: colors.$warning-red-01;
       }
 
       &:active:enabled {
-        background-color: colors.$warning-01;
-        border-color: colors.$warning-01;
+        background-color: colors.$warning-red-01;
+        border-color: colors.$warning-red-01;
       }
     }
 
     &.secondary {
       background-color: rgba(colors.$orange-00, 0);
-      border-color: colors.$warning-00;
-      color: colors.$warning-00;
+      border-color: colors.$warning-red-00;
+      color: colors.$warning-red-00;
 
       &:focus,
       &:hover:enabled {
@@ -198,7 +198,7 @@
     &.ghost {
       background-color: transparent;
       border-color: transparent;
-      color: colors.$warning-00;
+      color: colors.$warning-red-00;
 
       &:focus,
       &:hover:enabled {

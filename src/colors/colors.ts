@@ -48,10 +48,6 @@ export const red03 = '#E59DAD';
 export const red04 = '#F2CED6';
 export const red05 = '#F5D8DE';
 
-/* -- WARNING -- */
-export const warning00 = '#BF2600';
-export const warning01 = '#8D0000';
-
 /* -- GREY -- */
 export const grey00 = '#615B57';
 export const grey01 = '#999592';
@@ -69,6 +65,10 @@ export const white = '#FFFFFF';
 
 /* -- VALIDATOR_GREEN -- */
 export const validatorGreen = '#20B422';
+
+/* -- WARNING -- */
+export const warningRed00 = '#BF2600';
+export const warningRed01 = '#8D0000';
 
 /* -- ACCESSIBLE_VALIDATOR_GREEN -- */
 export const accessibleValidatorGreen = '#278637';

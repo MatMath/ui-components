@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { InfoCircleIcon } from '@components/icons';
 import { Button } from '@components/button/Button';
-import { dashGreen00, functionalRed00, warning00, white } from '@colors';
+import { dashGreen00, functionalRed00, warningRed00, white } from '@colors';
 import { getClassNames } from '@utility/cssUtils';
 
 import styles from './InfoBox.module.scss';
@@ -76,7 +76,7 @@ const selectIconColor = (severity: InfoBoxSeverity) => {
     case 'strong':
       return white;
     case 'warning':
-      return warning00;
+      return warningRed00;
     case 'subtle':
     default:
       return dashGreen00;

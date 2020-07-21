@@ -49,10 +49,6 @@
   --red-04: #f2ced6;
   --red-05: #f5d8de;
 
-  /* -- WARNING -- */
-  --warning-00: #bf2600;
-  --warning-01: #8d0000;
-
   /* -- GREY -- */
   --grey-00: #615b57;
   --grey-01: #999592;
@@ -70,6 +66,10 @@
 
   /* -- VALIDATOR_GREEN -- */
   --validator-green: #20b422;
+
+  /* -- WARNING -- */
+  --warning-red-00: #bf2600;
+  --warning-red-01: #8d0000;
 
   /* -- ACCESSIBLE_VALIDATOR_GREEN -- */
   --accessible-validator-green: #278637;
