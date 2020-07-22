@@ -1,94 +1,65 @@
 import * as React from 'react';
-import { mount, ReactWrapper } from 'enzyme';
-
-import { Alert, AlertProps } from '@components/alert/Alert';
-import { AlertSeverity } from '@components/alert/types';
-import { CheckCircleIcon, CloseIcon } from '@components';
+import { fireEvent, getByRole, render } from '@testing-library/react';
+import { Alert } from '@components/alert/Alert';
+import { AlertSeverity, AlertSize } from '@components/alert/types';
 
 describe('<Alert />', () => {
-  let wrapper: ReactWrapper;
-
-  const createWrapper = ({
-    severity,
-    showIcon,
-    showCloseIcon,
-    children
-  }: AlertProps) =>
-    mount(
-      <Alert
-        severity={severity}
-        showIcon={showIcon}
-        showCloseIcon={showCloseIcon}
-      >
-        {children}
-      </Alert>
-    );
-
-  it('should create an alert with success and with icon closed if children is defined', () => {
+  it('should create an alert with success, medium, and with icon closed if children is defined', () => {
     const children = 'Success test';
-    wrapper = createWrapper({
-      children
-    });
-    expect(wrapper.exists('.root.success')).toEqual(true);
-  });
-
-  it('should not show alert if children is empty', () => {
-    wrapper = createWrapper({ children: '' });
-    expect(wrapper.exists('.root.success')).toEqual(false);
-  });
-
-  it('should be able to create a success alert', () => {
-    const children = 'Success test';
-    wrapper = createWrapper({
-      severity: AlertSeverity.SUCCESS,
-      children
-    });
-    expect(wrapper.exists('.root.success')).toEqual(true);
-  });
-
-  it('should be able to create an error alert', () => {
-    const children = 'Error test';
-    wrapper = createWrapper({
-      severity: AlertSeverity.ERROR,
-      children
-    });
-    expect(wrapper.exists('.root.error')).toEqual(true);
-  });
-
-  it('should close alert when close button is pressed', () => {
-    const children = 'Success test';
-    wrapper = createWrapper({
-      severity: AlertSeverity.SUCCESS,
-      showCloseIcon: true,
-      children
-    });
-    expect(wrapper.exists('.root.success')).toEqual(true);
-    const closeBtn = wrapper.find(CloseIcon);
-    closeBtn.simulate('click');
-    expect(wrapper.exists('.root.success')).toEqual(false);
+    const { container, queryByText } = render(<Alert>{children}</Alert>);
+    expect(queryByText(children)).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 
   it('should not show icon if showIcon is false', () => {
     const children = 'Success test';
-    wrapper = createWrapper({
-      severity: AlertSeverity.SUCCESS,
-      showIcon: false,
-      showCloseIcon: true,
-      children
-    });
-    expect(wrapper.exists('.root.success')).toEqual(true);
-    expect(wrapper.exists(CheckCircleIcon)).toEqual(false);
+    const { container, queryByText } = render(
+      <Alert showIcon={false}>{children}</Alert>
+    );
+    expect(queryByText(children)).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should not show alert if children is empty', () => {
+    const children = '';
+    const { container } = render(<Alert>{children}</Alert>);
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should be able to create an error alert', () => {
+    const children = 'Error test';
+    const { container, queryByText } = render(
+      <Alert severity={AlertSeverity.ERROR}>{children}</Alert>
+    );
+    expect(queryByText(children)).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  it('Should create a small alert', () => {
+    const children = 'Success test';
+    const { container, queryByText } = render(
+      <Alert size={AlertSize.SMALL}>{children}</Alert>
+    );
+    expect(queryByText(children)).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
 
   it('should not show close button if showCloseIcon is false', () => {
     const children = 'Success test';
-    wrapper = createWrapper({
-      severity: AlertSeverity.SUCCESS,
-      showIcon: true,
-      showCloseIcon: false,
-      children
-    });
-    expect(wrapper.exists('.root.success')).toEqual(true);
-    expect(wrapper.exists(CloseIcon)).toEqual(false);
+    const { container, queryByText } = render(
+      <Alert showCloseIcon={false}>{children}</Alert>
+    );
+    expect(queryByText(children)).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should close alert when close button is pressed', () => {
+    const children = 'Success test';
+    const { container, queryByText } = render(
+      <Alert showCloseIcon={true}>{children}</Alert>
+    );
+    expect(queryByText(children)).toBeInTheDocument();
+    fireEvent.click(getByRole(container, 'button'));
+    expect(queryByText(children)).not.toBeInTheDocument();
   });
 });

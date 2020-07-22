@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { CheckCircleIcon, CloseIcon, CrossCircleIcon } from '@components/icons';
 
-import { AlertSeverity } from './types';
+import { AlertSeverity, AlertSize } from './types';
 import { Button } from '@components/button/Button';
 import { getClassNames } from '@utility/cssUtils';
 import styles from './Alert.module.scss';
@@ -12,12 +12,14 @@ export interface AlertProps {
   showIcon?: boolean;
   showCloseIcon?: boolean;
   children: string;
+  size?: AlertSize;
 }
 
 export const Alert = ({
   severity = AlertSeverity.SUCCESS,
   showIcon = true,
   showCloseIcon = false,
+  size = AlertSize.MEDIUM,
   children
 }: AlertProps) => {
   const [close, setClose] = React.useState(false);
@@ -26,26 +28,43 @@ export const Alert = ({
     return null;
   }
 
-  const getIconBySeverity = (alertSeverity: AlertSeverity) => {
-    switch (alertSeverity) {
-      case AlertSeverity.ERROR:
-        return <CrossCircleIcon size={30} color='white' />;
-      case AlertSeverity.SUCCESS:
+  const getIconSize = () => {
+    switch (size) {
+      case AlertSize.SMALL:
+        return 20;
+      case AlertSize.MEDIUM:
+        return 24;
       default:
-        return <CheckCircleIcon size={30} color='white' />;
+        return 24;
     }
   };
 
-  const renderIcon = (alertSeverity: AlertSeverity) => {
+  const getIconBySeverity = (alertSeverity: AlertSeverity) => {
+    switch (alertSeverity) {
+      case AlertSeverity.ERROR:
+        return <CrossCircleIcon size={getIconSize()} color='white' />;
+      case AlertSeverity.SUCCESS:
+      default:
+        return <CheckCircleIcon size={getIconSize()} color='white' />;
+    }
+  };
+
+  const renderIcon = (alertSeverity: AlertSeverity, alertSize: AlertSize) => {
     const icon = getIconBySeverity(alertSeverity);
-    return <div className={styles.icon}>{icon}</div>;
+    return (
+      <div className={getClassNames(styles.icon, styles[alertSize])}>
+        {icon}
+      </div>
+    );
   };
 
   return (
-    <div className={getClassNames(styles.root, styles[severity])}>
+    <div className={getClassNames(styles.root, styles[severity], styles[size])}>
       <div className={styles.content}>
-        {showIcon && renderIcon(severity)}
-        <p className={styles.description}>{children}</p>
+        {showIcon && renderIcon(severity, size)}
+        <p className={getClassNames(styles.description, styles[size])}>
+          {children}
+        </p>
       </div>
       {showCloseIcon && (
         <Button
