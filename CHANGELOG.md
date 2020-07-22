@@ -1,3 +1,18 @@
+# [4.1.0](https://github.com/Dashlane/ui-components/compare/v4.0.0...v4.1.0) (2020-07-22)
+
+
+### Bug Fixes
+
+* use existing typography ([0ad89f2](https://github.com/Dashlane/ui-components/commit/0ad89f2793d4cc4f44a6043ab40f24570d0838a7))
+* **alert:** incorrect icon size on alert ([5f959ca](https://github.com/Dashlane/ui-components/commit/5f959ca9f85868a62d63f816651c63cf3a63f2ce))
+
+
+### Features
+
+* add badge component ([6c0c08c](https://github.com/Dashlane/ui-components/commit/6c0c08c5997604e84891d3f8910497726b7893b3))
+* **alert:** add size to Alert component ([6fca4a9](https://github.com/Dashlane/ui-components/commit/6fca4a9029ea6c575d80788d0de7776cd66a790f))
+* **alert:** add test to small alert ([6ddd23e](https://github.com/Dashlane/ui-components/commit/6ddd23e1f3a2488071f1172ea8f220465ce665d8))
+
 # [4.0.0](https://github.com/Dashlane/ui-components/compare/v3.7.0...v4.0.0) (2020-07-16)
 
 
