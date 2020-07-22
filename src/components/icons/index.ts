@@ -28,7 +28,7 @@ export { HelpIcon } from './HelpIcon';
 export { HideIcon } from './HideIcon';
 export { HouseIcon } from './HouseIcon';
 export { IdIcon } from './IdIcon';
-export { IncludedIcon } from './IncludedIcon';
+export { IncludeIcon } from './IncludeIcon';
 export { InfoCircleIcon } from './InfoCircleIcon';
 export { LightBulbIcon } from './LightBulbIcon';
 export { LinkIcon } from './LinkIcon';
