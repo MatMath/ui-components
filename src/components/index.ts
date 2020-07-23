@@ -1,6 +1,6 @@
 export { Accordion } from './accordion/Accordion';
 export { Alert } from './alert/Alert';
-export { AlertSeverity } from './alert/types';
+export { AlertSeverity, AlertSize } from './alert/types';
 export { Badge } from './badge/Badge';
 export {
   BankAccountThumbnail
