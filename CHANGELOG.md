@@ -1,3 +1,11 @@
+## [4.1.1](https://github.com/Dashlane/ui-components/compare/v4.1.0...v4.1.1) (2020-07-23)
+
+
+### Bug Fixes
+
+* **icons:** fix include icon ([7063178](https://github.com/Dashlane/ui-components/commit/706317851fefea9088dd2e728423ba023cc7be6d))
+* **icons:** rollback dashboard icon path definition ([a5bf267](https://github.com/Dashlane/ui-components/commit/a5bf267b5dd810819bf230bebf02b40998857c81))
+
 # [4.1.0](https://github.com/Dashlane/ui-components/compare/v4.0.0...v4.1.0) (2020-07-22)
 
 
